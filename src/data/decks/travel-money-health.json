@@ -1,0 +1,749 @@
+{
+  "id": "travel-money-health",
+  "title": "Travel, Money & Health",
+  "description": "Everyday B2 phrases for trips and travel problems, managing money, and going to the doctor.",
+  "items": [
+    {
+      "term": "check in",
+      "type": "phrasal-verb",
+      "translation": "регистрироваться, заселяться",
+      "definition": "to arrive at a hotel or airport and give your details so you can stay or fly",
+      "example": "We have to [check in] at least two hours before an international flight.",
+      "exampleRu": "На международный рейс нужно зарегистрироваться минимум за два часа.",
+      "collocations": [
+        "online check-in",
+        "check-in desk",
+        "check out of a hotel"
+      ],
+      "pattern": "check in (at a hotel / for a flight)",
+      "trap": "At a hotel or airport, say «check in», not 'register'.",
+      "tags": [
+        "life",
+        "travel"
+      ]
+    },
+    {
+      "term": "miss a flight",
+      "type": "collocation",
+      "translation": "опоздать на рейс",
+      "definition": "to arrive too late to get on a plane",
+      "example": "If we don't leave now, we'll [miss our flight].",
+      "exampleRu": "Если мы сейчас не выйдем, то опоздаем на самолёт.",
+      "collocations": [
+        "miss the train",
+        "catch a flight",
+        "miss a connection"
+      ],
+      "pattern": "miss a flight / train / bus",
+      "trap": "«Опоздать на самолёт» (and not get on it) = miss the plane, not 'be late for the plane'.",
+      "tags": [
+        "life",
+        "travel"
+      ]
+    },
+    {
+      "term": "book in advance",
+      "type": "collocation",
+      "translation": "бронировать заранее",
+      "definition": "to reserve a room, ticket or table some time before you need it",
+      "example": "Hotels in the city centre fill up quickly, so it's better to [book in advance].",
+      "exampleRu": "Отели в центре быстро заполняются, так что лучше бронировать заранее.",
+      "collocations": [
+        "book a table",
+        "book a room",
+        "fully booked"
+      ],
+      "pattern": "book sth in advance",
+      "trap": "«Заранее» = in advance, not 'beforehand of time' or 'before'.",
+      "tags": [
+        "life",
+        "travel"
+      ]
+    },
+    {
+      "term": "jet lag",
+      "type": "word",
+      "translation": "джетлаг, усталость от смены часовых поясов",
+      "definition": "tiredness and confusion after a long flight across different time zones",
+      "example": "I always suffer from terrible [jet lag] when I fly from Moscow to New York.",
+      "exampleRu": "Когда я лечу из Москвы в Нью-Йорк, у меня всегда жуткий джетлаг.",
+      "collocations": [
+        "suffer from jet lag",
+        "jet-lagged",
+        "recover from jet lag"
+      ],
+      "pattern": "",
+      "trap": "",
+      "tags": [
+        "life",
+        "travel"
+      ]
+    },
+    {
+      "term": "hand luggage",
+      "type": "collocation",
+      "translation": "ручная кладь",
+      "definition": "small bags that you can take with you onto a plane",
+      "example": "You can only take one small bag as [hand luggage] on this airline.",
+      "exampleRu": "В этой авиакомпании можно взять в ручную кладь только одну небольшую сумку.",
+      "collocations": [
+        "luggage allowance",
+        "excess baggage",
+        "a piece of luggage"
+      ],
+      "pattern": "",
+      "trap": "Luggage is uncountable: not 'a luggage' or 'luggages'; say «a piece of luggage».",
+      "tags": [
+        "life",
+        "travel"
+      ]
+    },
+    {
+      "term": "get stuck",
+      "type": "collocation",
+      "translation": "застрять",
+      "definition": "to be unable to move or leave a place",
+      "example": "We [got stuck] in traffic on the way to the airport for an hour.",
+      "exampleRu": "По дороге в аэропорт мы на час застряли в пробке.",
+      "collocations": [
+        "get stuck in traffic",
+        "stuck in a lift",
+        "stuck at the airport"
+      ],
+      "pattern": "get stuck in / at sth",
+      "trap": "",
+      "tags": [
+        "life",
+        "travel"
+      ]
+    },
+    {
+      "term": "set off",
+      "type": "phrasal-verb",
+      "translation": "отправляться в путь, выезжать",
+      "definition": "to start a journey",
+      "example": "We [set off] early in the morning to avoid the traffic.",
+      "exampleRu": "Мы выехали рано утром, чтобы не попасть в пробки.",
+      "collocations": [
+        "set off on a journey",
+        "set off for home"
+      ],
+      "pattern": "set off for / on sth",
+      "trap": "",
+      "tags": [
+        "life",
+        "travel"
+      ]
+    },
+    {
+      "term": "connecting flight",
+      "type": "collocation",
+      "translation": "стыковочный рейс",
+      "definition": "a second flight that you take to continue a journey after the first one",
+      "example": "Our first flight was late, so we nearly missed our [connecting flight] in Istanbul.",
+      "exampleRu": "Первый рейс задержался, и мы чуть не опоздали на стыковку в Стамбуле.",
+      "collocations": [
+        "a direct flight",
+        "a long layover",
+        "catch a connecting flight"
+      ],
+      "pattern": "",
+      "trap": "",
+      "tags": [
+        "life",
+        "travel"
+      ]
+    },
+    {
+      "term": "off the beaten track",
+      "type": "idiom",
+      "translation": "вдали от туристических маршрутов, в глуши",
+      "definition": "far away from the places where most tourists or people go",
+      "example": "We stayed in a small village [off the beaten track], far from the tourist crowds.",
+      "exampleRu": "Мы жили в маленькой деревне в стороне от туристических маршрутов, вдали от толп.",
+      "collocations": [
+        "off the beaten path (AmE)"
+      ],
+      "pattern": "",
+      "trap": "",
+      "tags": [
+        "life",
+        "travel"
+      ]
+    },
+    {
+      "term": "travel light",
+      "type": "collocation",
+      "translation": "путешествовать налегке",
+      "definition": "to travel with very little luggage",
+      "example": "I always [travel light] and never take more than one small backpack.",
+      "exampleRu": "Я всегда путешествую налегке и беру с собой не больше одного рюкзака.",
+      "collocations": [
+        "pack light"
+      ],
+      "pattern": "",
+      "trap": "«Налегке» = light, not 'easy' or 'lightly'.",
+      "tags": [
+        "life",
+        "travel"
+      ]
+    },
+    {
+      "term": "be delayed",
+      "type": "collocation",
+      "translation": "задерживаться (о рейсе, поезде)",
+      "definition": "to happen or leave later than planned",
+      "example": "Our flight [was delayed] by three hours because of the storm.",
+      "exampleRu": "Наш рейс задержали на три часа из-за грозы.",
+      "collocations": [
+        "a long delay",
+        "be cancelled",
+        "delayed by an hour"
+      ],
+      "pattern": "be delayed by + time / because of sth",
+      "trap": "Not 'the flight is late for three hours'; say «delayed by three hours».",
+      "tags": [
+        "life",
+        "travel"
+      ]
+    },
+    {
+      "term": "get around",
+      "type": "phrasal-verb",
+      "translation": "передвигаться (по городу)",
+      "definition": "to travel from place to place in a city or area",
+      "example": "The easiest way to [get around] the city is by metro.",
+      "exampleRu": "Удобнее всего передвигаться по городу на метро.",
+      "collocations": [
+        "get around by bike",
+        "get around on foot"
+      ],
+      "pattern": "get around + place / by + transport",
+      "trap": "",
+      "tags": [
+        "life",
+        "travel"
+      ]
+    },
+    {
+      "term": "go sightseeing",
+      "type": "collocation",
+      "translation": "осматривать достопримечательности",
+      "definition": "to visit famous or interesting places as a tourist",
+      "example": "On our first day in Rome, we [went sightseeing] with a local guide.",
+      "exampleRu": "В первый день в Риме мы осматривали достопримечательности с местным гидом.",
+      "collocations": [
+        "see the sights",
+        "a sightseeing tour",
+        "a tourist attraction"
+      ],
+      "pattern": "",
+      "trap": "Sightseeing is uncountable: not 'sightseeings'; «достопримечательности» = sights.",
+      "tags": [
+        "life",
+        "travel"
+      ]
+    },
+    {
+      "term": "pick sb up",
+      "type": "phrasal-verb",
+      "translation": "встретить, забрать (на машине)",
+      "definition": "to go somewhere in a car to collect someone",
+      "example": "My brother will [pick us up] from the airport when we land.",
+      "exampleRu": "Брат заберёт нас из аэропорта, когда мы приземлимся.",
+      "collocations": [
+        "drop sb off",
+        "give sb a lift"
+      ],
+      "pattern": "pick sb up from / at a place",
+      "trap": "«Встретить в аэропорту» on the car = pick sb up, not 'meet sb by car'.",
+      "tags": [
+        "life",
+        "travel"
+      ]
+    },
+    {
+      "term": "make ends meet",
+      "type": "idiom",
+      "translation": "сводить концы с концами",
+      "definition": "to have just enough money to pay for the things you need",
+      "example": "Many families are struggling to [make ends meet] because of rising prices.",
+      "exampleRu": "Многие семьи с трудом сводят концы с концами из-за роста цен.",
+      "collocations": [
+        "struggle to make ends meet"
+      ],
+      "pattern": "struggle / try to make ends meet",
+      "trap": "Not 'connect the ends' (calque of «сводить концы с концами»).",
+      "tags": [
+        "life",
+        "money"
+      ]
+    },
+    {
+      "term": "save up",
+      "type": "phrasal-verb",
+      "translation": "копить",
+      "definition": "to keep money so that you can buy something later",
+      "example": "I'm [saving up] for a new laptop, so I'm not eating out much.",
+      "exampleRu": "Я коплю на новый ноутбук, поэтому почти не хожу в кафе.",
+      "collocations": [
+        "save money",
+        "a savings account",
+        "put money aside"
+      ],
+      "pattern": "save up for sth / to do sth",
+      "trap": "«Копить деньги» = save (up), not 'collect money'.",
+      "tags": [
+        "life",
+        "money"
+      ]
+    },
+    {
+      "term": "short of money",
+      "type": "collocation",
+      "translation": "не хватает денег, на мели",
+      "definition": "not having enough money",
+      "example": "I'm a bit [short of money] this month, so I'll skip the trip.",
+      "exampleRu": "В этом месяце у меня туго с деньгами, так что в поездку я не поеду.",
+      "collocations": [
+        "short of cash",
+        "short of time",
+        "run short of sth"
+      ],
+      "pattern": "be short of sth",
+      "trap": "",
+      "tags": [
+        "life",
+        "money"
+      ]
+    },
+    {
+      "term": "cost a fortune",
+      "type": "collocation",
+      "translation": "стоить целое состояние",
+      "definition": "to be very expensive",
+      "example": "Renting a flat in the city centre [costs a fortune] these days.",
+      "exampleRu": "Снимать квартиру в центре сейчас стоит целое состояние.",
+      "collocations": [
+        "spend a fortune",
+        "pay a fortune"
+      ],
+      "pattern": "sth costs a fortune",
+      "trap": "",
+      "tags": [
+        "life",
+        "money"
+      ]
+    },
+    {
+      "term": "pay sb back",
+      "type": "phrasal-verb",
+      "translation": "вернуть долг, отдать деньги",
+      "definition": "to give someone back the money you borrowed from them",
+      "example": "Can you lend me fifty euros? I'll [pay you back] on Friday.",
+      "exampleRu": "Одолжишь пятьдесят евро? Я верну в пятницу.",
+      "collocations": [
+        "lend sb money",
+        "borrow money from sb",
+        "owe sb money"
+      ],
+      "pattern": "pay sb back (for sth)",
+      "trap": "Don't mix up lend («дать в долг») and borrow («взять в долг»).",
+      "tags": [
+        "life",
+        "money"
+      ]
+    },
+    {
+      "term": "stick to a budget",
+      "type": "collocation",
+      "translation": "укладываться в бюджет",
+      "definition": "to spend only the amount of money you planned to spend",
+      "example": "We're trying to [stick to a budget] of two hundred euros a week on food.",
+      "exampleRu": "Мы стараемся укладываться в бюджет двести евро в неделю на еду.",
+      "collocations": [
+        "on a tight budget",
+        "go over budget",
+        "set a budget"
+      ],
+      "pattern": "stick to a budget of + amount",
+      "trap": "",
+      "tags": [
+        "life",
+        "money"
+      ]
+    },
+    {
+      "term": "rip-off",
+      "type": "word",
+      "translation": "грабёж, обдираловка",
+      "definition": "something that costs much more than it should",
+      "example": "Fifteen euros for a coffee? That's a total [rip-off]!",
+      "exampleRu": "Пятнадцать евро за кофе? Это же грабёж!",
+      "collocations": [
+        "a complete rip-off",
+        "rip sb off",
+        "a tourist trap"
+      ],
+      "pattern": "",
+      "trap": "",
+      "tags": [
+        "life",
+        "money"
+      ]
+    },
+    {
+      "term": "take out a loan",
+      "type": "collocation",
+      "translation": "взять кредит",
+      "definition": "to borrow money from a bank that you pay back over time",
+      "example": "They had to [take out a loan] to pay for their son's university fees.",
+      "exampleRu": "Им пришлось взять кредит, чтобы оплатить сыну учёбу в университете.",
+      "collocations": [
+        "pay off a loan",
+        "apply for a loan",
+        "take out a mortgage"
+      ],
+      "pattern": "take out a loan for sth / to do sth",
+      "trap": "Not 'take a credit' (calque of «взять кредит»).",
+      "tags": [
+        "life",
+        "money"
+      ]
+    },
+    {
+      "term": "can't afford sth",
+      "type": "phrase",
+      "translation": "не могу себе позволить (по деньгам)",
+      "definition": "to not have enough money to pay for something",
+      "example": "We [can't afford] a new car until we've paid off our debts.",
+      "exampleRu": "Мы не можем позволить себе новую машину, пока не расплатимся с долгами.",
+      "collocations": [
+        "afford to do sth",
+        "affordable prices"
+      ],
+      "pattern": "can't afford sth / to do sth",
+      "trap": "Not 'can't allow myself' (calque of «не могу себе позволить»).",
+      "tags": [
+        "life",
+        "money"
+      ]
+    },
+    {
+      "term": "cut back on sth",
+      "type": "phrasal-verb",
+      "translation": "сокращать (расходы, потребление)",
+      "definition": "to reduce the amount of money you spend or something you use",
+      "example": "We need to [cut back on] eating out if we want to save money.",
+      "exampleRu": "Если хотим копить, надо реже ходить в рестораны.",
+      "collocations": [
+        "cut costs",
+        "spending cuts"
+      ],
+      "pattern": "cut back on sth / doing sth",
+      "trap": "",
+      "tags": [
+        "life",
+        "money"
+      ]
+    },
+    {
+      "term": "withdraw cash",
+      "type": "collocation",
+      "translation": "снять наличные",
+      "definition": "to take money out of your bank account, for example from a cash machine",
+      "example": "I need to [withdraw cash] from the ATM before we take a taxi.",
+      "exampleRu": "Мне нужно снять наличные в банкомате, прежде чем мы возьмём такси.",
+      "collocations": [
+        "take money out",
+        "a cash machine",
+        "pay in cash"
+      ],
+      "pattern": "withdraw cash / money from sth",
+      "trap": "«Снять деньги» = withdraw / take out money, not 'take off money'.",
+      "tags": [
+        "life",
+        "money"
+      ]
+    },
+    {
+      "term": "get into debt",
+      "type": "collocation",
+      "translation": "влезть в долги",
+      "definition": "to start owing money to someone",
+      "example": "Lots of students [get into debt] because of high rent and tuition fees.",
+      "exampleRu": "Многие студенты влезают в долги из-за высокой аренды и платы за учёбу.",
+      "collocations": [
+        "be in debt",
+        "pay off a debt",
+        "heavily in debt"
+      ],
+      "pattern": "get into debt",
+      "trap": "In this phrase debt is uncountable: not 'get into debts'.",
+      "tags": [
+        "life",
+        "money"
+      ]
+    },
+    {
+      "term": "splash out on sth",
+      "type": "phrasal-verb",
+      "translation": "раскошелиться, потратиться",
+      "definition": "to spend a lot of money on something you enjoy",
+      "example": "We [splashed out on] a really nice hotel for our anniversary.",
+      "exampleRu": "На годовщину мы раскошелились на очень хороший отель.",
+      "collocations": [
+        "splash out on a treat"
+      ],
+      "pattern": "splash out on sth",
+      "trap": "",
+      "tags": [
+        "life",
+        "money"
+      ]
+    },
+    {
+      "term": "make an appointment",
+      "type": "collocation",
+      "translation": "записаться на приём",
+      "definition": "to arrange a time to see a doctor or other professional",
+      "example": "I'd like to [make an appointment] with Dr Brown for tomorrow morning.",
+      "exampleRu": "Я бы хотел записаться к доктору Брауну на завтрашнее утро.",
+      "collocations": [
+        "book an appointment",
+        "cancel an appointment",
+        "miss an appointment"
+      ],
+      "pattern": "make an appointment with sb / for + time",
+      "trap": "Not 'write myself to the doctor' (calque of «записаться к врачу»).",
+      "tags": [
+        "life",
+        "health"
+      ]
+    },
+    {
+      "term": "come down with sth",
+      "type": "phrasal-verb",
+      "translation": "заболеть, подхватить (простуду и т. п.)",
+      "definition": "to start to have an illness that is not serious",
+      "example": "I think I'm [coming down with] a cold; my throat feels awful.",
+      "exampleRu": "Кажется, я заболеваю простудой: горло ужасно болит.",
+      "collocations": [
+        "come down with flu",
+        "catch a cold"
+      ],
+      "pattern": "come down with sth",
+      "trap": "",
+      "tags": [
+        "life",
+        "health"
+      ]
+    },
+    {
+      "term": "get over sth",
+      "type": "phrasal-verb",
+      "translation": "оправиться, выздороветь",
+      "definition": "to become healthy again after an illness",
+      "example": "It took me two weeks to [get over] the flu.",
+      "exampleRu": "Мне потребовалось две недели, чтобы оправиться от гриппа.",
+      "collocations": [
+        "recover from sth",
+        "get over a cold",
+        "get over a breakup"
+      ],
+      "pattern": "get over sth",
+      "trap": "No preposition after over: not 'get over from the flu'.",
+      "tags": [
+        "life",
+        "health"
+      ]
+    },
+    {
+      "term": "have a temperature",
+      "type": "collocation",
+      "translation": "температурить, иметь температуру",
+      "definition": "to have a body temperature that is higher than normal",
+      "example": "My daughter [has a temperature], so she's staying home from school today.",
+      "exampleRu": "У дочки температура, поэтому сегодня она не пойдёт в школу.",
+      "collocations": [
+        "a high temperature",
+        "take sb's temperature",
+        "run a fever"
+      ],
+      "pattern": "have a temperature (of + number)",
+      "trap": "Not 'I have temperature 38'; say «I have a temperature of 38».",
+      "tags": [
+        "life",
+        "health"
+      ]
+    },
+    {
+      "term": "take medicine",
+      "type": "collocation",
+      "translation": "принимать лекарство",
+      "definition": "to swallow medicine to treat an illness",
+      "example": "Remember to [take your medicine] three times a day after meals.",
+      "exampleRu": "Не забывай принимать лекарство три раза в день после еды.",
+      "collocations": [
+        "take a pill",
+        "take painkillers",
+        "over-the-counter medicine"
+      ],
+      "pattern": "take medicine / pills / tablets",
+      "trap": "Not 'drink pills / medicine' (calque of «пить таблетки»).",
+      "tags": [
+        "life",
+        "health"
+      ]
+    },
+    {
+      "term": "sore throat",
+      "type": "collocation",
+      "translation": "больное горло, боль в горле",
+      "definition": "a pain in your throat, often when you have a cold",
+      "example": "I've had a [sore throat] and a runny nose since Monday.",
+      "exampleRu": "С понедельника у меня болит горло и течёт из носа.",
+      "collocations": [
+        "a runny nose",
+        "a bad cough",
+        "a splitting headache"
+      ],
+      "pattern": "have a sore throat",
+      "trap": "Not 'my throat hurts me' or 'my throat is ill'; say «I have a sore throat».",
+      "tags": [
+        "life",
+        "health"
+      ]
+    },
+    {
+      "term": "feel under the weather",
+      "type": "idiom",
+      "translation": "неважно себя чувствовать",
+      "definition": "to feel slightly ill",
+      "example": "I won't come to the party tonight because I'm [feeling under the weather].",
+      "exampleRu": "Я не приду сегодня на вечеринку: что-то неважно себя чувствую.",
+      "collocations": [
+        "a bit under the weather"
+      ],
+      "pattern": "",
+      "trap": "",
+      "tags": [
+        "life",
+        "health"
+      ]
+    },
+    {
+      "term": "get a prescription",
+      "type": "collocation",
+      "translation": "получить рецепт",
+      "definition": "to receive a doctor's written order for medicine",
+      "example": "You need to see a doctor to [get a prescription] for antibiotics.",
+      "exampleRu": "Чтобы получить рецепт на антибиотики, нужно сходить к врачу.",
+      "collocations": [
+        "write a prescription",
+        "available on prescription",
+        "prescribe sth"
+      ],
+      "pattern": "a prescription for sth",
+      "trap": "A medical «рецепт» is a prescription, not a 'recipe' (that's for cooking).",
+      "tags": [
+        "life",
+        "health"
+      ]
+    },
+    {
+      "term": "side effects",
+      "type": "collocation",
+      "translation": "побочные эффекты",
+      "definition": "unwanted effects that a medicine has on your body",
+      "example": "This medicine can cause [side effects] such as headaches and dizziness.",
+      "exampleRu": "Это лекарство может вызывать побочные эффекты, например головную боль и головокружение.",
+      "collocations": [
+        "serious side effects",
+        "cause side effects",
+        "have no side effects"
+      ],
+      "pattern": "side effects of sth",
+      "trap": "",
+      "tags": [
+        "life",
+        "health"
+      ]
+    },
+    {
+      "term": "pass out",
+      "type": "phrasal-verb",
+      "translation": "потерять сознание, упасть в обморок",
+      "definition": "to suddenly become unconscious for a short time",
+      "example": "It was so hot in the crowded room that one man [passed out].",
+      "exampleRu": "В переполненном зале было так жарко, что один мужчина потерял сознание.",
+      "collocations": [
+        "faint",
+        "come round"
+      ],
+      "pattern": "",
+      "trap": "Don't confuse with 'pass away' (= die).",
+      "tags": [
+        "life",
+        "health"
+      ]
+    },
+    {
+      "term": "check-up",
+      "type": "word",
+      "translation": "осмотр, профилактический осмотр",
+      "definition": "a general medical examination to check that you are healthy",
+      "example": "I go to the dentist for a [check-up] twice a year.",
+      "exampleRu": "Я хожу к стоматологу на осмотр два раза в год.",
+      "collocations": [
+        "a regular check-up",
+        "a medical check-up",
+        "have a check-up"
+      ],
+      "pattern": "go for / have a check-up",
+      "trap": "",
+      "tags": [
+        "life",
+        "health"
+      ]
+    },
+    {
+      "term": "be allergic to sth",
+      "type": "collocation",
+      "translation": "иметь аллергию на",
+      "definition": "to become ill when you eat, touch or breathe a particular thing",
+      "example": "I'm [allergic to] cats, so I can't stay at your place.",
+      "exampleRu": "У меня аллергия на кошек, так что у тебя я остановиться не смогу.",
+      "collocations": [
+        "an allergy to sth",
+        "an allergic reaction",
+        "hay fever"
+      ],
+      "pattern": "be allergic to sth",
+      "trap": "Not 'allergic on sth' (calque of «аллергия на»).",
+      "tags": [
+        "life",
+        "health"
+      ]
+    },
+    {
+      "term": "sprain your ankle",
+      "type": "collocation",
+      "translation": "подвернуть лодыжку, растянуть связки",
+      "definition": "to injure your ankle by suddenly twisting it",
+      "example": "I [sprained my ankle] while running and couldn't walk properly for a week.",
+      "exampleRu": "Я подвернул ногу на пробежке и неделю не мог нормально ходить.",
+      "collocations": [
+        "twist your ankle",
+        "break your leg",
+        "a sprained wrist"
+      ],
+      "pattern": "",
+      "trap": "",
+      "tags": [
+        "life",
+        "health"
+      ]
+    }
+  ]
+}

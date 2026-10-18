@@ -1,0 +1,738 @@
+{
+  "id": "feelings-opinions",
+  "title": "Feelings, Opinions & Relationships",
+  "description": "Essential B2 phrases for talking about emotions, giving opinions, agreeing and disagreeing, friendship, relationships, conflicts and character.",
+  "items": [
+    {
+      "term": "have mixed feelings",
+      "type": "collocation",
+      "translation": "испытывать смешанные чувства",
+      "definition": "to feel both positive and negative about something",
+      "example": "I [have mixed feelings] about moving to a new city for this job.",
+      "exampleRu": "У меня смешанные чувства по поводу переезда в другой город ради этой работы.",
+      "collocations": [
+        "strong feelings",
+        "hide your feelings",
+        "express your feelings"
+      ],
+      "pattern": "have mixed feelings about sth / about doing sth",
+      "trap": "Use 'about', not 'to' or 'for': mixed feelings about sth.",
+      "tags": [
+        "people",
+        "emotions"
+      ]
+    },
+    {
+      "term": "be fed up with sth",
+      "type": "phrase",
+      "translation": "сыт по горло, надоело",
+      "definition": "to be annoyed, bored or tired of something that has continued too long",
+      "example": "I'm really [fed up with] working late every evening.",
+      "exampleRu": "Мне ужасно надоело каждый вечер задерживаться на работе.",
+      "collocations": [
+        "fed up to the back teeth",
+        "get fed up"
+      ],
+      "pattern": "be fed up with sth / with doing sth",
+      "trap": "Followed by '-ing', not an infinitive: 'fed up with waiting', not 'fed up to wait'.",
+      "tags": [
+        "people",
+        "emotions"
+      ]
+    },
+    {
+      "term": "be over the moon",
+      "type": "idiom",
+      "translation": "быть на седьмом небе, безумно радоваться",
+      "definition": "to be extremely happy and pleased about something",
+      "example": "She was [over the moon] when she got the promotion.",
+      "exampleRu": "Она была на седьмом небе от счастья, когда получила повышение.",
+      "collocations": [],
+      "pattern": "be over the moon about/with sth",
+      "trap": "Used for great happiness, not for mild pleasure.",
+      "tags": [
+        "people",
+        "emotions"
+      ]
+    },
+    {
+      "term": "feel down",
+      "type": "phrase",
+      "translation": "грустить, быть в подавленном настроении",
+      "definition": "to feel sad or unhappy, often for no single clear reason",
+      "example": "He's been [feeling down] since he lost his job last month.",
+      "exampleRu": "С тех пор как он в прошлом месяце потерял работу, он ходит подавленный.",
+      "collocations": [
+        "feel low",
+        "feel a bit down"
+      ],
+      "pattern": "",
+      "trap": "Not 'feel myself down' (calque of «чувствовать себя»); say 'I feel down'.",
+      "tags": [
+        "people",
+        "emotions"
+      ]
+    },
+    {
+      "term": "be in a good/bad mood",
+      "type": "collocation",
+      "translation": "быть в хорошем/плохом настроении",
+      "definition": "to feel happy and friendly, or annoyed and unfriendly, at a particular time",
+      "example": "The boss is [in a good mood] today, so ask him now.",
+      "exampleRu": "Начальник сегодня в хорошем настроении, так что спроси его прямо сейчас.",
+      "collocations": [
+        "not in the mood for sth",
+        "put sb in a good mood",
+        "mood swings"
+      ],
+      "pattern": "be in a good/bad mood",
+      "trap": "Use 'in': 'in a bad mood', not 'with a bad mood' or 'at a bad mood'.",
+      "tags": [
+        "people",
+        "emotions"
+      ]
+    },
+    {
+      "term": "get on sb's nerves",
+      "type": "idiom",
+      "translation": "действовать на нервы, раздражать",
+      "definition": "to annoy someone a lot, especially by doing something repeatedly",
+      "example": "His constant complaining about everything really [gets on my nerves].",
+      "exampleRu": "Его постоянное нытьё по любому поводу ужасно действует мне на нервы.",
+      "collocations": [
+        "get on my nerves",
+        "calm your nerves"
+      ],
+      "pattern": "",
+      "trap": "Use the possessive: 'it gets on my nerves', not 'it gets me on nerves'.",
+      "tags": [
+        "people",
+        "emotions",
+        "conflict"
+      ]
+    },
+    {
+      "term": "lose your temper",
+      "type": "collocation",
+      "translation": "выйти из себя, сорваться",
+      "definition": "to suddenly become very angry and show it",
+      "example": "I [lost my temper] and shouted at my brother, which I regret.",
+      "exampleRu": "Я сорвался и накричал на брата, о чём теперь жалею.",
+      "collocations": [
+        "keep your temper",
+        "have a short temper",
+        "a bad temper"
+      ],
+      "pattern": "lose your temper with sb",
+      "trap": "'Lose your temper' = become angry; 'lose your nerve' = become too afraid to do something.",
+      "tags": [
+        "people",
+        "emotions",
+        "conflict"
+      ]
+    },
+    {
+      "term": "calm down",
+      "type": "phrasal-verb",
+      "translation": "успокоиться, успокоить",
+      "definition": "to become, or make someone become, less angry, upset or excited",
+      "example": "Just [calm down] and tell me exactly what happened.",
+      "exampleRu": "Просто успокойся и расскажи мне, что именно произошло.",
+      "collocations": [
+        "calm sb down",
+        "calm your nerves"
+      ],
+      "pattern": "calm down / calm sb down",
+      "trap": "Saying 'Calm down!' to an angry person can sound rude; 'Take it easy' is softer.",
+      "tags": [
+        "people",
+        "emotions"
+      ]
+    },
+    {
+      "term": "hurt sb's feelings",
+      "type": "collocation",
+      "translation": "задеть чьи-то чувства, обидеть",
+      "definition": "to upset someone by saying or doing something unkind",
+      "example": "I didn't mean to [hurt your feelings] with that comment.",
+      "exampleRu": "Я не хотел тебя обидеть этим замечанием.",
+      "collocations": [
+        "get hurt",
+        "feel hurt"
+      ],
+      "pattern": "",
+      "trap": "Not 'offend your feelings' (calque of «оскорбить чувства»).",
+      "tags": [
+        "people",
+        "emotions",
+        "relationships"
+      ]
+    },
+    {
+      "term": "take sth personally",
+      "type": "collocation",
+      "translation": "принимать на свой счёт",
+      "definition": "to feel offended by something because you think it is a criticism of you",
+      "example": "It's just feedback on the report, so please don't [take it personally].",
+      "exampleRu": "Это просто отзыв об отчёте, так что, пожалуйста, не принимай на свой счёт.",
+      "collocations": [
+        "nothing personal",
+        "no offence"
+      ],
+      "pattern": "take sth personally",
+      "trap": "Word order: 'take it personally', not 'take personally it'.",
+      "tags": [
+        "people",
+        "emotions",
+        "work"
+      ]
+    },
+    {
+      "term": "embarrassed",
+      "type": "word",
+      "translation": "смущённый, неловко",
+      "definition": "feeling shy, uncomfortable or silly in front of other people",
+      "example": "I felt really [embarrassed] when I forgot my colleague's name.",
+      "exampleRu": "Мне было очень неловко, когда я забыл имя коллеги.",
+      "collocations": [
+        "deeply embarrassed",
+        "an embarrassing situation",
+        "embarrassed silence"
+      ],
+      "pattern": "be/feel embarrassed about sth / to do sth",
+      "trap": "'Embarrassed' = awkward or uncomfortable; 'ashamed' = guilty about something wrong. 'Embarrassing' describes what causes the feeling.",
+      "tags": [
+        "people",
+        "emotions"
+      ]
+    },
+    {
+      "term": "be jealous of sb",
+      "type": "collocation",
+      "translation": "ревновать, завидовать",
+      "definition": "to feel unhappy because someone has something you want, or because you fear losing someone's love",
+      "example": "He gets [jealous of] anyone his girlfriend talks to at parties.",
+      "exampleRu": "Он ревнует свою девушку к каждому, с кем она разговаривает на вечеринках.",
+      "collocations": [
+        "get jealous",
+        "feel jealous",
+        "jealous of sb's success"
+      ],
+      "pattern": "be jealous of sb / sth",
+      "trap": "Use 'of', not 'to' or 'on': jealous of sb.",
+      "tags": [
+        "people",
+        "emotions",
+        "relationships"
+      ]
+    },
+    {
+      "term": "in my opinion",
+      "type": "phrase",
+      "translation": "по-моему, на мой взгляд",
+      "definition": "used to introduce what you personally think",
+      "example": "[In my opinion], the new office layout is much less practical.",
+      "exampleRu": "По-моему, новая планировка офиса гораздо менее удобная.",
+      "collocations": [
+        "express an opinion",
+        "a matter of opinion",
+        "a difference of opinion"
+      ],
+      "pattern": "",
+      "trap": "Not 'on my opinion' or 'by my opinion'; avoid 'In my opinion, I think' (it repeats itself).",
+      "tags": [
+        "people",
+        "opinions"
+      ]
+    },
+    {
+      "term": "as far as I'm concerned",
+      "type": "phrase",
+      "translation": "по моему мнению, что касается меня",
+      "definition": "used to give your personal opinion, often a strong one",
+      "example": "[As far as I'm concerned], the project was a complete success.",
+      "exampleRu": "Как по мне, проект оказался полным успехом.",
+      "collocations": [
+        "as far as I know",
+        "if you ask me"
+      ],
+      "pattern": "",
+      "trap": "Don't use 'As for me' to give an opinion: it introduces a change of topic, not a view.",
+      "tags": [
+        "people",
+        "opinions"
+      ]
+    },
+    {
+      "term": "to be honest",
+      "type": "phrase",
+      "translation": "если честно, честно говоря",
+      "definition": "used before saying what you really think, especially something negative",
+      "example": "[To be honest], I didn't really enjoy the film.",
+      "exampleRu": "Если честно, фильм мне не особо понравился.",
+      "collocations": [
+        "to be frank",
+        "honestly"
+      ],
+      "pattern": "",
+      "trap": "Not 'if to be honest' (calque of «если честно»).",
+      "tags": [
+        "people",
+        "opinions"
+      ]
+    },
+    {
+      "term": "I couldn't agree more",
+      "type": "phrase",
+      "translation": "полностью согласен",
+      "definition": "used to say you agree completely with someone",
+      "example": "When she said we needed more staff, I told her [I couldn't agree more].",
+      "exampleRu": "Когда она сказала, что нам нужно больше сотрудников, я ответил, что полностью согласен.",
+      "collocations": [
+        "I totally agree",
+        "absolutely"
+      ],
+      "pattern": "",
+      "trap": "It means total agreement, not disagreement, despite the negative form.",
+      "tags": [
+        "people",
+        "opinions"
+      ]
+    },
+    {
+      "term": "have a point",
+      "type": "collocation",
+      "translation": "в чём-то прав, резонно",
+      "definition": "to have an idea or argument that is reasonable or partly true",
+      "example": "You [have a point]; we probably should test it before launching.",
+      "exampleRu": "Ты в чём-то прав: наверное, нам действительно стоит протестировать это перед запуском.",
+      "collocations": [
+        "make a point",
+        "a fair point",
+        "that's a good point"
+      ],
+      "pattern": "",
+      "trap": "Not 'you are right in this point'; say 'you have a point' or 'fair point'.",
+      "tags": [
+        "people",
+        "opinions"
+      ]
+    },
+    {
+      "term": "see eye to eye",
+      "type": "idiom",
+      "translation": "сходиться во мнениях",
+      "definition": "to agree with someone",
+      "example": "My manager and I don't always [see eye to eye] on priorities.",
+      "exampleRu": "Мы с начальником не всегда сходимся во мнениях насчёт приоритетов.",
+      "collocations": [],
+      "pattern": "see eye to eye with sb on/about sth",
+      "trap": "Mostly used in negatives: 'we don't see eye to eye'.",
+      "tags": [
+        "people",
+        "opinions",
+        "work"
+      ]
+    },
+    {
+      "term": "agree to disagree",
+      "type": "idiom",
+      "translation": "остаться каждый при своём мнении",
+      "definition": "to accept that two people have different opinions and stop arguing",
+      "example": "We argued for an hour and finally decided to [agree to disagree].",
+      "exampleRu": "Мы спорили целый час и в итоге решили остаться каждый при своём мнении.",
+      "collocations": [
+        "let's agree to disagree"
+      ],
+      "pattern": "",
+      "trap": "",
+      "tags": [
+        "people",
+        "opinions",
+        "conflict"
+      ]
+    },
+    {
+      "term": "change your mind",
+      "type": "collocation",
+      "translation": "передумать",
+      "definition": "to change a decision or opinion",
+      "example": "I was going to quit, but I [changed my mind] after talking to her.",
+      "exampleRu": "Я собирался уволиться, но передумал после разговора с ней.",
+      "collocations": [
+        "make up your mind",
+        "have sth on your mind"
+      ],
+      "pattern": "change your mind about sth",
+      "trap": "Not 'change my decision' or 'rethink' for everyday use; 'I changed my mind' is the natural phrase.",
+      "tags": [
+        "people",
+        "opinions"
+      ]
+    },
+    {
+      "term": "make friends",
+      "type": "collocation",
+      "translation": "заводить друзей, подружиться",
+      "definition": "to start a friendship with someone",
+      "example": "It can be hard to [make friends] when you move to a new country.",
+      "exampleRu": "Заводить друзей бывает сложно, когда переезжаешь в другую страну.",
+      "collocations": [
+        "close friend",
+        "old friend",
+        "mutual friend"
+      ],
+      "pattern": "make friends with sb",
+      "trap": "Not 'find friends' or 'friend with sb'; always plural: 'I made friends with him'.",
+      "tags": [
+        "people",
+        "friendship"
+      ]
+    },
+    {
+      "term": "reliable",
+      "type": "word",
+      "translation": "надёжный",
+      "definition": "able to be trusted to do what is expected",
+      "example": "She's the most [reliable] person on our team; she never misses a deadline.",
+      "exampleRu": "Она самый надёжный человек в нашей команде: никогда не срывает сроки.",
+      "collocations": [
+        "completely reliable",
+        "reliable source",
+        "reliable friend"
+      ],
+      "pattern": "",
+      "trap": "",
+      "tags": [
+        "people",
+        "character"
+      ]
+    },
+    {
+      "term": "get on with sb",
+      "type": "phrasal-verb",
+      "translation": "ладить с кем-то",
+      "definition": "to have a friendly relationship with someone",
+      "example": "Do you [get on with] your colleagues at the new job?",
+      "exampleRu": "Ты ладишь с коллегами на новой работе?",
+      "collocations": [
+        "get on well with sb",
+        "get along with sb"
+      ],
+      "pattern": "get on (well) with sb",
+      "trap": "Don't confuse with 'get on with sth' (continue doing it). US English prefers 'get along with'.",
+      "tags": [
+        "people",
+        "relationships"
+      ]
+    },
+    {
+      "term": "have a lot in common",
+      "type": "phrase",
+      "translation": "иметь много общего",
+      "definition": "to share many interests, opinions or experiences",
+      "example": "We [have a lot in common], especially our love of hiking.",
+      "exampleRu": "У нас много общего, особенно любовь к походам.",
+      "collocations": [
+        "have nothing in common",
+        "common interests"
+      ],
+      "pattern": "have a lot in common with sb",
+      "trap": "Not 'have much common' or 'have many common things'.",
+      "tags": [
+        "people",
+        "friendship"
+      ]
+    },
+    {
+      "term": "keep in touch",
+      "type": "phrase",
+      "translation": "поддерживать связь, не теряться",
+      "definition": "to continue to communicate with someone who you no longer see often",
+      "example": "We still [keep in touch], even though she moved to Canada.",
+      "exampleRu": "Мы до сих пор общаемся, хотя она переехала в Канаду.",
+      "collocations": [
+        "stay in touch",
+        "lose touch with sb",
+        "get in touch"
+      ],
+      "pattern": "keep in touch with sb",
+      "trap": "Not 'keep the connection' (calque of «держать связь»).",
+      "tags": [
+        "people",
+        "friendship"
+      ]
+    },
+    {
+      "term": "drift apart",
+      "type": "phrasal-verb",
+      "translation": "отдалиться друг от друга",
+      "definition": "to gradually become less close to someone",
+      "example": "We [drifted apart] after university because we lived in different cities.",
+      "exampleRu": "После университета мы отдалились друг от друга, потому что жили в разных городах.",
+      "collocations": [
+        "grow apart"
+      ],
+      "pattern": "drift apart (from sb)",
+      "trap": "",
+      "tags": [
+        "people",
+        "friendship",
+        "relationships"
+      ]
+    },
+    {
+      "term": "look up to sb",
+      "type": "phrasal-verb",
+      "translation": "уважать, равняться на кого-то",
+      "definition": "to admire and respect someone",
+      "example": "I've always [looked up to] my older sister.",
+      "exampleRu": "Я всегда равнялся на свою старшую сестру.",
+      "collocations": [
+        "role model",
+        "admire sb"
+      ],
+      "pattern": "look up to sb",
+      "trap": "Don't confuse with 'look sth up' (search for information).",
+      "tags": [
+        "people",
+        "relationships"
+      ]
+    },
+    {
+      "term": "let sb down",
+      "type": "phrasal-verb",
+      "translation": "подвести",
+      "definition": "to disappoint someone by not doing what they expected",
+      "example": "I promised to help, and I really don't want to [let you down].",
+      "exampleRu": "Я обещал помочь и очень не хочу тебя подвести.",
+      "collocations": [
+        "feel let down",
+        "a big letdown"
+      ],
+      "pattern": "let sb down",
+      "trap": "Not 'put sb down', which means to criticise or humiliate someone.",
+      "tags": [
+        "people",
+        "relationships"
+      ]
+    },
+    {
+      "term": "take sb for granted",
+      "type": "idiom",
+      "translation": "не ценить, воспринимать как должное",
+      "definition": "to not appreciate someone because they are always there for you",
+      "example": "He felt his family [took him for granted] and never thanked him.",
+      "exampleRu": "Он чувствовал, что семья его не ценит и никогда не благодарит.",
+      "collocations": [
+        "take sth for granted"
+      ],
+      "pattern": "take sb/sth for granted",
+      "trap": "Keep the object in the middle: 'take him for granted', not 'take for granted him'.",
+      "tags": [
+        "people",
+        "relationships"
+      ]
+    },
+    {
+      "term": "go out with sb",
+      "type": "phrasal-verb",
+      "translation": "встречаться с кем-то",
+      "definition": "to have a romantic relationship with someone",
+      "example": "How long have you been [going out with] Anna?",
+      "exampleRu": "Сколько вы с Анной уже встречаетесь?",
+      "collocations": [
+        "ask sb out",
+        "go on a date"
+      ],
+      "pattern": "go out with sb",
+      "trap": "Not 'meet with sb' (calque of «встречаться»); 'meet' is for single encounters.",
+      "tags": [
+        "people",
+        "relationships"
+      ]
+    },
+    {
+      "term": "break up",
+      "type": "phrasal-verb",
+      "translation": "расстаться",
+      "definition": "to end a romantic relationship",
+      "example": "They [broke up] after five years together but stayed friends.",
+      "exampleRu": "Они расстались после пяти лет вместе, но остались друзьями.",
+      "collocations": [
+        "split up",
+        "a bad break-up"
+      ],
+      "pattern": "break up with sb",
+      "trap": "Use 'break up with sb', not 'break up sb'. 'Divorce' is only for married couples.",
+      "tags": [
+        "people",
+        "relationships"
+      ]
+    },
+    {
+      "term": "fall out with sb",
+      "type": "phrasal-verb",
+      "translation": "поссориться, разругаться",
+      "definition": "to stop being friendly with someone after an argument",
+      "example": "I [fell out with] my best friend over a stupid argument about money.",
+      "exampleRu": "Я разругался с лучшим другом из-за глупого спора о деньгах.",
+      "collocations": [
+        "have a falling-out"
+      ],
+      "pattern": "fall out with sb over sth",
+      "trap": "It means the friendship is damaged, not just a short argument.",
+      "tags": [
+        "people",
+        "conflict",
+        "friendship"
+      ]
+    },
+    {
+      "term": "have an argument",
+      "type": "collocation",
+      "translation": "поссориться, поругаться",
+      "definition": "to disagree angrily with someone",
+      "example": "My parents [had an argument] about money again last night.",
+      "exampleRu": "Вчера вечером родители опять поругались из-за денег.",
+      "collocations": [
+        "a heated argument",
+        "win an argument",
+        "start an argument"
+      ],
+      "pattern": "have an argument with sb about/over sth",
+      "trap": "Not 'make an argument' (that means to present reasons for something).",
+      "tags": [
+        "people",
+        "conflict"
+      ]
+    },
+    {
+      "term": "sort sth out",
+      "type": "phrasal-verb",
+      "translation": "разобраться, уладить",
+      "definition": "to deal successfully with a problem or disagreement",
+      "example": "Let's sit down and [sort this out] before it gets worse.",
+      "exampleRu": "Давай сядем и разберёмся с этим, пока всё не стало хуже.",
+      "collocations": [
+        "sort out a problem",
+        "sort out a misunderstanding"
+      ],
+      "pattern": "sort sth out / sort out sth",
+      "trap": "With a pronoun the object goes in the middle: 'sort it out', not 'sort out it'.",
+      "tags": [
+        "people",
+        "conflict"
+      ]
+    },
+    {
+      "term": "make up",
+      "type": "phrasal-verb",
+      "translation": "помириться",
+      "definition": "to become friendly with someone again after an argument",
+      "example": "They had a big fight but [made up] the next day.",
+      "exampleRu": "Они сильно поссорились, но на следующий день помирились.",
+      "collocations": [
+        "kiss and make up"
+      ],
+      "pattern": "make up (with sb)",
+      "trap": "It has many other meanings (invent, form, cosmetics); in this sense it takes no direct object: 'make up with sb'.",
+      "tags": [
+        "people",
+        "conflict",
+        "relationships"
+      ]
+    },
+    {
+      "term": "reach a compromise",
+      "type": "collocation",
+      "translation": "прийти к компромиссу",
+      "definition": "to agree on a solution where each side accepts less than it wanted",
+      "example": "After long discussions, we finally [reached a compromise] on the budget.",
+      "exampleRu": "После долгих обсуждений мы наконец пришли к компромиссу по бюджету.",
+      "collocations": [
+        "come to a compromise",
+        "make compromises",
+        "compromise on sth"
+      ],
+      "pattern": "reach a compromise on/over sth",
+      "trap": "Use an article: 'reach a compromise', not 'reach compromise' or 'find compromise'.",
+      "tags": [
+        "people",
+        "conflict",
+        "work"
+      ]
+    },
+    {
+      "term": "put yourself in sb's shoes",
+      "type": "idiom",
+      "translation": "поставить себя на чьё-то место",
+      "definition": "to imagine how you would feel in someone else's situation",
+      "example": "Try to [put yourself in her shoes] before you judge her.",
+      "exampleRu": "Попробуй поставить себя на её место, прежде чем её осуждать.",
+      "collocations": [
+        "if I were in your shoes"
+      ],
+      "pattern": "",
+      "trap": "",
+      "tags": [
+        "people",
+        "relationships"
+      ]
+    },
+    {
+      "term": "down-to-earth",
+      "type": "word",
+      "translation": "простой, без пафоса, практичный",
+      "definition": "practical, sensible and friendly, not trying to seem important",
+      "example": "Despite being famous, he's surprisingly [down-to-earth] and friendly.",
+      "exampleRu": "Несмотря на славу, он удивительно простой и дружелюбный человек.",
+      "collocations": [
+        "down-to-earth approach"
+      ],
+      "pattern": "",
+      "trap": "Positive meaning (practical, unpretentious), unlike «приземлённый», which can sound negative.",
+      "tags": [
+        "people",
+        "character"
+      ]
+    },
+    {
+      "term": "open-minded",
+      "type": "word",
+      "translation": "непредвзятый, с широкими взглядами",
+      "definition": "willing to consider new ideas and opinions",
+      "example": "My grandparents are surprisingly [open-minded] about new ideas and technology.",
+      "exampleRu": "Мои бабушка с дедушкой на удивление открыты новым идеям и технологиям.",
+      "collocations": [
+        "narrow-minded",
+        "keep an open mind"
+      ],
+      "pattern": "be open-minded about sth",
+      "trap": "",
+      "tags": [
+        "people",
+        "character"
+      ]
+    },
+    {
+      "term": "stubborn",
+      "type": "word",
+      "translation": "упрямый",
+      "definition": "refusing to change your opinion or behaviour even when you should",
+      "example": "He's too [stubborn] to admit he made a mistake.",
+      "exampleRu": "Он слишком упрямый, чтобы признать свою ошибку.",
+      "collocations": [
+        "as stubborn as a mule",
+        "stubborn refusal",
+        "a stubborn problem"
+      ],
+      "pattern": "",
+      "trap": "",
+      "tags": [
+        "people",
+        "character"
+      ]
+    }
+  ]
+}

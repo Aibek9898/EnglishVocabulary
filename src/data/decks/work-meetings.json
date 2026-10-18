@@ -1,0 +1,741 @@
+{
+  "id": "work-meetings",
+  "title": "Work & Meetings",
+  "description": "Everyday English for the office: meetings, emails, deadlines, projects, careers and negotiations.",
+  "items": [
+    {
+      "term": "meet a deadline",
+      "type": "collocation",
+      "translation": "уложиться в срок, успеть к сроку",
+      "definition": "to finish a piece of work by the time it was supposed to be finished",
+      "example": "The whole team stayed late to [meet the deadline] for the client report.",
+      "exampleRu": "Вся команда задержалась на работе, чтобы успеть сдать отчёт клиенту в срок.",
+      "collocations": [
+        "miss a deadline",
+        "a tight deadline",
+        "extend a deadline"
+      ],
+      "pattern": "meet a deadline for sth",
+      "trap": "Not 'fit into a deadline' (calque of «уложиться в срок»); you meet or miss a deadline.",
+      "tags": [
+        "work",
+        "deadlines"
+      ]
+    },
+    {
+      "term": "set up a meeting",
+      "type": "collocation",
+      "translation": "назначить встречу, организовать встречу",
+      "definition": "to arrange a time and place for a meeting",
+      "example": "Could you [set up a meeting] with the marketing team for next Tuesday?",
+      "exampleRu": "Можешь назначить встречу с отделом маркетинга на следующий вторник?",
+      "collocations": [
+        "arrange a meeting",
+        "schedule a meeting",
+        "reschedule a meeting"
+      ],
+      "pattern": "set up a meeting with sb (for + time)",
+      "trap": "Not 'appoint a meeting' (calque of «назначить встречу»); you appoint people to jobs.",
+      "tags": [
+        "work",
+        "meetings"
+      ]
+    },
+    {
+      "term": "call sth off",
+      "type": "phrasal-verb",
+      "translation": "отменить",
+      "definition": "to decide that a planned event will not happen",
+      "example": "The CEO was ill, so they had to [call off] the annual conference.",
+      "exampleRu": "Гендиректор заболел, поэтому ежегодную конференцию пришлось отменить.",
+      "collocations": [
+        "call off a meeting",
+        "call off a strike",
+        "call off the deal"
+      ],
+      "pattern": "call sth off / call off sth",
+      "trap": "Call off = cancel completely; to move an event to a later date, use 'put off' or 'postpone'.",
+      "tags": [
+        "work",
+        "meetings"
+      ]
+    },
+    {
+      "term": "put sth off",
+      "type": "phrasal-verb",
+      "translation": "откладывать, переносить на потом",
+      "definition": "to delay doing something or move it to a later time",
+      "example": "We can't [put off] this decision any longer; the budget is due tomorrow.",
+      "exampleRu": "Мы больше не можем откладывать это решение: бюджет нужно сдать завтра.",
+      "collocations": [
+        "put off a meeting",
+        "keep putting things off"
+      ],
+      "pattern": "put sth off / put off doing sth",
+      "trap": "Followed by -ing: 'put off calling', not 'put off to call'.",
+      "tags": [
+        "work",
+        "meetings"
+      ]
+    },
+    {
+      "term": "run late",
+      "type": "collocation",
+      "translation": "задерживаться, опаздывать",
+      "definition": "to be behind the planned time",
+      "example": "Sorry, my previous call is [running late], so I'll join in ten minutes.",
+      "exampleRu": "Извините, предыдущий созвон затянулся, я подключусь минут через десять.",
+      "collocations": [
+        "run behind schedule",
+        "run over time"
+      ],
+      "pattern": "be running late",
+      "trap": "Usually in the continuous form: 'I'm running late', not 'I run late'.",
+      "tags": [
+        "work",
+        "meetings"
+      ]
+    },
+    {
+      "term": "be on the same page",
+      "type": "idiom",
+      "translation": "одинаково понимать ситуацию, быть на одной волне",
+      "definition": "to agree or have the same understanding about something",
+      "example": "Let's have a quick call so everyone is [on the same page] before the launch.",
+      "exampleRu": "Давайте быстро созвонимся, чтобы перед запуском все одинаково понимали задачу.",
+      "collocations": [
+        "get everyone on the same page"
+      ],
+      "pattern": "be on the same page (about sth)",
+      "trap": "Always 'the same page', not 'one page' (calque of «на одной волне/странице»).",
+      "tags": [
+        "work",
+        "meetings"
+      ]
+    },
+    {
+      "term": "follow up on sth",
+      "type": "phrasal-verb",
+      "translation": "вернуться к вопросу, проконтролировать, напомнить",
+      "definition": "to take further action or check on something after an earlier contact",
+      "example": "I'm writing to [follow up on] our conversation about the new contract.",
+      "exampleRu": "Пишу, чтобы вернуться к нашему разговору о новом контракте.",
+      "collocations": [
+        "a follow-up email",
+        "a follow-up meeting"
+      ],
+      "pattern": "follow up on sth / follow up with sb",
+      "trap": "Verb is two words (follow up), noun and adjective take a hyphen (a follow-up).",
+      "tags": [
+        "work",
+        "emails"
+      ]
+    },
+    {
+      "term": "get back to sb",
+      "type": "phrasal-verb",
+      "translation": "ответить позже, перезвонить",
+      "definition": "to reply to someone later, usually with information they asked for",
+      "example": "Let me check the figures and I'll [get back to you] by the end of the day.",
+      "exampleRu": "Дайте мне проверить цифры, и я отвечу вам до конца дня.",
+      "collocations": [
+        "get back to sb on sth",
+        "get back to sb with an answer"
+      ],
+      "pattern": "get back to sb (on/about sth)",
+      "trap": "Not 'return to you' («вернусь к вам»); 'get back to you' is the natural phrase.",
+      "tags": [
+        "work",
+        "communication"
+      ]
+    },
+    {
+      "term": "keep sb in the loop",
+      "type": "idiom",
+      "translation": "держать в курсе",
+      "definition": "to keep someone informed about what is happening",
+      "example": "Please [keep me in the loop] if the client changes the requirements again.",
+      "exampleRu": "Пожалуйста, держи меня в курсе, если клиент снова поменяет требования.",
+      "collocations": [
+        "loop sb in",
+        "be out of the loop"
+      ],
+      "pattern": "keep sb in the loop (about sth)",
+      "trap": "Not 'keep me in the course' (calque of «держать в курсе»).",
+      "tags": [
+        "work",
+        "communication"
+      ]
+    },
+    {
+      "term": "take the minutes",
+      "type": "collocation",
+      "translation": "вести протокол",
+      "definition": "to write the official notes of what is said and decided at a meeting",
+      "example": "Anna usually [takes the minutes] at our weekly management meeting.",
+      "exampleRu": "На наших еженедельных совещаниях руководства протокол обычно ведёт Анна.",
+      "collocations": [
+        "circulate the minutes",
+        "approve the minutes"
+      ],
+      "pattern": "take (the) minutes",
+      "trap": "Not 'write a protocol': in English 'protocol' means rules of behaviour, the notes are 'minutes'.",
+      "tags": [
+        "work",
+        "meetings"
+      ]
+    },
+    {
+      "term": "on the agenda",
+      "type": "phrase",
+      "translation": "на повестке дня",
+      "definition": "included in the list of things to be discussed at a meeting",
+      "example": "The new hiring policy is the first item [on the agenda] this morning.",
+      "exampleRu": "Новая политика найма стоит первым пунктом в сегодняшней утренней повестке.",
+      "collocations": [
+        "set the agenda",
+        "an item on the agenda",
+        "be high on the agenda"
+      ],
+      "pattern": "be on the agenda",
+      "trap": "Use 'on' the agenda, not 'in' the agenda; 'agenda' is not a diary or planner.",
+      "tags": [
+        "work",
+        "meetings"
+      ]
+    },
+    {
+      "term": "bring sth up",
+      "type": "phrasal-verb",
+      "translation": "поднять вопрос, затронуть тему",
+      "definition": "to start talking about a subject",
+      "example": "She [brought up] the issue of remote work at the end of the meeting.",
+      "exampleRu": "В конце совещания она подняла вопрос об удалённой работе.",
+      "collocations": [
+        "bring up a problem",
+        "bring up a point"
+      ],
+      "pattern": "bring sth up / bring up sth",
+      "trap": "Not 'raise up a question'; say 'raise a question' or 'bring up a question'.",
+      "tags": [
+        "work",
+        "meetings"
+      ]
+    },
+    {
+      "term": "wrap sth up",
+      "type": "phrasal-verb",
+      "translation": "заканчивать, подводить итог",
+      "definition": "to finish a meeting, task or discussion",
+      "example": "We're almost out of time, so let's [wrap up] with a quick summary.",
+      "exampleRu": "Время почти вышло, так что давайте закругляться и коротко подведём итоги.",
+      "collocations": [
+        "wrap up a meeting",
+        "wrap up a deal"
+      ],
+      "pattern": "wrap sth up / wrap up (with sth)",
+      "trap": "",
+      "tags": [
+        "work",
+        "meetings"
+      ]
+    },
+    {
+      "term": "go over sth",
+      "type": "phrasal-verb",
+      "translation": "просмотреть, пройтись по, проверить",
+      "definition": "to look at or discuss something carefully, often again",
+      "example": "Can we [go over] the slides together before the presentation tomorrow?",
+      "exampleRu": "Можем вместе пройтись по слайдам перед завтрашней презентацией?",
+      "collocations": [
+        "go over the details",
+        "go over the numbers"
+      ],
+      "pattern": "go over sth (with sb)",
+      "trap": "The object comes after 'over': 'go over the plan', not 'go the plan over'.",
+      "tags": [
+        "work",
+        "meetings"
+      ]
+    },
+    {
+      "term": "make a decision",
+      "type": "collocation",
+      "translation": "принять решение",
+      "definition": "to choose what to do after thinking about it",
+      "example": "We need to [make a decision] about the new supplier by Friday.",
+      "exampleRu": "Нам нужно принять решение по новому поставщику до пятницы.",
+      "collocations": [
+        "reach a decision",
+        "a tough decision",
+        "put off a decision"
+      ],
+      "pattern": "make a decision about sth / to do sth",
+      "trap": "Not 'take/accept a decision' (calque of «принять решение»).",
+      "tags": [
+        "work"
+      ]
+    },
+    {
+      "term": "work overtime",
+      "type": "collocation",
+      "translation": "работать сверхурочно, перерабатывать",
+      "definition": "to work more hours than your normal working time",
+      "example": "During the busy season, most of the staff [work overtime] without complaining.",
+      "exampleRu": "В горячий сезон большинство сотрудников без жалоб работают сверхурочно.",
+      "collocations": [
+        "do overtime",
+        "be paid overtime",
+        "unpaid overtime"
+      ],
+      "pattern": "",
+      "trap": "'Overtime' is one word and has no article here: not 'work an overtime'.",
+      "tags": [
+        "work"
+      ]
+    },
+    {
+      "term": "take a day off",
+      "type": "collocation",
+      "translation": "взять выходной, взять отгул",
+      "definition": "to not go to work for one day, with permission",
+      "example": "I'm going to [take a day off] on Friday to move into my new flat.",
+      "exampleRu": "В пятницу я возьму выходной, чтобы переехать в новую квартиру.",
+      "collocations": [
+        "take time off",
+        "have a day off",
+        "take a week off"
+      ],
+      "pattern": "take a day off (work)",
+      "trap": "Not 'take a weekend' or 'take a day out' ('a day out' is a trip for fun).",
+      "tags": [
+        "work"
+      ]
+    },
+    {
+      "term": "be on sick leave",
+      "type": "collocation",
+      "translation": "быть на больничном",
+      "definition": "to be away from work because you are ill",
+      "example": "Mark has [been on sick leave] since Monday, so I'm covering his clients.",
+      "exampleRu": "Марк на больничном с понедельника, так что его клиентов веду я.",
+      "collocations": [
+        "take sick leave",
+        "maternity leave",
+        "annual leave"
+      ],
+      "pattern": "be on sick leave",
+      "trap": "Not 'be on a hospital' or 'on the sick list' (calques of «на больничном»).",
+      "tags": [
+        "work"
+      ]
+    },
+    {
+      "term": "apply for a job",
+      "type": "collocation",
+      "translation": "подать заявку на вакансию, откликнуться на вакансию",
+      "definition": "to formally ask to be considered for a job",
+      "example": "She [applied for a job] at a tech startup after finishing her MBA.",
+      "exampleRu": "После получения MBA она откликнулась на вакансию в технологическом стартапе.",
+      "collocations": [
+        "apply for a position",
+        "a job application",
+        "turn down a job offer"
+      ],
+      "pattern": "apply for a job / apply to a company",
+      "trap": "'Apply for' a job or position, but 'apply to' a company or university.",
+      "tags": [
+        "work",
+        "careers"
+      ]
+    },
+    {
+      "term": "get promoted",
+      "type": "collocation",
+      "translation": "получить повышение (по должности)",
+      "definition": "to be given a higher position at work",
+      "example": "After two years in sales, he [got promoted] to regional manager.",
+      "exampleRu": "Через два года работы в продажах его повысили до регионального менеджера.",
+      "collocations": [
+        "be promoted to sth",
+        "get a promotion"
+      ],
+      "pattern": "get promoted to + position",
+      "trap": "A promotion is a better job; more money is a 'pay rise' (US 'raise').",
+      "tags": [
+        "work",
+        "careers"
+      ]
+    },
+    {
+      "term": "get a pay rise",
+      "type": "collocation",
+      "translation": "получить прибавку к зарплате",
+      "definition": "to have your salary increased",
+      "example": "I'm planning to ask my manager whether I can [get a pay rise] this year.",
+      "exampleRu": "Я собираюсь спросить у начальника, можно ли мне в этом году получить прибавку.",
+      "collocations": [
+        "ask for a pay rise",
+        "get a raise",
+        "a salary increase"
+      ],
+      "pattern": "",
+      "trap": "Not 'salary rising' or 'a rise of salary'; 'pay rise' is British, 'raise' is American.",
+      "tags": [
+        "work",
+        "careers"
+      ]
+    },
+    {
+      "term": "hand in your notice",
+      "type": "phrase",
+      "translation": "подать заявление об уходе, уволиться по собственному желанию",
+      "definition": "to formally tell your employer that you are going to leave your job",
+      "example": "After five years at the bank, she finally [handed in her notice] last week.",
+      "exampleRu": "Проработав в банке пять лет, на прошлой неделе она наконец подала заявление об уходе.",
+      "collocations": [
+        "give notice",
+        "a notice period",
+        "resign from a job"
+      ],
+      "pattern": "hand in your notice",
+      "trap": "Not 'write a statement' (calque of «написать заявление»).",
+      "tags": [
+        "work",
+        "careers"
+      ]
+    },
+    {
+      "term": "lay sb off",
+      "type": "phrasal-verb",
+      "translation": "сокращать (сотрудников)",
+      "definition": "to stop employing workers because there is not enough work or money",
+      "example": "The factory [laid off] two hundred workers when orders dropped sharply.",
+      "exampleRu": "Когда заказы резко упали, завод сократил двести рабочих.",
+      "collocations": [
+        "mass layoffs",
+        "be laid off"
+      ],
+      "pattern": "lay sb off / be laid off",
+      "trap": "'Laid off' is because of cuts, not your fault; if it's for bad work, you are 'fired'. Past form is 'laid', not 'layed'.",
+      "tags": [
+        "work",
+        "careers"
+      ]
+    },
+    {
+      "term": "climb the career ladder",
+      "type": "idiom",
+      "translation": "подниматься по карьерной лестнице",
+      "definition": "to move to higher and better jobs in your career",
+      "example": "He spent his twenties trying to [climb the career ladder] at a big consulting firm.",
+      "exampleRu": "Свои двадцать с небольшим он провёл, пытаясь подняться по карьерной лестнице в крупной консалтинговой фирме.",
+      "collocations": [
+        "move up the career ladder",
+        "career growth"
+      ],
+      "pattern": "",
+      "trap": "Not 'career stairs' (calque of «карьерная лестница»).",
+      "tags": [
+        "work",
+        "careers"
+      ]
+    },
+    {
+      "term": "work-life balance",
+      "type": "collocation",
+      "translation": "баланс между работой и личной жизнью",
+      "definition": "the right amount of time spent on work compared with free time and family",
+      "example": "Working from home has really improved my [work-life balance] this year.",
+      "exampleRu": "Удалёнка в этом году заметно улучшила баланс между моей работой и личной жизнью.",
+      "collocations": [
+        "a healthy work-life balance",
+        "improve your work-life balance"
+      ],
+      "pattern": "",
+      "trap": "Word order is fixed: 'work-life balance', not 'balance of work and life'.",
+      "tags": [
+        "work",
+        "careers"
+      ]
+    },
+    {
+      "term": "be snowed under",
+      "type": "idiom",
+      "translation": "быть заваленным работой",
+      "definition": "to have so much work that you can hardly deal with it",
+      "example": "I'd love to help, but I'm [snowed under] with reports until Thursday.",
+      "exampleRu": "Я бы с радостью помог, но до четверга я завален отчётами.",
+      "collocations": [
+        "a heavy workload",
+        "be swamped"
+      ],
+      "pattern": "be snowed under (with sth)",
+      "trap": "",
+      "tags": [
+        "work"
+      ]
+    },
+    {
+      "term": "be in charge of sth",
+      "type": "phrase",
+      "translation": "отвечать за, руководить",
+      "definition": "to be the person who controls or is responsible for something",
+      "example": "Olga is [in charge of] the whole onboarding process for new employees.",
+      "exampleRu": "Ольга отвечает за весь процесс адаптации новых сотрудников.",
+      "collocations": [
+        "put sb in charge of sth",
+        "the person in charge"
+      ],
+      "pattern": "be in charge of sth / doing sth",
+      "trap": "Use 'of', not 'for': 'in charge of the budget', not 'in charge for the budget'.",
+      "tags": [
+        "work",
+        "projects"
+      ]
+    },
+    {
+      "term": "be on track",
+      "type": "idiom",
+      "translation": "идти по плану, укладываться в график",
+      "definition": "to be progressing as planned and likely to succeed",
+      "example": "Despite a few delays, the project is still [on track] to launch in March.",
+      "exampleRu": "Несмотря на некоторые задержки, проект по-прежнему идёт по плану и стартует в марте.",
+      "collocations": [
+        "keep sth on track",
+        "get back on track",
+        "ahead of schedule"
+      ],
+      "pattern": "be on track to do sth / for sth",
+      "trap": "",
+      "tags": [
+        "work",
+        "projects"
+      ]
+    },
+    {
+      "term": "fall behind",
+      "type": "phrasal-verb",
+      "translation": "отставать (от графика)",
+      "definition": "to fail to do something as quickly as planned",
+      "example": "We [fell behind] schedule because two developers left in the same month.",
+      "exampleRu": "Мы отстали от графика, потому что в один месяц ушли сразу два разработчика.",
+      "collocations": [
+        "fall behind schedule",
+        "fall behind with payments",
+        "behind schedule"
+      ],
+      "pattern": "fall behind (with sth) / fall behind schedule",
+      "trap": "Not 'lag from the schedule' (calque of «отставать от графика»).",
+      "tags": [
+        "work",
+        "projects",
+        "deadlines"
+      ]
+    },
+    {
+      "term": "make progress",
+      "type": "collocation",
+      "translation": "продвигаться, добиваться прогресса",
+      "definition": "to develop or move forward towards finishing something",
+      "example": "We've [made good progress] on the new app, but testing will take a while.",
+      "exampleRu": "Мы неплохо продвинулись с новым приложением, но тестирование займёт время.",
+      "collocations": [
+        "make real progress",
+        "slow progress",
+        "a progress report"
+      ],
+      "pattern": "make progress on/with sth",
+      "trap": "Not 'do progress', and 'progress' is uncountable: not 'a progress' or 'progresses'.",
+      "tags": [
+        "work",
+        "projects"
+      ]
+    },
+    {
+      "term": "take responsibility for sth",
+      "type": "collocation",
+      "translation": "брать на себя ответственность за",
+      "definition": "to accept that you are in charge of something or that it is your fault",
+      "example": "The manager [took responsibility for] the mistake instead of blaming her team.",
+      "exampleRu": "Руководитель взяла ответственность за ошибку на себя, а не стала обвинять команду.",
+      "collocations": [
+        "accept responsibility",
+        "share responsibility"
+      ],
+      "pattern": "take responsibility for sth / for doing sth",
+      "trap": "Use 'for', not 'on': not 'take responsibility on yourself' (calque of «взять на себя»).",
+      "tags": [
+        "work",
+        "projects"
+      ]
+    },
+    {
+      "term": "come up with sth",
+      "type": "phrasal-verb",
+      "translation": "придумать, предложить",
+      "definition": "to think of an idea, plan or solution",
+      "example": "The team [came up with] a clever way to cut delivery costs.",
+      "exampleRu": "Команда придумала хитрый способ сократить расходы на доставку.",
+      "collocations": [
+        "come up with an idea",
+        "come up with a solution",
+        "come up with a plan"
+      ],
+      "pattern": "come up with sth",
+      "trap": "Not 'think out an idea' (calque of «выдумать»); 'come up with' is the everyday choice.",
+      "tags": [
+        "work",
+        "projects"
+      ]
+    },
+    {
+      "term": "give a presentation",
+      "type": "collocation",
+      "translation": "выступить с презентацией, провести презентацию",
+      "definition": "to talk to a group of people about a subject, often using slides",
+      "example": "I have to [give a presentation] to the board on our quarterly results.",
+      "exampleRu": "Мне нужно выступить перед советом директоров с презентацией квартальных результатов.",
+      "collocations": [
+        "do a presentation",
+        "prepare a presentation",
+        "a sales presentation"
+      ],
+      "pattern": "give a presentation on/about sth (to sb)",
+      "trap": "Not 'hold/conduct a presentation' (calques of «провести презентацию»).",
+      "tags": [
+        "work",
+        "meetings"
+      ]
+    },
+    {
+      "term": "please find attached",
+      "type": "phrase",
+      "translation": "во вложении, прилагаю",
+      "definition": "a formal phrase used in emails to say that a file is attached",
+      "example": "[Please find attached] the updated budget for your review.",
+      "exampleRu": "Во вложении — обновлённый бюджет на ваше рассмотрение.",
+      "collocations": [
+        "I've attached",
+        "the attached file",
+        "see attached"
+      ],
+      "pattern": "please find attached + noun",
+      "trap": "Not 'In the attachment you can find' (calque of «во вложении вы найдёте»).",
+      "tags": [
+        "work",
+        "emails"
+      ]
+    },
+    {
+      "term": "look forward to sth",
+      "type": "phrasal-verb",
+      "translation": "ждать с нетерпением, с нетерпением ожидать",
+      "definition": "to feel pleased about something that is going to happen",
+      "example": "We [look forward to] hearing from you and hope to work together soon.",
+      "exampleRu": "Будем рады вашему ответу и надеемся вскоре начать сотрудничество.",
+      "collocations": [
+        "look forward to working with you",
+        "look forward to meeting you"
+      ],
+      "pattern": "look forward to sth / to doing sth",
+      "trap": "'To' is a preposition here: 'look forward to hearing', not 'look forward to hear'.",
+      "tags": [
+        "work",
+        "emails"
+      ]
+    },
+    {
+      "term": "jump on a call",
+      "type": "phrase",
+      "translation": "созвониться, быстро созвониться",
+      "definition": "an informal way to say you will join a phone or video call",
+      "example": "This is getting complicated; can we [jump on a call] for five minutes?",
+      "exampleRu": "Всё становится запутанно, может, созвонимся минут на пять?",
+      "collocations": [
+        "hop on a call",
+        "a quick call",
+        "set up a call"
+      ],
+      "pattern": "jump on a call (with sb)",
+      "trap": "Not 'call up with sb' («созвониться с кем-то»); say 'have a call with sb' or 'jump on a call'.",
+      "tags": [
+        "work",
+        "communication"
+      ]
+    },
+    {
+      "term": "work from home",
+      "type": "collocation",
+      "translation": "работать из дома, работать удалённо",
+      "definition": "to do your job at home instead of in an office",
+      "example": "Most of our team [work from home] on Mondays and Fridays.",
+      "exampleRu": "Большая часть нашей команды по понедельникам и пятницам работает из дома.",
+      "collocations": [
+        "work remotely",
+        "a hybrid schedule",
+        "WFH"
+      ],
+      "pattern": "work from home",
+      "trap": "Use 'from home', not 'at home from' or 'in home'; 'remote work' is the noun.",
+      "tags": [
+        "work"
+      ]
+    },
+    {
+      "term": "meet sb halfway",
+      "type": "idiom",
+      "translation": "пойти навстречу, пойти на компромисс",
+      "definition": "to agree to some of another person's demands so that you both can agree",
+      "example": "They wanted a 20% discount, so we [met them halfway] and offered 10%.",
+      "exampleRu": "Они хотели скидку 20 %, и мы пошли им навстречу, предложив 10 %.",
+      "collocations": [
+        "reach a compromise",
+        "find common ground"
+      ],
+      "pattern": "meet sb halfway (on sth)",
+      "trap": "Not 'go towards sb' (calque of «пойти навстречу»).",
+      "tags": [
+        "work",
+        "negotiations"
+      ]
+    },
+    {
+      "term": "strike a deal",
+      "type": "collocation",
+      "translation": "заключить сделку, договориться",
+      "definition": "to reach an agreement, especially in business",
+      "example": "After weeks of talks, the two companies finally [struck a deal] on Friday.",
+      "exampleRu": "После нескольких недель переговоров компании наконец заключили сделку в пятницу.",
+      "collocations": [
+        "close a deal",
+        "seal a deal",
+        "a good deal"
+      ],
+      "pattern": "strike a deal with sb (on sth)",
+      "trap": "Not 'conclude a deal' in everyday speech; the past of strike is 'struck'.",
+      "tags": [
+        "work",
+        "negotiations"
+      ]
+    },
+    {
+      "term": "the bottom line",
+      "type": "idiom",
+      "translation": "суть, главное, итог",
+      "definition": "the most important fact in a situation; also a company's final profit or loss",
+      "example": "[The bottom line] is that we can't afford to hire anyone this quarter.",
+      "exampleRu": "Суть в том, что в этом квартале мы не можем позволить себе нанять кого-либо.",
+      "collocations": [
+        "the bottom line is that",
+        "affect the bottom line"
+      ],
+      "pattern": "the bottom line is (that) + clause",
+      "trap": "",
+      "tags": [
+        "work",
+        "negotiations"
+      ]
+    }
+  ]
+}
