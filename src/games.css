@@ -1,0 +1,1250 @@
+/* ============ Practice games ============
+   Only design tokens from styles.css are used here, so light and dark themes
+   both work without extra rules. Everything game-specific is prefixed g-. */
+
+/* ---------- landing ---------- */
+.g-explainer {
+  color: var(--text-2);
+  margin: -6px 0 16px;
+}
+
+.g-scope-note {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin: -2px 0 14px;
+}
+
+.practice .game-card {
+  transition:
+    transform 160ms var(--ease-out),
+    box-shadow 160ms var(--ease-out),
+    border-color 160ms;
+}
+
+@media (hover: hover) {
+  .practice .game-card:hover:not(:disabled) {
+    transform: translateY(-2px);
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-2);
+  }
+}
+
+.practice .game-card:disabled {
+  opacity: 1;
+  background: var(--surface-2);
+  box-shadow: none;
+  border-style: dashed;
+}
+
+.practice .game-card:disabled .game-icon {
+  background: var(--surface-3);
+  color: var(--muted);
+}
+
+.practice .game-card:disabled b {
+  color: var(--text-2);
+}
+
+/* A brand-coloured icon tile (".game-card span" would otherwise mute it). */
+.game-icon.brand {
+  background: var(--brand-soft);
+  color: var(--brand-ink);
+}
+
+.game-card .g-reason {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-2);
+  font-weight: 600;
+}
+
+.game-card .g-reason svg {
+  flex-shrink: 0;
+}
+
+/* ---------- shared game layout ---------- */
+.g-game {
+  padding-bottom: 8px;
+}
+
+/* Speak buttons in games are full 44px touch targets. */
+.g-game .speak-btn {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.g-instr {
+  color: var(--text-2);
+  margin: -6px 0 18px;
+}
+
+.g-title {
+  margin: 8px 0 6px;
+}
+
+/* SessionHead without the "n/total" count (timers, pickers). Keeps the head sticky. */
+.g-head-plain {
+  display: contents;
+}
+
+.g-head-plain .session-count {
+  display: none;
+}
+
+/* A bar that stays on screen between answers should not slide in again. */
+.g-steady .action-bar.has-verdict,
+.g-judges .action-bar.has-verdict {
+  animation: none;
+}
+
+.g-steady .action-bar .verdict {
+  animation: fade-in 200ms var(--ease-out);
+}
+
+.g-reveal {
+  display: grid;
+  gap: 12px;
+  margin-top: 4px;
+  animation: fade-in 240ms var(--ease-out);
+}
+
+.g-reveal .trap {
+  margin: 0;
+}
+
+.g-fix {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 10px 6px 10px 14px;
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+
+.g-fix > span:nth-child(2) {
+  flex: 1;
+  min-width: 0;
+}
+
+.g-fix-icon {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--success-soft);
+  color: var(--success-ink);
+}
+
+.g-fix s {
+  color: var(--error-ink);
+  text-decoration-thickness: 2px;
+}
+
+.g-fix b {
+  color: var(--success-ink);
+}
+
+.g-trap-title {
+  display: block;
+  color: var(--warn-ink);
+}
+
+.g-meaning {
+  margin: 0;
+  color: var(--text-2);
+  font-size: 0.9375rem;
+}
+
+/* ---------- end screen ---------- */
+.g-over-hero {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  padding: 8px 0 12px;
+}
+
+.g-over .end-ring {
+  margin-bottom: 8px;
+}
+
+.g-over .ring-label {
+  font-size: 26px;
+}
+
+.g-over-title {
+  margin: 4px 0 4px;
+}
+
+.g-over-summary {
+  color: var(--text-2);
+  font-size: 1.0625rem;
+  margin: 0;
+}
+
+.g-over-extra {
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.g-bignum {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 6px;
+  height: 132px;
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 132px;
+  letter-spacing: -0.04em;
+  color: var(--brand-ink);
+}
+
+.g-bignum small {
+  font-size: 1.125rem;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+.g-misses {
+  margin-top: 8px;
+}
+
+.g-misses .g-miss-list li {
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 60px;
+}
+
+.g-miss-text {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+  line-height: 1.4;
+}
+
+.g-miss-struck {
+  color: var(--error-ink);
+  font-size: 0.9375rem;
+  text-decoration-thickness: 1.5px;
+}
+
+.g-miss-sub {
+  color: var(--text-2);
+}
+
+.g-miss-note {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+/* ---------- match pairs ---------- */
+.g-pairs-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: -4px 0 14px;
+}
+
+.g-pairs-meta .chip {
+  min-height: 30px;
+  font-variant-numeric: tabular-nums;
+}
+
+.g-pairs-board {
+  margin-left: auto;
+}
+
+.pairs .tile {
+  font-weight: 650;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.pairs .tile.matched {
+  border-color: var(--success);
+  background: var(--success-soft);
+  color: var(--success-ink);
+  box-shadow: 0 2px 0 var(--success);
+}
+
+/* ---------- flashcards ---------- */
+.g-card {
+  width: 100%;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 28px 22px;
+  text-align: center;
+  white-space: normal;
+  border-radius: var(--r-xl);
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow-2);
+}
+
+.g-card-ru {
+  font-size: clamp(1.375rem, 5.5vw, 1.875rem);
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.g-card-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  font-weight: 650;
+  color: var(--muted);
+}
+
+.g-card.back {
+  align-items: stretch;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 6px;
+}
+
+.g-card-term {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.g-card-sub {
+  font-size: 1.125rem;
+  font-weight: 650;
+  color: var(--text-2);
+  margin: 0;
+}
+
+.g-card-def {
+  color: var(--muted);
+  margin: 0;
+}
+
+.g-card-example {
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  margin: 8px 0 0;
+}
+
+.g-still {
+  flex: 0 1 auto;
+}
+
+/* ---------- make / do / take / have ---------- */
+.g-sorter-card {
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+  text-align: center;
+  padding: 28px 18px;
+  margin-bottom: 16px;
+  border-radius: var(--r-xl);
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow-1);
+  transition:
+    background-color 160ms,
+    border-color 160ms;
+}
+
+.g-sorter-card.is-right {
+  background: var(--success-soft);
+  border-color: var(--success);
+}
+
+.g-sorter-card.is-wrong {
+  background: var(--error-soft);
+  border-color: var(--error);
+}
+
+.g-sorter-phrase {
+  margin: 0;
+  font-size: clamp(1.5rem, 7vw, 2.125rem);
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.g-slot {
+  display: inline-block;
+  min-width: 2.6em;
+  padding: 0 4px;
+  border-bottom: 3px solid var(--brand);
+  color: var(--brand-ink);
+  text-align: center;
+}
+
+.g-slot.ok {
+  color: var(--success-ink);
+  border-color: var(--success);
+}
+
+.g-slot.bad {
+  color: var(--error-ink);
+  border-color: var(--error);
+}
+
+.g-sorter-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: var(--text-2);
+  font-weight: 600;
+}
+
+.g-verbs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.g-verb.option {
+  position: relative;
+  justify-content: center;
+  min-height: 76px;
+  font-size: 1.375rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.g-verb .kbd {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.g-verb .option-mark {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  translate: 0 -50%;
+  margin: 0;
+}
+
+.g-verb.right .option-mark {
+  color: var(--success-ink);
+}
+
+.g-verb.wrong .option-mark {
+  color: var(--error-ink);
+}
+
+/* ---------- find the mistake ---------- */
+.g-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 20px;
+}
+
+.g-word {
+  min-height: 44px;
+  padding: 6px 12px;
+  border-radius: var(--r-md);
+  font-size: 1.125rem;
+  font-weight: 650;
+  box-shadow: 0 2px 0 var(--border-strong);
+}
+
+.g-word:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.g-word:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+.g-word.is-wrong {
+  background: var(--error-soft);
+  border-color: var(--error);
+  color: var(--error-ink);
+  box-shadow: 0 2px 0 var(--error);
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+
+.g-word.is-right {
+  background: var(--success-soft);
+  border-color: var(--success);
+  color: var(--success-ink);
+  box-shadow: 0 2px 0 var(--success);
+}
+
+.g-word.is-missed {
+  background: var(--warn-soft);
+  border-color: var(--warn);
+  border-style: dashed;
+  box-shadow: none;
+}
+
+.g-word.is-found {
+  outline: 3px solid var(--success);
+  outline-offset: 2px;
+}
+
+.g-nomistake {
+  width: 100%;
+}
+
+/* ---------- build the sentence ---------- */
+.prompt-ru.g-ru {
+  font-size: 1.25rem;
+  line-height: 1.45;
+  font-weight: 650;
+  color: var(--text);
+  margin: 0 0 16px;
+}
+
+.g-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 12px 8px;
+  min-height: 116px;
+  padding: 4px 0;
+  margin-bottom: 20px;
+  /* A ruled line under each row of tiles: rows are 44px tiles + 12px gap. */
+  background: linear-gradient(transparent 52px, var(--border-strong) 52px, var(--border-strong) 54px, transparent 54px) 0 0 / 100% 56px;
+}
+
+.g-line.is-correct .g-tile {
+  border-color: var(--success);
+  background: var(--success-soft);
+  box-shadow: 0 2px 0 var(--success);
+}
+
+.g-line.is-wrong .g-tile {
+  border-color: var(--error);
+  background: var(--error-soft);
+  box-shadow: 0 2px 0 var(--error);
+}
+
+.g-line-hint {
+  align-self: center;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.g-bank {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.g-tile {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 6px 14px;
+  border-radius: var(--r-md);
+  border: 1.5px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1.0625rem;
+  font-weight: 650;
+  line-height: 1.2;
+  box-shadow: 0 2px 0 var(--border-strong);
+}
+
+.g-tile:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+.g-tile.is-used {
+  background: var(--surface-3);
+  border-color: transparent;
+  color: transparent;
+  box-shadow: none;
+  user-select: none;
+}
+
+/* ---------- natural or not? ---------- */
+.g-intro {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  text-align: center;
+  padding: 16px 0 8px;
+}
+
+.g-intro .game-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 22px;
+  margin-bottom: 8px;
+}
+
+.g-intro h1 {
+  margin: 0 0 6px;
+}
+
+.g-intro .g-instr {
+  margin: 0 0 12px;
+  max-width: 34ch;
+}
+
+.g-howto {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.g-howto li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  text-align: left;
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.g-howto li > span:last-child {
+  display: grid;
+}
+
+.g-howto-sub {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.g-howto-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.g-howto-icon.yes {
+  background: var(--success-soft);
+  color: var(--success-ink);
+}
+
+.g-howto-icon.no {
+  background: var(--error-soft);
+  color: var(--error-ink);
+}
+
+.g-blitz-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px 0 14px;
+}
+
+.g-timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.g-timer.is-low {
+  color: var(--error-ink);
+}
+
+.g-score {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 4px 14px;
+  border-radius: var(--r-pill);
+  background: var(--brand-soft);
+  color: var(--brand-ink);
+  font-size: 1.125rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.g-stage {
+  position: relative;
+  overflow: hidden;
+  margin: 0 -16px;
+  padding: 4px 16px 12px;
+}
+
+.g-statement {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 240px;
+  padding: 44px 22px 28px;
+  border-radius: var(--r-xl);
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow-2);
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+  transition:
+    transform 200ms var(--ease-out),
+    background-color 160ms,
+    border-color 160ms;
+}
+
+.g-statement.is-dragging {
+  transition: none;
+  cursor: grabbing;
+}
+
+.g-statement.is-right {
+  background: var(--success-soft);
+  border-color: var(--success);
+}
+
+.g-statement.is-wrong {
+  background: var(--error-soft);
+  border-color: var(--error);
+}
+
+.g-statement-text {
+  margin: 0;
+  max-width: 30ch;
+  text-align: center;
+  font-size: clamp(1.25rem, 5vw, 1.5rem);
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.g-swipe-tag {
+  position: absolute;
+  top: 14px;
+  padding: 2px 10px;
+  border-radius: var(--r-pill);
+  border: 2px solid;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.g-swipe-tag.yes {
+  left: 14px;
+  color: var(--success-ink);
+  border-color: var(--success);
+  background: var(--success-soft);
+}
+
+.g-swipe-tag.no {
+  right: 14px;
+  color: var(--error-ink);
+  border-color: var(--error);
+  background: var(--error-soft);
+}
+
+.g-statement-mark {
+  position: absolute;
+  bottom: 14px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--on-brand);
+}
+
+.g-statement-mark.yes {
+  background: var(--success);
+}
+
+.g-statement-mark.no {
+  background: var(--error);
+}
+
+.g-swipe-hint {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin: 4px 0 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .g-swipe-hint {
+    display: none;
+  }
+}
+
+.g-judges .action-bar-inner {
+  gap: 0;
+}
+
+.g-judges .action-bar .buttons > * {
+  flex: 1;
+}
+
+.g-judge {
+  min-height: 64px;
+  border-radius: var(--r-lg);
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+
+.g-judge.yes {
+  color: var(--success-ink);
+  border-color: var(--success);
+  background: var(--success-soft);
+  box-shadow: 0 3px 0 var(--success);
+}
+
+.g-judge.no {
+  color: var(--error-ink);
+  border-color: var(--error);
+  background: var(--error-soft);
+  box-shadow: 0 3px 0 var(--error);
+}
+
+.g-judge:hover:not(:disabled) {
+  border-color: currentColor;
+}
+
+.g-judge:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+/* ---------- role-play ---------- */
+.g-scenarios {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 480px) {
+  .g-scenarios {
+    grid-template-columns: 1fr;
+  }
+}
+
+.g-scenario {
+  width: 100%;
+  min-height: 80px;
+  justify-content: flex-start;
+  gap: 14px;
+  padding: 12px 14px;
+  text-align: left;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--border);
+}
+
+.g-scenario .game-icon {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.g-scenario > svg {
+  flex-shrink: 0;
+  color: var(--muted);
+}
+
+.g-scenario-text {
+  display: grid;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.g-scenario-text span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.g-chat-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 4px 0 12px;
+}
+
+.g-chat-head .game-icon {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.g-chat-title {
+  font-size: 1.25rem;
+  margin: 0 0 2px;
+}
+
+.g-chat-setting {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--text-2);
+}
+
+.g-targets {
+  padding: 10px 12px 12px;
+  margin-bottom: 16px;
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.g-targets-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.g-targets ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.g-targets .chip {
+  font-size: 0.875rem;
+  padding: 5px 12px;
+  transition:
+    background-color 200ms,
+    color 200ms;
+}
+
+.g-chat {
+  display: grid;
+  gap: 12px;
+  padding-bottom: 8px;
+}
+
+/* Room for a reply that grows to several lines. */
+.g-chat-page {
+  padding-bottom: 56px;
+}
+
+.g-msg {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  min-width: 0;
+}
+
+.g-msg.partner {
+  padding-right: 4%;
+}
+
+.g-msg.me {
+  flex-direction: column;
+  align-items: flex-end;
+  padding-left: 14%;
+}
+
+.g-bubble {
+  min-width: 0;
+  padding: 10px 14px;
+  border-radius: 18px;
+  font-size: 1rem;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.partner .g-bubble {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-bottom-left-radius: 6px;
+  box-shadow: var(--shadow-1);
+}
+
+.me .g-bubble {
+  background: var(--brand);
+  color: var(--on-brand);
+  border-bottom-right-radius: 6px;
+}
+
+.g-who {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--muted);
+}
+
+.g-avatar {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--ice-soft);
+  color: var(--ice);
+}
+
+.g-msg .speak-btn {
+  align-self: center;
+}
+
+.g-msg-used {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.g-typing {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 42px;
+}
+
+.g-typing i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--muted);
+  opacity: 0.6;
+}
+
+.g-finish {
+  display: flex;
+  justify-content: center;
+}
+
+.g-composer {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  width: 100%;
+}
+
+.g-composer textarea {
+  min-height: 52px;
+  max-height: 144px;
+  resize: none;
+  overflow-y: auto;
+}
+
+.g-send.primary {
+  width: 52px;
+  min-width: 52px;
+  height: 52px;
+  padding: 0;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.g-composer-bar .action-bar-inner {
+  gap: 0;
+}
+
+.g-transcript h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.g-transcript-list {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.g-transcript-list li {
+  display: grid;
+  gap: 2px;
+  padding-left: 12px;
+  border-left: 3px solid var(--border-strong);
+}
+
+.g-transcript-list li.me {
+  border-left-color: var(--brand);
+}
+
+.g-transcript-who {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.g-transcript-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.g-transcript-actions button {
+  flex: 1 1 200px;
+}
+
+.g-transcript-note {
+  margin: 10px 0 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.g-copy-fallback {
+  margin-top: 14px;
+}
+
+.g-copy-fallback textarea {
+  font-size: 0.875rem;
+  resize: vertical;
+}
+
+/* ---------- motion (only when the learner hasn't asked for less) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .g-flip-in {
+    animation: g-flip 320ms var(--ease-out);
+  }
+
+  .g-line .g-tile,
+  .g-bank button.g-tile {
+    animation: g-tile-in 180ms var(--ease-spring);
+  }
+
+  .g-statement {
+    animation: g-card-in 220ms var(--ease-out);
+  }
+
+  .g-timer.is-low svg {
+    animation: g-pulse 1s ease-in-out infinite;
+  }
+
+  .g-msg {
+    animation: g-msg-in 240ms var(--ease-out);
+  }
+
+  .g-typing i {
+    animation: g-dot 1s ease-in-out infinite;
+  }
+
+  .g-typing i:nth-child(3) {
+    animation-delay: 150ms;
+  }
+
+  .g-typing i:nth-child(4) {
+    animation-delay: 300ms;
+  }
+
+  .g-sorter-card,
+  .g-words {
+    animation: g-card-in 220ms var(--ease-out);
+  }
+
+  /* Keep the answer feedback from styles.css on elements that also animate in. */
+  .g-sorter-card.pop {
+    animation: pop 260ms var(--ease-spring);
+  }
+
+  .g-sorter-card.shake,
+  .g-statement.shake {
+    animation: shake 300ms;
+  }
+
+  @keyframes g-flip {
+    from {
+      transform: perspective(900px) rotateY(-70deg);
+      opacity: 0.3;
+    }
+    to {
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+  @keyframes g-tile-in {
+    from {
+      transform: scale(0.85);
+    }
+    to {
+      transform: none;
+    }
+  }
+
+  @keyframes g-card-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes g-msg-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes g-dot {
+    0%,
+    100% {
+      transform: translateY(0);
+      opacity: 0.4;
+    }
+    50% {
+      transform: translateY(-4px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes g-pulse {
+    50% {
+      transform: scale(1.18);
+    }
+  }
+}

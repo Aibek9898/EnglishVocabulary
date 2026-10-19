@@ -1,31 +1,38 @@
 import { toContent } from './content';
 import type { ItemContent } from './types';
 
-export const AI_PROMPT = `You are helping me build my English vocabulary (my level: Upper-Intermediate, my native language: Russian).
-From our conversation (or the text/topic below), pick the most useful English words and phrases for me: collocations, phrasal verbs, idioms and fixed phrases are better than single words.
+export const AI_PROMPT = `You are helping me build my English vocabulary. My level: Upper-Intermediate (B2). My native language: Russian.
 
-Return ONLY a JSON array, no other text, in exactly this format:
+From our conversation above (or from the topic or text at the end), choose 8 to 15 of the most useful English items for me. Prefer collocations, phrasal verbs, fixed phrases and idioms that people really use in everyday life and at work. Skip words I obviously know already. If I made mistakes in my English in this chat, add the correct phrases too, with the tag "my-mistakes".
+
+Reply with ONE \`\`\`json code block and nothing else, in exactly this format:
 [
   {
-    "term": "make a decision",
+    "term": "make a mistake",
     "type": "collocation",
-    "translation": "принять решение",
-    "definition": "to choose what to do after thinking about it",
-    "example": "We need to [make a decision] by Friday.",
-    "exampleRu": "Нам нужно принять решение до пятницы.",
-    "collocations": ["reach a decision", "a tough decision"],
-    "pattern": "make a decision about sth / to do sth",
-    "trap": "Not 'take a decision' (calque of «принять решение»)",
-    "tags": ["work"]
+    "translation": "сделать ошибку, ошибиться",
+    "definition": "to do something wrong without meaning to",
+    "example": "I [made a mistake] in the report, so I sent a new version.",
+    "exampleRu": "Я ошибся в отчёте, поэтому отправил новую версию.",
+    "collocations": ["a big mistake", "by mistake"],
+    "pattern": "make a mistake (in sth)",
+    "trap": "Not 'do a mistake' (calque of «сделать ошибку»).",
+    "wrong": ["did a mistake"],
+    "tags": ["everyday"]
   }
 ]
 
 Rules:
 - "type" is one of: collocation, phrasal-verb, idiom, phrase, word.
-- "example" is one natural sentence; put the target words exactly as used in the sentence inside [square brackets], once.
-- "translation" and "exampleRu" are in Russian; everything else in English.
-- "trap" is a typical mistake Russian speakers make with it, or "" if none.
-- Use sth / sb for placeholders, e.g. "put sth off".
+- "definition": simple English, at most 12 words, and it must NOT contain the term itself.
+- "example": one natural sentence of at most 15 words about everyday life or work. Put the target, exactly as used in the sentence, inside [square brackets] once.
+- "translation" and "exampleRu": natural Russian, not word for word. Everything else in English.
+- "collocations": 1 to 3 other common combinations, or [].
+- "pattern": the grammar around it, e.g. "look forward to + -ing", or "".
+- "trap": the typical mistake Russian speakers make with it, in one short sentence, or "".
+- "wrong": 0 to 2 typical wrong versions in the same form as the bracketed text (they must be wrong in both British and American English), or [].
+- "tags": 1 or 2 of: work, travel, money, health, feelings, opinions, everyday, relationships, study, tech, food, home, my-mistakes.
+- Use sth / sb for placeholders in "term", e.g. "put sth off".
 
 Topic or text:
 `;
@@ -35,8 +42,15 @@ export interface ParseResult {
   skipped: number;
 }
 
+/** AI chats sometimes add trailing commas or curly quotes that break JSON. */
+function repairJson(text: string): string {
+  return text
+    .replace(/[\u201C\u201D\u201E](?=\s*[:,\]}])|(?<=[[{,:]\s*)[\u201C\u201D\u201E]/g, '"')
+    .replace(/,\s*([\]}])/g, '$1');
+}
+
 /** Finds the outermost JSON array or object inside any text (AI replies often wrap it in prose or ```json fences). */
-function extractJson(text: string): unknown {
+export function extractJson(text: string): unknown {
   const fenced = text.match(/```(?:json)?\s*([\s\S]*?)```/i);
   const body = fenced ? fenced[1] : text;
   const starts = ['[', '{'].map((c) => body.indexOf(c)).filter((i) => i >= 0);
@@ -44,11 +58,15 @@ function extractJson(text: string): unknown {
   const start = Math.min(...starts);
   const end = Math.max(body.lastIndexOf(']'), body.lastIndexOf('}'));
   if (end <= start) return undefined;
-  try {
-    return JSON.parse(body.slice(start, end + 1));
-  } catch {
-    return undefined;
+  const raw = body.slice(start, end + 1);
+  for (const candidate of [raw, repairJson(raw)]) {
+    try {
+      return JSON.parse(candidate);
+    } catch {
+      // try the repaired version next
+    }
   }
+  return undefined;
 }
 
 /**

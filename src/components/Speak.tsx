@@ -1,11 +1,12 @@
 import { canSpeak, speak } from '../lib/speech';
+import { Icon } from './Icon';
 
-export function Speak({ text, label = 'Listen' }: { text: string; label?: string }) {
-  if (!canSpeak) return null;
+export function Speak({ text, label = 'Listen', small = false }: { text: string; label?: string; small?: boolean }) {
+  if (!canSpeak || !text) return null;
   return (
     <button
       type="button"
-      className="icon-btn"
+      className={small ? 'speak-btn small' : 'speak-btn'}
       title={label}
       aria-label={label}
       onClick={(e) => {
@@ -13,7 +14,7 @@ export function Speak({ text, label = 'Listen' }: { text: string; label?: string
         speak(text);
       }}
     >
-      🔊
+      <Icon name="volume" size={small ? 16 : 20} />
     </button>
   );
 }

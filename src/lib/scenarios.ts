@@ -1,0 +1,261 @@
+import type { IconName } from '../components/Icon';
+
+/** An everyday situation for the role-play game. The partner always speaks first. */
+export interface Scenario {
+  id: string;
+  title: string;
+  icon: IconName;
+  /** One sentence that sets the scene for the learner. */
+  setting: string;
+  /** Who the learner is talking to. */
+  partner: string;
+  /** The partner's turns; each one invites an answer. */
+  lines: string[];
+  /** The partner's last words after the learner's final reply. */
+  closing: string;
+  /** Library tags used to choose target phrases. */
+  tags: string[];
+}
+
+export const SCENARIOS: Scenario[] = [
+  {
+    id: 'job-interview',
+    title: 'Job interview',
+    icon: 'user',
+    setting: "You're interviewing for a project manager role at a mid-sized tech company.",
+    partner: 'Interviewer',
+    lines: [
+      'Thanks for coming in today. To start, could you tell me a bit about yourself and your current role?',
+      'What made you apply for this position?',
+      "Tell me about a time a project didn't go to plan. What happened, and what did you do?",
+      'How do you usually deal with tight deadlines and competing priorities?',
+      "Where do you see yourself in a few years' time?",
+    ],
+    closing: "Great, thank you. We'll be in touch by the end of next week.",
+    tags: ['work', 'careers', 'projects', 'deadlines', 'meetings'],
+  },
+  {
+    id: 'hotel-complaint',
+    title: 'Complaining at a hotel',
+    icon: 'alert',
+    setting: "You've just checked in, and your room isn't the one you booked.",
+    partner: 'Receptionist',
+    lines: [
+      'Good evening! How can I help you?',
+      "Oh, I'm sorry to hear that. What exactly is wrong with the room?",
+      "I see. I'm afraid we're fully booked tonight. Could you stay in this room just for one night?",
+      'I understand. What would you like us to do to make it right?',
+      'Okay. I can move you to a better room tomorrow and give you free breakfast for your whole stay. Does that sound fair?',
+    ],
+    closing: "Thank you for your patience. Again, I'm really sorry for the trouble.",
+    tags: ['travel', 'problems', 'money'],
+  },
+  {
+    id: 'catching-up',
+    title: 'Catching up with a friend',
+    icon: 'chat',
+    setting: "You bump into an old friend you haven't seen for about a year.",
+    partner: 'Old friend',
+    lines: [
+      "No way! It's been ages! How have you been?",
+      'So what have you been up to since I last saw you?',
+      'And how is work going? Are you still at the same place?',
+      'Have you got any plans for the summer?',
+      'We should meet up properly. When are you free?',
+    ],
+    closing: "Perfect, it's a plan! It's so good to see you.",
+    tags: ['friendship', 'people', 'relationships', 'free-time', 'small-talk', 'life'],
+  },
+  {
+    id: 'doctor',
+    title: "Booking a doctor's appointment",
+    icon: 'plus',
+    setting: "You're calling your local clinic because you haven't been feeling well.",
+    partner: 'Clinic receptionist',
+    lines: [
+      'Good morning, Riverside Clinic. How can I help?',
+      'Of course. Can you tell me briefly what the problem is?',
+      'How long have you had these symptoms?',
+      'The earliest appointment I have is Thursday at 9:40. Would that work for you?',
+      'Is there anything else the doctor should know before you come in?',
+    ],
+    closing: "Lovely, you're booked in. If you feel worse before then, please call us again.",
+    tags: ['health', 'life'],
+  },
+  {
+    id: 'team-meeting',
+    title: 'Team meeting',
+    icon: 'chart',
+    setting: 'At the weekly team meeting, your team lead asks for an update on your project.',
+    partner: 'Team lead',
+    lines: [
+      "Okay, let's start. Could you give us a quick update on your project?",
+      'Are we still on track for the deadline, or are there any risks we should know about?',
+      'What do you need from the rest of the team to keep things moving?',
+      "Someone suggested pushing the launch back two weeks. What's your view on that?",
+      "Great. So what are the next steps, and who's doing what?",
+    ],
+    closing: "Thanks, that's really helpful. Let's check in again next week.",
+    tags: ['work', 'meetings', 'projects', 'deadlines', 'communication'],
+  },
+  {
+    id: 'rent',
+    title: 'Negotiating the rent',
+    icon: 'hand',
+    setting: 'Your landlord wants to raise the rent, and you want to keep it lower.',
+    partner: 'Landlord',
+    lines: [
+      "Thanks for calling back. As I said in my email, I'm planning to raise the rent by ten percent from next month. How do you feel about that?",
+      'I know it\'s a lot, but prices have gone up everywhere. What did you have in mind?',
+      'Hmm. Why do you think a smaller increase would be fair?',
+      'If I agreed to a smaller increase, would you be willing to sign a longer contract?',
+      'Okay. So what exactly are we agreeing to?',
+    ],
+    closing: "Fine. I'll email you the new contract this week.",
+    tags: ['money', 'negotiations', 'home', 'life'],
+  },
+  {
+    id: 'return',
+    title: 'Returning a product',
+    icon: 'reset',
+    setting: "You're back at a shop with headphones that stopped working after a week.",
+    partner: 'Shop assistant',
+    lines: [
+      'Hi there, what can I do for you?',
+      'Oh no. What seems to be the problem with them?',
+      'Do you have the receipt with you?',
+      'Would you prefer a new pair or your money back?',
+      'No problem. Is there anything else I can help you with today?',
+    ],
+    closing: 'All done. Sorry again for the hassle, and have a great day!',
+    tags: ['shopping', 'money', 'problems'],
+  },
+  {
+    id: 'colleague',
+    title: 'Small talk with a colleague',
+    icon: 'message',
+    setting: "You're making coffee in the office kitchen when a colleague from another team walks in.",
+    partner: 'Colleague',
+    lines: [
+      'Morning! Did you have a good weekend?',
+      'Nice! Did you get up to anything special?',
+      'How are things in your team at the moment? Busy?',
+      'By the way, are you coming to the team lunch on Friday?',
+      "Anyway, I'd better get back to my desk. Anything exciting planned for this week?",
+    ],
+    closing: 'Sounds good. Catch you later!',
+    tags: ['small-talk', 'work', 'people', 'free-time', 'daily'],
+  },
+  {
+    id: 'day-off',
+    title: 'Asking for a day off',
+    icon: 'sun',
+    setting: 'You need next Friday off, so you go to talk to your manager.',
+    partner: 'Manager',
+    lines: [
+      'Hi, come in. You wanted to talk to me about something?',
+      'Next Friday? Can I ask what it is for?',
+      "Hmm, that's the day before the client deadline. How will your work get done?",
+      'Who could cover for you if something urgent comes up?',
+      'Okay. Can you send me a request so I can approve it in the system?',
+    ],
+    closing: "Sure, that's fine. Enjoy your day off.",
+    tags: ['work', 'careers', 'deadlines', 'communication'],
+  },
+  {
+    id: 'flight-delay',
+    title: 'Flight delay',
+    icon: 'timer',
+    setting: 'Your flight has just been delayed by five hours, and you go to the airline desk.',
+    partner: 'Airline agent',
+    lines: [
+      "Hello. I'm sorry, your flight has been delayed. How can I help?",
+      "Unfortunately, there's a technical problem with the plane. Do you have a connecting flight?",
+      'I can put you on a later connection, but you would arrive tomorrow morning. Would that be okay?',
+      'What would you need from us in the meantime?',
+      'Here are some meal vouchers for the restaurants upstairs. Is there anything else I can do?',
+    ],
+    closing: "You're all set. Once again, I apologise for the inconvenience.",
+    tags: ['travel', 'problems'],
+  },
+  {
+    id: 'restaurant',
+    title: 'At a restaurant',
+    icon: 'book',
+    setting: "You're having dinner with a friend at a busy restaurant.",
+    partner: 'Waiter',
+    lines: [
+      'Good evening! Have you had a chance to look at the menu?',
+      "Good choice. Are there any allergies or anything you don't eat?",
+      'And what would you like to drink?',
+      'How is everything? Are you enjoying your meal?',
+      'Can I get you anything else, or would you like the bill?',
+    ],
+    closing: 'Thank you very much. We hope to see you again soon!',
+    tags: ['food', 'cooking', 'free-time', 'money'],
+  },
+  {
+    id: 'chores',
+    title: 'Sorting out chores',
+    icon: 'trash',
+    setting: 'The flat is a mess, and you want to agree on chores with your flatmate.',
+    partner: 'Flatmate',
+    lines: [
+      "Hey, you said you wanted a word. What's up?",
+      "Fair enough, it's got a bit messy lately. What do you think we should do?",
+      "Okay, but I'm working late most evenings this month. How would that work?",
+      'What about the bins and the bathroom? Those are the worst jobs.',
+      'So shall we try it for a month and see how it goes?',
+    ],
+    closing: "Deal. I'll stick the plan on the fridge.",
+    tags: ['home', 'daily', 'routine', 'conflict', 'relationships'],
+  },
+  {
+    id: 'client-delay',
+    title: 'Explaining a delay to a client',
+    icon: 'pen',
+    setting: 'You have to tell an important client that their order will be two weeks late.',
+    partner: 'Client',
+    lines: [
+      'Hi, thanks for calling. Is everything on schedule with our order?',
+      "Two weeks? That's a real problem for us. What happened?",
+      "Why weren't we told about this earlier?",
+      "What are you going to do to make sure this doesn't happen again?",
+      'Can you offer us anything to make up for the delay?',
+    ],
+    closing: 'All right. Please keep me in the loop from now on.',
+    tags: ['work', 'deadlines', 'communication', 'emails', 'negotiations', 'problems'],
+  },
+  {
+    id: 'trip',
+    title: 'Planning a trip',
+    icon: 'arrow',
+    setting: "You and a friend are planning a long weekend away together.",
+    partner: 'Friend',
+    lines: [
+      'So, where should we go for the long weekend?',
+      'Sounds good! How should we get there?',
+      "What's your budget for the whole trip, roughly?",
+      'Where should we stay: a hotel or an apartment?',
+      "What would you most like to do while we're there?",
+    ],
+    closing: "Love it. I'll start looking at tickets tonight!",
+    tags: ['travel', 'money', 'free-time', 'decisions'],
+  },
+  {
+    id: 'feedback',
+    title: 'Giving feedback',
+    icon: 'bulb',
+    setting: 'A junior colleague asks for feedback on their first big presentation.',
+    partner: 'Junior colleague',
+    lines: [
+      'Thanks for coming to my presentation. Be honest: how do you think it went?',
+      'What do you think worked well?',
+      'And what could I do better next time?',
+      'I was really nervous at the start. Do you have any tips for that?',
+      "That's really useful. Would you mind looking at my slides before the next one?",
+    ],
+    closing: 'Thanks so much. I really appreciate it.',
+    tags: ['work', 'communication', 'opinions', 'people'],
+  },
+];

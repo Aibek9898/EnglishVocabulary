@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { guessType } from '../lib/content';
 import type { ItemContent, ItemType } from '../lib/types';
 
 export const EMPTY: ItemContent = {
@@ -32,6 +33,9 @@ export function ItemForm({
   const [c, setC] = useState<ItemContent>(initial);
   const [collocations, setCollocations] = useState(initial.collocations.join(', '));
   const [tags, setTags] = useState(initial.tags.join(', '));
+  const [wrong, setWrong] = useState((initial.wrong ?? []).join(', '));
+  // Guess the type from the term until the learner picks one.
+  const [typeTouched, setTypeTouched] = useState(!!initial.term);
   const set = (k: keyof ItemContent) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setC({ ...c, [k]: e.target.value });
 
@@ -55,63 +59,86 @@ export function ItemForm({
           term: c.term.trim(),
           translation: c.translation.trim(),
           collocations: split(collocations),
+          wrong: split(wrong),
           tags: split(tags).map((t) => t.toLowerCase()),
         });
       }}
     >
       <div className="grid2">
         <label className="field">
-          <span>English word or phrase *</span>
-          <input value={c.term} onChange={set('term')} required placeholder="come up with sth" autoCapitalize="off" />
+          <span>English word or phrase</span>
+          <input
+            value={c.term}
+            onChange={(e) => setC({ ...c, term: e.target.value, type: typeTouched ? c.type : guessType(e.target.value || 'x') })}
+            required
+            placeholder="e.g. come up with sth"
+            autoCapitalize="off"
+            autoCorrect="off"
+            spellCheck={false}
+          />
         </label>
         <label className="field">
-          <span>Russian translation *</span>
-          <input value={c.translation} onChange={set('translation')} required placeholder="придумать" />
+          <span>Russian translation</span>
+          <input value={c.translation} onChange={set('translation')} required placeholder="e.g. придумать" lang="ru" />
         </label>
       </div>
       <label className="field">
-        <span>Example sentence (put the target in [brackets])</span>
-        <input value={c.example} onChange={set('example')} onBlur={markTarget} placeholder="She [came up with] a great idea." />
+        <span>Example sentence</span>
+        <input value={c.example} onChange={set('example')} onBlur={markTarget} placeholder="e.g. She came up with a great idea." autoCapitalize="sentences" />
+        <small>The phrase gets marked automatically. Use [brackets] if the sentence changes its form, e.g. “She [came up with] it”.</small>
       </label>
       <label className="field">
         <span>Example in Russian</span>
-        <input value={c.exampleRu} onChange={set('exampleRu')} placeholder="Она придумала отличную идею." />
+        <input value={c.exampleRu} onChange={set('exampleRu')} placeholder="e.g. Она придумала отличную идею." lang="ru" />
       </label>
       <div className="grid2">
         <label className="field">
           <span>Type</span>
-          <select value={c.type} onChange={set('type')}>
+          <select
+            value={c.type}
+            onChange={(e) => {
+              setTypeTouched(true);
+              setC({ ...c, type: e.target.value as ItemType });
+            }}
+          >
             {TYPES.map((t) => (
-              <option key={t}>{t}</option>
+              <option key={t} value={t}>
+                {t.replace('-', ' ')}
+              </option>
             ))}
           </select>
         </label>
         <label className="field">
-          <span>Tags (comma separated)</span>
-          <input value={tags} onChange={(e) => setTags(e.target.value)} placeholder="work, ideas" autoCapitalize="off" />
+          <span>Tags</span>
+          <input value={tags} onChange={(e) => setTags(e.target.value)} placeholder="e.g. work, ideas" autoCapitalize="off" />
         </label>
       </div>
       <details>
         <summary>More details</summary>
         <label className="field">
           <span>English definition</span>
-          <input value={c.definition} onChange={set('definition')} />
+          <input value={c.definition} onChange={set('definition')} placeholder="e.g. to think of an idea or a plan" />
         </label>
         <label className="field">
-          <span>Other collocations (comma separated)</span>
-          <input value={collocations} onChange={(e) => setCollocations(e.target.value)} />
+          <span>Other collocations</span>
+          <input value={collocations} onChange={(e) => setCollocations(e.target.value)} placeholder="e.g. come up with a plan, come up with an excuse" />
         </label>
         <label className="field">
           <span>Grammar pattern</span>
           <input value={c.pattern} onChange={set('pattern')} placeholder="come up with sth / an idea" />
         </label>
         <label className="field">
-          <span>Trap (typical mistake)</span>
-          <input value={c.trap} onChange={set('trap')} />
+          <span>Trap</span>
+          <input value={c.trap} onChange={set('trap')} placeholder="e.g. Not 'come up on' an idea" />
+        </label>
+        <label className="field">
+          <span>Wrong versions</span>
+          <input value={wrong} onChange={(e) => setWrong(e.target.value)} placeholder="e.g. came up on" autoCapitalize="off" />
+          <small>Typical mistakes, in the same form as in the example. Games use them.</small>
         </label>
         <label className="field">
           <span>Where I met it</span>
-          <input value={c.source ?? ''} onChange={set('source')} placeholder="Series, article, work…" />
+          <input value={c.source ?? ''} onChange={set('source')} placeholder="e.g. a series, an article, a meeting" />
         </label>
       </details>
       <div className="row">
@@ -120,7 +147,7 @@ export function ItemForm({
             Cancel
           </button>
         )}
-        <button type="submit" className="primary">
+        <button type="submit" className="primary" disabled={!c.term.trim() || !c.translation.trim()}>
           {submitLabel}
         </button>
       </div>
