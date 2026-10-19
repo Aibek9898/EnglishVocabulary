@@ -16,7 +16,7 @@
         "check out of a hotel"
       ],
       "pattern": "check in (at a hotel / for a flight)",
-      "trap": "At a hotel or airport, say «check in», not 'register'.",
+      "trap": "At a hotel or airport say 'check in', not 'register' (from «регистрироваться»).",
       "tags": [
         "life",
         "travel"
@@ -35,7 +35,7 @@
         "miss a connection"
       ],
       "pattern": "miss a flight / train / bus",
-      "trap": "«Опоздать на самолёт» (and not get on it) = miss the plane, not 'be late for the plane'.",
+      "trap": "«Опоздать на самолёт» = 'miss the flight', not 'be late for the plane': 'be late for' means you arrive late but still get there (late for work).",
       "tags": [
         "life",
         "travel"
@@ -54,7 +54,7 @@
         "fully booked"
       ],
       "pattern": "book sth in advance",
-      "trap": "«Заранее» = in advance, not 'beforehand of time' or 'before'.",
+      "trap": "«Заранее» = 'in advance' or 'ahead of time', not just 'before' ('book before' sounds unfinished: before what?).",
       "tags": [
         "life",
         "travel"
@@ -92,26 +92,27 @@
         "a piece of luggage"
       ],
       "pattern": "",
-      "trap": "Luggage is uncountable: not 'a luggage' or 'luggages'; say «a piece of luggage».",
+      "trap": "Luggage is uncountable: not 'a luggage' or 'luggages'; say 'a piece of luggage'. US English: 'carry-on'.",
       "tags": [
         "life",
         "travel"
       ]
     },
     {
-      "term": "get stuck",
+      "term": "go through security",
       "type": "collocation",
-      "translation": "застрять",
-      "definition": "to be unable to move or leave a place",
-      "example": "We [got stuck] in traffic on the way to the airport for an hour.",
-      "exampleRu": "По дороге в аэропорт мы на час застряли в пробке.",
+      "translation": "проходить досмотр (в аэропорту)",
+      "definition": "to have yourself and your bags checked at an airport before you can go to your gate",
+      "example": "Leave plenty of time to [go through security] — the queues can be huge in summer.",
+      "exampleRu": "Закладывайте побольше времени на досмотр — летом бывают огромные очереди.",
       "collocations": [
-        "get stuck in traffic",
-        "stuck in a lift",
-        "stuck at the airport"
+        "get through security",
+        "passport control",
+        "a boarding pass",
+        "a security check"
       ],
-      "pattern": "get stuck in / at sth",
-      "trap": "",
+      "pattern": "go / get through security (passport control, customs)",
+      "trap": "Not 'pass the control' (calque of «пройти контроль»); say 'go through security' or 'go through passport control'.",
       "tags": [
         "life",
         "travel"
@@ -201,7 +202,7 @@
         "delayed by an hour"
       ],
       "pattern": "be delayed by + time / because of sth",
-      "trap": "Not 'the flight is late for three hours'; say «delayed by three hours».",
+      "trap": "Not 'late for three hours'; say 'delayed by three hours' or 'three hours late'.",
       "tags": [
         "life",
         "travel"
@@ -256,7 +257,7 @@
         "give sb a lift"
       ],
       "pattern": "pick sb up from / at a place",
-      "trap": "«Встретить в аэропорту» on the car = pick sb up, not 'meet sb by car'.",
+      "trap": "«Встретить» someone at the airport by car is 'pick sb up'; 'meet sb' alone doesn't say that you will drive them.",
       "tags": [
         "life",
         "travel"
@@ -301,7 +302,7 @@
     {
       "term": "short of money",
       "type": "collocation",
-      "translation": "не хватает денег, на мели",
+      "translation": "не хватает денег, туго с деньгами",
       "definition": "not having enough money",
       "example": "I'm a bit [short of money] this month, so I'll skip the trip.",
       "exampleRu": "В этом месяце у меня туго с деньгами, так что в поездку я не поеду.",
@@ -374,19 +375,19 @@
       ]
     },
     {
-      "term": "rip-off",
-      "type": "word",
-      "translation": "грабёж, обдираловка",
-      "definition": "something that costs much more than it should",
-      "example": "Fifteen euros for a coffee? That's a total [rip-off]!",
-      "exampleRu": "Пятнадцать евро за кофе? Это же грабёж!",
+      "term": "value for money",
+      "type": "collocation",
+      "translation": "соотношение цены и качества; стоит своих денег",
+      "definition": "how good something is compared with how much it costs",
+      "example": "The hotel wasn't cheap, but it was great [value for money].",
+      "exampleRu": "Отель был недешёвым, но вполне стоил своих денег.",
       "collocations": [
-        "a complete rip-off",
-        "rip sb off",
-        "a tourist trap"
+        "good value for money",
+        "poor value",
+        "worth the money"
       ],
-      "pattern": "",
-      "trap": "",
+      "pattern": "be good / great value (for money)",
+      "trap": "Not 'a good price-quality ratio' (calque of «соотношение цена–качество»); say 'good value for money' or just 'good value'.",
       "tags": [
         "life",
         "money"
@@ -432,7 +433,7 @@
     {
       "term": "cut back on sth",
       "type": "phrasal-verb",
-      "translation": "сокращать (расходы, потребление)",
+      "translation": "экономить на, урезать (расходы)",
       "definition": "to reduce the amount of money you spend or something you use",
       "example": "We need to [cut back on] eating out if we want to save money.",
       "exampleRu": "Если хотим копить, надо реже ходить в рестораны.",
@@ -441,7 +442,7 @@
         "spending cuts"
       ],
       "pattern": "cut back on sth / doing sth",
-      "trap": "",
+      "trap": "Very close to 'cut down on'; 'cut back on' is used especially for spending and costs.",
       "tags": [
         "life",
         "money"
@@ -527,7 +528,7 @@
       "translation": "заболеть, подхватить (простуду и т. п.)",
       "definition": "to start to have an illness that is not serious",
       "example": "I think I'm [coming down with] a cold; my throat feels awful.",
-      "exampleRu": "Кажется, я заболеваю простудой: горло ужасно болит.",
+      "exampleRu": "Кажется, я простужаюсь: горло ужасно болит.",
       "collocations": [
         "come down with flu",
         "catch a cold"
@@ -540,19 +541,19 @@
       ]
     },
     {
-      "term": "get over sth",
-      "type": "phrasal-verb",
-      "translation": "оправиться, выздороветь",
-      "definition": "to become healthy again after an illness",
-      "example": "It took me two weeks to [get over] the flu.",
-      "exampleRu": "Мне потребовалось две недели, чтобы оправиться от гриппа.",
+      "term": "catch a cold",
+      "type": "collocation",
+      "translation": "простудиться",
+      "definition": "to become ill with a cold (a minor illness with a sore throat, a runny nose, etc.)",
+      "example": "I [caught a cold] after walking home in the rain without a jacket.",
+      "exampleRu": "Я простудился, когда шёл домой под дождём без куртки.",
       "collocations": [
-        "recover from sth",
-        "get over a cold",
-        "get over a breakup"
+        "have a cold",
+        "a heavy cold",
+        "get over a cold"
       ],
-      "pattern": "get over sth",
-      "trap": "No preposition after over: not 'get over from the flu'.",
+      "pattern": "catch / have a cold",
+      "trap": "'I have a cold' = «я простужен», but 'I'm cold' = «мне холодно». And 'I got cold' means you felt cold, not that you got ill.",
       "tags": [
         "life",
         "health"
@@ -571,7 +572,7 @@
         "run a fever"
       ],
       "pattern": "have a temperature (of + number)",
-      "trap": "Not 'I have temperature 38'; say «I have a temperature of 38».",
+      "trap": "Not 'I have temperature 38'; say 'I have a temperature of 38' or just 'I've got a temperature'.",
       "tags": [
         "life",
         "health"
@@ -609,7 +610,7 @@
         "a splitting headache"
       ],
       "pattern": "have a sore throat",
-      "trap": "Not 'my throat hurts me' or 'my throat is ill'; say «I have a sore throat».",
+      "trap": "Not 'my throat is ill' or 'my throat hurts me'; say 'I have a sore throat' or 'my throat hurts'.",
       "tags": [
         "life",
         "health"

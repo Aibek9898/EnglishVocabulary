@@ -47,9 +47,13 @@
       "definition": "to be extremely happy and pleased about something",
       "example": "She was [over the moon] when she got the promotion.",
       "exampleRu": "Она была на седьмом небе от счастья, когда получила повышение.",
-      "collocations": [],
+      "collocations": [
+        "on cloud nine",
+        "thrilled to bits (UK)",
+        "delighted"
+      ],
       "pattern": "be over the moon about/with sth",
-      "trap": "Used for great happiness, not for mild pleasure.",
+      "trap": "Not 'on the seventh sky' (calque of «на седьмом небе»); say 'over the moon' or 'on cloud nine'.",
       "tags": [
         "people",
         "emotions"
@@ -86,7 +90,7 @@
         "mood swings"
       ],
       "pattern": "be in a good/bad mood",
-      "trap": "Use 'in': 'in a bad mood', not 'with a bad mood' or 'at a bad mood'.",
+      "trap": "Not 'I have a bad mood' (calque of «у меня плохое настроение»); say 'I'm in a bad mood'. Use 'in', not 'with' or 'at'.",
       "tags": [
         "people",
         "emotions"
@@ -100,8 +104,9 @@
       "example": "His constant complaining about everything really [gets on my nerves].",
       "exampleRu": "Его постоянное нытьё по любому поводу ужасно действует мне на нервы.",
       "collocations": [
-        "get on my nerves",
-        "calm your nerves"
+        "drive sb mad",
+        "really annoy sb",
+        "get on everyone's nerves"
       ],
       "pattern": "",
       "trap": "Use the possessive: 'it gets on my nerves', not 'it gets me on nerves'.",
@@ -251,7 +256,7 @@
       "translation": "по моему мнению, что касается меня",
       "definition": "used to give your personal opinion, often a strong one",
       "example": "[As far as I'm concerned], the project was a complete success.",
-      "exampleRu": "Как по мне, проект оказался полным успехом.",
+      "exampleRu": "Как по мне, проект полностью удался.",
       "collocations": [
         "as far as I know",
         "if you ask me"
@@ -286,8 +291,8 @@
       "type": "phrase",
       "translation": "полностью согласен",
       "definition": "used to say you agree completely with someone",
-      "example": "When she said we needed more staff, I told her [I couldn't agree more].",
-      "exampleRu": "Когда она сказала, что нам нужно больше сотрудников, я ответил, что полностью согласен.",
+      "example": "\"We really need more people on this team.\" \"[I couldn't agree more].\"",
+      "exampleRu": "«Нам очень нужно больше людей в команде». — «Полностью согласен».",
       "collocations": [
         "I totally agree",
         "absolutely"
@@ -304,7 +309,7 @@
       "type": "collocation",
       "translation": "в чём-то прав, резонно",
       "definition": "to have an idea or argument that is reasonable or partly true",
-      "example": "You [have a point]; we probably should test it before launching.",
+      "example": "You [have a point] — we should probably test it before we launch.",
       "exampleRu": "Ты в чём-то прав: наверное, нам действительно стоит протестировать это перед запуском.",
       "collocations": [
         "make a point",
@@ -378,12 +383,12 @@
       "example": "It can be hard to [make friends] when you move to a new country.",
       "exampleRu": "Заводить друзей бывает сложно, когда переезжаешь в другую страну.",
       "collocations": [
-        "close friend",
-        "old friend",
-        "mutual friend"
+        "make friends with sb",
+        "be friends with sb",
+        "make new friends"
       ],
       "pattern": "make friends with sb",
-      "trap": "Not 'find friends' or 'friend with sb'; always plural: 'I made friends with him'.",
+      "trap": "Always plural, even about one person: 'I made friends with him', not 'made a friend with him'. «Дружить с» is 'be friends with sb'.",
       "tags": [
         "people",
         "friendship"
@@ -409,20 +414,22 @@
       ]
     },
     {
-      "term": "get on with sb",
-      "type": "phrasal-verb",
-      "translation": "ладить с кем-то",
-      "definition": "to have a friendly relationship with someone",
-      "example": "Do you [get on with] your colleagues at the new job?",
-      "exampleRu": "Ты ладишь с коллегами на новой работе?",
+      "term": "get to know sb",
+      "type": "phrase",
+      "translation": "узнать (кого-то) поближе, познакомиться",
+      "definition": "to spend time with someone and gradually learn what they are like",
+      "example": "We only met last week, but I'd like to [get to know] her better.",
+      "exampleRu": "Мы познакомились только на прошлой неделе, но мне хочется узнать её поближе.",
       "collocations": [
-        "get on well with sb",
-        "get along with sb"
+        "get to know each other",
+        "get to know a city",
+        "nice to meet you"
       ],
-      "pattern": "get on (well) with sb",
-      "trap": "Don't confuse with 'get on with sth' (continue doing it). US English prefers 'get along with'.",
+      "pattern": "get to know sb/sth (better)",
+      "trap": "Not 'know sb better' or 'learn sb' (calques of «узнать»): 'know' is a state, 'get to know' is the process. «Узнать новость» is 'find out'.",
       "tags": [
         "people",
+        "friendship",
         "relationships"
       ]
     },
@@ -500,21 +507,23 @@
       ]
     },
     {
-      "term": "let sb down",
-      "type": "phrasal-verb",
-      "translation": "подвести",
-      "definition": "to disappoint someone by not doing what they expected",
-      "example": "I promised to help, and I really don't want to [let you down].",
-      "exampleRu": "Я обещал помочь и очень не хочу тебя подвести.",
+      "term": "take sb's side",
+      "type": "collocation",
+      "translation": "встать на чью-то сторону, поддержать в споре",
+      "definition": "to support one person in an argument or disagreement",
+      "example": "Whenever I argue with my brother, Mum always [takes his side].",
+      "exampleRu": "Каждый раз, когда я спорю с братом, мама встаёт на его сторону.",
       "collocations": [
-        "feel let down",
-        "a big letdown"
+        "take sides",
+        "be on sb's side",
+        "stay neutral"
       ],
-      "pattern": "let sb down",
-      "trap": "Not 'put sb down', which means to criticise or humiliate someone.",
+      "pattern": "take sb's side (in sth) / take sides",
+      "trap": "Not 'stand on sb's side' (calque of «встать на чью-то сторону»); say 'take sb's side' or 'be on sb's side'.",
       "tags": [
         "people",
-        "relationships"
+        "relationships",
+        "conflict"
       ]
     },
     {
@@ -591,7 +600,7 @@
     {
       "term": "have an argument",
       "type": "collocation",
-      "translation": "поссориться, поругаться",
+      "translation": "поругаться, повздорить",
       "definition": "to disagree angrily with someone",
       "example": "My parents [had an argument] about money again last night.",
       "exampleRu": "Вчера вечером родители опять поругались из-за денег.",
@@ -601,25 +610,26 @@
         "start an argument"
       ],
       "pattern": "have an argument with sb about/over sth",
-      "trap": "Not 'make an argument' (that means to present reasons for something).",
+      "trap": "«Ругаться» with someone is 'argue' or 'have an argument', not 'swear' (= use rude words). 'Make an argument' means present reasons for something.",
       "tags": [
         "people",
         "conflict"
       ]
     },
     {
-      "term": "sort sth out",
-      "type": "phrasal-verb",
-      "translation": "разобраться, уладить",
-      "definition": "to deal successfully with a problem or disagreement",
-      "example": "Let's sit down and [sort this out] before it gets worse.",
-      "exampleRu": "Давай сядем и разберёмся с этим, пока всё не стало хуже.",
+      "term": "apologise to sb for sth",
+      "type": "collocation",
+      "translation": "извиниться перед кем-то за что-то",
+      "definition": "to tell someone that you are sorry for something you did",
+      "example": "I think you should [apologise to] Tom for shouting at him.",
+      "exampleRu": "По-моему, тебе стоит извиниться перед Томом за то, что ты на него накричал.",
       "collocations": [
-        "sort out a problem",
-        "sort out a misunderstanding"
+        "make an apology",
+        "a sincere apology",
+        "accept sb's apology"
       ],
-      "pattern": "sort sth out / sort out sth",
-      "trap": "With a pronoun the object goes in the middle: 'sort it out', not 'sort out it'.",
+      "pattern": "apologise to sb for sth / for doing sth",
+      "trap": "Not 'apologise before sb' (calque of «извиниться перед»); say 'apologise to sb for sth'. US spelling: 'apologize'.",
       "tags": [
         "people",
         "conflict"

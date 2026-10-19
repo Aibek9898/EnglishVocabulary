@@ -36,7 +36,7 @@
       "exampleRu": "Можешь прибраться в гостиной до прихода гостей?",
       "collocations": ["tidy up after sb", "a quick tidy-up", "keep sth tidy"],
       "pattern": "tidy (sth) up / tidy up after sb",
-      "trap": "«Убираться» is usually 'tidy up' (put things away) or 'clean' (remove dirt), not 'clean up the room' for everyday tidying.",
+      "trap": "Not 'make order' (calque of «навести порядок»). 'Tidy up' = put things back in their place; 'clean' = remove dirt and dust.",
       "tags": ["daily", "home"]
     },
     {
@@ -114,13 +114,13 @@
     {
       "term": "on a tight budget",
       "type": "phrase",
-      "translation": "с ограниченным бюджетом, на мели",
+      "translation": "с ограниченным бюджетом, в режиме экономии",
       "definition": "having very little money to spend",
       "example": "We're [on a tight budget] this month, so let's cook at home.",
       "exampleRu": "В этом месяце у нас с деньгами туго, так что давай готовить дома.",
       "collocations": ["stick to a budget", "go over budget", "a budget airline"],
       "pattern": "be on a tight budget",
-      "trap": "Not 'with a small budget' in this sense; the fixed phrase uses 'on'.",
+      "trap": "For a person's situation say 'be on a (tight) budget', not 'in a budget'. «Уложиться в бюджет» is 'stay within budget'.",
       "tags": ["daily", "shopping", "money"]
     },
     {
@@ -139,12 +139,12 @@
       "term": "on sale",
       "type": "phrase",
       "translation": "со скидкой, по распродаже",
-      "definition": "available at a lower price than usual",
+      "definition": "(especially US) available at a lower price than usual; also simply 'available to buy in shops'",
       "example": "These boots were [on sale], so I got them for half price.",
       "exampleRu": "Эти ботинки продавались со скидкой, так что я купила их за полцены.",
       "collocations": ["the sales", "half price", "a good deal"],
       "pattern": "be on sale",
-      "trap": "Don't confuse with 'for sale' — available to buy (e.g. a house for sale), with no discount implied.",
+      "trap": "Don't confuse with 'for sale' (= available to buy, e.g. a house for sale). In British English discounted items are also 'in the sale', and 'go on sale' means become available.",
       "tags": ["daily", "shopping"]
     },
     {
@@ -160,15 +160,15 @@
       "tags": ["daily", "shopping"]
     },
     {
-      "term": "run out of sth",
-      "type": "phrasal-verb",
-      "translation": "закончиться (о запасах), израсходовать",
-      "definition": "to use all of something so that there is none left",
-      "example": "We've [run out of] coffee again, so I'll add it to the shopping list.",
-      "exampleRu": "У нас опять закончился кофе, добавлю его в список покупок.",
-      "collocations": ["run out of time", "run out of patience", "be running low on sth"],
-      "pattern": "sb runs out of sth / sth runs out",
-      "trap": "The person is the subject: 'We've run out of milk', not 'Milk has run out of us'. Avoid 'The milk finished' (calque of «молоко закончилось»).",
+      "term": "do the shopping",
+      "type": "collocation",
+      "translation": "ходить за продуктами, делать покупки",
+      "definition": "to buy the food and other things you regularly need for your home",
+      "example": "I usually [do the shopping] on Saturday mornings, when the shops are quiet.",
+      "exampleRu": "Обычно я хожу за продуктами в субботу утром, когда в магазинах мало народу.",
+      "collocations": ["do the weekly shop (UK)", "make a shopping list", "go shopping"],
+      "pattern": "do the (food) shopping",
+      "trap": "Not 'make shopping' (calque of «делать покупки»). 'Do the shopping' = buy food and essentials; 'go shopping' = shop for fun, e.g. for clothes.",
       "tags": ["daily", "home", "shopping"]
     },
     {
@@ -192,7 +192,7 @@
       "exampleRu": "Обязательно сохрани чек на случай, если рубашка не подойдёт.",
       "collocations": ["ask for a receipt", "proof of purchase"],
       "pattern": "",
-      "trap": "Not 'check' — in British English that's a mark (✓); in the US it means a restaurant bill. The 'p' in 'receipt' is silent.",
+      "trap": "Not 'check' (from «чек»): in American English a 'check' is a restaurant bill or a bank cheque. The 'p' in 'receipt' is silent.",
       "tags": ["daily", "shopping"]
     },
     {
@@ -316,15 +316,15 @@
       "tags": ["daily", "free-time"]
     },
     {
-      "term": "take up sth",
-      "type": "phrasal-verb",
-      "translation": "начать заниматься (хобби, спортом)",
-      "definition": "to start doing a new activity, especially a hobby or sport",
-      "example": "I've [taken up] yoga to help me deal with stress.",
-      "exampleRu": "Я начала заниматься йогой, чтобы справляться со стрессом.",
-      "collocations": ["take up a hobby", "take up running", "give sth up"],
-      "pattern": "take up + noun / -ing",
-      "trap": "Not 'begin to occupy myself with' (calque of «заниматься»).",
+      "term": "be into sth",
+      "type": "phrase",
+      "translation": "увлекаться, очень любить (что-то)",
+      "definition": "to be very interested in an activity or subject and enjoy it (informal)",
+      "example": "My brother [is into] rock climbing — he goes three times a week.",
+      "exampleRu": "Мой брат увлекается скалолазанием — ходит на тренировки три раза в неделю.",
+      "collocations": ["be really into sth", "be keen on sth (UK)", "get into sth (= start liking it)"],
+      "pattern": "be into sth / into doing sth",
+      "trap": "Not 'be carried away by sth' (calque of «увлекаться») — that means getting so excited that you lose control. Say 'I'm into...' or 'I'm keen on...'.",
       "tags": ["daily", "free-time"]
     },
     {
@@ -400,16 +400,16 @@
       "tags": ["daily", "small-talk"]
     },
     {
-      "term": "break down",
-      "type": "phrasal-verb",
-      "translation": "сломаться (о технике, машине)",
-      "definition": "if a machine or vehicle breaks down, it stops working",
-      "example": "Our washing machine [broke down] in the middle of a wash.",
-      "exampleRu": "Наша стиральная машина сломалась прямо посреди стирки.",
-      "collocations": ["the car broke down", "a breakdown", "call a repairman"],
-      "pattern": "",
-      "trap": "Use 'break down' for machines and cars; for objects like a cup or a phone screen use 'break'.",
-      "tags": ["daily", "home", "problems"]
+      "term": "my phone died",
+      "type": "phrase",
+      "translation": "у меня сел телефон",
+      "definition": "your phone's battery has run out, so it has stopped working (informal)",
+      "example": "Sorry I didn't call back — [my phone died] on the way home.",
+      "exampleRu": "Извини, что не перезвонил — у меня сел телефон по дороге домой.",
+      "collocations": ["a dead / flat battery", "charge your phone", "a phone charger", "run out of battery"],
+      "pattern": "sth dies / the battery is dead (UK also: flat)",
+      "trap": "Not 'my phone sat down' (calque of «телефон сел»); say 'my phone died' or 'my battery is dead/flat'.",
+      "tags": ["daily", "problems"]
     },
     {
       "term": "leak",

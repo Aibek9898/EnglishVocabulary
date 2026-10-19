@@ -12,7 +12,7 @@
       "exampleRu": "После нескольких недель обсуждений совет директоров наконец принял решение о слиянии.",
       "collocations": ["reach a decision", "a tough decision", "put off a decision"],
       "pattern": "make a decision about sth / to do sth",
-      "trap": "Not 'take/accept a decision' (calque of «принять решение»).",
+      "trap": "Not 'accept a decision' (calque of «принять решение»): 'accept' means agree to someone else's decision. 'Take a decision' exists in formal British English, but 'make' is the safe choice.",
       "tags": ["traps", "make-do", "work"]
     },
     {
@@ -88,16 +88,16 @@
       "tags": ["traps", "make-do"]
     },
     {
-      "term": "make friends",
+      "term": "make sense",
       "type": "collocation",
-      "translation": "заводить друзей, подружиться",
-      "definition": "to start a friendship with sb",
-      "example": "It's harder to [make friends] when you move to a new city as an adult.",
-      "exampleRu": "Взрослому человеку сложнее заводить друзей, когда он переезжает в новый город.",
-      "collocations": ["make friends with sb", "close friends", "a friend of mine"],
-      "pattern": "make friends (with sb)",
-      "trap": "Not 'find friends' or 'do friends'; say 'make friends with sb', and 'friends' is always plural here.",
-      "tags": ["traps", "make-do", "daily-life"]
+      "translation": "иметь смысл, быть понятным",
+      "definition": "to be reasonable, logical or easy to understand",
+      "example": "It doesn't [make sense] to buy a car if you live right next to the metro.",
+      "exampleRu": "Нет смысла покупать машину, если живёшь прямо у метро.",
+      "collocations": ["that makes sense", "make sense of sth", "there's no point (in) doing sth"],
+      "pattern": "sth makes sense / it makes sense to do sth",
+      "trap": "Not 'it has no sense' (calque of «не имеет смысла»); say 'it makes no sense' or 'there's no point'.",
+      "tags": ["traps", "make-do"]
     },
     {
       "term": "take an exam",
@@ -408,7 +408,7 @@
       "exampleRu": "Боюсь, сейчас она не может подойти. Что-нибудь передать?",
       "collocations": ["right now", "at present", "for the moment"],
       "pattern": "",
-      "trap": "Not 'in this moment' or 'in the moment' (calque of «в данный момент»); use 'at the moment'.",
+      "trap": "Not 'in this moment' (calque of «в данный момент»); 'in the moment' means something else (fully focused on the present). Use 'at the moment'.",
       "tags": ["traps", "articles"]
     },
     {

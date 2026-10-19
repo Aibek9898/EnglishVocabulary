@@ -45,7 +45,7 @@
       "translation": "откладывать, переносить на потом",
       "definition": "to delay doing something until a later time",
       "example": "I keep [putting off] my dentist appointment because I hate needles.",
-      "exampleRu": "Я всё откладываю визит к стоматологу, потому что боюсь уколов.",
+      "exampleRu": "Я всё откладываю визит к стоматологу, потому что терпеть не могу уколы.",
       "collocations": ["put off a decision", "put off a meeting", "put off doing sth"],
       "pattern": "separable: put it off / put off doing sth",
       "trap": "Followed by -ing, not 'to': 'put off calling', not 'put off to call'.",
@@ -60,7 +60,7 @@
       "exampleRu": "У нас закончилось молоко, так что утром я пил чёрный кофе.",
       "collocations": ["run out of time", "run out of money", "run out of patience"],
       "pattern": "inseparable: sb runs out of sth; sth runs out (no 'of')",
-      "trap": "The person is the subject: 'We ran out of milk', not 'Milk ran out of us'; or simply 'The milk ran out'.",
+      "trap": "Not 'The milk finished' or 'Milk is over' (calques of «молоко закончилось»). Say 'We ran out of milk' or 'The milk ran out'.",
       "tags": ["phrasal", "everyday"]
     },
     {
@@ -72,7 +72,7 @@
       "exampleRu": "Извините, что перебил, продолжайте, пожалуйста.",
       "collocations": ["carry on working", "carry on with sth", "carry on as normal"],
       "pattern": "intransitive: carry on doing sth / carry on with sth",
-      "trap": "Use -ing or 'with': 'carry on working', not 'carry on to work' (that means start something new).",
+      "trap": "Use -ing or 'with': 'carry on working', not 'carry on to work'.",
       "tags": ["phrasal", "conversation"]
     },
     {
@@ -95,7 +95,7 @@
       "example": "I only [found out] about the party when I saw the photos online.",
       "exampleRu": "Я узнал о вечеринке, только когда увидел фотографии в интернете.",
       "collocations": ["find out about sth", "find out the truth", "find out why"],
-      "pattern": "separable: find it out / find out about sth / find out that...",
+      "pattern": "find out (about sth) / find out that... / find out what/why...",
       "trap": "Use 'find out' (not 'know') for getting new information: 'I found out yesterday', not 'I knew yesterday'.",
       "tags": ["phrasal", "information"]
     },
@@ -144,7 +144,7 @@
       "exampleRu": "Мне не хотелось заводить разговор о деньгах на нашем первом совместном ужине.",
       "collocations": ["bring up a topic", "bring up an issue", "be brought up by sb"],
       "pattern": "separable: bring it up / bring up the subject",
-      "trap": "Not 'raise up a topic'; say 'bring up' or 'raise a topic'.",
+      "trap": "Not 'raise up' or 'lift' a topic (calques of «поднять тему»); say 'bring up a topic' or 'raise a topic'.",
       "tags": ["phrasal", "conversation"]
     },
     {
@@ -168,7 +168,7 @@
       "exampleRu": "Я весь вечер настраивал новый Wi-Fi роутер.",
       "collocations": ["set up a business", "set up a meeting", "set up an account"],
       "pattern": "separable: set it up / set up a company",
-      "trap": "Don't confuse the verb 'set up' with the noun 'setup' (or 'set-up').",
+      "trap": "«Настроить» a device or account is 'set up', not 'tune' ('tune' is for musical instruments, engines or radio stations). The noun is 'setup'.",
       "tags": ["phrasal", "technology"]
     },
     {
@@ -180,7 +180,7 @@
       "exampleRu": "Переехав на побережье, она в сорок лет занялась сёрфингом.",
       "collocations": ["take up a hobby", "take up yoga", "take up too much time"],
       "pattern": "separable: take it up / take up doing sth",
-      "trap": "Not 'take sth up' for «поднять» a topic (that's 'bring up'); also sth 'takes up' time/space = занимает.",
+      "trap": "Not 'I'm engaged in yoga' (calque of «занимаюсь»): 'engaged' usually means about to get married. 'Take up' = start; 'do' = practise ('I do yoga'). 'Take up time/space' = занимать.",
       "tags": ["phrasal", "hobbies"]
     },
     {
@@ -200,8 +200,8 @@
       "type": "phrasal-verb",
       "translation": "уладить, решить, разобраться с",
       "definition": "to deal with a problem successfully or put things in order",
-      "example": "Don't worry about the ticket problem, I'll [sort out] everything tomorrow.",
-      "exampleRu": "Не переживай из-за проблемы с билетами, я завтра всё улажу.",
+      "example": "Don't worry about the tickets — I'll [sort it out] tomorrow.",
+      "exampleRu": "Не переживай из-за билетов, я завтра всё улажу.",
       "collocations": ["sort out a problem", "get sth sorted out", "sort yourself out"],
       "pattern": "separable: sort it out / sort out the problem",
       "trap": "It means «уладить», not «сортировать»; for putting items into groups use 'sort' or 'sort through'.",
@@ -252,7 +252,7 @@
       "exampleRu": "Наша машина сломалась на трассе, и мы два часа ждали помощи.",
       "collocations": ["the car broke down", "talks broke down", "break down in tears"],
       "pattern": "intransitive: sth breaks down",
-      "trap": "For cars and machines say 'broke down', not 'broke'. 'Break down sth' (separable) means split into parts: 'break down the costs'.",
+      "trap": "Machines and cars 'break down'; a cup or a phone screen just 'breaks'. 'Break down sth' (separable) means split into parts: 'break down the costs'.",
       "tags": ["phrasal", "everyday"]
     },
     {
@@ -272,7 +272,7 @@
       "type": "phrasal-verb",
       "translation": "переживать, проходить через (трудности); просматривать",
       "definition": "to experience a difficult situation; to examine something carefully",
-      "example": "She's [going through] a tough time since she lost her job.",
+      "example": "She's been [going through] a tough time since she lost her job.",
       "exampleRu": "С тех пор как она потеряла работу, у неё непростой период.",
       "collocations": ["go through a hard time", "go through a divorce", "go through the details"],
       "pattern": "inseparable: go through it",
@@ -309,10 +309,10 @@
       "translation": "подвести, разочаровать",
       "definition": "to disappoint someone by not doing what they expected or trusted you to do",
       "example": "I felt really [let down] when my best friend missed my birthday dinner.",
-      "exampleRu": "Я почувствовал себя очень обиженным, когда лучший друг не пришёл на мой праздничный ужин.",
+      "exampleRu": "Я был очень разочарован, когда лучший друг не пришёл на мой праздничный ужин.",
       "collocations": ["feel let down", "never let sb down", "let yourself down"],
       "pattern": "separable: let him down / feel let down",
-      "trap": "Not 'lower sb' or 'bring sb down'; «подвести» is 'let sb down'.",
+      "trap": "Not 'bring sb down' (= make sb feel sad) or 'put sb down' (= criticise sb); «подвести» is 'let sb down'.",
       "tags": ["phrasal", "relationships"]
     },
     {
@@ -384,7 +384,7 @@
       "exampleRu": "На Анну всегда можно положиться: она помнит дни рождения всех.",
       "collocations": ["count on sb to do sth", "count on sb's support", "don't count on it"],
       "pattern": "inseparable: count on sb (to do sth)",
-      "trap": "Not 'count for sb' or 'count to sb'; the preposition is 'on'.",
+      "trap": "Not 'calculate on sb' (from «рассчитывать на»): 'calculate' is only for numbers. Say 'count on' or 'rely on'.",
       "tags": ["phrasal", "relationships"]
     },
     {
@@ -416,24 +416,24 @@
       "type": "phrasal-verb",
       "translation": "развалиться, разваливаться на части",
       "definition": "to break into pieces because of being old or badly made; to fail completely",
-      "example": "These cheap shoes [fell apart] after just two weeks of wearing them.",
-      "exampleRu": "Эти дешёвые туфли развалились всего через две недели носки.",
+      "example": "These cheap shoes [fell apart] after just two weeks.",
+      "exampleRu": "Эти дешёвые туфли развалились всего через две недели.",
       "collocations": ["fall apart at the seams", "a marriage falls apart", "plans fall apart"],
       "pattern": "intransitive: sth falls apart",
       "trap": "Not 'fall into pieces'; say 'fall apart' or 'fall to pieces'.",
       "tags": ["phrasal", "everyday"]
     },
     {
-      "term": "catch up",
+      "term": "catch up on sth",
       "type": "phrasal-verb",
-      "translation": "догнать, наверстать; пообщаться, обменяться новостями",
-      "definition": "to reach the same level as others; to talk to a friend about what has happened since you last met",
-      "example": "Let's meet for a drink on Friday and [catch up] properly.",
-      "exampleRu": "Давай встретимся в пятницу выпить и нормально поболтаем о новостях.",
-      "collocations": ["catch up with sb", "catch up on sleep", "catch up on work"],
-      "pattern": "intransitive: catch up (with sb / on sth)",
-      "trap": "'Catch up with sb' = reach/meet sb; 'catch up on sth' = do what you missed (sleep, work, news).",
-      "tags": ["phrasal", "people"]
+      "translation": "наверстать, нагнать (упущенное)",
+      "definition": "to spend time doing something that you did not have time to do earlier",
+      "example": "I'm going to spend the weekend [catching up on] sleep and emails.",
+      "exampleRu": "Выходные я собираюсь потратить на то, чтобы отоспаться и разобрать почту.",
+      "collocations": ["catch up on sleep", "catch up on work", "catch up on the news"],
+      "pattern": "inseparable: catch up on sth / on doing sth",
+      "trap": "Don't confuse: 'catch up on sth' = do what you missed (sleep, work, news); 'catch up with sb' = reach sb, or meet and exchange news.",
+      "tags": ["phrasal", "time"]
     },
     {
       "term": "keep up with sth",
@@ -450,7 +450,7 @@
     {
       "term": "make up for sth",
       "type": "phrasal-verb",
-      "translation": "компенсировать, загладить (вину), наверстать",
+      "translation": "компенсировать, загладить (вину)",
       "definition": "to do something good to repair a bad situation or a mistake",
       "example": "He bought her flowers to [make up for] forgetting their anniversary.",
       "exampleRu": "Он купил ей цветы, чтобы загладить вину за то, что забыл про годовщину.",

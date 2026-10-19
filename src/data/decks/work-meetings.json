@@ -61,18 +61,19 @@
       ]
     },
     {
-      "term": "put sth off",
-      "type": "phrasal-verb",
-      "translation": "откладывать, переносить на потом",
-      "definition": "to delay doing something or move it to a later time",
-      "example": "We can't [put off] this decision any longer; the budget is due tomorrow.",
-      "exampleRu": "Мы больше не можем откладывать это решение: бюджет нужно сдать завтра.",
+      "term": "reschedule sth",
+      "type": "word",
+      "translation": "перенести (на другое время)",
+      "definition": "to change the time or date of a planned event",
+      "example": "Something urgent has come up — can we [reschedule] our call to Thursday?",
+      "exampleRu": "Возникло срочное дело — можем перенести наш созвон на четверг?",
       "collocations": [
-        "put off a meeting",
-        "keep putting things off"
+        "reschedule a meeting",
+        "move a meeting to Friday",
+        "postpone sth"
       ],
-      "pattern": "put sth off / put off doing sth",
-      "trap": "Followed by -ing: 'put off calling', not 'put off to call'.",
+      "pattern": "reschedule sth for / to + day",
+      "trap": "Not 'transfer the meeting' (calque of «перенести встречу»). 'Postpone' or 'put off' = only to a later time; 'reschedule' or 'move' = any new time.",
       "tags": [
         "work",
         "meetings"
@@ -99,7 +100,7 @@
     {
       "term": "be on the same page",
       "type": "idiom",
-      "translation": "одинаково понимать ситуацию, быть на одной волне",
+      "translation": "одинаково понимать ситуацию, задачу",
       "definition": "to agree or have the same understanding about something",
       "example": "Let's have a quick call so everyone is [on the same page] before the launch.",
       "exampleRu": "Давайте быстро созвонимся, чтобы перед запуском все одинаково понимали задачу.",
@@ -107,7 +108,7 @@
         "get everyone on the same page"
       ],
       "pattern": "be on the same page (about sth)",
-      "trap": "Always 'the same page', not 'one page' (calque of «на одной волне/странице»).",
+      "trap": "Not 'on one page'. Don't mix it up with 'on the same wavelength' («на одной волне» = think and feel alike).",
       "tags": [
         "work",
         "meetings"
@@ -205,18 +206,19 @@
       ]
     },
     {
-      "term": "bring sth up",
-      "type": "phrasal-verb",
-      "translation": "поднять вопрос, затронуть тему",
-      "definition": "to start talking about a subject",
-      "example": "She [brought up] the issue of remote work at the end of the meeting.",
-      "exampleRu": "В конце совещания она подняла вопрос об удалённой работе.",
+      "term": "attend a meeting",
+      "type": "collocation",
+      "translation": "присутствовать на совещании, посетить встречу",
+      "definition": "to go to a meeting and be present at it",
+      "example": "I'm afraid I won't be able to [attend the meeting] on Friday — I'll be at a client's office.",
+      "exampleRu": "К сожалению, я не смогу присутствовать на совещании в пятницу — буду у клиента.",
       "collocations": [
-        "bring up a problem",
-        "bring up a point"
+        "attend a conference",
+        "attend a course",
+        "be well attended"
       ],
-      "pattern": "bring sth up / bring up sth",
-      "trap": "Not 'raise up a question'; say 'raise a question' or 'bring up a question'.",
+      "pattern": "attend sth (no preposition)",
+      "trap": "No preposition: 'attend a meeting', not 'attend at/on a meeting'. Not 'visit a meeting' (calque of «посетить»).",
       "tags": [
         "work",
         "meetings"
@@ -259,21 +261,22 @@
       ]
     },
     {
-      "term": "make a decision",
+      "term": "give sb feedback",
       "type": "collocation",
-      "translation": "принять решение",
-      "definition": "to choose what to do after thinking about it",
-      "example": "We need to [make a decision] about the new supplier by Friday.",
-      "exampleRu": "Нам нужно принять решение по новому поставщику до пятницы.",
+      "translation": "дать обратную связь, высказать мнение (о работе)",
+      "definition": "to tell someone what was good or bad about their work so that they can improve it",
+      "example": "Could you [give me some feedback] on my first draft before Friday?",
+      "exampleRu": "Можешь дать мне обратную связь по первому черновику до пятницы?",
       "collocations": [
-        "reach a decision",
-        "a tough decision",
-        "put off a decision"
+        "positive / negative feedback",
+        "constructive feedback",
+        "ask for feedback"
       ],
-      "pattern": "make a decision about sth / to do sth",
-      "trap": "Not 'take/accept a decision' (calque of «принять решение»).",
+      "pattern": "give sb (some) feedback on sth",
+      "trap": "Uncountable: not 'a feedback' or 'feedbacks'; say 'some feedback' or 'a piece of feedback'.",
       "tags": [
-        "work"
+        "work",
+        "communication"
       ]
     },
     {
@@ -325,7 +328,7 @@
         "annual leave"
       ],
       "pattern": "be on sick leave",
-      "trap": "Not 'be on a hospital' or 'on the sick list' (calques of «на больничном»).",
+      "trap": "Not 'on a hospital' (calque of «на больничном»); 'in hospital' means you are a patient there. Informally: 'be off sick'.",
       "tags": [
         "work"
       ]
@@ -429,7 +432,7 @@
       "translation": "подниматься по карьерной лестнице",
       "definition": "to move to higher and better jobs in your career",
       "example": "He spent his twenties trying to [climb the career ladder] at a big consulting firm.",
-      "exampleRu": "Свои двадцать с небольшим он провёл, пытаясь подняться по карьерной лестнице в крупной консалтинговой фирме.",
+      "exampleRu": "Лет до тридцати он пытался подняться по карьерной лестнице в крупной консалтинговой компании.",
       "collocations": [
         "move up the career ladder",
         "career growth"
@@ -534,22 +537,22 @@
       ]
     },
     {
-      "term": "make progress",
-      "type": "collocation",
-      "translation": "продвигаться, добиваться прогресса",
-      "definition": "to develop or move forward towards finishing something",
-      "example": "We've [made good progress] on the new app, but testing will take a while.",
-      "exampleRu": "Мы неплохо продвинулись с новым приложением, но тестирование займёт время.",
+      "term": "at the last minute",
+      "type": "phrase",
+      "translation": "в последний момент",
+      "definition": "at the latest possible time, just before something was supposed to happen",
+      "example": "The client cancelled the meeting [at the last minute], after we'd prepared everything.",
+      "exampleRu": "Клиент отменил встречу в последний момент, когда мы уже всё подготовили.",
       "collocations": [
-        "make real progress",
-        "slow progress",
-        "a progress report"
+        "a last-minute change",
+        "leave sth until the last minute",
+        "at short notice"
       ],
-      "pattern": "make progress on/with sth",
-      "trap": "Not 'do progress', and 'progress' is uncountable: not 'a progress' or 'progresses'.",
+      "pattern": "at the last minute / a last-minute + noun",
+      "trap": "Not 'in the last moment' (calque of «в последний момент»); say 'at the last minute'.",
       "tags": [
         "work",
-        "projects"
+        "deadlines"
       ]
     },
     {
@@ -571,22 +574,22 @@
       ]
     },
     {
-      "term": "come up with sth",
-      "type": "phrasal-verb",
-      "translation": "придумать, предложить",
-      "definition": "to think of an idea, plan or solution",
-      "example": "The team [came up with] a clever way to cut delivery costs.",
-      "exampleRu": "Команда придумала хитрый способ сократить расходы на доставку.",
+      "term": "have a job interview",
+      "type": "collocation",
+      "translation": "проходить собеседование",
+      "definition": "to meet an employer who asks you questions to decide whether to give you a job",
+      "example": "I [have a job interview] at a bank tomorrow, and I'm really nervous.",
+      "exampleRu": "Завтра у меня собеседование в банке, и я очень нервничаю.",
       "collocations": [
-        "come up with an idea",
-        "come up with a solution",
-        "come up with a plan"
+        "go for an interview",
+        "prepare for an interview",
+        "the interview went well"
       ],
-      "pattern": "come up with sth",
-      "trap": "Not 'think out an idea' (calque of «выдумать»); 'come up with' is the everyday choice.",
+      "pattern": "have a (job) interview with / at + company",
+      "trap": "Not 'pass an interview' (calque of «пройти собеседование»): 'pass' means succeed. Say 'have / go for an interview'.",
       "tags": [
         "work",
-        "projects"
+        "careers"
       ]
     },
     {
@@ -628,18 +631,19 @@
       ]
     },
     {
-      "term": "look forward to sth",
-      "type": "phrasal-verb",
-      "translation": "ждать с нетерпением, с нетерпением ожидать",
-      "definition": "to feel pleased about something that is going to happen",
-      "example": "We [look forward to] hearing from you and hope to work together soon.",
-      "exampleRu": "Будем рады вашему ответу и надеемся вскоре начать сотрудничество.",
+      "term": "as discussed",
+      "type": "phrase",
+      "translation": "как мы обсуждали, как договаривались",
+      "definition": "a common phrase in work emails meaning \"as we talked about or agreed earlier\"",
+      "example": "[As discussed] on Monday, I've attached the revised contract.",
+      "exampleRu": "Как мы и обсуждали в понедельник, прикладываю исправленный договор.",
       "collocations": [
-        "look forward to working with you",
-        "look forward to meeting you"
+        "as agreed",
+        "as mentioned",
+        "discuss sth with sb"
       ],
-      "pattern": "look forward to sth / to doing sth",
-      "trap": "'To' is a preposition here: 'look forward to hearing', not 'look forward to hear'.",
+      "pattern": "as discussed (with sb / on + day)",
+      "trap": "'Discuss' takes no preposition: 'as we discussed', 'discuss the contract', not 'discuss about the contract' (from «обсуждать / говорить о»).",
       "tags": [
         "work",
         "emails"
@@ -677,7 +681,7 @@
         "WFH"
       ],
       "pattern": "work from home",
-      "trap": "Use 'from home', not 'at home from' or 'in home'; 'remote work' is the noun.",
+      "trap": "Not 'I work on remote' (calque of «на удалёнке»); say 'I work from home' or 'I work remotely'.",
       "tags": [
         "work"
       ]
@@ -685,7 +689,7 @@
     {
       "term": "meet sb halfway",
       "type": "idiom",
-      "translation": "пойти навстречу, пойти на компромисс",
+      "translation": "пойти навстречу, частично уступить",
       "definition": "to agree to some of another person's demands so that you both can agree",
       "example": "They wanted a 20% discount, so we [met them halfway] and offered 10%.",
       "exampleRu": "Они хотели скидку 20 %, и мы пошли им навстречу, предложив 10 %.",
