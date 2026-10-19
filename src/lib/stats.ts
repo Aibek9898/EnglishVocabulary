@@ -1,5 +1,5 @@
 import { addDays, dayKey } from './dates';
-import type { Item, ReviewEntry } from './types';
+import type { ExerciseKind, Item, ReviewEntry } from './types';
 
 /** A day counts towards the streak after this many exercises. */
 export const MIN_DAY = 5;
@@ -49,12 +49,27 @@ export function computeStreak(byDay: Map<string, number>, today = new Date()): S
   return { current, best, freezes, activeToday };
 }
 
-/** Share of scheduled reviews (not first checks) answered right in the last `days` days. */
+/** Answers from memory that measure retention ('dictation' only appears in older logs). */
+const RECALLED: ExerciseKind[] = ['cloze', 'cloze-ru', 'recall', 'say', 'dictation'];
+
+/**
+ * Share of reviews remembered in the last `days` days, or null below 10 reviews.
+ * Counts the first scheduled typed or said answer per item per day, but not a
+ * new item's first check on the day it was introduced. Almost (typo) counts as
+ * remembered; hinted and wrong do not.
+ */
 export function retention(reviews: ReviewEntry[], days = 30, now = new Date()): number | null {
   const since = now.getTime() - days * 864e5;
-  const rel = reviews.filter((r) => r.scheduled && r.at >= since && r.exercise !== 'choice');
+  const introduced = new Set(reviews.filter((r) => r.exercise === 'intro').map((r) => `${r.itemId}|${r.day}`));
+  const first = new Map<string, ReviewEntry>();
+  for (const r of [...reviews].sort((a, b) => a.at - b.at)) {
+    const key = `${r.itemId}|${r.day}`;
+    if (!r.scheduled || r.at < since || !RECALLED.includes(r.exercise) || introduced.has(key) || first.has(key)) continue;
+    first.set(key, r);
+  }
+  const rel = [...first.values()];
   if (rel.length < 10) return null;
-  return rel.filter((r) => r.result !== 'wrong').length / rel.length;
+  return rel.filter((r) => r.result === 'correct' || r.result === 'almost').length / rel.length;
 }
 
 export function levelCounts(items: Item[]): number[] {

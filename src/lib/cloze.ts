@@ -1,4 +1,4 @@
-import { normalize, stripPlaceholders } from './check';
+import { normalize, slotKind, stripPlaceholders } from './check';
 
 export interface Cloze {
   before: string;
@@ -34,6 +34,76 @@ export function firstLetterHint(answer: string): string {
     .split(' ')
     .map((w) => (w.length <= 1 ? w : w[0] + '_'.repeat(w.length - 1)))
     .join(' ');
+}
+
+/**
+ * Word-length blanks for a scaffolded gap: "make a decision" -> "____ _ ________".
+ * Apostrophes and hyphens stay visible.
+ */
+export function wordBlanks(answer: string): string {
+  return answer
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((w) => w.replace(/[\p{L}\p{N}]/gu, '_'))
+    .join(' ');
+}
+
+/** Words of a term that are too common to mask in a definition. */
+const NOT_CONTENT = new Set(
+  'a an the be is are was were been being to of in on at by for with from into onto up down out off over about and or not as so if than that this there what when how can will it i me my you your he him his she her we us our they them their one'.split(
+    ' ',
+  ),
+);
+const IRREGULAR: Record<string, string[]> = {
+  make: ['made'],
+  take: ['took', 'taken'],
+  get: ['got', 'gotten'],
+  give: ['gave', 'given'],
+  go: ['goes', 'went', 'gone'],
+  come: ['came'],
+  do: ['does', 'did', 'done'],
+  have: ['has', 'had'],
+  run: ['ran'],
+  find: ['found'],
+  bring: ['brought'],
+  keep: ['kept'],
+  lose: ['lost'],
+  fall: ['fell', 'fallen'],
+  feel: ['felt'],
+  catch: ['caught'],
+  break: ['broke', 'broken'],
+  stand: ['stood'],
+  lay: ['laid'],
+  pay: ['paid'],
+  hold: ['held'],
+  spend: ['spent'],
+  tell: ['told'],
+  think: ['thought'],
+  buy: ['bought'],
+  meet: ['met'],
+};
+
+/** A regex source matching a word and its simple inflections: decide/decides/decided/deciding, stop/stopped. */
+function wordForms(word: string): string {
+  const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const forms = [`${esc(word)}(?:s|es|ed|d|ing)?`, ...(IRREGULAR[word] ?? []).map(esc)];
+  if (word.endsWith('e')) forms.push(`${esc(word.slice(0, -1))}(?:ing|ed)`);
+  if (/[^aeiou]y$/.test(word)) forms.push(`${esc(word.slice(0, -1))}i(?:es|ed)`);
+  if (/[^aeiou][aeiou][bdfgklmnprtvz]$/.test(word)) forms.push(`${esc(word)}${word.slice(-1)}(?:ed|ing)`);
+  return forms.join('|');
+}
+
+/**
+ * Hides the term's content words (and simple inflections) in a text, so a
+ * recall prompt's definition does not give the answer away:
+ * maskTerm("to change a decision", "change your mind") -> "to … a decision".
+ */
+export function maskTerm(text: string, term: string): string {
+  const words = [...new Set(normalize(term).split(' '))].filter((w) => w && !NOT_CONTENT.has(w) && !slotKind(w));
+  if (!text || !words.length) return text;
+  const re = new RegExp(`(?<![\\p{L}\\p{N}])(?:${words.map(wordForms).join('|')})(?![\\p{L}\\p{N}])`, 'giu');
+  return text.replace(re, '…').replace(/…(?:\s+…)+/g, '…');
 }
 
 /**
