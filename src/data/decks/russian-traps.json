@@ -13,6 +13,7 @@
       "collocations": ["reach a decision", "a tough decision", "put off a decision"],
       "pattern": "make a decision about sth / to do sth",
       "trap": "Not 'accept a decision' (calque of «принять решение»): 'accept' means agree to someone else's decision. 'Take a decision' exists in formal British English, but 'make' is the safe choice.",
+      "wrong": ["accepted a decision", "did a decision"],
       "tags": ["traps", "make-do", "work"]
     },
     {
@@ -25,6 +26,7 @@
       "collocations": ["a common mistake", "by mistake", "learn from your mistakes"],
       "pattern": "make a mistake (in/with sth)",
       "trap": "Not 'do a mistake' (calque of «сделать ошибку»).",
+      "wrong": ["did a mistake", "did an error"],
       "tags": ["traps", "make-do"]
     },
     {
@@ -37,6 +39,7 @@
       "collocations": ["carry out research", "research shows", "market research"],
       "pattern": "do research on/into sth",
       "trap": "Not 'make a research': use do, and research is uncountable (no 'a', no 'researches').",
+      "wrong": ["making a research", "doing a research", "doing researches"],
       "tags": ["traps", "make-do", "work"]
     },
     {
@@ -49,6 +52,7 @@
       "collocations": ["make good progress", "slow progress", "a progress report"],
       "pattern": "make progress (in/with sth)",
       "trap": "Not 'do progress' or 'make a progress': progress is uncountable.",
+      "wrong": ["doing progress", "making a progress", "making progresses"],
       "tags": ["traps", "make-do"]
     },
     {
@@ -61,6 +65,7 @@
       "collocations": ["take a picture", "a group photo", "post a photo"],
       "pattern": "take a photo of sb/sth",
       "trap": "Not 'make a photo' (calque of «сделать фото»).",
+      "wrong": ["make a photo", "do a photo"],
       "tags": ["traps", "make-do"]
     },
     {
@@ -73,6 +78,7 @@
       "collocations": ["have a shower", "a quick shower", "take a bath"],
       "pattern": "",
       "trap": "Not 'make a shower' or 'accept a shower' (from «принять душ»); use take or have (BrE).",
+      "wrong": ["make a shower", "accept a shower"],
       "tags": ["traps", "make-do", "daily-life"]
     },
     {
@@ -85,6 +91,7 @@
       "collocations": ["ask sb a favour", "owe sb a favour", "return the favour"],
       "pattern": "do sb a favour",
       "trap": "Not 'make sb a favour' (from «сделать одолжение»); the US spelling is 'favor'.",
+      "wrong": ["make me a favour"],
       "tags": ["traps", "make-do"]
     },
     {
@@ -97,6 +104,7 @@
       "collocations": ["that makes sense", "make sense of sth", "there's no point (in) doing sth"],
       "pattern": "sth makes sense / it makes sense to do sth",
       "trap": "Not 'it has no sense' (calque of «не имеет смысла»); say 'it makes no sense' or 'there's no point'.",
+      "wrong": ["have sense", "make a sense"],
       "tags": ["traps", "make-do"]
     },
     {
@@ -109,6 +117,7 @@
       "collocations": ["pass an exam", "fail an exam", "sit an exam"],
       "pattern": "take an exam (in sth)",
       "trap": "«Сдавать экзамен» = take an exam; «сдать» = pass. 'I passed the exam' means you succeeded; never 'give/make an exam'.",
+      "wrong": ["passing an exam", "giving an exam", "making an exam"],
       "tags": ["traps", "make-do", "education"]
     },
     {
@@ -121,6 +130,7 @@
       "collocations": ["have lunch", "skip breakfast", "a quick breakfast"],
       "pattern": "have breakfast/lunch/dinner",
       "trap": "No article: not 'have a breakfast' (only with an adjective: 'a big breakfast'); 'make breakfast' means cook it.",
+      "wrong": ["have a breakfast", "have the breakfast"],
       "tags": ["traps", "make-do", "daily-life"]
     },
     {
@@ -133,6 +143,7 @@
       "collocations": ["take an active part in sth", "participate in sth"],
       "pattern": "take part in sth",
       "trap": "Not 'take participation' or 'take part at' (calque of «принять участие в»).",
+      "wrong": ["took part at", "took participation in", "took a part in"],
       "tags": ["traps", "make-do", "work"]
     },
     {
@@ -145,6 +156,7 @@
       "collocations": ["run a business", "start a business", "a business partner"],
       "pattern": "do business with sb",
       "trap": "Not 'make business' (calque of «делать бизнес»); it's 'make money' but 'do business'.",
+      "wrong": ["making business", "doing a business"],
       "tags": ["traps", "make-do", "work"]
     },
     {
@@ -157,6 +169,7 @@
       "collocations": ["it depends", "depend on sb for sth", "be dependent on"],
       "pattern": "depend on/upon sb/sth",
       "trap": "Not 'depend from' or 'depend of' (calque of «зависеть от»).",
+      "wrong": ["depends from", "depends of"],
       "tags": ["traps", "prepositions"]
     },
     {
@@ -169,6 +182,7 @@
       "collocations": ["get married", "a married couple", "happily married"],
       "pattern": "be/get married to sb",
       "trap": "Not 'married with' or 'married on' (from «женат на / замужем за»); 'marry sb' has no preposition: 'He married Anna.'",
+      "wrong": ["married with", "married on"],
       "tags": ["traps", "prepositions", "family"]
     },
     {
@@ -181,6 +195,7 @@
       "collocations": ["arrive in", "arrive home", "arrive late"],
       "pattern": "arrive at (a building/point) / arrive in (a city/country)",
       "trap": "Never 'arrive to' (from «приехать в/к»): arrive at the office, arrive in Paris, and 'arrive home' with no preposition.",
+      "wrong": ["arrive to", "arrive"],
       "tags": ["traps", "prepositions", "travel"]
     },
     {
@@ -193,6 +208,7 @@
       "collocations": ["take an interest in sth", "lose interest in sth", "of interest to sb"],
       "pattern": "be interested in sth / in doing sth",
       "trap": "Not 'interested about/by' or 'interesting in'; interested = how you feel, interesting = what causes it.",
+      "wrong": ["interested about", "interesting in"],
       "tags": ["traps", "prepositions"]
     },
     {
@@ -205,6 +221,7 @@
       "collocations": ["bad at sth", "good with people", "better at sth"],
       "pattern": "be good at sth / at doing sth",
       "trap": "Not 'good in' (from «хорош в»); with people and tools use 'good with': good with kids.",
+      "wrong": ["good in", "strong in"],
       "tags": ["traps", "prepositions"]
     },
     {
@@ -217,6 +234,7 @@
       "collocations": ["congratulations on sth", "warmly congratulate sb"],
       "pattern": "congratulate sb on sth / on doing sth",
       "trap": "Not 'congratulate with' (calque of «поздравить с»); for holidays just say 'Happy birthday!' or 'Merry Christmas!'.",
+      "wrong": ["congratulate her with"],
       "tags": ["traps", "prepositions"]
     },
     {
@@ -229,6 +247,7 @@
       "collocations": ["listen carefully", "listen to music", "listen to advice"],
       "pattern": "listen to sb/sth",
       "trap": "Not 'listen podcasts/music' without 'to' («слушать» takes a direct object); 'to' is dropped only with no object: 'Listen!'",
+      "wrong": ["listen", "hear"],
       "tags": ["traps", "prepositions"]
     },
     {
@@ -241,6 +260,7 @@
       "collocations": ["can't wait to do sth", "wait in line", "keep sb waiting"],
       "pattern": "wait for sb/sth (to do sth)",
       "trap": "Not 'wait sb/sth' without 'for' (from «ждать кого-то»); 'await' has no preposition but is formal.",
+      "wrong": ["waited"],
       "tags": ["traps", "prepositions"]
     },
     {
@@ -253,6 +273,7 @@
       "collocations": ["explain why/how", "a clear explanation", "explain yourself"],
       "pattern": "explain sth to sb / explain (to sb) why...",
       "trap": "Not 'explain me' (from «объясни мне»): say 'explain it to me' or 'explain to me why...'.",
+      "wrong": ["explain me"],
       "tags": ["traps", "prepositions"]
     },
     {
@@ -265,6 +286,7 @@
       "collocations": ["be made up of", "be composed of"],
       "pattern": "consist of sth",
       "trap": "Not 'consist from' (calque of «состоять из»); never passive or continuous: not 'is consisted of' or 'is consisting of'.",
+      "wrong": ["consists from", "is consisted of", "is consisting of"],
       "tags": ["traps", "prepositions", "work"]
     },
     {
@@ -277,6 +299,7 @@
       "collocations": ["a fashion magazine", "a magazine article", "subscribe to a magazine"],
       "pattern": "",
       "trap": "Not «магазин» — a shop is 'shop' or 'store'.",
+      "wrong": [],
       "tags": ["traps", "false-friend"]
     },
     {
@@ -289,6 +312,7 @@
       "collocations": ["accurate information", "highly accurate", "an accurate description"],
       "pattern": "",
       "trap": "Not «аккуратный» — that is 'neat', 'tidy' or 'careful'.",
+      "wrong": [],
       "tags": ["traps", "false-friend"]
     },
     {
@@ -301,6 +325,7 @@
       "collocations": ["a sympathetic ear", "sympathetic to sb's problems", "sympathy"],
       "pattern": "be sympathetic to/towards sb",
       "trap": "Not «симпатичный» — that is 'nice', 'likeable' or 'attractive'.",
+      "wrong": [],
       "tags": ["traps", "false-friend"]
     },
     {
@@ -313,6 +338,7 @@
       "collocations": ["in actual fact", "the actual number", "actually"],
       "pattern": "",
       "trap": "Not «актуальный» — that is 'relevant', 'topical' or 'up to date'; 'actually' means «на самом деле».",
+      "wrong": ["factual"],
       "tags": ["traps", "false-friend"]
     },
     {
@@ -325,6 +351,7 @@
       "collocations": ["cotton fabric", "fabric softener", "the fabric of society"],
       "pattern": "",
       "trap": "Not «фабрика» — that is 'factory'.",
+      "wrong": ["tissue"],
       "tags": ["traps", "false-friend"]
     },
     {
@@ -337,6 +364,7 @@
       "collocations": ["highly intelligent", "artificial intelligence", "an intelligent choice"],
       "pattern": "",
       "trap": "Not «интеллигентный» — that is closer to 'cultured', 'educated' or 'well-mannered'.",
+      "wrong": [],
       "tags": ["traps", "false-friend"]
     },
     {
@@ -349,6 +377,7 @@
       "collocations": ["the past decade", "for decades", "decades ago"],
       "pattern": "",
       "trap": "Not «декада» in the sense of ten days — a decade is always ten years.",
+      "wrong": [],
       "tags": ["traps", "false-friend"]
     },
     {
@@ -361,6 +390,7 @@
       "collocations": ["a graphic artist", "a street artist", "a make-up artist"],
       "pattern": "",
       "trap": "Usually «художник», not «артист»; a stage performer is a 'performer', 'actor' or 'entertainer'.",
+      "wrong": [],
       "tags": ["traps", "false-friend"]
     },
     {
@@ -373,6 +403,7 @@
       "collocations": ["a pathetic excuse", "a pathetic attempt"],
       "pattern": "",
       "trap": "Not «патетический» (solemn, emotional) — 'pathetic' is negative: weak, useless or pitiful.",
+      "wrong": [],
       "tags": ["traps", "false-friend"]
     },
     {
@@ -385,6 +416,7 @@
       "collocations": ["job prospects", "career prospects", "the prospect of doing sth"],
       "pattern": "the prospect of sth / of doing sth",
       "trap": "Not «проспект» (a wide street) — that is 'avenue'; 'prospects' (plural) = chances of future success.",
+      "wrong": ["perspective"],
       "tags": ["traps", "false-friend", "work"]
     },
     {
@@ -397,6 +429,7 @@
       "collocations": ["go to sleep", "be in bed", "make the bed"],
       "pattern": "",
       "trap": "No article: not 'go to the bed' (that means walk to the furniture); 'go to sleep' means fall asleep.",
+      "wrong": ["go to the bed", "go sleeping"],
       "tags": ["traps", "articles", "daily-life"]
     },
     {
@@ -409,6 +442,7 @@
       "collocations": ["right now", "at present", "for the moment"],
       "pattern": "",
       "trap": "Not 'in this moment' (calque of «в данный момент»); 'in the moment' means something else (fully focused on the present). Use 'at the moment'.",
+      "wrong": ["in this moment", "in the moment"],
       "tags": ["traps", "articles"]
     },
     {
@@ -421,6 +455,7 @@
       "collocations": ["go to work", "after work", "at home"],
       "pattern": "",
       "trap": "No article and not 'on work' (from «на работе»): at work, go to work, from work.",
+      "wrong": ["on work", "at the work", "on the work"],
       "tags": ["traps", "articles", "work"]
     },
     {
@@ -433,6 +468,7 @@
       "collocations": ["see a doctor", "go to the dentist", "make an appointment"],
       "pattern": "",
       "trap": "Don't drop the article: not 'go to doctor' (Russian has no articles); same with 'go to the dentist'.",
+      "wrong": ["go to doctor"],
       "tags": ["traps", "articles", "health"]
     },
     {
@@ -445,6 +481,7 @@
       "collocations": ["what a pity", "it's a shame (that)", "what a surprise"],
       "pattern": "what a + countable noun / what + uncountable noun",
       "trap": "Don't drop 'a': not 'What shame!'; but no 'a' with uncountable nouns: 'What nice weather!'",
+      "wrong": ["What shame", "How shame"],
       "tags": ["traps", "articles"]
     },
     {
@@ -457,6 +494,7 @@
       "collocations": ["at the beginning of sth", "by the end of sth", "in the end"],
       "pattern": "at the end of sth",
       "trap": "Not 'in the end of' (from «в конце»); 'in the end' alone means «в итоге»: In the end, we chose the cheaper option.",
+      "wrong": ["in the end of", "on the end of"],
       "tags": ["traps", "articles"]
     },
     {
@@ -469,6 +507,7 @@
       "collocations": [],
       "pattern": "",
       "trap": "Means «на днях» (in the past), not «на следующий день» ('the next day') or «в другой день» ('another day').",
+      "wrong": ["these days", "on these days"],
       "tags": ["traps", "articles"]
     },
     {
@@ -481,6 +520,7 @@
       "collocations": ["by bus", "by train", "on foot"],
       "pattern": "by + means of transport (no article)",
       "trap": "No article and not 'on car' or 'with car' (from «на машине»); but 'in my car', 'on the bus'.",
+      "wrong": ["on car", "with car", "by the car"],
       "tags": ["traps", "articles", "travel"]
     }
   ]

@@ -16,6 +16,8 @@ export interface ItemContent {
   trap: string;
   tags: string[];
   source?: string;
+  /** Typical wrong versions of the target, e.g. ["do a mistake"]. */
+  wrong?: string[];
 }
 
 export interface MySentence {
@@ -34,6 +36,8 @@ export interface Item extends ItemContent {
   mySentences: MySentence[];
   usedInLife: number;
   suspended: boolean;
+  /** Answers the learner marked as also right ("I was right"). */
+  accepted?: string[];
 }
 
 export type ExerciseKind =
@@ -44,10 +48,16 @@ export type ExerciseKind =
   | 'recall'
   | 'dictation'
   | 'sentence'
+  | 'say'
   | 'pairs'
-  | 'flashcard';
+  | 'flashcard'
+  | 'game';
 
-export type Result = 'correct' | 'almost' | 'wrong' | 'done';
+/**
+ * correct / almost (typo) / hinted (needed a hint: counts as not remembered) /
+ * wrong / done (no right or wrong, e.g. an intro).
+ */
+export type Result = 'correct' | 'almost' | 'hinted' | 'wrong' | 'done';
 
 export interface ReviewEntry {
   id?: number;

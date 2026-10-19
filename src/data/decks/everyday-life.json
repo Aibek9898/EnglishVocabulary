@@ -13,6 +13,7 @@
       "collocations": ["wash up", "load the dishwasher", "dry the dishes"],
       "pattern": "",
       "trap": "Not 'make the dishes' or 'clean the plates'; housework usually takes 'do': do the dishes, do the laundry, do the cleaning.",
+      "wrong": ["make the dishes"],
       "tags": ["daily", "home"]
     },
     {
@@ -25,6 +26,7 @@
       "collocations": ["run an errand for sb", "a quick errand"],
       "pattern": "run errands (for sb)",
       "trap": "Not 'do my affairs' (calque of «делать свои дела»); 'affairs' sounds formal or romantic.",
+      "wrong": ["making errands", "doing my affairs"],
       "tags": ["daily", "routine"]
     },
     {
@@ -37,6 +39,7 @@
       "collocations": ["tidy up after sb", "a quick tidy-up", "keep sth tidy"],
       "pattern": "tidy (sth) up / tidy up after sb",
       "trap": "Not 'make order' (calque of «навести порядок»). 'Tidy up' = put things back in their place; 'clean' = remove dirt and dust.",
+      "wrong": ["make order in"],
       "tags": ["daily", "home"]
     },
     {
@@ -49,6 +52,7 @@
       "collocations": ["take out the trash (US)", "put the bins out", "recycling bin"],
       "pattern": "take the rubbish out / take out the rubbish",
       "trap": "Not 'carry out the garbage'. 'Rubbish' is British, 'trash/garbage' is American.",
+      "wrong": ["carry out the rubbish", "bring out the rubbish"],
       "tags": ["daily", "home"]
     },
     {
@@ -61,6 +65,7 @@
       "collocations": ["oversleep by an hour", "sleep through the alarm"],
       "pattern": "",
       "trap": "Not 'sleep over' — that means to spend the night at someone's house. Past form is 'overslept'.",
+      "wrong": ["slept over", "oversleeped"],
       "tags": ["daily", "routine"]
     },
     {
@@ -73,6 +78,7 @@
       "collocations": ["the alarm goes off", "turn off the alarm", "hit snooze"],
       "pattern": "set an alarm for + time",
       "trap": "Not 'put an alarm' (calque of «поставить будильник»).",
+      "wrong": ["put an alarm", "put the alarm clock"],
       "tags": ["daily", "routine"]
     },
     {
@@ -85,6 +91,7 @@
       "collocations": ["get the kids ready", "be ready to go"],
       "pattern": "get ready for sth / to do sth",
       "trap": "«Собираться» (prepare to go out) is 'get ready', not 'gather' or 'collect myself'.",
+      "wrong": ["gather", "collect myself"],
       "tags": ["daily", "routine"]
     },
     {
@@ -97,6 +104,7 @@
       "collocations": ["a long commute", "the daily commute", "commute to work"],
       "pattern": "commute to/from + place; commute by train/car",
       "trap": "",
+      "wrong": ["drive"],
       "tags": ["daily", "routine", "work"]
     },
     {
@@ -109,6 +117,7 @@
       "collocations": ["a daily routine", "a morning routine", "get into a routine"],
       "pattern": "stick to sth",
       "trap": "Not 'keep to the regime' — 'regime' in English is mainly political or medical.",
+      "wrong": ["keep the regime", "observe the regime"],
       "tags": ["daily", "routine"]
     },
     {
@@ -121,6 +130,7 @@
       "collocations": ["stick to a budget", "go over budget", "a budget airline"],
       "pattern": "be on a tight budget",
       "trap": "For a person's situation say 'be on a (tight) budget', not 'in a budget'. «Уложиться в бюджет» is 'stay within budget'.",
+      "wrong": ["in a tight budget", "with a tight budget"],
       "tags": ["daily", "shopping", "money"]
     },
     {
@@ -133,6 +143,7 @@
       "collocations": ["shop around for a deal", "compare prices"],
       "pattern": "shop around for sth",
       "trap": "",
+      "wrong": [],
       "tags": ["daily", "shopping"]
     },
     {
@@ -145,6 +156,7 @@
       "collocations": ["the sales", "half price", "a good deal"],
       "pattern": "be on sale",
       "trap": "Don't confuse with 'for sale' (= available to buy, e.g. a house for sale). In British English discounted items are also 'in the sale', and 'go on sale' means become available.",
+      "wrong": ["for sale", "at sale"],
       "tags": ["daily", "shopping"]
     },
     {
@@ -157,6 +169,7 @@
       "collocations": ["a complete rip-off", "rip sb off", "overpriced"],
       "pattern": "be a rip-off",
       "trap": "Informal; in formal complaints say 'overpriced' instead.",
+      "wrong": [],
       "tags": ["daily", "shopping"]
     },
     {
@@ -169,6 +182,7 @@
       "collocations": ["do the weekly shop (UK)", "make a shopping list", "go shopping"],
       "pattern": "do the (food) shopping",
       "trap": "Not 'make shopping' (calque of «делать покупки»). 'Do the shopping' = buy food and essentials; 'go shopping' = shop for fun, e.g. for clothes.",
+      "wrong": ["make the shopping", "do shopping"],
       "tags": ["daily", "home", "shopping"]
     },
     {
@@ -181,6 +195,7 @@
       "collocations": ["pop to the shop", "pop round", "pop in"],
       "pattern": "pop out (for sth / to do sth)",
       "trap": "",
+      "wrong": [],
       "tags": ["daily", "shopping"]
     },
     {
@@ -193,6 +208,7 @@
       "collocations": ["ask for a receipt", "proof of purchase"],
       "pattern": "",
       "trap": "Not 'check' (from «чек»): in American English a 'check' is a restaurant bill or a bank cheque. The 'p' in 'receipt' is silent.",
+      "wrong": ["keep the check", "save the check"],
       "tags": ["daily", "shopping"]
     },
     {
@@ -205,6 +221,7 @@
       "collocations": ["ask for a refund", "a full refund", "exchange sth for sth"],
       "pattern": "get a refund on/for sth",
       "trap": "Not 'return money back' (tautology). Say 'get a refund' or 'get my money back'.",
+      "wrong": ["got a return", "returned the money back"],
       "tags": ["daily", "shopping"]
     },
     {
@@ -217,6 +234,7 @@
       "collocations": ["fitting room", "it fits", "it suits you"],
       "pattern": "try sth on / try on sth",
       "trap": "Not 'measure' (calque of «мерить»). Also: 'fit' = right size, 'suit' = looks good on you.",
+      "wrong": ["measure", "try out"],
       "tags": ["daily", "shopping"]
     },
     {
@@ -229,6 +247,7 @@
       "collocations": ["a recipe for sth", "a family recipe", "measure the ingredients"],
       "pattern": "",
       "trap": "'Recipe' is for cooking; a doctor's «рецепт» is a 'prescription'.",
+      "wrong": ["cook by a recipe", "cook on a recipe"],
       "tags": ["daily", "cooking"]
     },
     {
@@ -241,6 +260,7 @@
       "collocations": ["heat sth up in the microwave", "reheat", "warm sth up"],
       "pattern": "heat sth up / heat up sth",
       "trap": "",
+      "wrong": [],
       "tags": ["daily", "cooking"]
     },
     {
@@ -253,6 +273,7 @@
       "collocations": ["leftover pizza", "eat up the leftovers"],
       "pattern": "",
       "trap": "Usually plural as a noun: 'leftovers'. As an adjective it is 'leftover' (leftover rice).",
+      "wrong": ["leftover", "rests"],
       "tags": ["daily", "cooking", "food"]
     },
     {
@@ -265,6 +286,7 @@
       "collocations": ["get a takeaway", "takeout (US)", "order food online"],
       "pattern": "",
       "trap": "'Takeaway' is British; Americans say 'takeout'.",
+      "wrong": ["order food to home"],
       "tags": ["daily", "food"]
     },
     {
@@ -277,6 +299,7 @@
       "collocations": ["go out for dinner", "eat in"],
       "pattern": "",
       "trap": "Not the same as 'eat outside' (= eat in the open air).",
+      "wrong": ["eat outside"],
       "tags": ["daily", "food", "free-time"]
     },
     {
@@ -289,6 +312,7 @@
       "collocations": ["go on a diet", "a healthy diet", "cut down on sugar"],
       "pattern": "eat / have a balanced diet",
       "trap": "'Diet' means everything you usually eat, not only a weight-loss plan («диета»); for that say 'be on a diet'.",
+      "wrong": ["balanced diet", "a balanced nutrition"],
       "tags": ["daily", "food", "health"]
     },
     {
@@ -301,6 +325,7 @@
       "collocations": ["have a lie-in (UK)", "a lazy morning"],
       "pattern": "",
       "trap": "Not 'oversleep' — 'sleep in' is deliberate, 'oversleep' is an accident.",
+      "wrong": ["oversleep", "sleep out"],
       "tags": ["daily", "free-time"]
     },
     {
@@ -313,6 +338,7 @@
       "collocations": ["hang out with friends", "a place to hang out"],
       "pattern": "hang out with sb / at a place",
       "trap": "Informal. For «гулять с друзьями» say 'hang out with friends', not 'walk with friends' (that means literally walking).",
+      "wrong": ["walk", "hang on"],
       "tags": ["daily", "free-time"]
     },
     {
@@ -325,6 +351,7 @@
       "collocations": ["be really into sth", "be keen on sth (UK)", "get into sth (= start liking it)"],
       "pattern": "be into sth / into doing sth",
       "trap": "Not 'be carried away by sth' (calque of «увлекаться») — that means getting so excited that you lose control. Say 'I'm into...' or 'I'm keen on...'.",
+      "wrong": ["is carried away by", "is fond on"],
       "tags": ["daily", "free-time"]
     },
     {
@@ -337,6 +364,7 @@
       "collocations": ["unwind after work", "chill out", "a way to unwind"],
       "pattern": "",
       "trap": "Not 'relax myself' — 'unwind' and 'relax' are used without 'myself'.",
+      "wrong": ["relax myself", "unwind myself"],
       "tags": ["daily", "free-time"]
     },
     {
@@ -349,6 +377,7 @@
       "collocations": ["have a catch-up", "catch up on the news", "we must catch up soon"],
       "pattern": "catch up with sb / catch up on sth",
       "trap": "",
+      "wrong": ["catch up", "catch up on"],
       "tags": ["daily", "small-talk", "free-time"]
     },
     {
@@ -361,6 +390,7 @@
       "collocations": ["be good at small talk", "chat about the weather"],
       "pattern": "make small talk with sb",
       "trap": "Not 'do small talk' or 'speak small talk'. 'Small talk' is uncountable: not 'a small talk'.",
+      "wrong": ["do small talk", "make a small talk", "speak small talk"],
       "tags": ["daily", "small-talk"]
     },
     {
@@ -373,6 +403,7 @@
       "collocations": ["how are things?", "what have you been up to?"],
       "pattern": "",
       "trap": "It's a greeting, not a real question: answer briefly ('Good, thanks — you?'), not with a detailed report.",
+      "wrong": ["how it's going"],
       "tags": ["daily", "small-talk"]
     },
     {
@@ -385,6 +416,7 @@
       "collocations": ["not bad", "pretty good", "same as usual"],
       "pattern": "",
       "trap": "",
+      "wrong": [],
       "tags": ["daily", "small-talk"]
     },
     {
@@ -397,6 +429,7 @@
       "collocations": ["speaking of which", "that reminds me"],
       "pattern": "",
       "trap": "Only for «кстати» as a topic change; «очень кстати» (= at the right moment) is 'just in time' or 'that's handy'.",
+      "wrong": ["On the way"],
       "tags": ["daily", "small-talk"]
     },
     {
@@ -409,6 +442,7 @@
       "collocations": ["a dead / flat battery", "charge your phone", "a phone charger", "run out of battery"],
       "pattern": "sth dies / the battery is dead (UK also: flat)",
       "trap": "Not 'my phone sat down' (calque of «телефон сел»); say 'my phone died' or 'my battery is dead/flat'.",
+      "wrong": ["my phone sat down", "my phone discharged"],
       "tags": ["daily", "problems"]
     },
     {
@@ -421,6 +455,7 @@
       "collocations": ["a leaking tap", "a gas leak", "fix a leak"],
       "pattern": "",
       "trap": "Not 'flow' (calque of «течь») — 'flow' is for rivers or traffic, not broken pipes.",
+      "wrong": ["flowing"],
       "tags": ["daily", "home", "problems"]
     },
     {
@@ -433,6 +468,7 @@
       "collocations": ["get sth repaired", "have sth fixed", "take sth in for repair"],
       "pattern": "get + object + past participle",
       "trap": "'I fixed my phone' means you did it yourself; if a repair shop did it, say 'I got my phone fixed'.",
+      "wrong": ["get fixed my phone", "get my phone fix"],
       "tags": ["daily", "problems"]
     },
     {
@@ -445,6 +481,7 @@
       "collocations": ["power outage (US)", "the power went off", "the power came back on"],
       "pattern": "",
       "trap": "For «отключили свет» say 'there was a power cut' or 'the power went off', not 'they turned off the light'.",
+      "wrong": ["light cut"],
       "tags": ["daily", "home", "problems"]
     },
     {
@@ -457,6 +494,7 @@
       "collocations": ["leave your keys inside", "a spare key", "call a locksmith"],
       "pattern": "lock yourself out (of sth)",
       "trap": "",
+      "wrong": ["closed myself out", "locked me out"],
       "tags": ["daily", "home", "problems"]
     },
     {
@@ -469,6 +507,7 @@
       "collocations": ["a traffic jam", "rush hour", "heavy traffic"],
       "pattern": "get / be stuck in traffic",
       "trap": "Not 'stand in a traffic jam' (calque of «стоять в пробке»); 'traffic' is uncountable: not 'a traffic' or 'traffics'.",
+      "wrong": ["stood in a traffic jam", "got stuck in a traffic", "got stuck in traffics"],
       "tags": ["daily", "routine", "problems"]
     },
     {
@@ -481,6 +520,7 @@
       "collocations": ["the ticket machine is out of order", "not working"],
       "pattern": "be out of order",
       "trap": "Used mainly for public machines (lifts, ticket machines, toilets); for your own laptop say 'it's not working'.",
+      "wrong": ["out of work", "not in order"],
       "tags": ["daily", "problems"]
     }
   ]

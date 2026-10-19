@@ -17,6 +17,10 @@
       ],
       "pattern": "meet a deadline for sth",
       "trap": "Not 'fit into a deadline' (calque of «уложиться в срок»); you meet or miss a deadline.",
+      "wrong": [
+        "fit into the deadline",
+        "catch the deadline"
+      ],
       "tags": [
         "work",
         "deadlines"
@@ -36,6 +40,10 @@
       ],
       "pattern": "set up a meeting with sb (for + time)",
       "trap": "Not 'appoint a meeting' (calque of «назначить встречу»); you appoint people to jobs.",
+      "wrong": [
+        "appoint a meeting",
+        "assign a meeting"
+      ],
       "tags": [
         "work",
         "meetings"
@@ -55,6 +63,9 @@
       ],
       "pattern": "call sth off / call off sth",
       "trap": "Call off = cancel completely; to move an event to a later date, use 'put off' or 'postpone'.",
+      "wrong": [
+        "call out"
+      ],
       "tags": [
         "work",
         "meetings"
@@ -74,6 +85,10 @@
       ],
       "pattern": "reschedule sth for / to + day",
       "trap": "Not 'transfer the meeting' (calque of «перенести встречу»). 'Postpone' or 'put off' = only to a later time; 'reschedule' or 'move' = any new time.",
+      "wrong": [
+        "transfer",
+        "carry"
+      ],
       "tags": [
         "work",
         "meetings"
@@ -92,6 +107,10 @@
       ],
       "pattern": "be running late",
       "trap": "Usually in the continuous form: 'I'm running late', not 'I run late'.",
+      "wrong": [
+        "delaying",
+        "running lately"
+      ],
       "tags": [
         "work",
         "meetings"
@@ -109,6 +128,10 @@
       ],
       "pattern": "be on the same page (about sth)",
       "trap": "Not 'on one page'. Don't mix it up with 'on the same wavelength' («на одной волне» = think and feel alike).",
+      "wrong": [
+        "on one page",
+        "on the same wave"
+      ],
       "tags": [
         "work",
         "meetings"
@@ -127,6 +150,10 @@
       ],
       "pattern": "follow up on sth / follow up with sb",
       "trap": "Verb is two words (follow up), noun and adjective take a hyphen (a follow-up).",
+      "wrong": [
+        "follow-up on",
+        "follow up to"
+      ],
       "tags": [
         "work",
         "emails"
@@ -145,6 +172,10 @@
       ],
       "pattern": "get back to sb (on/about sth)",
       "trap": "Not 'return to you' («вернусь к вам»); 'get back to you' is the natural phrase.",
+      "wrong": [
+        "return to you",
+        "get back you"
+      ],
       "tags": [
         "work",
         "communication"
@@ -163,6 +194,10 @@
       ],
       "pattern": "keep sb in the loop (about sth)",
       "trap": "Not 'keep me in the course' (calque of «держать в курсе»).",
+      "wrong": [
+        "keep me in the course",
+        "keep me in course"
+      ],
       "tags": [
         "work",
         "communication"
@@ -181,6 +216,10 @@
       ],
       "pattern": "take (the) minutes",
       "trap": "Not 'write a protocol': in English 'protocol' means rules of behaviour, the notes are 'minutes'.",
+      "wrong": [
+        "keeps the protocol",
+        "writes the protocol"
+      ],
       "tags": [
         "work",
         "meetings"
@@ -200,6 +239,10 @@
       ],
       "pattern": "be on the agenda",
       "trap": "Use 'on' the agenda, not 'in' the agenda; 'agenda' is not a diary or planner.",
+      "wrong": [
+        "in the agenda",
+        "on agenda"
+      ],
       "tags": [
         "work",
         "meetings"
@@ -219,6 +262,11 @@
       ],
       "pattern": "attend sth (no preposition)",
       "trap": "No preposition: 'attend a meeting', not 'attend at/on a meeting'. Not 'visit a meeting' (calque of «посетить»).",
+      "wrong": [
+        "attend at the meeting",
+        "attend on the meeting",
+        "visit the meeting"
+      ],
       "tags": [
         "work",
         "meetings"
@@ -237,6 +285,7 @@
       ],
       "pattern": "wrap sth up / wrap up (with sth)",
       "trap": "",
+      "wrong": [],
       "tags": [
         "work",
         "meetings"
@@ -255,6 +304,10 @@
       ],
       "pattern": "go over sth (with sb)",
       "trap": "The object comes after 'over': 'go over the plan', not 'go the plan over'.",
+      "wrong": [
+        "go on",
+        "pass over"
+      ],
       "tags": [
         "work",
         "meetings"
@@ -274,6 +327,10 @@
       ],
       "pattern": "give sb (some) feedback on sth",
       "trap": "Uncountable: not 'a feedback' or 'feedbacks'; say 'some feedback' or 'a piece of feedback'.",
+      "wrong": [
+        "give me a feedback",
+        "give me some feedbacks"
+      ],
       "tags": [
         "work",
         "communication"
@@ -293,6 +350,10 @@
       ],
       "pattern": "",
       "trap": "'Overtime' is one word and has no article here: not 'work an overtime'.",
+      "wrong": [
+        "work an overtime",
+        "work overtimes"
+      ],
       "tags": [
         "work"
       ]
@@ -311,6 +372,11 @@
       ],
       "pattern": "take a day off (work)",
       "trap": "Not 'take a weekend' or 'take a day out' ('a day out' is a trip for fun).",
+      "wrong": [
+        "take a day out",
+        "take a weekend",
+        "take a free day"
+      ],
       "tags": [
         "work"
       ]
@@ -329,6 +395,10 @@
       ],
       "pattern": "be on sick leave",
       "trap": "Not 'on a hospital' (calque of «на больничном»); 'in hospital' means you are a patient there. Informally: 'be off sick'.",
+      "wrong": [
+        "been on a hospital",
+        "been on hospital"
+      ],
       "tags": [
         "work"
       ]
@@ -347,6 +417,10 @@
       ],
       "pattern": "apply for a job / apply to a company",
       "trap": "'Apply for' a job or position, but 'apply to' a company or university.",
+      "wrong": [
+        "applied on a job",
+        "applied a job"
+      ],
       "tags": [
         "work",
         "careers"
@@ -365,6 +439,10 @@
       ],
       "pattern": "get promoted to + position",
       "trap": "A promotion is a better job; more money is a 'pay rise' (US 'raise').",
+      "wrong": [
+        "was raised",
+        "was increased"
+      ],
       "tags": [
         "work",
         "careers"
@@ -384,6 +462,10 @@
       ],
       "pattern": "",
       "trap": "Not 'salary rising' or 'a rise of salary'; 'pay rise' is British, 'raise' is American.",
+      "wrong": [
+        "get a rise of salary",
+        "get a salary rising"
+      ],
       "tags": [
         "work",
         "careers"
@@ -403,6 +485,10 @@
       ],
       "pattern": "hand in your notice",
       "trap": "Not 'write a statement' (calque of «написать заявление»).",
+      "wrong": [
+        "wrote a statement",
+        "wrote an application"
+      ],
       "tags": [
         "work",
         "careers"
@@ -421,6 +507,10 @@
       ],
       "pattern": "lay sb off / be laid off",
       "trap": "'Laid off' is because of cuts, not your fault; if it's for bad work, you are 'fired'. Past form is 'laid', not 'layed'.",
+      "wrong": [
+        "reduced",
+        "layed off"
+      ],
       "tags": [
         "work",
         "careers"
@@ -439,6 +529,10 @@
       ],
       "pattern": "",
       "trap": "Not 'career stairs' (calque of «карьерная лестница»).",
+      "wrong": [
+        "climb the career stairs",
+        "climb the career staircase"
+      ],
       "tags": [
         "work",
         "careers"
@@ -457,6 +551,9 @@
       ],
       "pattern": "",
       "trap": "Word order is fixed: 'work-life balance', not 'balance of work and life'.",
+      "wrong": [
+        "life-work balance"
+      ],
       "tags": [
         "work",
         "careers"
@@ -475,6 +572,9 @@
       ],
       "pattern": "be snowed under (with sth)",
       "trap": "",
+      "wrong": [
+        "snowed in"
+      ],
       "tags": [
         "work"
       ]
@@ -492,6 +592,10 @@
       ],
       "pattern": "be in charge of sth / doing sth",
       "trap": "Use 'of', not 'for': 'in charge of the budget', not 'in charge for the budget'.",
+      "wrong": [
+        "in charge for",
+        "in charge with"
+      ],
       "tags": [
         "work",
         "projects"
@@ -511,6 +615,10 @@
       ],
       "pattern": "be on track to do sth / for sth",
       "trap": "",
+      "wrong": [
+        "on the track",
+        "in track"
+      ],
       "tags": [
         "work",
         "projects"
@@ -530,6 +638,10 @@
       ],
       "pattern": "fall behind (with sth) / fall behind schedule",
       "trap": "Not 'lag from the schedule' (calque of «отставать от графика»).",
+      "wrong": [
+        "lagged from",
+        "fell behind from"
+      ],
       "tags": [
         "work",
         "projects",
@@ -550,6 +662,11 @@
       ],
       "pattern": "at the last minute / a last-minute + noun",
       "trap": "Not 'in the last moment' (calque of «в последний момент»); say 'at the last minute'.",
+      "wrong": [
+        "in the last moment",
+        "in the last minute",
+        "on the last minute"
+      ],
       "tags": [
         "work",
         "deadlines"
@@ -568,6 +685,10 @@
       ],
       "pattern": "take responsibility for sth / for doing sth",
       "trap": "Use 'for', not 'on': not 'take responsibility on yourself' (calque of «взять на себя»).",
+      "wrong": [
+        "took responsibility on",
+        "took responsibility of"
+      ],
       "tags": [
         "work",
         "projects"
@@ -587,6 +708,9 @@
       ],
       "pattern": "have a (job) interview with / at + company",
       "trap": "Not 'pass an interview' (calque of «пройти собеседование»): 'pass' means succeed. Say 'have / go for an interview'.",
+      "wrong": [
+        "pass a job interview"
+      ],
       "tags": [
         "work",
         "careers"
@@ -606,6 +730,10 @@
       ],
       "pattern": "give a presentation on/about sth (to sb)",
       "trap": "Not 'hold/conduct a presentation' (calques of «провести презентацию»).",
+      "wrong": [
+        "conduct a presentation",
+        "hold a presentation"
+      ],
       "tags": [
         "work",
         "meetings"
@@ -625,6 +753,10 @@
       ],
       "pattern": "please find attached + noun",
       "trap": "Not 'In the attachment you can find' (calque of «во вложении вы найдёте»).",
+      "wrong": [
+        "Please find in attachment",
+        "Please find attachment"
+      ],
       "tags": [
         "work",
         "emails"
@@ -644,6 +776,10 @@
       ],
       "pattern": "as discussed (with sb / on + day)",
       "trap": "'Discuss' takes no preposition: 'as we discussed', 'discuss the contract', not 'discuss about the contract' (from «обсуждать / говорить о»).",
+      "wrong": [
+        "As we discussed about",
+        "As discussed about"
+      ],
       "tags": [
         "work",
         "emails"
@@ -663,6 +799,9 @@
       ],
       "pattern": "jump on a call (with sb)",
       "trap": "Not 'call up with sb' («созвониться с кем-то»); say 'have a call with sb' or 'jump on a call'.",
+      "wrong": [
+        "call up"
+      ],
       "tags": [
         "work",
         "communication"
@@ -682,6 +821,10 @@
       ],
       "pattern": "work from home",
       "trap": "Not 'I work on remote' (calque of «на удалёнке»); say 'I work from home' or 'I work remotely'.",
+      "wrong": [
+        "work on remote",
+        "work in remote"
+      ],
       "tags": [
         "work"
       ]
@@ -699,6 +842,10 @@
       ],
       "pattern": "meet sb halfway (on sth)",
       "trap": "Not 'go towards sb' (calque of «пойти навстречу»).",
+      "wrong": [
+        "went towards them",
+        "met them half of the way"
+      ],
       "tags": [
         "work",
         "negotiations"
@@ -718,6 +865,10 @@
       ],
       "pattern": "strike a deal with sb (on sth)",
       "trap": "Not 'conclude a deal' in everyday speech; the past of strike is 'struck'.",
+      "wrong": [
+        "striked a deal",
+        "stroke a deal"
+      ],
       "tags": [
         "work",
         "negotiations"
@@ -736,6 +887,7 @@
       ],
       "pattern": "the bottom line is (that) + clause",
       "trap": "",
+      "wrong": [],
       "tags": [
         "work",
         "negotiations"

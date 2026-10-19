@@ -17,6 +17,10 @@
       ],
       "pattern": "check in (at a hotel / for a flight)",
       "trap": "At a hotel or airport say 'check in', not 'register' (from «регистрироваться»).",
+      "wrong": [
+        "register",
+        "check on"
+      ],
       "tags": [
         "life",
         "travel"
@@ -36,6 +40,10 @@
       ],
       "pattern": "miss a flight / train / bus",
       "trap": "«Опоздать на самолёт» = 'miss the flight', not 'be late for the plane': 'be late for' means you arrive late but still get there (late for work).",
+      "wrong": [
+        "be late on our flight",
+        "lose our flight"
+      ],
       "tags": [
         "life",
         "travel"
@@ -55,6 +63,10 @@
       ],
       "pattern": "book sth in advance",
       "trap": "«Заранее» = 'in advance' or 'ahead of time', not just 'before' ('book before' sounds unfinished: before what?).",
+      "wrong": [
+        "book before",
+        "book on advance"
+      ],
       "tags": [
         "life",
         "travel"
@@ -74,6 +86,7 @@
       ],
       "pattern": "",
       "trap": "",
+      "wrong": [],
       "tags": [
         "life",
         "travel"
@@ -93,6 +106,10 @@
       ],
       "pattern": "",
       "trap": "Luggage is uncountable: not 'a luggage' or 'luggages'; say 'a piece of luggage'. US English: 'carry-on'.",
+      "wrong": [
+        "a hand luggage",
+        "hand luggages"
+      ],
       "tags": [
         "life",
         "travel"
@@ -113,6 +130,10 @@
       ],
       "pattern": "go / get through security (passport control, customs)",
       "trap": "Not 'pass the control' (calque of «пройти контроль»); say 'go through security' or 'go through passport control'.",
+      "wrong": [
+        "pass the control",
+        "go through the control"
+      ],
       "tags": [
         "life",
         "travel"
@@ -131,6 +152,10 @@
       ],
       "pattern": "set off for / on sth",
       "trap": "",
+      "wrong": [
+        "set up",
+        "set on"
+      ],
       "tags": [
         "life",
         "travel"
@@ -150,6 +175,10 @@
       ],
       "pattern": "",
       "trap": "",
+      "wrong": [
+        "docking flight",
+        "connection flight"
+      ],
       "tags": [
         "life",
         "travel"
@@ -167,6 +196,10 @@
       ],
       "pattern": "",
       "trap": "",
+      "wrong": [
+        "out of the beaten track",
+        "off the beaten road"
+      ],
       "tags": [
         "life",
         "travel"
@@ -184,6 +217,10 @@
       ],
       "pattern": "",
       "trap": "«Налегке» = light, not 'easy' or 'lightly'.",
+      "wrong": [
+        "travel easy",
+        "travel lightly"
+      ],
       "tags": [
         "life",
         "travel"
@@ -203,6 +240,10 @@
       ],
       "pattern": "be delayed by + time / because of sth",
       "trap": "Not 'late for three hours'; say 'delayed by three hours' or 'three hours late'.",
+      "wrong": [
+        "delayed",
+        "was detained"
+      ],
       "tags": [
         "life",
         "travel"
@@ -221,6 +262,9 @@
       ],
       "pattern": "get around + place / by + transport",
       "trap": "",
+      "wrong": [
+        "get along"
+      ],
       "tags": [
         "life",
         "travel"
@@ -240,6 +284,10 @@
       ],
       "pattern": "",
       "trap": "Sightseeing is uncountable: not 'sightseeings'; «достопримечательности» = sights.",
+      "wrong": [
+        "went to sightseeing",
+        "went sightseeings"
+      ],
       "tags": [
         "life",
         "travel"
@@ -258,6 +306,10 @@
       ],
       "pattern": "pick sb up from / at a place",
       "trap": "«Встретить» someone at the airport by car is 'pick sb up'; 'meet sb' alone doesn't say that you will drive them.",
+      "wrong": [
+        "pick up us",
+        "pick us"
+      ],
       "tags": [
         "life",
         "travel"
@@ -275,6 +327,11 @@
       ],
       "pattern": "struggle / try to make ends meet",
       "trap": "Not 'connect the ends' (calque of «сводить концы с концами»).",
+      "wrong": [
+        "connect the ends",
+        "make the ends meet",
+        "bring ends together"
+      ],
       "tags": [
         "life",
         "money"
@@ -294,6 +351,10 @@
       ],
       "pattern": "save up for sth / to do sth",
       "trap": "«Копить деньги» = save (up), not 'collect money'.",
+      "wrong": [
+        "collecting",
+        "accumulating"
+      ],
       "tags": [
         "life",
         "money"
@@ -313,6 +374,10 @@
       ],
       "pattern": "be short of sth",
       "trap": "",
+      "wrong": [
+        "lack of money",
+        "short with money"
+      ],
       "tags": [
         "life",
         "money"
@@ -331,6 +396,10 @@
       ],
       "pattern": "sth costs a fortune",
       "trap": "",
+      "wrong": [
+        "costs a state",
+        "costs fortune"
+      ],
       "tags": [
         "life",
         "money"
@@ -350,6 +419,10 @@
       ],
       "pattern": "pay sb back (for sth)",
       "trap": "Don't mix up lend («дать в долг») and borrow («взять в долг»).",
+      "wrong": [
+        "pay back you",
+        "return you"
+      ],
       "tags": [
         "life",
         "money"
@@ -369,6 +442,9 @@
       ],
       "pattern": "stick to a budget of + amount",
       "trap": "",
+      "wrong": [
+        "keep in a budget"
+      ],
       "tags": [
         "life",
         "money"
@@ -388,6 +464,10 @@
       ],
       "pattern": "be good / great value (for money)",
       "trap": "Not 'a good price-quality ratio' (calque of «соотношение цена–качество»); say 'good value for money' or just 'good value'.",
+      "wrong": [
+        "price-quality ratio",
+        "value of money"
+      ],
       "tags": [
         "life",
         "money"
@@ -407,6 +487,10 @@
       ],
       "pattern": "take out a loan for sth / to do sth",
       "trap": "Not 'take a credit' (calque of «взять кредит»).",
+      "wrong": [
+        "take a credit",
+        "take out a credit"
+      ],
       "tags": [
         "life",
         "money"
@@ -425,6 +509,10 @@
       ],
       "pattern": "can't afford sth / to do sth",
       "trap": "Not 'can't allow myself' (calque of «не могу себе позволить»).",
+      "wrong": [
+        "can't afford ourselves",
+        "don't afford"
+      ],
       "tags": [
         "life",
         "money"
@@ -443,6 +531,10 @@
       ],
       "pattern": "cut back on sth / doing sth",
       "trap": "Very close to 'cut down on'; 'cut back on' is used especially for spending and costs.",
+      "wrong": [
+        "reduce on",
+        "cut back"
+      ],
       "tags": [
         "life",
         "money"
@@ -462,6 +554,11 @@
       ],
       "pattern": "withdraw cash / money from sth",
       "trap": "«Снять деньги» = withdraw / take out money, not 'take off money'.",
+      "wrong": [
+        "take off cash",
+        "remove cash",
+        "withdraw a cash"
+      ],
       "tags": [
         "life",
         "money"
@@ -481,6 +578,10 @@
       ],
       "pattern": "get into debt",
       "trap": "In this phrase debt is uncountable: not 'get into debts'.",
+      "wrong": [
+        "get into debts",
+        "climb into debts"
+      ],
       "tags": [
         "life",
         "money"
@@ -498,6 +599,10 @@
       ],
       "pattern": "splash out on sth",
       "trap": "",
+      "wrong": [
+        "splashed out for",
+        "splashed on"
+      ],
       "tags": [
         "life",
         "money"
@@ -517,6 +622,10 @@
       ],
       "pattern": "make an appointment with sb / for + time",
       "trap": "Not 'write myself to the doctor' (calque of «записаться к врачу»).",
+      "wrong": [
+        "do an appointment",
+        "make a reception"
+      ],
       "tags": [
         "life",
         "health"
@@ -535,6 +644,9 @@
       ],
       "pattern": "come down with sth",
       "trap": "",
+      "wrong": [
+        "coming up with"
+      ],
       "tags": [
         "life",
         "health"
@@ -554,6 +666,10 @@
       ],
       "pattern": "catch / have a cold",
       "trap": "'I have a cold' = «я простужен», but 'I'm cold' = «мне холодно». And 'I got cold' means you felt cold, not that you got ill.",
+      "wrong": [
+        "got cold",
+        "took a cold"
+      ],
       "tags": [
         "life",
         "health"
@@ -573,6 +689,10 @@
       ],
       "pattern": "have a temperature (of + number)",
       "trap": "Not 'I have temperature 38'; say 'I have a temperature of 38' or just 'I've got a temperature'.",
+      "wrong": [
+        "has temperature",
+        "is with a temperature"
+      ],
       "tags": [
         "life",
         "health"
@@ -592,6 +712,10 @@
       ],
       "pattern": "take medicine / pills / tablets",
       "trap": "Not 'drink pills / medicine' (calque of «пить таблетки»).",
+      "wrong": [
+        "drink your pills",
+        "accept your medicine"
+      ],
       "tags": [
         "life",
         "health"
@@ -611,6 +735,9 @@
       ],
       "pattern": "have a sore throat",
       "trap": "Not 'my throat is ill' or 'my throat hurts me'; say 'I have a sore throat' or 'my throat hurts'.",
+      "wrong": [
+        "sick throat"
+      ],
       "tags": [
         "life",
         "health"
@@ -628,6 +755,10 @@
       ],
       "pattern": "",
       "trap": "",
+      "wrong": [
+        "feeling myself bad",
+        "feeling under weather"
+      ],
       "tags": [
         "life",
         "health"
@@ -647,6 +778,10 @@
       ],
       "pattern": "a prescription for sth",
       "trap": "A medical «рецепт» is a prescription, not a 'recipe' (that's for cooking).",
+      "wrong": [
+        "get a recipe",
+        "get a receipt"
+      ],
       "tags": [
         "life",
         "health"
@@ -666,6 +801,7 @@
       ],
       "pattern": "side effects of sth",
       "trap": "",
+      "wrong": [],
       "tags": [
         "life",
         "health"
@@ -684,6 +820,10 @@
       ],
       "pattern": "",
       "trap": "Don't confuse with 'pass away' (= die).",
+      "wrong": [
+        "passed away",
+        "lost his mind"
+      ],
       "tags": [
         "life",
         "health"
@@ -703,6 +843,7 @@
       ],
       "pattern": "go for / have a check-up",
       "trap": "",
+      "wrong": [],
       "tags": [
         "life",
         "health"
@@ -722,6 +863,10 @@
       ],
       "pattern": "be allergic to sth",
       "trap": "Not 'allergic on sth' (calque of «аллергия на»).",
+      "wrong": [
+        "allergic on",
+        "allergic for"
+      ],
       "tags": [
         "life",
         "health"
@@ -741,6 +886,10 @@
       ],
       "pattern": "",
       "trap": "",
+      "wrong": [
+        "stretched my ankle",
+        "sprained the ankle"
+      ],
       "tags": [
         "life",
         "health"

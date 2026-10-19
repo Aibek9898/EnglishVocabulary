@@ -17,6 +17,10 @@
       ],
       "pattern": "have mixed feelings about sth / about doing sth",
       "trap": "Use 'about', not 'to' or 'for': mixed feelings about sth.",
+      "wrong": [
+        "have mixed feeling",
+        "have mixed senses"
+      ],
       "tags": [
         "people",
         "emotions"
@@ -35,6 +39,10 @@
       ],
       "pattern": "be fed up with sth / with doing sth",
       "trap": "Followed by '-ing', not an infinitive: 'fed up with waiting', not 'fed up to wait'.",
+      "wrong": [
+        "fed up from",
+        "fed up to"
+      ],
       "tags": [
         "people",
         "emotions"
@@ -54,6 +62,10 @@
       ],
       "pattern": "be over the moon about/with sth",
       "trap": "Not 'on the seventh sky' (calque of «на седьмом небе»); say 'over the moon' or 'on cloud nine'.",
+      "wrong": [
+        "on the seventh sky",
+        "on the moon"
+      ],
       "tags": [
         "people",
         "emotions"
@@ -72,6 +84,9 @@
       ],
       "pattern": "",
       "trap": "Not 'feel myself down' (calque of «чувствовать себя»); say 'I feel down'.",
+      "wrong": [
+        "feeling himself down"
+      ],
       "tags": [
         "people",
         "emotions"
@@ -91,6 +106,11 @@
       ],
       "pattern": "be in a good/bad mood",
       "trap": "Not 'I have a bad mood' (calque of «у меня плохое настроение»); say 'I'm in a bad mood'. Use 'in', not 'with' or 'at'.",
+      "wrong": [
+        "in good mood",
+        "with a good mood",
+        "at a good mood"
+      ],
       "tags": [
         "people",
         "emotions"
@@ -110,6 +130,11 @@
       ],
       "pattern": "",
       "trap": "Use the possessive: 'it gets on my nerves', not 'it gets me on nerves'.",
+      "wrong": [
+        "plays on my nerves",
+        "gets me on nerves",
+        "gets on my nerve"
+      ],
       "tags": [
         "people",
         "emotions",
@@ -130,6 +155,10 @@
       ],
       "pattern": "lose your temper with sb",
       "trap": "'Lose your temper' = become angry; 'lose your nerve' = become too afraid to do something.",
+      "wrong": [
+        "went out of myself",
+        "lost my nerves"
+      ],
       "tags": [
         "people",
         "emotions",
@@ -149,6 +178,7 @@
       ],
       "pattern": "calm down / calm sb down",
       "trap": "Saying 'Calm down!' to an angry person can sound rude; 'Take it easy' is softer.",
+      "wrong": [],
       "tags": [
         "people",
         "emotions"
@@ -167,6 +197,11 @@
       ],
       "pattern": "",
       "trap": "Not 'offend your feelings' (calque of «оскорбить чувства»).",
+      "wrong": [
+        "offend your feelings",
+        "insult your feelings",
+        "hurt your feeling"
+      ],
       "tags": [
         "people",
         "emotions",
@@ -186,6 +221,10 @@
       ],
       "pattern": "take sth personally",
       "trap": "Word order: 'take it personally', not 'take personally it'.",
+      "wrong": [
+        "take it on your account",
+        "take personally it"
+      ],
       "tags": [
         "people",
         "emotions",
@@ -206,6 +245,9 @@
       ],
       "pattern": "be/feel embarrassed about sth / to do sth",
       "trap": "'Embarrassed' = awkward or uncomfortable; 'ashamed' = guilty about something wrong. 'Embarrassing' describes what causes the feeling.",
+      "wrong": [
+        "embarrassing"
+      ],
       "tags": [
         "people",
         "emotions"
@@ -225,6 +267,10 @@
       ],
       "pattern": "be jealous of sb / sth",
       "trap": "Use 'of', not 'to' or 'on': jealous of sb.",
+      "wrong": [
+        "jealous to",
+        "jealous on"
+      ],
       "tags": [
         "people",
         "emotions",
@@ -245,6 +291,11 @@
       ],
       "pattern": "",
       "trap": "Not 'on my opinion' or 'by my opinion'; avoid 'In my opinion, I think' (it repeats itself).",
+      "wrong": [
+        "On my opinion",
+        "By my opinion",
+        "To my opinion"
+      ],
       "tags": [
         "people",
         "opinions"
@@ -263,6 +314,10 @@
       ],
       "pattern": "",
       "trap": "Don't use 'As for me' to give an opinion: it introduces a change of topic, not a view.",
+      "wrong": [
+        "As for me",
+        "As far as I concern"
+      ],
       "tags": [
         "people",
         "opinions"
@@ -281,6 +336,10 @@
       ],
       "pattern": "",
       "trap": "Not 'if to be honest' (calque of «если честно»).",
+      "wrong": [
+        "If to be honest",
+        "Honestly saying"
+      ],
       "tags": [
         "people",
         "opinions"
@@ -299,6 +358,10 @@
       ],
       "pattern": "",
       "trap": "It means total agreement, not disagreement, despite the negative form.",
+      "wrong": [
+        "I am agree",
+        "I'm totally agree"
+      ],
       "tags": [
         "people",
         "opinions"
@@ -318,6 +381,10 @@
       ],
       "pattern": "",
       "trap": "Not 'you are right in this point'; say 'you have a point' or 'fair point'.",
+      "wrong": [
+        "are right in this point",
+        "have the point"
+      ],
       "tags": [
         "people",
         "opinions"
@@ -333,6 +400,9 @@
       "collocations": [],
       "pattern": "see eye to eye with sb on/about sth",
       "trap": "Mostly used in negatives: 'we don't see eye to eye'.",
+      "wrong": [
+        "find a common language"
+      ],
       "tags": [
         "people",
         "opinions",
@@ -351,6 +421,7 @@
       ],
       "pattern": "",
       "trap": "",
+      "wrong": [],
       "tags": [
         "people",
         "opinions",
@@ -370,6 +441,10 @@
       ],
       "pattern": "change your mind about sth",
       "trap": "Not 'change my decision' or 'rethink' for everyday use; 'I changed my mind' is the natural phrase.",
+      "wrong": [
+        "changed mind",
+        "changed the mind"
+      ],
       "tags": [
         "people",
         "opinions"
@@ -389,6 +464,10 @@
       ],
       "pattern": "make friends with sb",
       "trap": "Always plural, even about one person: 'I made friends with him', not 'made a friend with him'. «Дружить с» is 'be friends with sb'.",
+      "wrong": [
+        "make friend",
+        "do friends"
+      ],
       "tags": [
         "people",
         "friendship"
@@ -408,6 +487,7 @@
       ],
       "pattern": "",
       "trap": "",
+      "wrong": [],
       "tags": [
         "people",
         "character"
@@ -427,6 +507,10 @@
       ],
       "pattern": "get to know sb/sth (better)",
       "trap": "Not 'know sb better' or 'learn sb' (calques of «узнать»): 'know' is a state, 'get to know' is the process. «Узнать новость» is 'find out'.",
+      "wrong": [
+        "learn",
+        "recognise"
+      ],
       "tags": [
         "people",
         "friendship",
@@ -446,6 +530,10 @@
       ],
       "pattern": "have a lot in common with sb",
       "trap": "Not 'have much common' or 'have many common things'.",
+      "wrong": [
+        "have a lot of common",
+        "have much common"
+      ],
       "tags": [
         "people",
         "friendship"
@@ -465,6 +553,10 @@
       ],
       "pattern": "keep in touch with sb",
       "trap": "Not 'keep the connection' (calque of «держать связь»).",
+      "wrong": [
+        "keep the connection",
+        "keep the touch"
+      ],
       "tags": [
         "people",
         "friendship"
@@ -482,6 +574,7 @@
       ],
       "pattern": "drift apart (from sb)",
       "trap": "",
+      "wrong": [],
       "tags": [
         "people",
         "friendship",
@@ -501,6 +594,10 @@
       ],
       "pattern": "look up to sb",
       "trap": "Don't confuse with 'look sth up' (search for information).",
+      "wrong": [
+        "looked up at",
+        "looked up"
+      ],
       "tags": [
         "people",
         "relationships"
@@ -520,6 +617,9 @@
       ],
       "pattern": "take sb's side (in sth) / take sides",
       "trap": "Not 'stand on sb's side' (calque of «встать на чью-то сторону»); say 'take sb's side' or 'be on sb's side'.",
+      "wrong": [
+        "stands on his side"
+      ],
       "tags": [
         "people",
         "relationships",
@@ -538,6 +638,11 @@
       ],
       "pattern": "take sb/sth for granted",
       "trap": "Keep the object in the middle: 'take him for granted', not 'take for granted him'.",
+      "wrong": [
+        "took for granted him",
+        "took him as granted",
+        "took him as due"
+      ],
       "tags": [
         "people",
         "relationships"
@@ -556,6 +661,10 @@
       ],
       "pattern": "go out with sb",
       "trap": "Not 'meet with sb' (calque of «встречаться»); 'meet' is for single encounters.",
+      "wrong": [
+        "meeting with",
+        "walking with"
+      ],
       "tags": [
         "people",
         "relationships"
@@ -574,6 +683,10 @@
       ],
       "pattern": "break up with sb",
       "trap": "Use 'break up with sb', not 'break up sb'. 'Divorce' is only for married couples.",
+      "wrong": [
+        "broke down",
+        "broke off"
+      ],
       "tags": [
         "people",
         "relationships"
@@ -591,6 +704,10 @@
       ],
       "pattern": "fall out with sb over sth",
       "trap": "It means the friendship is damaged, not just a short argument.",
+      "wrong": [
+        "fell out of",
+        "swore with"
+      ],
       "tags": [
         "people",
         "conflict",
@@ -611,6 +728,11 @@
       ],
       "pattern": "have an argument with sb about/over sth",
       "trap": "«Ругаться» with someone is 'argue' or 'have an argument', not 'swear' (= use rude words). 'Make an argument' means present reasons for something.",
+      "wrong": [
+        "swore",
+        "made an argument",
+        "did an argument"
+      ],
       "tags": [
         "people",
         "conflict"
@@ -630,6 +752,10 @@
       ],
       "pattern": "apologise to sb for sth / for doing sth",
       "trap": "Not 'apologise before sb' (calque of «извиниться перед»); say 'apologise to sb for sth'. US spelling: 'apologize'.",
+      "wrong": [
+        "apologise before",
+        "apologise"
+      ],
       "tags": [
         "people",
         "conflict"
@@ -647,6 +773,9 @@
       ],
       "pattern": "make up (with sb)",
       "trap": "It has many other meanings (invent, form, cosmetics); in this sense it takes no direct object: 'make up with sb'.",
+      "wrong": [
+        "made out"
+      ],
       "tags": [
         "people",
         "conflict",
@@ -667,6 +796,11 @@
       ],
       "pattern": "reach a compromise on/over sth",
       "trap": "Use an article: 'reach a compromise', not 'reach compromise' or 'find compromise'.",
+      "wrong": [
+        "reached compromise",
+        "found compromise",
+        "came to compromise"
+      ],
       "tags": [
         "people",
         "conflict",
@@ -685,6 +819,10 @@
       ],
       "pattern": "",
       "trap": "",
+      "wrong": [
+        "put yourself on her place",
+        "put yourself at her place"
+      ],
       "tags": [
         "people",
         "relationships"
@@ -702,6 +840,9 @@
       ],
       "pattern": "",
       "trap": "Positive meaning (practical, unpretentious), unlike «приземлённый», which can sound negative.",
+      "wrong": [
+        "simple"
+      ],
       "tags": [
         "people",
         "character"
@@ -720,6 +861,9 @@
       ],
       "pattern": "be open-minded about sth",
       "trap": "",
+      "wrong": [
+        "wide-minded"
+      ],
       "tags": [
         "people",
         "character"
@@ -739,6 +883,7 @@
       ],
       "pattern": "",
       "trap": "",
+      "wrong": [],
       "tags": [
         "people",
         "character"

@@ -6,7 +6,7 @@ const str = (v: unknown) => (typeof v === 'string' ? v.trim() : typeof v === 'nu
 const list = (v: unknown) =>
   Array.isArray(v) ? v.map(str).filter(Boolean) : typeof v === 'string' ? v.split(/[;,]/).map((s) => s.trim()).filter(Boolean) : [];
 
-function guessType(term: string): ItemType {
+export function guessType(term: string): ItemType {
   const words = term.trim().split(/\s+/);
   if (words.length === 1) return 'word';
   if (/\b(up|down|out|off|on|in|over|away|back|around|through)\b/.test(term) && words.length <= 3) return 'phrasal-verb';
@@ -33,6 +33,7 @@ export function toContent(raw: unknown): ItemContent | null {
     trap: str(r.trap),
     tags: list(r.tags).map((t) => t.toLowerCase()),
     source: str(r.source) || undefined,
+    wrong: list(r.wrong ?? r.mistakes),
   };
 }
 

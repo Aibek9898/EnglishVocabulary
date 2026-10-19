@@ -13,6 +13,7 @@
       "collocations": ["turn down an offer", "turn down an invitation", "turn the music down"],
       "pattern": "separable: turn it down / turn down the offer",
       "trap": "With a pronoun, the object must go in the middle: 'turn it down', not 'turn down it'.",
+      "wrong": ["refused from", "turned off"],
       "tags": ["phrasal", "decisions"]
     },
     {
@@ -25,6 +26,7 @@
       "collocations": ["come up with an idea", "come up with a solution", "come up with an excuse"],
       "pattern": "inseparable: come up with it",
       "trap": "Don't drop 'with': 'come up with a plan', not 'come up a plan'.",
+      "wrong": ["came up", "came up to"],
       "tags": ["phrasal", "ideas"]
     },
     {
@@ -37,6 +39,7 @@
       "collocations": ["figure out how to", "figure out what to do", "figure out a way"],
       "pattern": "separable: figure it out / figure out how/what/why...",
       "trap": "With a pronoun say 'figure it out', not 'figure out it'.",
+      "wrong": ["figure up"],
       "tags": ["phrasal", "thinking"]
     },
     {
@@ -49,6 +52,7 @@
       "collocations": ["put off a decision", "put off a meeting", "put off doing sth"],
       "pattern": "separable: put it off / put off doing sth",
       "trap": "Followed by -ing, not 'to': 'put off calling', not 'put off to call'.",
+      "wrong": ["putting aside", "putting away"],
       "tags": ["phrasal", "time"]
     },
     {
@@ -61,6 +65,7 @@
       "collocations": ["run out of time", "run out of money", "run out of patience"],
       "pattern": "inseparable: sb runs out of sth; sth runs out (no 'of')",
       "trap": "Not 'The milk finished' or 'Milk is over' (calques of «молоко закончилось»). Say 'We ran out of milk' or 'The milk ran out'.",
+      "wrong": ["ran out", "ran out from"],
       "tags": ["phrasal", "everyday"]
     },
     {
@@ -73,6 +78,7 @@
       "collocations": ["carry on working", "carry on with sth", "carry on as normal"],
       "pattern": "intransitive: carry on doing sth / carry on with sth",
       "trap": "Use -ing or 'with': 'carry on working', not 'carry on to work'.",
+      "wrong": ["carry out"],
       "tags": ["phrasal", "conversation"]
     },
     {
@@ -85,6 +91,7 @@
       "collocations": ["end up doing sth", "end up in hospital", "end up with sth"],
       "pattern": "intransitive: end up doing sth / end up in/with sth",
       "trap": "Followed by -ing, not 'to': 'ended up staying', not 'ended up to stay'.",
+      "wrong": ["ended", "ended with"],
       "tags": ["phrasal", "everyday"]
     },
     {
@@ -97,6 +104,7 @@
       "collocations": ["find out about sth", "find out the truth", "find out why"],
       "pattern": "find out (about sth) / find out that... / find out what/why...",
       "trap": "Use 'find out' (not 'know') for getting new information: 'I found out yesterday', not 'I knew yesterday'.",
+      "wrong": ["knew", "recognised", "found"],
       "tags": ["phrasal", "information"]
     },
     {
@@ -109,6 +117,7 @@
       "collocations": ["give up smoking", "give up sugar", "never give up"],
       "pattern": "separable: give it up / give up doing sth",
       "trap": "Followed by -ing: 'give up smoking', not 'give up to smoke'.",
+      "wrong": ["threw", "gave in", "left"],
       "tags": ["phrasal", "habits"]
     },
     {
@@ -121,6 +130,7 @@
       "collocations": ["look forward to hearing from you", "look forward to seeing sb", "really look forward to"],
       "pattern": "inseparable: look forward to sth / to doing sth",
       "trap": "'To' is a preposition here: 'look forward to seeing you', not 'look forward to see you'.",
+      "wrong": ["looking forward for", "looking forward"],
       "tags": ["phrasal", "feelings"]
     },
     {
@@ -133,6 +143,7 @@
       "collocations": ["look into a complaint", "look into the matter", "look into options"],
       "pattern": "inseparable: look into it",
       "trap": "It doesn't mean 'look inside': «заглянуть в коробку» is 'look in/inside the box'.",
+      "wrong": ["look inside", "figure out with"],
       "tags": ["phrasal", "problems"]
     },
     {
@@ -145,6 +156,7 @@
       "collocations": ["bring up a topic", "bring up an issue", "be brought up by sb"],
       "pattern": "separable: bring it up / bring up the subject",
       "trap": "Not 'raise up' or 'lift' a topic (calques of «поднять тему»); say 'bring up a topic' or 'raise a topic'.",
+      "wrong": ["raise up", "lift", "bring out"],
       "tags": ["phrasal", "conversation"]
     },
     {
@@ -157,6 +169,7 @@
       "collocations": ["point out a mistake", "point out that", "as sb pointed out"],
       "pattern": "separable: point it out / point out that... / point sth out to sb",
       "trap": "Say 'point out sth to sb', not 'point sb out sth'.",
+      "wrong": ["pointed on", "pointed me on"],
       "tags": ["phrasal", "communication"]
     },
     {
@@ -169,6 +182,7 @@
       "collocations": ["set up a business", "set up a meeting", "set up an account"],
       "pattern": "separable: set it up / set up a company",
       "trap": "«Настроить» a device or account is 'set up', not 'tune' ('tune' is for musical instruments, engines or radio stations). The noun is 'setup'.",
+      "wrong": ["tune", "set out"],
       "tags": ["phrasal", "technology"]
     },
     {
@@ -181,6 +195,7 @@
       "collocations": ["take up a hobby", "take up yoga", "take up too much time"],
       "pattern": "separable: take it up / take up doing sth",
       "trap": "Not 'I'm engaged in yoga' (calque of «занимаюсь»): 'engaged' usually means about to get married. 'Take up' = start; 'do' = practise ('I do yoga'). 'Take up time/space' = занимать.",
+      "wrong": ["took up with", "took off"],
       "tags": ["phrasal", "hobbies"]
     },
     {
@@ -193,6 +208,7 @@
       "collocations": ["turn out to be", "it turns out that", "turn out well"],
       "pattern": "intransitive: turn out to be sth / it turns out (that)...",
       "trap": "Don't translate «оказаться» as 'appear to be' when you mean the final result: 'It turned out that he was right'.",
+      "wrong": ["turned up", "found out"],
       "tags": ["phrasal", "results"]
     },
     {
@@ -205,6 +221,7 @@
       "collocations": ["sort out a problem", "get sth sorted out", "sort yourself out"],
       "pattern": "separable: sort it out / sort out the problem",
       "trap": "It means «уладить», not «сортировать»; for putting items into groups use 'sort' or 'sort through'.",
+      "wrong": ["sort out it", "sort it up"],
       "tags": ["phrasal", "problems"]
     },
     {
@@ -217,6 +234,7 @@
       "collocations": ["deal with a problem", "deal with stress", "hard to deal with"],
       "pattern": "inseparable: deal with it / deal with sb",
       "trap": "Don't omit 'with': 'deal with the problem', not 'deal the problem'. Past form is 'dealt'.",
+      "wrong": ["dealing", "having deal with"],
       "tags": ["phrasal", "problems"]
     },
     {
@@ -229,6 +247,7 @@
       "collocations": ["get over a cold", "get over a break-up", "get over the shock"],
       "pattern": "inseparable: get over it",
       "trap": "Not 'survive the break-up' for emotional recovery; 'get over' is the natural choice.",
+      "wrong": ["get over from", "come over"],
       "tags": ["phrasal", "feelings"]
     },
     {
@@ -241,6 +260,7 @@
       "collocations": ["get along well", "get along with colleagues", "get along fine"],
       "pattern": "inseparable: get along (with sb); British also 'get on (with sb)'",
       "trap": "Not 'find a common language' (calque of «найти общий язык»); say 'get along' or 'hit it off'.",
+      "wrong": ["find a common language with", "get along"],
       "tags": ["phrasal", "relationships"]
     },
     {
@@ -253,6 +273,7 @@
       "collocations": ["the car broke down", "talks broke down", "break down in tears"],
       "pattern": "intransitive: sth breaks down",
       "trap": "Machines and cars 'break down'; a cup or a phone screen just 'breaks'. 'Break down sth' (separable) means split into parts: 'break down the costs'.",
+      "wrong": ["broke up", "broke off"],
       "tags": ["phrasal", "everyday"]
     },
     {
@@ -265,6 +286,7 @@
       "collocations": ["show up late", "fail to show up", "show up for work"],
       "pattern": "intransitive: show up (at/to/for sth)",
       "trap": "Informal; in formal writing use 'arrive' or 'attend'.",
+      "wrong": ["showed off", "showed"],
       "tags": ["phrasal", "everyday"]
     },
     {
@@ -277,6 +299,7 @@
       "collocations": ["go through a hard time", "go through a divorce", "go through the details"],
       "pattern": "inseparable: go through it",
       "trap": "Not 'pass through difficulties'; say 'go through a difficult time'.",
+      "wrong": ["passing through", "going over"],
       "tags": ["phrasal", "life"]
     },
     {
@@ -289,6 +312,7 @@
       "collocations": ["back up a claim", "back up your files", "back sth up with evidence"],
       "pattern": "separable: back me up / back up your files",
       "trap": "With a pronoun the object goes in the middle: 'back me up', not 'back up me'.",
+      "wrong": ["backed up me"],
       "tags": ["phrasal", "relationships"]
     },
     {
@@ -301,6 +325,7 @@
       "collocations": ["cut down on sugar", "cut down on spending", "cut down on screen time"],
       "pattern": "inseparable: cut down on it",
       "trap": "Not 'reduce on coffee'; say 'cut down on coffee' or 'reduce my coffee intake'.",
+      "wrong": ["reduce on", "cut down"],
       "tags": ["phrasal", "health"]
     },
     {
@@ -313,6 +338,7 @@
       "collocations": ["feel let down", "never let sb down", "let yourself down"],
       "pattern": "separable: let him down / feel let down",
       "trap": "Not 'bring sb down' (= make sb feel sad) or 'put sb down' (= criticise sb); «подвести» is 'let sb down'.",
+      "wrong": ["let off", "let up"],
       "tags": ["phrasal", "relationships"]
     },
     {
@@ -325,6 +351,7 @@
       "collocations": ["the plane took off", "sales took off", "a career takes off"],
       "pattern": "intransitive: sth takes off; separable 'take sth off' = remove clothes",
       "trap": "Don't confuse with 'take sth off' (снять одежду): 'take off your shoes'.",
+      "wrong": ["took up", "flew up"],
       "tags": ["phrasal", "success"]
     },
     {
@@ -337,6 +364,7 @@
       "collocations": ["hold on a minute", "hold on tight", "hold on to sth"],
       "pattern": "intransitive: hold on (a minute) / hold on to sth",
       "trap": "On the phone say 'Hold on' or 'Hang on', not 'Wait me'.",
+      "wrong": ["wait me"],
       "tags": ["phrasal", "conversation"]
     },
     {
@@ -349,6 +377,7 @@
       "collocations": ["drop the kids off at school", "drop sb off at the station", "drop off a package"],
       "pattern": "separable: drop me off / drop off the parcel",
       "trap": "Not 'throw me at the station' (calque of «закинь меня»); say 'drop me off at the station'.",
+      "wrong": ["throw", "drop out"],
       "tags": ["phrasal", "everyday"]
     },
     {
@@ -361,6 +390,7 @@
       "collocations": ["run into an old friend", "run into problems", "run into trouble"],
       "pattern": "inseparable: run into him / run into difficulties",
       "trap": "Not 'meet occasionally' («случайно» = 'by chance', 'occasionally' = «иногда»); say 'run into' or 'bump into'.",
+      "wrong": ["occasionally met", "ran in"],
       "tags": ["phrasal", "people"]
     },
     {
@@ -373,6 +403,7 @@
       "collocations": ["stand out from the crowd", "make sth stand out", "stand out as"],
       "pattern": "intransitive: stand out (from sth / as sth)",
       "trap": "Not 'stand out of the crowd'; the preposition is 'from'.",
+      "wrong": ["stood up", "distinguished"],
       "tags": ["phrasal", "success"]
     },
     {
@@ -385,6 +416,7 @@
       "collocations": ["count on sb to do sth", "count on sb's support", "don't count on it"],
       "pattern": "inseparable: count on sb (to do sth)",
       "trap": "Not 'calculate on sb' (from «рассчитывать на»): 'calculate' is only for numbers. Say 'count on' or 'rely on'.",
+      "wrong": ["calculate on", "count for"],
       "tags": ["phrasal", "relationships"]
     },
     {
@@ -397,6 +429,7 @@
       "collocations": ["look after children", "look after yourself", "look after a pet"],
       "pattern": "inseparable: look after them",
       "trap": "Not 'look for' (искать) or 'look at' (смотреть на); «присматривать» is 'look after'.",
+      "wrong": ["looks behind", "looks for"],
       "tags": ["phrasal", "family"]
     },
     {
@@ -409,6 +442,7 @@
       "collocations": ["put up with noise", "put up with sb's behaviour", "have to put up with"],
       "pattern": "inseparable: put up with it",
       "trap": "Not 'suffer the noise' or 'stand with'; say 'put up with' or 'can't stand'.",
+      "wrong": ["put up", "stand with"],
       "tags": ["phrasal", "feelings"]
     },
     {
@@ -421,6 +455,7 @@
       "collocations": ["fall apart at the seams", "a marriage falls apart", "plans fall apart"],
       "pattern": "intransitive: sth falls apart",
       "trap": "Not 'fall into pieces'; say 'fall apart' or 'fall to pieces'.",
+      "wrong": ["fell into pieces", "fell off"],
       "tags": ["phrasal", "everyday"]
     },
     {
@@ -433,6 +468,7 @@
       "collocations": ["catch up on sleep", "catch up on work", "catch up on the news"],
       "pattern": "inseparable: catch up on sth / on doing sth",
       "trap": "Don't confuse: 'catch up on sth' = do what you missed (sleep, work, news); 'catch up with sb' = reach sb, or meet and exchange news.",
+      "wrong": ["catching up with", "catching up"],
       "tags": ["phrasal", "time"]
     },
     {
@@ -445,6 +481,7 @@
       "collocations": ["keep up with the news", "keep up with demand", "keep up with technology"],
       "pattern": "inseparable: keep up with it",
       "trap": "Don't confuse with 'catch up' (reach after being behind); 'keep up' = not fall behind.",
+      "wrong": ["keep up", "keep with"],
       "tags": ["phrasal", "progress"]
     },
     {
@@ -457,6 +494,7 @@
       "collocations": ["make up for lost time", "make up for a mistake", "more than make up for"],
       "pattern": "inseparable: make up for sth / for doing sth",
       "trap": "Don't drop 'for': 'make up a story' means invent it; 'make up for a mistake' means compensate.",
+      "wrong": ["make up", "compensate"],
       "tags": ["phrasal", "relationships"]
     },
     {
@@ -469,6 +507,7 @@
       "collocations": ["fill in a form", "fill in the gaps", "fill sb in on sth"],
       "pattern": "separable: fill it in / fill in the form (US also 'fill out')",
       "trap": "Not just 'fill a form' (calque of «заполнить»); the particle is needed: 'fill in a form'.",
+      "wrong": ["fill", "fill up"],
       "tags": ["phrasal", "admin"]
     },
     {
@@ -481,6 +520,7 @@
       "collocations": ["settle down and have kids", "settle down to work", "things settle down"],
       "pattern": "intransitive: settle down (in a place)",
       "trap": "Don't confuse with 'settle in' (привыкнуть к новому месту, освоиться).",
+      "wrong": ["settled up"],
       "tags": ["phrasal", "life"]
     }
   ]
