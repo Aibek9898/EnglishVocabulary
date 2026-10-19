@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { db, saveSettings, useSettings } from '../lib/db';
 import { dayKey } from '../lib/dates';
 import { downloadJson, isBackup, makeBackup, restoreBackup } from '../lib/backup';
+import { logout } from '../lib/auth';
 import { canSpeak, englishVoices, speak } from '../lib/speech';
 
 export function SettingsPage() {
@@ -128,6 +129,14 @@ export function SettingsPage() {
           />
         </div>
         {msg && <p className="small">{msg}</p>}
+      </div>
+
+      <div className="card">
+        <h3>Account</h3>
+        <p className="muted small">Signing out keeps your words on this device.</p>
+        <button className="ghost" onClick={logout}>
+          Sign out
+        </button>
       </div>
 
       <div className="card">

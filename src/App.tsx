@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
+import { isLoggedIn } from './lib/auth';
 import { AddWords } from './pages/AddWords';
 import { Library } from './pages/Library';
+import { Login } from './pages/Login';
 import { Practice } from './pages/Practice';
 import { Progress } from './pages/Progress';
 import { SettingsPage } from './pages/Settings';
@@ -20,6 +22,12 @@ const NAV = [
 ];
 
 export function App() {
+  const [authed, setAuthed] = useState(isLoggedIn);
+  if (!authed) return <Login onSuccess={() => setAuthed(true)} />;
+  return <Shell />;
+}
+
+function Shell() {
   const [route, setRoute] = useState(parseHash);
   useEffect(() => {
     const onHash = () => {
