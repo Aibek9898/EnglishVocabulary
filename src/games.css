@@ -348,6 +348,16 @@
   margin: 8px 0 0;
 }
 
+.g-card-also {
+  margin: 4px 0 0;
+  font-size: 0.9375rem;
+  color: var(--text-2);
+}
+
+.g-card-also b {
+  color: var(--text);
+}
+
 .g-still {
   flex: 0 1 auto;
 }

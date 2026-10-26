@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { buildRounds, sameSentence, type BuildRound } from '../../lib/games';
 import { Icon } from '../Icon';
-import { Example } from '../ItemCard';
+import { Also, Example } from '../ItemCard';
 import { Speak } from '../Speak';
 import { ActionBar, ContinueButton, SessionHead, Verdict, useEnter } from '../ui';
 import { GameOver } from './GameOver';
@@ -115,6 +115,10 @@ export function BuildSentence({ pool, onExit, onAgain }: GameProps) {
               </span>
               <Speak text={round.answer} label="Listen to the sentence" />
             </p>
+            <p className="g-meaning">
+              <b>{round.item.term}</b> — <span lang="ru">{round.item.translation}</span>
+            </p>
+            <Also item={round.item} />
           </div>
         )}
       </div>

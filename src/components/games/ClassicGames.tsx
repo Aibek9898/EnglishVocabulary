@@ -3,7 +3,7 @@ import { formatTime, hasCloze, pickDistinct } from '../../lib/games';
 import type { Item, Result } from '../../lib/types';
 import { Exercise } from '../Exercise';
 import { Icon } from '../Icon';
-import { Example } from '../ItemCard';
+import { Also, Example } from '../ItemCard';
 import { MatchPairs } from '../MatchPairs';
 import { Speak } from '../Speak';
 import { ActionBar, ContinueButton, SessionHead } from '../ui';
@@ -171,6 +171,7 @@ export function Flashcards({ pool, onExit, onAgain }: GameProps) {
                 <Example item={item} />
               </p>
             )}
+            <Also item={item} className="g-card-also" />
           </div>
         )}
       </div>

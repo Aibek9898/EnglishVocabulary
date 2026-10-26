@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { buildMistakeRounds, isRightTap, type MistakeRound } from '../../lib/games';
 import { Icon } from '../Icon';
+import { Also } from '../ItemCard';
 import { Speak } from '../Speak';
 import { ActionBar, ContinueButton, SessionHead, Verdict } from '../ui';
 import { GameOver } from './GameOver';
@@ -138,6 +139,7 @@ export function FindMistake({ pool, onExit, onAgain }: GameProps) {
             <p className="g-meaning">
               <b>{round.item.term}</b> — <span lang="ru">{round.item.translation}</span>
             </p>
+            <Also item={round.item} />
           </div>
         )}
       </div>

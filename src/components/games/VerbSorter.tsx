@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { LIGHT_VERBS, sorterCards, type LightVerb, type SorterCard } from '../../lib/games';
 import { Icon } from '../Icon';
+import { Also } from '../ItemCard';
 import { Speak } from '../Speak';
 import { ActionBar, ContinueButton, SessionHead, Verdict } from '../ui';
 import { GameOver } from './GameOver';
@@ -83,6 +84,7 @@ export function VerbSorter({ pool, all, onExit, onAgain }: GameProps) {
               <Speak text={full} label={`Listen: ${full}`} />
             </p>
           )}
+          {picked && <Also item={card} className="g-card-also" />}
         </div>
         <div className="g-verbs" role="group" aria-label="Verbs">
           {LIGHT_VERBS.map((v, i) => {

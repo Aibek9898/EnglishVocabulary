@@ -17,6 +17,16 @@ export function Example({ item }: { item: Pick<ItemContent, 'example' | 'term'> 
   );
 }
 
+/** "Also: a · b · c": collocations and close relatives of an item. */
+export function Also({ item, className = 'meta' }: { item: { collocations?: string[] }; className?: string }) {
+  if (!item.collocations?.length) return null;
+  return (
+    <p className={className}>
+      <b>Also:</b> {item.collocations.join(' · ')}
+    </p>
+  );
+}
+
 export const TYPE_LABEL: Record<string, string> = {
   collocation: 'collocation',
   'phrasal-verb': 'phrasal verb',
@@ -61,11 +71,7 @@ export function ItemCard({ item, compact = false, heading = 'h2' }: { item: Item
           <Speak text={plainExample(item.example)} label="Listen to the example" small />
         </div>
       )}
-      {!compact && item.collocations.length > 0 && (
-        <p className="meta">
-          <b>Also:</b> {item.collocations.join(' · ')}
-        </p>
-      )}
+      <Also item={item} />
       {!compact && item.pattern && (
         <p className="meta">
           <b>Pattern:</b> {item.pattern}

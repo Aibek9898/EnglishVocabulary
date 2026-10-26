@@ -218,6 +218,8 @@ export interface SorterCard {
   translation: string;
   /** The library item behind the card, if any (games log activity for it). */
   itemId?: string;
+  /** The item's "Also" list, shown after answering. */
+  collocations?: string[];
 }
 
 const SLOT_WORDS: Record<string, string> = {
@@ -265,10 +267,10 @@ export function sorterCards(pool: Item[], all: Item[] = [], count = 12, rand: Ra
     const key = normalize(split.phrase);
     if (seen.has(key)) continue;
     seen.add(key);
-    cards.push({ id: item.id, verb: split.verb, phrase: split.phrase, translation: item.translation, itemId: item.id });
+    cards.push({ id: item.id, verb: split.verb, phrase: split.phrase, translation: item.translation, itemId: item.id, collocations: item.collocations });
   }
 
-  const byTerm = new Map(all.filter((i) => !i.suspended).map((i) => [normalize(i.term), i.id]));
+  const byTerm = new Map(all.filter((i) => !i.suspended).map((i) => [normalize(i.term), i]));
   const left = new Map<LightVerb, VerbPhrase[]>(LIGHT_VERBS.map((v) => [v, shuffle(VERB_PHRASES.filter((p) => p.verb === v && !seen.has(normalize(p.phrase))), rand)]));
   const counts = new Map<LightVerb, number>(LIGHT_VERBS.map((v) => [v, cards.filter((c) => c.verb === v).length]));
   while (cards.length < count) {
@@ -281,12 +283,14 @@ export function sorterCards(pool: Item[], all: Item[] = [], count = 12, rand: Ra
     );
     const p = left.get(verb)!.pop()!;
     counts.set(verb, least + 1);
+    const linked = byTerm.get(normalize(`${p.verb} ${p.phrase}`));
     cards.push({
       id: `builtin:${p.verb} ${p.phrase}`,
       verb: p.verb,
       phrase: p.phrase,
       translation: p.ru,
-      itemId: byTerm.get(normalize(`${p.verb} ${p.phrase}`)),
+      itemId: linked?.id,
+      collocations: linked?.collocations,
     });
   }
   return shuffle(cards, rand);
