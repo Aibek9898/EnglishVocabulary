@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Icon, type IconName } from './components/Icon';
+import { SaveSelection } from './components/SaveSelection';
 import { Toaster } from './components/ui';
 import { isLoggedIn } from './lib/auth';
 import { db, useLive } from './lib/db';
@@ -94,6 +95,7 @@ function Shell() {
       </header>
       <main id="main">{page}</main>
       <Toaster />
+      <SaveSelection />
     </div>
   );
 }

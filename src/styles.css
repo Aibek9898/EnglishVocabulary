@@ -1715,7 +1715,7 @@ dialog.sheet::backdrop {
 /* Import */
 .choice-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 10px;
   margin-bottom: 14px;
 }
@@ -2513,4 +2513,85 @@ a.funnel-step {
 .pack-group {
   font-size: 1.125rem;
   margin: 8px 0 -4px;
+}
+
+/* ============ saving phrases ============ */
+.save-pill {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  margin: 0 auto;
+  width: fit-content;
+  max-width: calc(100% - 32px);
+  bottom: calc(var(--nav-h) + 24px + env(safe-area-inset-bottom));
+  z-index: 65;
+  min-height: 48px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--r-pill);
+  background: var(--brand);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: var(--shadow-pop);
+  animation: toast-in 240ms var(--ease-spring);
+  white-space: nowrap;
+}
+
+.save-pill.done {
+  background: var(--success);
+}
+
+html.in-session .save-pill {
+  bottom: calc(var(--bar-h) + 16px);
+}
+
+dialog .save-pill {
+  bottom: max(24px, env(safe-area-inset-bottom));
+}
+
+.tab-count {
+  margin-left: 6px;
+  min-width: 20px;
+  padding: 0 6px;
+  border-radius: var(--r-pill);
+  background: var(--brand);
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 20px;
+  text-align: center;
+}
+
+.saved-add {
+  display: flex;
+  gap: 8px;
+}
+
+.saved-add input {
+  flex: 1;
+  min-width: 0;
+}
+
+.saved-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.saved-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 8px 8px 16px;
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.saved-text {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  gap: 2px;
 }

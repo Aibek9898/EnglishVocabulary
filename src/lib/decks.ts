@@ -15,7 +15,7 @@ export const COURSE_DECKS = new Set(DECKS.filter((d) => d.course).map((d) => d.i
 
 /**
  * Adds the given items to the library, skipping terms that are already there. Returns how many were added.
- * With `first`, the new words go to the front of the queue of words not started yet.
+ * With `first`, the new words go after the course words still waiting and before all other new words.
  */
 export async function addContents(contents: ItemContent[], deck: string, first = false): Promise<number> {
   const items = await db.items.toArray();
@@ -26,10 +26,19 @@ export async function addContents(contents: ItemContent[], deck: string, first =
     existing.add(key);
     return true;
   });
-  // Stagger createdAt so the original order is kept when picking new words.
-  const waiting = items.filter((i) => i.level === 0).map((i) => i.createdAt);
-  const base = first && waiting.length ? Math.min(...waiting) - fresh.length : Date.now();
-  await db.items.bulkAdd(fresh.map((c, i) => ({ ...makeItem(c, deck), createdAt: base + i })));
+  // New words are picked by createdAt, so staggering it keeps the original order.
+  const now = Date.now();
+  let times = fresh.map((_, i) => now + i);
+  const waiting = items.filter((i) => i.level === 0);
+  const later = waiting.filter((i) => !COURSE_DECKS.has(i.deck)).map((i) => i.createdAt);
+  if (first && later.length) {
+    const hi = Math.min(...later);
+    const ahead = waiting.filter((i) => COURSE_DECKS.has(i.deck) && i.createdAt < hi).map((i) => i.createdAt);
+    const lo = ahead.length ? Math.max(...ahead) : hi - fresh.length - 1;
+    const step = (hi - lo) / (fresh.length + 1);
+    times = fresh.map((_, i) => lo + step * (i + 1));
+  }
+  await db.items.bulkAdd(fresh.map((c, i) => ({ ...makeItem(c, deck), createdAt: times[i] })));
   return fresh.length;
 }
 
@@ -74,17 +83,14 @@ async function updatePacks() {
 }
 
 /**
- * Course packs come into every library once, ahead of the words not started
- * yet. A brand-new library skips this: the welcome screen offers them.
+ * Course packs come into every library once, ahead of the other words not
+ * started yet. A brand-new library skips this: the welcome screen offers them.
  */
 async function addCoursePacks() {
   const row = await db.kv.get('coursePacks');
   const done = new Set<string>(Array.isArray(row?.value) ? row.value : []);
   const todo = DECKS.filter((d) => d.course && !done.has(d.id));
   if (!todo.length) return;
-  if ((await db.items.count()) > 0) {
-    // Last pack first, so the first pack ends up at the very front.
-    for (const d of [...todo].reverse()) await addDeck(d);
-  }
+  if ((await db.items.count()) > 0) for (const d of todo) await addDeck(d);
   await db.kv.put({ key: 'coursePacks', value: [...done, ...todo.map((d) => d.id)] });
 }

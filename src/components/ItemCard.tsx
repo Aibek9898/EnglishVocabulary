@@ -40,7 +40,7 @@ export function ItemCard({ item, compact = false, heading = 'h2' }: { item: Item
   const H = heading;
   const wrong = (item.wrong ?? []).slice(0, 3);
   return (
-    <div className="item-card">
+    <div className="item-card" data-term={item.term}>
       <div className="item-head">
         <H className="term">{item.term}</H>
         <Speak text={item.term} />

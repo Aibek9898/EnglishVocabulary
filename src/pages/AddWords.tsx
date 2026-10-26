@@ -4,9 +4,10 @@ import { ItemForm } from '../components/ItemForm';
 import { toast, usePageTitle } from '../components/ui';
 import { plainExample } from '../lib/cloze';
 import { termKey } from '../lib/content';
-import { db } from '../lib/db';
+import { db, useLive } from '../lib/db';
 import { addContents } from '../lib/decks';
 import { AI_PROMPT, parseImport } from '../lib/importer';
+import { getSaved, inLibrary, libraryKeys, pruneSaved, savedText, type SavedPhrase } from '../lib/saved';
 import type { ItemContent } from '../lib/types';
 
 export function AddWords({ tab }: { tab: string }) {
@@ -47,10 +48,19 @@ function Manual() {
   );
 }
 
-type Mode = 'chat' | 'topic';
+type Mode = 'chat' | 'topic' | 'saved';
 
 function FromAi() {
-  const [mode, setMode] = useState<Mode>('chat');
+  // Library → Saved links here with from=saved.
+  const [mode, setMode] = useState<Mode>(() => (window.location.hash.includes('from=saved') ? 'saved' : 'chat'));
+  const saved = useLive(
+    async () => {
+      const keys = libraryKeys((await db.items.toArray()).map((i) => i.term));
+      return (await getSaved()).filter((s) => !inLibrary(s, keys));
+    },
+    [],
+    [] as SavedPhrase[],
+  );
   const [topic, setTopic] = useState('');
   const [copied, setCopied] = useState<'yes' | 'failed' | null>(null);
   const [text, setText] = useState('');
@@ -60,11 +70,13 @@ function FromAi() {
   const promptBox = useRef<HTMLTextAreaElement>(null);
 
   const ask =
-    mode === 'topic'
-      ? topic.trim()
-        ? `Topic: ${topic.trim()}`
-        : '(choose a useful everyday topic for me)'
-      : '(use the words and phrases from our conversation above)';
+    mode === 'saved' && saved.length
+      ? `Make one item for EACH of these words and phrases, even if there are more than 15. Keep each one as the term (use sth/sb where needed):\n${savedText(saved)}`
+      : mode === 'topic'
+        ? topic.trim()
+          ? `Topic: ${topic.trim()}`
+          : '(choose a useful everyday topic for me)'
+        : '(use the words and phrases from our conversation above)';
   const prompt = AI_PROMPT + ask;
 
   const copy = async () => {
@@ -90,6 +102,7 @@ function FromAi() {
     if (!parsed) return;
     const list = parsed.items.filter((_, i) => chosen.has(i)).map((c) => ({ ...c, source: c.source || 'AI chat' }));
     const n = await addContents(list, 'own');
+    await pruneSaved();
     setAdded(n);
     setParsed(null);
     setText('');
@@ -130,6 +143,15 @@ function FromAi() {
           <b>Pick a topic</b>
           <span>The AI suggests useful phrases for a topic.</span>
         </button>
+        {(saved.length > 0 || mode === 'saved') && (
+          <button type="button" className="choice-card" aria-pressed={mode === 'saved'} onClick={() => setMode('saved')}>
+            <Icon name="bookmark" size={22} />
+            <b>My saved list</b>
+            <span>
+              {saved.length} word{saved.length === 1 ? '' : 's'} from Library → Saved.
+            </span>
+          </button>
+        )}
       </div>
 
       <div className="card">

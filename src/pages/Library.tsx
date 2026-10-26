@@ -6,11 +6,13 @@ import { Empty, LevelMeter, Sheet, toast, usePageTitle } from '../components/ui'
 import { sentenceUsesTerm } from '../lib/cloze';
 import { db, useLive } from '../lib/db';
 import { COURSE_DECKS, DECKS, addDeck } from '../lib/decks';
+import { getSaved, inLibrary, libraryKeys, removeSaved, savePhrase, savedText, type SavedPhrase } from '../lib/saved';
 import { addSentence, resetItem } from '../lib/srs';
 import { LEVEL_NAMES, type Deck, type Item } from '../lib/types';
 
 export function Library({ tab }: { tab: string }) {
   usePageTitle('Library');
+  const saved = useLive(getSaved, [], [] as SavedPhrase[]);
   return (
     <section className="page">
       <div className="page-head">
@@ -20,14 +22,17 @@ export function Library({ tab }: { tab: string }) {
         </a>
       </div>
       <nav className="tabs" aria-label="Library sections">
-        <a className="tab" href="#/library" aria-current={tab !== 'packs' ? 'page' : undefined}>
+        <a className="tab" href="#/library" aria-current={tab !== 'packs' && tab !== 'saved' ? 'page' : undefined}>
           Words I'm learning
         </a>
         <a className="tab" href="#/library?tab=packs" aria-current={tab === 'packs' ? 'page' : undefined}>
           Packs
         </a>
+        <a className="tab" href="#/library?tab=saved" aria-current={tab === 'saved' ? 'page' : undefined}>
+          Saved{saved.length > 0 && <span className="tab-count">{saved.length}</span>}
+        </a>
       </nav>
-      {tab === 'packs' ? <Packs /> : <Words />}
+      {tab === 'packs' ? <Packs /> : tab === 'saved' ? <Saved list={saved} /> : <Words />}
     </section>
   );
 }
@@ -383,6 +388,91 @@ function PackCard({
             </li>
           ))}
         </ul>
+      )}
+    </div>
+  );
+}
+
+function Saved({ list }: { list: SavedPhrase[] }) {
+  const items = useLive(() => db.items.toArray(), [], [] as Item[]);
+  const [text, setText] = useState('');
+  const keys = useMemo(() => libraryKeys(items.map((i) => i.term)), [items]);
+  const waiting = list.filter((s) => !inLibrary(s, keys));
+  const done = list.filter((s) => inLibrary(s, keys));
+
+  const copyList = async () => {
+    try {
+      await navigator.clipboard.writeText(savedText(waiting));
+      toast('List copied', 'copy');
+    } catch {
+      toast('Copying is blocked here', 'info');
+    }
+  };
+
+  return (
+    <div className="stack">
+      <p className="muted small">
+        Select any word or phrase on the site, for example in “Also”, and tap <b>Save</b>. Or type it here. Then turn the list into cards with Claude or Gemini.
+      </p>
+      <form
+        className="saved-add"
+        onSubmit={async (e) => {
+          e.preventDefault();
+          const added = await savePhrase(text);
+          toast(added ? 'Saved' : 'Already in the list', added ? 'bookmark' : 'info');
+          if (added) setText('');
+        }}
+      >
+        <input value={text} onChange={(e) => setText(e.target.value)} placeholder="e.g. take the plunge" aria-label="Word or phrase to save" autoCapitalize="off" enterKeyHint="done" />
+        <button type="submit" className="primary" disabled={!text.trim()}>
+          <Icon name="plus" size={18} /> Save
+        </button>
+      </form>
+
+      {list.length === 0 ? (
+        <Empty icon="bookmark" title="Nothing saved yet">
+          <p className="muted">Select a word or phrase anywhere on the site and a Save button appears at the bottom.</p>
+        </Empty>
+      ) : (
+        <>
+          <ul className="saved-list">
+            {list.map((s) => (
+              <li key={s.text} className="saved-row">
+                <span className="saved-text">
+                  <b>{s.text}</b>
+                  {s.from && <span className="muted small">from “{s.from}”</span>}
+                </span>
+                {inLibrary(s, keys) && (
+                  <span className="chip ok">
+                    <Icon name="check" size={14} strokeWidth={3} /> In library
+                  </span>
+                )}
+                <button type="button" className="icon-btn" aria-label={`Remove “${s.text}”`} onClick={() => removeSaved([s.text])}>
+                  <Icon name="x" size={18} />
+                </button>
+              </li>
+            ))}
+          </ul>
+          {done.length > 0 && (
+            <button type="button" className="link-btn small" onClick={() => removeSaved(done.map((s) => s.text))}>
+              Remove {done.length} already in the library
+            </button>
+          )}
+          {waiting.length > 0 && (
+            <div className="card">
+              <h3>Turn them into cards</h3>
+              <p className="muted small">The AI writes a translation, an example and the typical mistakes for each one, and you add them in one go.</p>
+              <div className="row">
+                <a className="button primary" href="#/add?tab=ai&from=saved">
+                  <Icon name="sparkles" size={18} /> Make cards with AI
+                </a>
+                <button type="button" onClick={copyList}>
+                  <Icon name="copy" size={18} /> Copy the list
+                </button>
+              </div>
+            </div>
+          )}
+        </>
       )}
     </div>
   );

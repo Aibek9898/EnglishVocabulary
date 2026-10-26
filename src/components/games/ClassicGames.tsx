@@ -157,7 +157,7 @@ export function Flashcards({ pool, onExit, onAgain }: GameProps) {
             </span>
           </button>
         ) : (
-          <div className="g-card back g-flip-in" key={`b${index}`}>
+          <div className="g-card back g-flip-in" key={`b${index}`} data-term={item.term}>
             <div className="g-card-term">
               <span>{item.term}</span>
               <Speak text={item.term} />

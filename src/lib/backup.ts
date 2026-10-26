@@ -1,4 +1,5 @@
 import { db, getSettings } from './db';
+import { getSaved, setSaved, type SavedPhrase } from './saved';
 import type { Item, ReviewEntry, Settings } from './types';
 
 export interface Backup {
@@ -8,6 +9,8 @@ export interface Backup {
   items: Item[];
   reviews: ReviewEntry[];
   settings: Settings;
+  /** Library → Saved; missing in older backups. */
+  saved?: SavedPhrase[];
 }
 
 export async function makeBackup(): Promise<Backup> {
@@ -18,6 +21,7 @@ export async function makeBackup(): Promise<Backup> {
     items: await db.items.toArray(),
     reviews: await db.reviews.toArray(),
     settings: await getSettings(),
+    saved: await getSaved(),
   };
 }
 
@@ -50,5 +54,6 @@ export async function restoreBackup(backup: Backup) {
     await db.items.bulkAdd(backup.items.map(reviveItem));
     await db.reviews.bulkAdd(backup.reviews.map(({ id: _id, ...r }) => r));
     await db.kv.put({ key: 'settings', value: backup.settings });
+    if (Array.isArray(backup.saved)) await setSaved(backup.saved);
   });
 }
