@@ -36,7 +36,18 @@ export const TYPE_LABEL: Record<string, string> = {
 };
 
 /** Everything known about an item, used for introductions, feedback and the library. */
-export function ItemCard({ item, compact = false, heading = 'h2' }: { item: ItemContent | Item; compact?: boolean; heading?: 'h2' | 'h3' }) {
+export function ItemCard({
+  item,
+  compact = false,
+  heading = 'h2',
+  onEdit,
+}: {
+  item: ItemContent | Item;
+  compact?: boolean;
+  heading?: 'h2' | 'h3';
+  /** Shows an Edit button for writing your own translation and example. */
+  onEdit?: () => void;
+}) {
   const H = heading;
   const wrong = (item.wrong ?? []).slice(0, 3);
   return (
@@ -54,9 +65,16 @@ export function ItemCard({ item, compact = false, heading = 'h2' }: { item: Item
         <span className="chip">{TYPE_LABEL[item.type] ?? item.type}</span>
         {'level' in item && item.level > 0 && <LevelMeter level={item.level} />}
       </div>
-      <p className="translation" lang="ru">
-        {item.translation}
-      </p>
+      <div className="translation-row">
+        <p className="translation" lang="ru">
+          {item.translation}
+        </p>
+        {onEdit && (
+          <button type="button" className="small edit-meaning" onClick={onEdit} aria-label="Edit translation and example">
+            <Icon name="pen" size={16} /> Edit
+          </button>
+        )}
+      </div>
       {item.definition && <p className="definition">{item.definition}</p>}
       {item.example && (
         <div className="example-row">

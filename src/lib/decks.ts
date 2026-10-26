@@ -1,7 +1,9 @@
 import { db } from './db';
 import { makeItem } from './srs';
 import { termKey, toContent } from './content';
-import type { Deck, ItemContent } from './types';
+import { packUpdate } from './edit';
+import { getRemoved, setRemoved } from './removed';
+import type { Deck, Item, ItemContent } from './types';
 
 const files = import.meta.glob<{ default: Deck }>('../data/decks/*.json', { eager: true });
 
@@ -16,16 +18,21 @@ export const COURSE_DECKS = new Set(DECKS.filter((d) => d.course).map((d) => d.i
 /**
  * Adds the given items to the library, skipping terms that are already there. Returns how many were added.
  * With `first`, the new words go after the course words still waiting and before all other new words.
+ * Words the learner removed stay out of packs, unless `restore` is set; adding your own word always brings it back.
  */
-export async function addContents(contents: ItemContent[], deck: string, first = false): Promise<number> {
+export async function addContents(contents: ItemContent[], deck: string, { first = false, restore = false } = {}): Promise<number> {
   const items = await db.items.toArray();
   const existing = new Set(items.map((i) => termKey(i.term)));
+  const removed = new Set(await getRemoved());
+  const explicit = restore || deck === 'own';
   const fresh = contents.filter((c) => {
     const key = termKey(c.term);
-    if (existing.has(key)) return false;
+    if (existing.has(key) || (!explicit && removed.has(key))) return false;
     existing.add(key);
     return true;
   });
+  const back = fresh.map((c) => termKey(c.term)).filter((k) => removed.has(k));
+  if (back.length) await setRemoved([...removed].filter((k) => !back.includes(k)));
   // New words are picked by createdAt, so staggering it keeps the original order.
   const now = Date.now();
   let times = fresh.map((_, i) => now + i);
@@ -42,8 +49,15 @@ export async function addContents(contents: ItemContent[], deck: string, first =
   return fresh.length;
 }
 
-export async function addDeck(deck: Deck) {
-  return addContents(deck.items, deck.id, !!deck.course);
+/** The pack's own version of a library item, if it came from a pack. */
+export function packOriginal(item: Pick<Item, 'deck' | 'term'>): ItemContent | undefined {
+  const key = termKey(item.term);
+  return DECKS.find((d) => d.id === item.deck)?.items.find((c) => termKey(c.term) === key);
+}
+
+/** `restore`: the learner asked for the whole pack, so words they removed come back too. */
+export async function addDeck(deck: Deck, restore = false) {
+  return addContents(deck.items, deck.id, { first: !!deck.course, restore });
 }
 
 /** Bump when the pack files change, so libraries made from older packs get the fixes. */
@@ -71,8 +85,7 @@ async function updatePacks() {
       if (!pack) continue;
       const fresh = pack.get(termKey(item.term));
       if (fresh) {
-        const { source: _source, ...content } = fresh;
-        await db.items.update(item.id, content);
+        await db.items.update(item.id, packUpdate(fresh, item.edited));
       } else if (item.level === 0 && item.card.reps === 0) {
         await db.items.delete(item.id);
       }

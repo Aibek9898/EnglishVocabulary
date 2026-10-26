@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { markExample } from '../lib/cloze';
 import { guessType } from '../lib/content';
 import type { ItemContent, ItemType } from '../lib/types';
 
@@ -39,14 +40,8 @@ export function ItemForm({
   const set = (k: keyof ItemContent) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setC({ ...c, [k]: e.target.value });
 
-  const markTarget = () => {
-    // Wrap the term in [brackets] inside the example if it is there and not marked yet.
-    if (!c.term || c.example.includes('[')) return;
-    const idx = c.example.toLowerCase().indexOf(c.term.toLowerCase());
-    if (idx >= 0) {
-      setC({ ...c, example: `${c.example.slice(0, idx)}[${c.example.slice(idx, idx + c.term.length)}]${c.example.slice(idx + c.term.length)}` });
-    }
-  };
+  // Wrap the term in [brackets] inside the example if it is there and not marked yet.
+  const markTarget = () => setC({ ...c, example: markExample(c.example, c.term) });
 
   return (
     <form
@@ -57,6 +52,7 @@ export function ItemForm({
         await onSubmit({
           ...c,
           term: c.term.trim(),
+          example: markExample(c.example.trim(), c.term.trim()),
           ipa: c.ipa?.replace(/^[[/]+|[\]/]+$/g, '').trim() || undefined,
           translation: c.translation.trim(),
           collocations: split(collocations),

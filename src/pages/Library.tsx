@@ -1,11 +1,14 @@
 import { useMemo, useState } from 'react';
+import { EditMeaning } from '../components/EditMeaning';
 import { Icon } from '../components/Icon';
 import { ItemCard } from '../components/ItemCard';
 import { ItemForm } from '../components/ItemForm';
 import { Empty, LevelMeter, Sheet, toast, usePageTitle } from '../components/ui';
 import { sentenceUsesTerm } from '../lib/cloze';
 import { db, useLive } from '../lib/db';
-import { COURSE_DECKS, DECKS, addDeck } from '../lib/decks';
+import { COURSE_DECKS, DECKS, addDeck, packOriginal } from '../lib/decks';
+import { editPatch } from '../lib/edit';
+import { removeItem } from '../lib/removed';
 import { getSaved, inLibrary, libraryKeys, removeSaved, savePhrase, savedText, type SavedPhrase } from '../lib/saved';
 import { addSentence, resetItem } from '../lib/srs';
 import { LEVEL_NAMES, type Deck, type Item } from '../lib/types';
@@ -156,9 +159,13 @@ function statusLine(item: Item): string {
 }
 
 function ItemDetails({ item, onClose }: { item: Item; onClose: () => void }) {
-  const [mode, setMode] = useState<'view' | 'edit' | 'write' | 'delete' | 'reset'>('view');
+  const [mode, setMode] = useState<'view' | 'meaning' | 'edit' | 'write' | 'delete' | 'reset'>('view');
   const [menu, setMenu] = useState(false);
   const [text, setText] = useState('');
+
+  if (mode === 'meaning') {
+    return <EditMeaning item={item} onSave={(patch) => db.items.update(item.id, patch)} onDone={() => setMode('view')} />;
+  }
 
   if (mode === 'edit') {
     return (
@@ -169,7 +176,8 @@ function ItemDetails({ item, onClose }: { item: Item; onClose: () => void }) {
           submitLabel="Save changes"
           onCancel={() => setMode('view')}
           onSubmit={async (c) => {
-            await db.items.update(item.id, { ...c } as Partial<Item>);
+            const patch = editPatch(item, c, packOriginal(item));
+            if (Object.keys(patch).length) await db.items.update(item.id, patch);
             toast('Saved');
             setMode('view');
           }}
@@ -182,8 +190,12 @@ function ItemDetails({ item, onClose }: { item: Item; onClose: () => void }) {
     const del = mode === 'delete';
     return (
       <>
-        <h2>{del ? `Delete “${item.term}”?` : 'Start over?'}</h2>
-        <p>{del ? 'It will be removed with all its progress.' : 'Its progress goes back to zero and it comes back as a new word.'}</p>
+        <h2>{del ? `Remove “${item.term}”?` : 'Start over?'}</h2>
+        <p>
+          {del
+            ? "It leaves your lessons and games with all its progress, and its pack won't add it again. You can always add it yourself later."
+            : 'Its progress goes back to zero and it comes back as a new word.'}
+        </p>
         <div className="row">
           <button type="button" className="ghost" onClick={() => setMode('view')}>
             Cancel
@@ -193,8 +205,8 @@ function ItemDetails({ item, onClose }: { item: Item; onClose: () => void }) {
             className={del ? 'danger' : 'primary'}
             onClick={async () => {
               if (del) {
-                await db.items.delete(item.id);
-                toast('Deleted', 'trash');
+                await removeItem(item);
+                toast(`“${item.term}” removed`, 'trash');
                 onClose();
               } else {
                 await resetItem(item.id);
@@ -203,7 +215,7 @@ function ItemDetails({ item, onClose }: { item: Item; onClose: () => void }) {
               }
             }}
           >
-            {del ? 'Delete' : 'Start over'}
+            {del ? 'Remove' : 'Start over'}
           </button>
         </div>
       </>
@@ -214,7 +226,7 @@ function ItemDetails({ item, onClose }: { item: Item; onClose: () => void }) {
 
   return (
     <>
-      <ItemCard item={item} />
+      <ItemCard item={item} onEdit={() => setMode('meaning')} />
       <p className="status-line">
         <LevelMeter level={item.level} /> {statusLine(item)}
       </p>
@@ -283,7 +295,7 @@ function ItemDetails({ item, onClose }: { item: Item; onClose: () => void }) {
               {menu && (
                 <div className="menu-list" role="menu">
                   <button type="button" role="menuitem" onClick={() => setMode('edit')}>
-                    <Icon name="pen" size={18} /> Edit
+                    <Icon name="pen" size={18} /> Edit all fields
                   </button>
                   <button
                     type="button"
@@ -299,15 +311,17 @@ function ItemDetails({ item, onClose }: { item: Item; onClose: () => void }) {
                   <button type="button" role="menuitem" onClick={() => setMode('reset')}>
                     <Icon name="reset" size={18} /> Start over
                   </button>
-                  <button type="button" role="menuitem" className="danger" onClick={() => setMode('delete')}>
-                    <Icon name="trash" size={18} /> Delete
-                  </button>
                 </div>
               )}
             </div>
           </>
         )}
       </div>
+      {mode === 'view' && (
+        <button type="button" className="link-btn remove-word" onClick={() => setMode('delete')}>
+          <Icon name="trash" size={18} /> Don't want to learn it? Remove the word
+        </button>
+      )}
     </>
   );
 }
@@ -366,7 +380,7 @@ function PackCard({
             type="button"
             className="primary small"
             onClick={async () => {
-              const n = await addDeck(d);
+              const n = await addDeck(d, true);
               toast(n < d.items.length ? `Added ${n} (${d.items.length - n} were already there)` : `Added ${n} phrases`);
             }}
           >

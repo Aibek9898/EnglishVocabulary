@@ -1,4 +1,5 @@
 import { db, getSettings } from './db';
+import { getRemoved, setRemoved } from './removed';
 import { getSaved, setSaved, type SavedPhrase } from './saved';
 import type { Item, ReviewEntry, Settings } from './types';
 
@@ -11,6 +12,8 @@ export interface Backup {
   settings: Settings;
   /** Library → Saved; missing in older backups. */
   saved?: SavedPhrase[];
+  /** Words removed on purpose, so packs don't bring them back; missing in older backups. */
+  removed?: string[];
 }
 
 export async function makeBackup(): Promise<Backup> {
@@ -22,6 +25,7 @@ export async function makeBackup(): Promise<Backup> {
     reviews: await db.reviews.toArray(),
     settings: await getSettings(),
     saved: await getSaved(),
+    removed: await getRemoved(),
   };
 }
 
@@ -55,5 +59,6 @@ export async function restoreBackup(backup: Backup) {
     await db.reviews.bulkAdd(backup.reviews.map(({ id: _id, ...r }) => r));
     await db.kv.put({ key: 'settings', value: backup.settings });
     if (Array.isArray(backup.saved)) await setSaved(backup.saved);
+    if (Array.isArray(backup.removed)) await setRemoved(backup.removed);
   });
 }

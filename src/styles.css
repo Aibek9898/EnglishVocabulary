@@ -1449,6 +1449,54 @@ html.in-session .app {
   margin: 6px 0 2px;
 }
 
+/* The translation with the card's Edit button beside it. */
+.translation-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+button.edit-meaning {
+  flex-shrink: 0;
+  min-height: 36px;
+  padding: 4px 12px;
+  margin-top: 2px;
+  gap: 6px;
+  color: var(--brand-ink);
+}
+
+/* Your own translation and example */
+.field small.hint-line {
+  color: var(--warn-ink);
+  font-weight: 650;
+}
+
+.field small.meaning-preview {
+  color: var(--text-2);
+  line-height: 1.5;
+}
+
+.meaning-form .link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: -6px 0 6px;
+}
+
+.another-meaning {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  width: 100%;
+  justify-content: flex-start;
+  border-radius: 0;
+  text-align: left;
+}
+
 .definition {
   color: var(--text-2);
   margin: 0 0 12px;
@@ -2275,6 +2323,16 @@ html.in-session .toast {
 
 .menu-list .danger {
   color: var(--error-ink);
+}
+
+/* "Don't want to learn it? Remove the word" under the word's actions */
+.link-btn.remove-word {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-top: 8px;
+  color: var(--error-ink);
+  font-weight: 600;
 }
 
 .my-sentences h3 {

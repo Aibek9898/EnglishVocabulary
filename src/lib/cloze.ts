@@ -82,6 +82,37 @@ const IRREGULAR: Record<string, string[]> = {
   think: ['thought'],
   buy: ['bought'],
   meet: ['met'],
+  be: ['am', 'is', 'are', 'was', 'were', 'been', 'being'],
+  say: ['said'],
+  see: ['saw', 'seen'],
+  know: ['knew', 'known'],
+  leave: ['left'],
+  send: ['sent'],
+  sell: ['sold'],
+  teach: ['taught'],
+  fight: ['fought'],
+  speak: ['spoke', 'spoken'],
+  write: ['wrote', 'written'],
+  drive: ['drove', 'driven'],
+  throw: ['threw', 'thrown'],
+  blow: ['blew', 'blown'],
+  grow: ['grew', 'grown'],
+  win: ['won'],
+  sit: ['sat'],
+  lead: ['led'],
+  stick: ['stuck'],
+  hang: ['hung'],
+  mean: ['meant'],
+  deal: ['dealt'],
+  bite: ['bit', 'bitten'],
+  shake: ['shook', 'shaken'],
+  wake: ['woke', 'woken'],
+  wear: ['wore', 'worn'],
+  tear: ['tore', 'torn'],
+  begin: ['began', 'begun'],
+  forget: ['forgot', 'forgotten'],
+  choose: ['chose', 'chosen'],
+  steal: ['stole', 'stolen'],
 };
 
 /** A regex source matching a word and its simple inflections: decide/decides/decided/deciding, stop/stopped. */
@@ -104,6 +135,44 @@ export function maskTerm(text: string, term: string): string {
   if (!text || !words.length) return text;
   const re = new RegExp(`(?<![\\p{L}\\p{N}])(?:${words.map(wordForms).join('|')})(?![\\p{L}\\p{N}])`, 'giu');
   return text.replace(re, '…').replace(/…(?:\s+…)+/g, '…');
+}
+
+const ARTICLES = new Set(['a', 'an', 'the']);
+
+/**
+ * Where a term is used in a sentence, allowing other forms of its words and
+ * any words in place of sth/sb/your: "trip sb up" is found in "The last
+ * question really tripped me up." as "tripped me up". Null when it isn't there.
+ */
+export function findTarget(sentence: string, term: string): { start: number; end: number } | null {
+  // "fall over / fall over sth", "be (a bit) out of sth": the first variant is enough.
+  const main = term.split(/[/(]/)[0].trim();
+  if (!main) return null;
+  const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const exact = new RegExp(`(?<![\\p{L}\\p{N}])${esc(main)}(?![\\p{L}\\p{N}])`, 'iu').exec(sentence);
+  if (exact) return { start: exact.index, end: exact.index + exact[0].length };
+  const words = normalize(main)
+    .split(' ')
+    .filter((w) => w && !ARTICLES.has(w) && !slotKind(w));
+  if (!words.length) return null;
+  const word = (w: string) => `(?<![\\p{L}\\p{N}])(?:${/^[a-z]+$/.test(w) ? wordForms(w) : esc(w)})(?![\\p{L}\\p{N}])`;
+  // Up to three other words may stand between the term's words: "tripped [me] up", "make a [quick] decision".
+  const re = new RegExp(words.map(word).join('(?:\\s+\\S+){0,3}?\\s+'), 'iu');
+  const m = re.exec(sentence);
+  if (!m) return null;
+  let start = m.index;
+  // Keep a leading article: "the last straw", not "last straw".
+  const before = sentence.slice(0, start).match(/\b(a|an|the)\s+$/i);
+  if (before && ARTICLES.has(normalize(main).split(' ')[0])) start -= before[0].length;
+  return { start, end: m.index + m[0].length };
+}
+
+/** Puts the term in [brackets] inside the example, if it is there and nothing is marked yet. */
+export function markExample(example: string, term: string): string {
+  if (!term.trim() || example.includes('[')) return example;
+  const t = findTarget(example, term);
+  if (!t) return example;
+  return `${example.slice(0, t.start)}[${example.slice(t.start, t.end)}]${example.slice(t.end)}`;
 }
 
 /**

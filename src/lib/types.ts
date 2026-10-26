@@ -40,6 +40,8 @@ export interface Item extends ItemContent {
   suspended: boolean;
   /** Answers the learner marked as also right ("I was right"). */
   accepted?: string[];
+  /** Fields the learner rewrote (e.g. their own translation): pack updates leave these alone. */
+  edited?: (keyof ItemContent)[];
 }
 
 export type ExerciseKind =

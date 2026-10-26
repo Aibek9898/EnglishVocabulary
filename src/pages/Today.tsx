@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { EditMeaning } from '../components/EditMeaning';
 import { Exercise } from '../components/Exercise';
 import { Icon } from '../components/Icon';
 import { Confetti, Ring, SessionHead, Sheet, toast, useCountUp, useFocusMode, usePageTitle } from '../components/ui';
@@ -6,6 +7,7 @@ import { sentenceUsesTerm } from '../lib/cloze';
 import { dayKey } from '../lib/dates';
 import { db, getSettings, saveSettings, useLive, useSettings } from '../lib/db';
 import { DECKS, addDeck } from '../lib/decks';
+import { removeItem } from '../lib/removed';
 import { buildSession, dueItems, newAllowance, overdueCount, pickMessageWords, retrySteps, type Step } from '../lib/session';
 import { unlockSpeech } from '../lib/speech';
 import { addSentence, nextLevel, recordResult, TYPED } from '../lib/srs';
@@ -39,6 +41,8 @@ export function Today() {
   const items = useLive(() => db.items.toArray(), [], null as Item[] | null);
   const [lesson, setLesson] = useState<Lesson | null>(null);
   const [confirmEnd, setConfirmEnd] = useState(false);
+  const [editing, setEditing] = useState<Item | null>(null);
+  const [removing, setRemoving] = useState<Item | null>(null);
   // Saves run one after another in the background, so moving on never waits.
   const saving = useRef<Promise<unknown>>(Promise.resolve());
   const latest = useRef(new Map<string, Item>());
@@ -125,13 +129,40 @@ export function Today() {
             updated = await recordResult(current, step.exercise, result, step.scheduled);
           }
           latest.current.set(item.id, updated);
-          setLesson((l) => (l ? { ...l, items: new Map(l.items).set(item.id, updated) } : l));
+          setLesson((l) => (l?.items.has(item.id) ? { ...l, items: new Map(l.items).set(item.id, updated) } : l));
           if (updated.level > current.level && updated.level >= 3) toast(`“${item.term}” is now ${LEVEL_NAMES[updated.level]}`, 'star');
         })
         .catch((e) => console.error(e));
     },
     [lesson],
   );
+
+  // The learner's own translation or example: saved in turn with the answers, and used for the rest of the lesson.
+  const saveEdit = useCallback((id: string, patch: Partial<Item>) => {
+    const run = saving.current.then(async () => {
+      await db.items.update(id, patch);
+      const current = latest.current.get(id);
+      if (!current) return;
+      const updated = { ...current, ...patch };
+      latest.current.set(id, updated);
+      setLesson((l) => (l?.items.has(id) ? { ...l, items: new Map(l.items).set(id, updated) } : l));
+    });
+    saving.current = run.catch((e) => console.error(e));
+    return run;
+  }, []);
+
+  // A word the learner doesn't want: gone from the library and from the rest of this lesson.
+  const removeWord = useCallback((item: Item) => {
+    saving.current = saving.current.then(() => removeItem(item)).catch((e) => console.error(e));
+    setLesson((l) => {
+      if (!l) return l;
+      const steps = [...l.steps.slice(0, l.index), ...l.steps.slice(l.index).filter((s) => s.itemId !== item.id)];
+      const items = new Map(l.items);
+      items.delete(item.id);
+      return { ...l, steps, items, ended: l.index >= steps.length ? 'done' : null };
+    });
+    toast(`“${item.term}” removed`, 'trash');
+  }, []);
 
   if (items === null) return null;
   if (items.length === 0 && !lesson) return <Welcome onStart={() => start()} />;
@@ -142,7 +173,41 @@ export function Today() {
     return (
       <section className="page session">
         <SessionHead done={lesson.index} total={lesson.steps.length} combo={lesson.combo} onClose={() => setConfirmEnd(true)} />
-        <Exercise key={lesson.index} item={item} kind={step.exercise} pool={[...lesson.items.values()]} onDone={onDone} />
+        <Exercise
+          key={lesson.index}
+          item={item}
+          kind={step.exercise}
+          pool={[...lesson.items.values()]}
+          onDone={onDone}
+          onEdit={setEditing}
+          onRemove={setRemoving}
+        />
+        <Sheet open={!!removing} onClose={() => setRemoving(null)} label="Remove the word?">
+          {removing && (
+            <>
+              <h2>Remove “{removing.term}”?</h2>
+              <p>You won't see it in lessons or games again, and its pack won't add it back. You can always add it yourself later.</p>
+              <div className="row">
+                <button type="button" className="ghost" onClick={() => setRemoving(null)} autoFocus>
+                  Keep it
+                </button>
+                <button
+                  type="button"
+                  className="danger"
+                  onClick={() => {
+                    removeWord(removing);
+                    setRemoving(null);
+                  }}
+                >
+                  Remove
+                </button>
+              </div>
+            </>
+          )}
+        </Sheet>
+        <Sheet open={!!editing} onClose={() => setEditing(null)} label="Your translation and example">
+          {editing && <EditMeaning item={editing} onSave={(patch) => saveEdit(editing.id, patch)} onDone={() => setEditing(null)} />}
+        </Sheet>
         <Sheet open={confirmEnd} onClose={() => setConfirmEnd(false)} label="End the lesson?">
           <h2>End the lesson?</h2>
           <p>Your answers so far are saved. The rest comes back next time.</p>

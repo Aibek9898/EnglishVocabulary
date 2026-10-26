@@ -18,6 +18,10 @@ export interface ExerciseProps {
   pool: Item[];
   /** `sentence` is the learner's own sentence, for the 'sentence' step. */
   onDone: (result: Result, sentence?: string) => void;
+  /** Lets the learner write their own translation and example from the word card. */
+  onEdit?: (item: Item) => void;
+  /** Lets the learner drop a new word they don't want to learn. */
+  onRemove?: (item: Item) => void;
 }
 
 export function Exercise(props: ExerciseProps) {
@@ -65,7 +69,8 @@ const TYPE_NAME: Record<string, string> = { 'phrasal-verb': 'phrasal verb', idio
 /** Up to `n` other items with a different `key`, same tag first, then same type. */
 function pickOthers(item: Item, pool: Item[], n: number, key: (i: Item) => string): Item[] {
   const seen = new Set([normalize(key(item))]);
-  const others = pool.filter((p) => p.id !== item.id);
+  // Another meaning of the same phrase is not a wrong answer.
+  const others = pool.filter((p) => p.id !== item.id && normalize(p.term) !== normalize(item.term));
   const out: Item[] = [];
   const ordered = [
     ...shuffle(others.filter((o) => o.tags.some((t) => item.tags.includes(t)) && o.type === item.type)),
@@ -109,7 +114,7 @@ const keepFocus = { onMouseDown: (e: React.MouseEvent) => e.preventDefault() };
 
 /* ---------- new word ---------- */
 
-function Intro({ item, onDone }: ExerciseProps) {
+function Intro({ item, onDone, onEdit, onRemove }: ExerciseProps) {
   useEffect(() => {
     speak(item.term);
   }, [item.term]);
@@ -117,9 +122,14 @@ function Intro({ item, onDone }: ExerciseProps) {
     <>
       <div className="exercise">
         <Pill icon="sparkles">New {TYPE_NAME[item.type] ?? 'phrase'}</Pill>
-        <ItemCard item={item} />
+        <ItemCard item={item} onEdit={onEdit && (() => onEdit(item))} />
       </div>
       <ActionBar>
+        {onRemove && (
+          <button type="button" className="ghost big" onClick={() => onRemove(item)}>
+            <Icon name="trash" size={18} /> Remove word
+          </button>
+        )}
         <ContinueButton label="Got it" onClick={() => onDone('done')} />
       </ActionBar>
     </>
@@ -133,7 +143,7 @@ interface Option {
   right: boolean;
 }
 
-function Choice({ item, pool, onDone }: ExerciseProps) {
+function Choice({ item, pool, onDone, onEdit }: ExerciseProps) {
   const cloze = parseCloze(item.example, item.term);
   const [mode] = useState<'meaning' | 'form' | 'term'>(() => {
     if (Math.random() < 0.5) return 'meaning';
@@ -238,7 +248,7 @@ function Choice({ item, pool, onDone }: ExerciseProps) {
         </div>
         {done && !correct && (
           <div className="details-panel">
-            <ItemCard item={item} compact heading="h3" />
+            <ItemCard item={item} compact heading="h3" onEdit={onEdit && (() => onEdit(item))} />
           </div>
         )}
       </div>
@@ -271,7 +281,7 @@ function Choice({ item, pool, onDone }: ExerciseProps) {
 
 /* ---------- typed answers: gap, translation, recall, dictation ---------- */
 
-function Typed({ item, kind: requested, onDone }: ExerciseProps) {
+function Typed({ item, kind: requested, onDone, onEdit }: ExerciseProps) {
   const cloze = parseCloze(item.example, item.term);
   let kind = requested;
   // Without a usable example a gap-fill becomes plain recall.
@@ -447,7 +457,7 @@ function Typed({ item, kind: requested, onDone }: ExerciseProps) {
         )}
         {verdict && tone !== 'correct' && (
           <div className="details-panel">
-            <ItemCard item={item} compact heading="h3" />
+            <ItemCard item={item} compact heading="h3" onEdit={onEdit && (() => onEdit(item))} />
           </div>
         )}
       </div>
