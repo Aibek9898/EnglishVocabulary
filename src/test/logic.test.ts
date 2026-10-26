@@ -268,6 +268,24 @@ describe('session', () => {
     const picked = pickNew([item('take a break'), item('come up with', { deck: 'own', createdAt: 5 })], 1);
     expect(picked[0].term).toBe('come up with');
   });
+  it('takes course words before other packs, mixing the course topics', () => {
+    const picked = pickNew(
+      [
+        item('take a break', { deck: 'everyday-life', createdAt: 1 }),
+        item('bond over sth', { deck: 'course-1-friends', createdAt: 2 }),
+        item('click with sb', { deck: 'course-1-friends', createdAt: 3 }),
+        item('urban areas', { deck: 'course-2-cities', createdAt: 4 }),
+      ],
+      4,
+    );
+    expect(picked.map((i) => i.term)).toEqual(['bond over sth', 'urban areas', 'click with sb', 'take a break']);
+  });
+  it('can be asked for extra new words after the daily ones', () => {
+    const fresh = ['a', 'b', 'c', 'd'].map((t, k) => item(`${t} word`, { createdAt: k }));
+    const intros = (steps: { exercise: string }[]) => steps.filter((s) => s.exercise === 'intro').length;
+    expect(intros(buildSession(fresh, [], { ...DEFAULT_SETTINGS, newPerDay: 0 }, NOW))).toBe(0);
+    expect(intros(buildSession(fresh, [], { ...DEFAULT_SETTINGS, newPerDay: 0 }, NOW, 3))).toBe(3);
+  });
   it('pauses new words when the overdue backlog reaches the cap', () => {
     const due = Array.from({ length: 5 }, (_, i) => item(`due${i}`, { level: 2, card: reviewed(5, -2) }));
     const steps = buildSession([...due, item('fresh')], [], { ...DEFAULT_SETTINGS, reviewCap: 5 }, NOW);

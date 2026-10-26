@@ -31,6 +31,10 @@ interface Lesson {
   ended: 'done' | 'early' | null;
 }
 
+/** "Learn 5 more": extra new words once today's plan is done. */
+const MORE_NEW = 5;
+type StartMode = 'normal' | 'quick' | 'more';
+
 export function Today() {
   const items = useLive(() => db.items.toArray(), [], null as Item[] | null);
   const [lesson, setLesson] = useState<Lesson | null>(null);
@@ -43,11 +47,11 @@ export function Today() {
   usePageTitle(lesson && !lesson.ended ? 'Lesson' : 'Today');
   useFocusMode(!!lesson);
 
-  const start = useCallback(async (quick = false) => {
+  const start = useCallback(async (mode: StartMode = 'normal') => {
     unlockSpeech();
     const [all, settings, logs] = await Promise.all([db.items.toArray(), getSettings(), db.reviews.toArray()]);
-    const effective = quick ? { ...settings, newPerDay: 0, reviewCap: 15 } : settings;
-    const steps = buildSession(all, logs, effective);
+    const effective = mode === 'quick' ? { ...settings, newPerDay: 0, reviewCap: 15 } : settings;
+    const steps = buildSession(all, logs, effective, new Date(), mode === 'more' ? MORE_NEW : undefined);
     if (!steps.length) return;
     latest.current = new Map(all.map((i) => [i.id, i]));
     handled.current = -1;
@@ -162,14 +166,14 @@ export function Today() {
     );
   }
 
-  if (lesson?.ended) return <LessonEnd lesson={lesson} saved={saving.current} onClose={() => setLesson(null)} />;
+  if (lesson?.ended) return <LessonEnd lesson={lesson} saved={saving.current} onClose={() => setLesson(null)} onMore={() => start('more')} />;
 
   return <TodayStart items={items!} onStart={start} />;
 }
 
 /* ---------- start screen ---------- */
 
-function TodayStart({ items, onStart }: { items: Item[]; onStart: (quick?: boolean) => void }) {
+function TodayStart({ items, onStart }: { items: Item[]; onStart: (mode?: StartMode) => void }) {
   const settings = useSettings();
   const reviews = useLive(() => db.reviews.where('day').equals(dayKey()).toArray(), [], null);
   const [busy, setBusy] = useState(false);
@@ -187,9 +191,9 @@ function TodayStart({ items, onStart }: { items: Item[]; onStart: (quick?: boole
   const levels = levelCounts(items);
   const tomorrow = items.filter((i) => !i.suspended && i.level > 0 && +new Date(i.card.due) < +new Date(new Date().setHours(48, 0, 0, 0))).length - due;
 
-  const go = (quick?: boolean) => {
+  const go = (mode?: StartMode) => {
     setBusy(true);
-    onStart(quick);
+    onStart(mode);
   };
 
   const parts = [reviewsNow && `${reviewsNow} review${reviewsNow === 1 ? '' : 's'}`, newCount && `${newCount} new`].filter(Boolean).join(' + ');
@@ -208,10 +212,18 @@ function TodayStart({ items, onStart }: { items: Item[]; onStart: (quick?: boole
           <>
             <div>
               <h2>All done for today</h2>
-              <p className="muted">{tomorrow > 0 ? `${tomorrow} review${tomorrow === 1 ? '' : 's'} tomorrow. ` : ''}Play a game or add new words.</p>
+              <p className="muted">
+                {tomorrow > 0 ? `${tomorrow} review${tomorrow === 1 ? '' : 's'} tomorrow. ` : ''}
+                {unseen > 0 ? 'Want more? Learn a few extra words, or play a game.' : 'Play a game or add new words.'}
+              </p>
             </div>
             <div className="hero-actions">
-              <a className="button primary big" href="#/practice">
+              {unseen > 0 && (
+                <button type="button" className="primary big block" onClick={() => go('more')} disabled={busy}>
+                  <Icon name="plus" /> Learn {Math.min(MORE_NEW, unseen)} more words
+                </button>
+              )}
+              <a className={unseen > 0 ? 'button big' : 'button primary big'} href="#/practice">
                 <Icon name="gamepad" /> Practice
               </a>
               <a className="button big" href="#/add">
@@ -230,7 +242,7 @@ function TodayStart({ items, onStart }: { items: Item[]; onStart: (quick?: boole
                 {doneToday ? 'Continue lesson' : 'Start lesson'}
               </button>
               {reviewsNow > 3 && (
-                <button type="button" className="ghost block" onClick={() => go(true)} disabled={busy}>
+                <button type="button" className="ghost block" onClick={() => go('quick')} disabled={busy}>
                   <Icon name="timer" size={18} /> Quick 3-minute review
                 </button>
               )}
@@ -306,7 +318,7 @@ function InstallCard() {
 
 /* ---------- end screen ---------- */
 
-function LessonEnd({ lesson, saved, onClose }: { lesson: Lesson; saved: Promise<unknown>; onClose: () => void }) {
+function LessonEnd({ lesson, saved, onClose, onMore }: { lesson: Lesson; saved: Promise<unknown>; onClose: () => void; onMore: () => void }) {
   const [after, setAfter] = useState<{ streak: Streak; words: Item[]; items: Item[] } | null>(null);
   useEffect(() => {
     let live = true;
@@ -334,6 +346,7 @@ function LessonEnd({ lesson, saved, onClose }: { lesson: Lesson; saved: Promise<
       .slice(0, 6);
   }, [after, lesson.levelsBefore]);
 
+  const unseen = after ? after.items.filter((i) => i.level === 0 && !i.suspended).length : 0;
   const streak = after?.streak;
   const extended = streak && streak.activeToday && !lesson.streakBefore.activeToday;
 
@@ -386,6 +399,11 @@ function LessonEnd({ lesson, saved, onClose }: { lesson: Lesson; saved: Promise<
       <button type="button" className="primary big block" onClick={onClose}>
         Done
       </button>
+      {complete && unseen > 0 && (
+        <button type="button" className="big block end-more" onClick={onMore}>
+          <Icon name="plus" /> Learn {Math.min(MORE_NEW, unseen)} more words
+        </button>
+      )}
     </section>
   );
 }

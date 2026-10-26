@@ -2595,3 +2595,7 @@ dialog .save-pill {
   display: grid;
   gap: 2px;
 }
+
+.end-more {
+  margin-top: 8px;
+}

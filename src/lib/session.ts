@@ -53,10 +53,20 @@ export function newAllowance(items: Item[], reviews: ReviewEntry[], settings: Se
   return Math.max(0, Math.round(settings.newPerDay * room) - introducedToday(reviews, dayKey(now)));
 }
 
+/** Round-robin over the queues: one from each, then the second from each, and so on. */
+function interleave(queues: Item[][]): Item[] {
+  const out: Item[] = [];
+  for (let round = 0; queues.some((q) => q.length > round); round++) {
+    for (const q of queues) if (q[round]) out.push(q[round]);
+  }
+  return out;
+}
+
 /**
- * Picks new items: the learner's own words first, then packs round-robin, and
- * never two items starting with the same word on one day (look up / look after
- * learned together interfere with each other).
+ * Picks new items: the learner's own words first, then the course packs
+ * (course-*.json) round-robin, then the other packs round-robin, and never two
+ * items starting with the same word on one day (look up / look after learned
+ * together interfere with each other).
  */
 export function pickNew(items: Item[], count: number): Item[] {
   if (count <= 0) return [];
@@ -65,11 +75,12 @@ export function pickNew(items: Item[], count: number): Item[] {
   for (const i of fresh) byDeck.set(i.deck, [...(byDeck.get(i.deck) ?? []), i]);
   const own = byDeck.get('own') ?? [];
   byDeck.delete('own');
-  const queues = [own, ...byDeck.values()];
-  const ordered: Item[] = [...own];
-  for (let round = 0; queues.slice(1).some((q) => q.length > round); round++) {
-    for (const q of queues.slice(1)) if (q[round]) ordered.push(q[round]);
-  }
+  const decks = [...byDeck.entries()];
+  const ordered = [
+    ...own,
+    ...interleave(decks.filter(([id]) => id.startsWith('course-')).map(([, q]) => q)),
+    ...interleave(decks.filter(([id]) => !id.startsWith('course-')).map(([, q]) => q)),
+  ];
   const picked: Item[] = [];
   const firstWords = new Set<string>();
   for (const i of ordered) {
@@ -109,12 +120,13 @@ const TYPED_AFTER = 9;
  * 'choice' with at least 2 other steps in between, and its first scheduled,
  * typed check ('cloze', or 'recall' without a cloze) with at least 8 other steps
  * in between. When the queue is too short for a gap, the step goes at the end.
+ * `newCount` overrides today's allowance ("Learn 5 more").
  */
-export function buildSession(items: Item[], reviews: ReviewEntry[], settings: Settings, now = new Date()): Step[] {
+export function buildSession(items: Item[], reviews: ReviewEntry[], settings: Settings, now = new Date(), newCount?: number): Step[] {
   const reviewSteps = dueItems(items, now)
     .slice(0, settings.reviewCap)
     .map<Step>((i) => ({ itemId: i.id, exercise: exerciseFor(i), scheduled: true, isNew: false }));
-  const fresh = pickNew(items, newAllowance(items, reviews, settings, now));
+  const fresh = pickNew(items, newCount ?? newAllowance(items, reviews, settings, now));
 
   // Base order: one warm-up review, then each intro followed by two reviews.
   const base: Step[] = reviewSteps.slice(0, 1);
