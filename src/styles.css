@@ -2212,8 +2212,16 @@ html.in-session .toast {
 .item-sub {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 6px;
+}
+
+.ipa {
+  color: var(--muted);
+  font-size: 1rem;
+  /* Fonts with full IPA coverage; Manrope lacks some symbols. */
+  font-family: 'Segoe UI', 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .example-row {
@@ -2500,4 +2508,9 @@ a.funnel-step {
 
 .lesson-end {
   padding-top: max(24px, env(safe-area-inset-top));
+}
+
+.pack-group {
+  font-size: 1.125rem;
+  margin: 8px 0 -4px;
 }

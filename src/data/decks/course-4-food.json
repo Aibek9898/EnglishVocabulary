@@ -1,0 +1,954 @@
+{
+  "id": "course-4-food",
+  "title": "Food & Writing Posts",
+  "description": "From your course: words for describing food and its taste and texture, kitchen basics, and the language of writing captions and posts.",
+  "course": true,
+  "items": [
+    {
+      "term": "comfort food",
+      "ipa": "ˈkʌmfət fuːd",
+      "type": "collocation",
+      "translation": "еда «для души», которая поднимает настроение",
+      "definition": "simple, familiar food that makes you feel better when you are sad or tired",
+      "example": "Mac and cheese is my go-to [comfort food] after a bad day at work.",
+      "exampleRu": "Макароны с сыром — моя любимая еда для поднятия настроения после тяжёлого дня на работе.",
+      "collocations": [
+        "my go-to comfort food",
+        "crave comfort food",
+        "home cooking",
+        "treat yourself"
+      ],
+      "pattern": "",
+      "trap": "Not 'comfortable food': 'comfortable' describes chairs, clothes and people, not food.",
+      "wrong": [
+        "comfortable food",
+        "food for soul"
+      ],
+      "tags": [
+        "food",
+        "feelings"
+      ]
+    },
+    {
+      "term": "carbohydrates",
+      "ipa": "ˌkɑːbəʊˈhaɪdreɪts",
+      "type": "word",
+      "translation": "углеводы",
+      "definition": "substances in food like bread, rice and pasta that give your body energy",
+      "example": "My personal trainer says I need more complex [carbohydrates], like oats and brown rice.",
+      "exampleRu": "Мой тренер говорит, что мне нужно больше сложных углеводов — например, овсянки и бурого риса.",
+      "collocations": [
+        "carbs (informal)",
+        "complex carbohydrates",
+        "cut down on carbs",
+        "a low-carb diet"
+      ],
+      "pattern": "",
+      "trap": "In everyday speech people say 'carbs'; 'hydrocarbons' (углеводороды) are oil and gas, not food.",
+      "wrong": [
+        "hydrocarbons",
+        "carbons"
+      ],
+      "tags": [
+        "food",
+        "health"
+      ]
+    },
+    {
+      "term": "essential feature",
+      "ipa": "ɪˈsenʃl ˈfiːtʃə",
+      "type": "collocation",
+      "translation": "важная, неотъемлемая черта",
+      "definition": "a very important part or quality that something must have",
+      "example": "Fast Wi-Fi is an [essential feature] of any café I work from.",
+      "exampleRu": "Быстрый вайфай — обязательное условие для любого кафе, где я работаю.",
+      "collocations": [
+        "a key feature",
+        "a distinctive feature",
+        "an essential part of sth",
+        "an essential ingredient"
+      ],
+      "pattern": "an essential feature of sth",
+      "trap": "Черта is 'feature' for things and places, 'trait' for a person's character, and 'line' only for a drawn line.",
+      "wrong": [
+        "essential line",
+        "essential trait"
+      ],
+      "tags": [
+        "everyday",
+        "city"
+      ]
+    },
+    {
+      "term": "chickpeas",
+      "ipa": "ˈtʃɪkpiːz",
+      "type": "word",
+      "translation": "нут",
+      "definition": "round, light brown beans used to make hummus and curries",
+      "example": "Hummus is so easy – just blitz a tin of [chickpeas] with garlic and tahini.",
+      "exampleRu": "Хумус готовится элементарно: просто взбейте в блендере банку нута с чесноком и тахини.",
+      "collocations": [
+        "a tin of chickpeas (US: a can)",
+        "roasted chickpeas",
+        "hummus",
+        "chickpea curry"
+      ],
+      "pattern": "",
+      "trap": "Нут is 'chickpeas', not 'nut' (a nut is орех); Americans also call them 'garbanzo beans'.",
+      "wrong": [
+        "nut",
+        "chickpea"
+      ],
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "term": "fried doughballs",
+      "ipa": "fraɪd ˈdəʊbɔːlz",
+      "type": "collocation",
+      "translation": "жареные шарики из теста",
+      "definition": "small balls of dough cooked in hot oil, often eaten as a snack or dessert",
+      "example": "At the street food market, I got a bag of [fried doughballs] dusted with sugar.",
+      "exampleRu": "На фуд-маркете я купил пакетик жареных шариков из теста, посыпанных сахаром.",
+      "collocations": [
+        "deep-fried",
+        "doughnuts",
+        "garlic doughballs",
+        "street food"
+      ],
+      "pattern": "",
+      "trap": "Жареный is 'fried' when cooked in oil; 'roasted' means cooked in the oven and 'grilled' on a grill.",
+      "wrong": [
+        "roasted doughballs",
+        "frying doughballs"
+      ],
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "term": "taste and appeal",
+      "ipa": "teɪst ənd əˈpiːl",
+      "type": "collocation",
+      "translation": "вкус и привлекательность (еды)",
+      "definition": "how good food tastes and how attractive it looks or seems",
+      "example": "Nothing beats the [taste and appeal] of home cooking after a week of takeaways.",
+      "exampleRu": "После недели еды навынос ничто не сравнится со вкусом и притягательностью домашней кухни.",
+      "collocations": [
+        "visual appeal",
+        "lose its appeal",
+        "have wide appeal",
+        "look appealing"
+      ],
+      "pattern": "the appeal of sth",
+      "trap": "'Appeal' here is a noun (what makes something attractive); the adjective is 'appealing'.",
+      "wrong": [
+        "taste and appealing",
+        "tasty and appeal"
+      ],
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "term": "covered in oil",
+      "ipa": "ˈkʌvəd ɪn ɔɪl",
+      "type": "collocation",
+      "translation": "покрытый маслом",
+      "definition": "having a layer of oil all over it",
+      "example": "The chips at that place are always [covered in oil], so I usually skip them.",
+      "exampleRu": "Картошка фри в том месте вечно вся в масле, так что я обычно её не заказываю.",
+      "collocations": [
+        "covered in sugar",
+        "dripping with oil",
+        "deep-fried",
+        "drain on kitchen paper"
+      ],
+      "pattern": "covered in/with sth",
+      "trap": "Say 'covered in' or 'covered with', not 'covered by'; and масло for frying is 'oil', while масло for bread is 'butter'.",
+      "wrong": [
+        "covered by oil",
+        "covering in oil"
+      ],
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "term": "oily",
+      "ipa": "ˈɔɪli",
+      "type": "word",
+      "translation": "маслянистый, жирный",
+      "definition": "containing or covered in a lot of oil",
+      "example": "My doctor says I should eat [oily] fish like salmon twice a week.",
+      "exampleRu": "Врач говорит, что мне нужно есть жирную рыбу, например лосося, два раза в неделю.",
+      "collocations": [
+        "oily fish",
+        "oily skin",
+        "oily hair",
+        "a bit oily"
+      ],
+      "pattern": "",
+      "trap": "Жирная рыба is 'oily fish', not 'fat fish'; 'oiled' means oil was put on it (an oiled bike chain).",
+      "wrong": [
+        "fat",
+        "oiled"
+      ],
+      "tags": [
+        "food",
+        "health"
+      ]
+    },
+    {
+      "term": "spicy",
+      "ipa": "ˈspaɪsi",
+      "type": "word",
+      "translation": "острый, пряный",
+      "definition": "having a strong, hot taste from spices or chilli",
+      "example": "Is this curry very [spicy]? I can't handle anything too hot.",
+      "exampleRu": "Это карри сильно острое? Я плохо переношу острую еду.",
+      "collocations": [
+        "spicy food",
+        "too spicy",
+        "mildly spicy",
+        "hot and spicy"
+      ],
+      "pattern": "",
+      "trap": "Острая еда is 'spicy' or 'hot', never 'sharp' (a knife is sharp); 'hot' can also mean горячий, so 'spicy' is clearer.",
+      "wrong": [
+        "sharp",
+        "acute"
+      ],
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "term": "creamy",
+      "ipa": "ˈkriːmi",
+      "type": "word",
+      "translation": "сливочный, нежный",
+      "definition": "smooth and rich, like cream or containing cream",
+      "example": "I'll take [creamy] milk chocolate over dark chocolate any day.",
+      "exampleRu": "Я всегда выберу нежный молочный шоколад, а не тёмный.",
+      "collocations": [
+        "creamy chocolate",
+        "a creamy sauce",
+        "a creamy texture",
+        "rich and creamy"
+      ],
+      "pattern": "",
+      "trap": "Крем-суп is usually 'cream of mushroom soup' or 'a creamy soup'; 'creamed' is for food cooked with cream (creamed spinach).",
+      "wrong": [
+        "creamed",
+        "cream"
+      ],
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "term": "crispy",
+      "ipa": "ˈkrɪspi",
+      "type": "word",
+      "translation": "хрустящий (снаружи)",
+      "definition": "pleasantly hard and dry on the outside so it breaks easily, often after frying or baking",
+      "example": "Roast potatoes should be [crispy] on the outside and fluffy inside.",
+      "exampleRu": "Запечённая картошка должна быть хрустящей снаружи и рассыпчатой внутри.",
+      "collocations": [
+        "crispy bacon",
+        "crispy chips",
+        "nice and crispy",
+        "crisp (a bit more formal)"
+      ],
+      "pattern": "",
+      "trap": "Crispy is light and dry, usually after frying or baking (crispy bacon); crunchy is firm and loud when you bite (crunchy apples, crunchy crackers).",
+      "wrong": [
+        "crunching"
+      ],
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "term": "crunchy",
+      "ipa": "ˈkrʌntʃi",
+      "type": "word",
+      "translation": "хрустящий (твёрдый)",
+      "definition": "firm and making a loud noise when you bite it",
+      "example": "I keep [crunchy] carrot sticks at my desk so I don't snack on crisps.",
+      "exampleRu": "Я держу на рабочем столе хрустящие морковные палочки, чтобы не таскать чипсы.",
+      "collocations": [
+        "crunchy crackers",
+        "crunchy peanut butter",
+        "crunchy apples",
+        "a crunchy texture"
+      ],
+      "pattern": "",
+      "trap": "Crunchy = firm and noisy (raw carrots, nuts, crackers); crispy = light and dry after frying or baking (bacon, chips). In the UK, 'crisps' are чипсы.",
+      "wrong": [
+        "crunching",
+        "crunched"
+      ],
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "term": "greasy",
+      "ipa": "ˈɡriːsi",
+      "type": "word",
+      "translation": "жирный, сальный",
+      "definition": "containing too much fat or oil, in an unpleasant way",
+      "example": "Honestly, a [greasy] fry-up is the best cure for a hangover.",
+      "exampleRu": "Честно говоря, жирная яичница с беконом — лучшее средство от похмелья.",
+      "collocations": [
+        "greasy food",
+        "a greasy spoon (a cheap café)",
+        "greasy hair",
+        "greasy fingers"
+      ],
+      "pattern": "",
+      "trap": "Жирная еда is 'greasy' (too much oil, negative) or 'fatty' (lots of fat); 'fat' as an adjective describes a body, not food.",
+      "wrong": [
+        "fat",
+        "greased"
+      ],
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "term": "gooey",
+      "ipa": "ˈɡuːi",
+      "type": "word",
+      "translation": "тягучий, липкий",
+      "definition": "soft, sticky and melted, usually in a nice way",
+      "example": "The best brownies are still a bit [gooey] in the middle.",
+      "exampleRu": "Лучшие брауни — те, что внутри ещё чуть тягучие.",
+      "collocations": [
+        "gooey chocolate",
+        "gooey cheese",
+        "warm and gooey",
+        "gooey in the middle"
+      ],
+      "pattern": "",
+      "trap": "Gooey is informal and usually positive about food; 'viscous' is a scientific word for liquids.",
+      "wrong": [
+        "viscous",
+        "stretching"
+      ],
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "term": "sugary",
+      "ipa": "ˈʃʊɡəri",
+      "type": "word",
+      "translation": "сладкий, приторный",
+      "definition": "containing a lot of sugar, often too much",
+      "example": "I'm trying to cut down on [sugary] drinks, so it's mostly water and tea now.",
+      "exampleRu": "Я стараюсь пить меньше сладких напитков, так что теперь в основном вода и чай.",
+      "collocations": [
+        "sugary drinks",
+        "sugary snacks",
+        "sugar-free",
+        "too sweet"
+      ],
+      "pattern": "",
+      "trap": "'Sweet' is a neutral or positive taste; 'sugary' stresses that there is a lot of sugar, often in a negative way.",
+      "wrong": [
+        "sweety"
+      ],
+      "tags": [
+        "food",
+        "health"
+      ]
+    },
+    {
+      "term": "butter",
+      "ipa": "ˈbʌtə",
+      "type": "word",
+      "translation": "сливочное масло",
+      "definition": "a soft yellow fat made from milk that you put on bread or use in cooking",
+      "example": "Toast just isn't the same without a bit of salted [butter].",
+      "exampleRu": "Тост без кусочка солёного сливочного масла — совсем не то.",
+      "collocations": [
+        "salted butter",
+        "spread butter on sth",
+        "peanut butter",
+        "bread and butter"
+      ],
+      "pattern": "",
+      "trap": "Масло is 'butter' (made from milk) or 'oil' (olive oil, sunflower oil); сливочное масло is just 'butter', never 'cream oil'.",
+      "wrong": [
+        "oil",
+        "cream oil"
+      ],
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "term": "cheese",
+      "ipa": "tʃiːz",
+      "type": "word",
+      "translation": "сыр",
+      "definition": "a solid food made from milk",
+      "example": "Be honest – do I put too much [cheese] on my pasta?",
+      "exampleRu": "Скажи честно, я слишком много сыра кладу в пасту?",
+      "collocations": [
+        "grated cheese",
+        "a slice of cheese",
+        "a cheese board",
+        "a cheese toastie (UK)"
+      ],
+      "pattern": "",
+      "trap": "Cheese is usually uncountable (some cheese, a slice of cheese); 'cheeses' means different kinds of cheese.",
+      "wrong": [
+        "cheeses"
+      ],
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "term": "cream",
+      "ipa": "kriːm",
+      "type": "word",
+      "translation": "сливки; крем",
+      "definition": "the thick, fatty part of milk; also a soft substance you put on your skin",
+      "example": "In summer, I could live on strawberries and [cream].",
+      "exampleRu": "Летом могу хоть каждый день есть клубнику со сливками.",
+      "collocations": [
+        "strawberries and cream",
+        "whipped cream",
+        "single/double cream (UK)",
+        "sun cream"
+      ],
+      "pattern": "",
+      "trap": "Сливки is plural in Russian, but 'cream' is uncountable: 'some cream', not 'some creams'.",
+      "wrong": [
+        "creams"
+      ],
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "term": "dough",
+      "ipa": "dəʊ",
+      "type": "word",
+      "translation": "тесто",
+      "definition": "a mix of flour and water that you use to make bread or pizza",
+      "example": "Let the pizza [dough] rest for an hour before you roll it out.",
+      "exampleRu": "Дай тесту для пиццы постоять час, прежде чем раскатывать.",
+      "collocations": [
+        "pizza dough",
+        "knead the dough",
+        "roll out the dough",
+        "cookie dough"
+      ],
+      "pattern": "",
+      "trap": "Тесто is 'dough' for bread and pizza, 'pastry' for pies and tarts, and 'batter' for pancakes; the 'gh' is silent.",
+      "wrong": [
+        "batter",
+        "pastry"
+      ],
+      "tags": [
+        "food",
+        "home"
+      ]
+    },
+    {
+      "term": "lemon",
+      "ipa": "ˈlemən",
+      "type": "word",
+      "translation": "лимон",
+      "definition": "a sour yellow fruit",
+      "example": "Could I have a sparkling water with ice and a slice of [lemon], please?",
+      "exampleRu": "Можно мне газированную воду со льдом и долькой лимона?",
+      "collocations": [
+        "a slice of lemon",
+        "a squeeze of lemon",
+        "lemon juice",
+        "lemon zest"
+      ],
+      "pattern": "",
+      "trap": "In the UK 'lemonade' usually means a sweet fizzy drink like Sprite, not fresh lemon juice.",
+      "wrong": [
+        "lemons"
+      ],
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "term": "mint",
+      "ipa": "mɪnt",
+      "type": "word",
+      "translation": "мята",
+      "definition": "a plant with a fresh, cool taste and smell",
+      "example": "A fresh [mint] tea is perfect after a heavy meal.",
+      "exampleRu": "Свежий мятный чай — то, что надо после сытного обеда.",
+      "collocations": [
+        "fresh mint",
+        "mint tea",
+        "a mint (a small sweet)",
+        "mint sauce (UK)"
+      ],
+      "pattern": "",
+      "trap": "The herb is uncountable (some mint), but 'a mint' is a small sweet; 'minty' means tasting of mint.",
+      "wrong": [
+        "mints",
+        "menthol"
+      ],
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "term": "nuts",
+      "ipa": "nʌts",
+      "type": "word",
+      "translation": "орехи",
+      "definition": "dry fruits with a hard shell, like walnuts or almonds",
+      "example": "Sorry, I can't eat that – I'm allergic to [nuts].",
+      "exampleRu": "Извините, мне это нельзя — у меня аллергия на орехи.",
+      "collocations": [
+        "mixed nuts",
+        "a handful of nuts",
+        "a nut allergy",
+        "be nuts about sth (informal)"
+      ],
+      "pattern": "be allergic to sth",
+      "trap": "Say 'allergic to nuts' (plural, with 'to'), not 'allergic on nut'; informally 'nuts' also means crazy.",
+      "wrong": [
+        "nut"
+      ],
+      "tags": [
+        "food",
+        "health"
+      ]
+    },
+    {
+      "term": "pepper",
+      "ipa": "ˈpepə",
+      "type": "word",
+      "translation": "перец",
+      "definition": "a hot spice made from black or white seeds; also a red, green or yellow vegetable",
+      "example": "Can you grab two red [peppers] and an onion on your way home?",
+      "exampleRu": "Можешь захватить по дороге домой два красных перца и луковицу?",
+      "collocations": [
+        "black pepper",
+        "salt and pepper",
+        "red/green peppers",
+        "chilli pepper"
+      ],
+      "pattern": "",
+      "trap": "The vegetable is 'a red/green pepper' (US: bell pepper) and is countable; the spice, black pepper, is uncountable.",
+      "wrong": [
+        "pepper",
+        "paprikas"
+      ],
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "term": "salt",
+      "ipa": "sɔːlt",
+      "type": "word",
+      "translation": "соль",
+      "definition": "white grains you add to food to give it more taste",
+      "example": "Pass the [salt], would you? These eggs are a bit bland.",
+      "exampleRu": "Передай соль, пожалуйста. Яйца какие-то пресные.",
+      "collocations": [
+        "a pinch of salt",
+        "salt and pepper",
+        "sea salt",
+        "take sth with a pinch of salt"
+      ],
+      "pattern": "",
+      "trap": "'Salty' means it tastes of too much salt; 'salted' means salt was added (salted butter, salted peanuts).",
+      "wrong": [
+        "salts"
+      ],
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "term": "sugar",
+      "ipa": "ˈʃʊɡə",
+      "type": "word",
+      "translation": "сахар",
+      "definition": "a sweet white or brown substance that you put in drinks and food",
+      "example": "Do you take [sugar] in your tea, or just milk?",
+      "exampleRu": "Тебе в чай положить сахар или только молоко?",
+      "collocations": [
+        "take sugar (in tea)",
+        "two sugars, please",
+        "brown sugar",
+        "sugar-free"
+      ],
+      "pattern": "take sugar in your tea/coffee",
+      "trap": "Sugar is uncountable, but in tea and coffee Brits count spoons: 'One sugar or two?'; the natural verb is 'take', not 'drink with'.",
+      "wrong": [
+        "the sugar"
+      ],
+      "tags": [
+        "food",
+        "everyday"
+      ]
+    },
+    {
+      "term": "s'mores",
+      "ipa": "smɔːz",
+      "type": "word",
+      "translation": "«сморы» (десерт из жареного зефира, шоколада и крекеров)",
+      "definition": "a campfire snack of toasted marshmallow and chocolate between two biscuits",
+      "example": "We sat round the campfire making [s'mores] until the marshmallows ran out.",
+      "exampleRu": "Мы сидели у костра и делали сморы, пока не кончились маршмеллоу.",
+      "collocations": [
+        "make s'mores",
+        "toast marshmallows",
+        "sit round the campfire",
+        "graham crackers (US)"
+      ],
+      "pattern": "",
+      "trap": "S'mores (from 'some more') are an American treat; in the UK people often use digestive biscuits instead of graham crackers.",
+      "wrong": [
+        "s'more"
+      ],
+      "tags": [
+        "food",
+        "travel"
+      ]
+    },
+    {
+      "term": "melted marshmallow",
+      "ipa": "ˈmeltɪd ˌmɑːʃˈmæləʊ",
+      "type": "collocation",
+      "translation": "растопленный зефир (маршмеллоу)",
+      "definition": "marshmallow that has become soft and runny from heat",
+      "example": "By the end of the night, I had [melted marshmallow] all over my hoodie.",
+      "exampleRu": "К концу вечера у меня вся толстовка была в растаявшем маршмеллоу.",
+      "collocations": [
+        "toasted marshmallows",
+        "melted chocolate",
+        "gooey marshmallow",
+        "hot chocolate with marshmallows"
+      ],
+      "pattern": "",
+      "trap": "Use 'melted' for things made soft by heat; 'thawed' is only for frozen food (thawed chicken).",
+      "wrong": [
+        "melt marshmallow",
+        "thawed marshmallow"
+      ],
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "term": "chunks of sth",
+      "ipa": "tʃʌŋks əv",
+      "type": "phrase",
+      "translation": "кусочки, куски",
+      "definition": "thick, solid pieces of something",
+      "example": "These cookies have massive [chunks of] dark chocolate in them – try one!",
+      "exampleRu": "В этом печенье огромные кусочки тёмного шоколада — попробуй!",
+      "collocations": [
+        "chocolate chunks",
+        "a chunk of bread",
+        "cut sth into chunks",
+        "a big chunk of my salary"
+      ],
+      "pattern": "a chunk of sth / chunks of sth",
+      "trap": "A chunk is a thick, solid piece; a slice is thin and flat, and a crumb is tiny. 'A big chunk of my time/salary' is also common.",
+      "wrong": [
+        "chunks from",
+        "chunk of"
+      ],
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "term": "chilly",
+      "ipa": "ˈtʃɪli",
+      "type": "word",
+      "translation": "прохладный, зябкий",
+      "definition": "unpleasantly cold",
+      "example": "On a [chilly] autumn night, all I want is a bowl of hot soup.",
+      "exampleRu": "Холодным осенним вечером мне хочется только тарелку горячего супа.",
+      "collocations": [
+        "a chilly autumn night",
+        "feel chilly",
+        "a chilly wind",
+        "a chilly welcome"
+      ],
+      "pattern": "",
+      "trap": "Don't mix up chilly (cold), chilli (a hot pepper) and chilled (cold from the fridge, or relaxed).",
+      "wrong": [
+        "chilli",
+        "chilled"
+      ],
+      "tags": [
+        "everyday"
+      ]
+    },
+    {
+      "term": "cosiness",
+      "ipa": "ˈkəʊzinəs",
+      "type": "word",
+      "translation": "уют",
+      "definition": "the feeling of being warm, comfortable and relaxed",
+      "example": "What I love about winter is the [cosiness] of a pub with a real fire.",
+      "exampleRu": "Что я люблю зимой — так это уют паба с настоящим камином.",
+      "collocations": [
+        "cosy",
+        "a cosy pub",
+        "feel cosy",
+        "hygge"
+      ],
+      "pattern": "",
+      "trap": "In speech people usually use the adjective: 'It's so cosy here!' sounds more natural than the noun. US spelling: cozy, coziness.",
+      "wrong": [
+        "cosy",
+        "comfortness"
+      ],
+      "tags": [
+        "home",
+        "feelings"
+      ]
+    },
+    {
+      "term": "caption",
+      "ipa": "ˈkæpʃn",
+      "type": "word",
+      "translation": "подпись (к фото)",
+      "definition": "a short text under or next to a photo or picture",
+      "example": "Thinking of a [caption] takes me longer than taking the actual photo.",
+      "exampleRu": "Придумать подпись у меня занимает больше времени, чем сделать само фото.",
+      "collocations": [
+        "write a caption",
+        "a funny caption",
+        "an Instagram caption",
+        "captions (subtitles) on a video"
+      ],
+      "pattern": "",
+      "trap": "Подпись under a photo is a 'caption'; your name written by hand is a 'signature', and подписка is a 'subscription'.",
+      "wrong": [
+        "signature",
+        "subscription"
+      ],
+      "tags": [
+        "tech",
+        "language"
+      ]
+    },
+    {
+      "term": "conversational tone",
+      "ipa": "ˌkɒnvəˈseɪʃənl təʊn",
+      "type": "collocation",
+      "translation": "разговорный тон",
+      "definition": "a friendly, informal way of writing, like normal speech",
+      "example": "Our boss wants the company newsletter to have a more [conversational tone].",
+      "exampleRu": "Начальник хочет, чтобы корпоративная рассылка была написана в более разговорном тоне.",
+      "collocations": [
+        "a friendly tone",
+        "a formal tone",
+        "tone of voice",
+        "a conversational style"
+      ],
+      "pattern": "",
+      "trap": "Use the adjective: 'a conversational tone', not 'a conversation tone'.",
+      "wrong": [
+        "conversation tone",
+        "talking tone"
+      ],
+      "tags": [
+        "language",
+        "work"
+      ]
+    },
+    {
+      "term": "abbreviations",
+      "ipa": "əˌbriːviˈeɪʃnz",
+      "type": "word",
+      "translation": "сокращения, аббревиатуры",
+      "definition": "short forms of words or phrases, like 'BRB' or 'etc.'",
+      "example": "Half the [abbreviations] my teenage cousin uses in texts mean nothing to me.",
+      "exampleRu": "Половина сокращений, которые мой кузен-подросток пишет в сообщениях, мне ни о чём не говорят.",
+      "collocations": [
+        "use abbreviations",
+        "a common abbreviation",
+        "an acronym",
+        "be short for sth"
+      ],
+      "pattern": "X is short for Y / X stands for Y",
+      "trap": "Сокращение of a word is an 'abbreviation'; fewer jobs or less money is a 'cut' or 'reduction'. To explain one, say 'BRB is short for \"be right back\"'.",
+      "wrong": [
+        "reductions",
+        "cuts"
+      ],
+      "tags": [
+        "language",
+        "tech"
+      ]
+    },
+    {
+      "term": "in bold",
+      "ipa": "ɪn bəʊld",
+      "type": "phrase",
+      "translation": "жирным шрифтом",
+      "definition": "printed in thick, dark letters so that it stands out",
+      "example": "Could you put the deadline [in bold] so nobody misses it?",
+      "exampleRu": "Можешь выделить дедлайн жирным, чтобы его никто не пропустил?",
+      "collocations": [
+        "in italics",
+        "underlined",
+        "highlight sth",
+        "bold font"
+      ],
+      "pattern": "put/write sth in bold",
+      "trap": "Жирный шрифт is 'bold', never 'fat'; say 'in bold' and 'in italics', but just 'underlined' (no 'in').",
+      "wrong": [
+        "in fat",
+        "with bold",
+        "on bold"
+      ],
+      "tags": [
+        "work",
+        "language"
+      ]
+    },
+    {
+      "term": "emphasis",
+      "ipa": "ˈemfəsɪs",
+      "type": "word",
+      "translation": "акцент, ударение",
+      "definition": "special importance or attention given to something",
+      "example": "This company puts a lot of [emphasis] on work-life balance, which is why I applied.",
+      "exampleRu": "Эта компания делает большой акцент на балансе работы и личной жизни — поэтому мне и захотелось там работать.",
+      "collocations": [
+        "put emphasis on sth",
+        "place great emphasis on sth",
+        "with an emphasis on sth",
+        "emphasise sth"
+      ],
+      "pattern": "put/place emphasis on sth; emphasise sth (no 'on')",
+      "trap": "Делать акцент на is 'put emphasis on' or 'emphasise', not 'make an accent on'; the verb takes no 'on': 'emphasise teamwork'.",
+      "wrong": [
+        "accent",
+        "emphasise"
+      ],
+      "tags": [
+        "work",
+        "language"
+      ]
+    },
+    {
+      "term": "summary",
+      "ipa": "ˈsʌməri",
+      "type": "word",
+      "translation": "краткое изложение, резюме",
+      "definition": "a short text that gives only the main points",
+      "example": "Would you mind sending me a quick [summary] of the meeting? I had to leave early.",
+      "exampleRu": "Можешь скинуть мне краткое резюме встречи? Мне пришлось уйти пораньше.",
+      "collocations": [
+        "a brief summary",
+        "in summary",
+        "sum up",
+        "a summary of sth"
+      ],
+      "pattern": "a summary of sth",
+      "trap": "Резюме of a text or meeting is a 'summary'; a резюме for a job is a 'CV' (US: résumé). Don't confuse it with 'summery' (like summer).",
+      "wrong": [
+        "resume",
+        "summery"
+      ],
+      "tags": [
+        "work",
+        "study"
+      ]
+    },
+    {
+      "term": "ironic",
+      "ipa": "aɪˈrɒnɪk",
+      "type": "word",
+      "translation": "ироничный; парадоксальный («по иронии судьбы» — ironically)",
+      "definition": "strange or funny because it is the opposite of what you expect",
+      "example": "It's a bit [ironic] that I wrote my healthy-eating post with a doughnut in my hand.",
+      "exampleRu": "Немного иронично, что пост о здоровом питании я писал с пончиком в руке.",
+      "collocations": [
+        "it's ironic that…",
+        "ironically",
+        "the irony is that…",
+        "sarcastic"
+      ],
+      "pattern": "It's ironic that + clause",
+      "trap": "Ironic means 'the opposite of what you'd expect'; don't use it for 'sarcastic' (saying the opposite to mock someone).",
+      "wrong": [
+        "irony",
+        "ironically"
+      ],
+      "tags": [
+        "language",
+        "opinions"
+      ]
+    },
+    {
+      "term": "crayon",
+      "ipa": "ˈkreɪən",
+      "type": "word",
+      "translation": "восковой мелок",
+      "definition": "a coloured wax stick that children use for drawing",
+      "example": "My niece drew me a birthday card with her new wax [crayons].",
+      "exampleRu": "Племянница нарисовала мне открытку на день рождения своими новыми восковыми мелками.",
+      "collocations": [
+        "wax crayons",
+        "a box of crayons",
+        "colouring pencils",
+        "felt-tip pens"
+      ],
+      "pattern": "",
+      "trap": "Детские мелки for paper are 'crayons'; 'chalk' is for a blackboard or the pavement and is usually uncountable.",
+      "wrong": [
+        "chalks",
+        "chalk"
+      ],
+      "tags": [
+        "home"
+      ]
+    },
+    {
+      "term": "past and present habits",
+      "ipa": "pɑːst ənd ˈpreznt ˈhæbɪts",
+      "type": "phrase",
+      "translation": "привычки в прошлом и настоящем",
+      "definition": "things you did regularly before and things you do regularly now",
+      "example": "Writing about my [past and present habits] made me realise how much I've changed.",
+      "exampleRu": "Когда я написал о своих прошлых и нынешних привычках, я понял, как сильно изменился.",
+      "collocations": [
+        "used to do sth",
+        "would do sth (past habit)",
+        "be always doing sth",
+        "break a habit"
+      ],
+      "pattern": "used to / would + verb (past); be always + -ing (annoying present habit)",
+      "trap": "For past habits use 'used to' or 'would' (I used to eat fast food every day), not 'I was used to eat'.",
+      "wrong": [
+        "passed and present habits",
+        "past and now habits"
+      ],
+      "tags": [
+        "language",
+        "everyday"
+      ]
+    }
+  ]
+}

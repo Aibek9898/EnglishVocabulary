@@ -1,0 +1,753 @@
+{
+  "id": "course-5-sport",
+  "title": "Sport & Fair Play",
+  "description": "From your course: talking about sport, winning and losing, fair play and cheating.",
+  "course": true,
+  "items": [
+    {
+      "term": "underdog",
+      "ipa": "ˈʌndədɒɡ",
+      "type": "word",
+      "translation": "аутсайдер, заведомо слабейший",
+      "definition": "the person or team that most people expect to lose",
+      "example": "We went into the match as the [underdogs] and still won 3–1!",
+      "exampleRu": "Нас считали аутсайдерами, а мы всё равно выиграли 3:1!",
+      "collocations": [
+        "the clear underdog",
+        "support the underdog",
+        "an underdog story",
+        "the favourite"
+      ],
+      "pattern": "be the underdog(s); go into sth as the underdog(s)",
+      "trap": "In sport, Russian «аутсайдер» is usually 'underdog', because an 'outsider' is mainly someone who doesn't belong to a group.",
+      "wrong": [
+        "losers"
+      ],
+      "tags": [
+        "sport"
+      ]
+    },
+    {
+      "term": "the favourite",
+      "ipa": "ðə ˈfeɪvərɪt",
+      "type": "word",
+      "translation": "фаворит",
+      "definition": "the person or team that most people expect to win",
+      "example": "I reckon Spain are [the favourites] to win the next World Cup.",
+      "exampleRu": "По-моему, главный фаворит следующего чемпионата мира — сборная Испании.",
+      "collocations": [
+        "the clear favourite",
+        "the hot favourite",
+        "odds-on favourite",
+        "the underdog"
+      ],
+      "pattern": "the favourite(s) to win sth",
+      "trap": "Say 'the favourites to win', not 'for winning', and in British English a team takes a plural verb: 'Spain are'.",
+      "wrong": [
+        "the favorits",
+        "the favourable"
+      ],
+      "tags": [
+        "sport"
+      ]
+    },
+    {
+      "term": "trip sb up",
+      "ipa": "trɪp ʌp",
+      "type": "phrasal-verb",
+      "translation": "поставить подножку, сбить с ног",
+      "definition": "to make someone fall by putting your foot in their way",
+      "example": "Someone [tripped me up] at five-a-side last night, and I twisted my ankle.",
+      "exampleRu": "Вчера на мини-футболе мне кто-то поставил подножку, и я подвернул ногу.",
+      "collocations": [
+        "trip over sth",
+        "trip and fall",
+        "the last question tripped me up"
+      ],
+      "pattern": "trip sb up; trip (over sth)",
+      "trap": "The pronoun goes in the middle ('tripped me up', not 'tripped up me'), and it can also mean 'catch sb out with a tricky question'.",
+      "wrong": [
+        "tripped up me",
+        "put me a leg"
+      ],
+      "tags": [
+        "sport"
+      ]
+    },
+    {
+      "term": "dive",
+      "ipa": "daɪv",
+      "type": "word",
+      "translation": "симулировать падение, «нырять» (в футболе)",
+      "definition": "to fall over on purpose in football so the referee thinks you were fouled",
+      "example": "I can't stand players who [dive] every time someone comes near them.",
+      "exampleRu": "Терпеть не могу игроков, которые падают, стоит кому-то к ним приблизиться.",
+      "collocations": [
+        "a blatant dive",
+        "dive in the box",
+        "go down too easily",
+        "fake an injury"
+      ],
+      "pattern": "dive (UK past: dived; US: dove)",
+      "trap": "The rules call it 'simulation', but fans and commentators say a player 'dived' (the British past form).",
+      "wrong": [
+        "make a dive",
+        "plunge"
+      ],
+      "tags": [
+        "sport"
+      ]
+    },
+    {
+      "term": "penalty",
+      "ipa": "ˈpenəlti",
+      "type": "word",
+      "translation": "пенальти, одиннадцатиметровый; штраф",
+      "definition": "a free shot at goal after a foul near the goal; also a punishment such as a fine",
+      "example": "After a 2–2 draw we lost on [penalties], which was absolutely gutting.",
+      "exampleRu": "Сыграли 2:2 и проиграли по пенальти — было ужасно обидно.",
+      "collocations": [
+        "take a penalty",
+        "miss a penalty",
+        "a penalty shoot-out",
+        "win on penalties"
+      ],
+      "pattern": "take/score/miss a penalty; win/lose on penalties",
+      "trap": "Russian «штрафной удар» is a 'free kick'; a 'penalty' is the kick from the spot, and 'on penalties' is always plural.",
+      "wrong": [
+        "free kicks",
+        "penalty"
+      ],
+      "tags": [
+        "sport"
+      ]
+    },
+    {
+      "term": "play for time",
+      "ipa": "pleɪ fə taɪm",
+      "type": "idiom",
+      "translation": "тянуть время",
+      "definition": "to delay something on purpose to get more time",
+      "example": "I said ‘good question’ just to [play for time] while I thought of an answer.",
+      "exampleRu": "Я сказал «хороший вопрос», только чтобы потянуть время и придумать ответ.",
+      "collocations": [
+        "buy time",
+        "stall for time",
+        "waste time",
+        "time-wasting"
+      ],
+      "pattern": "play for time",
+      "trap": "Not 'pull time' or 'stretch time' (calques of «тянуть время»); 'buy time' and 'stall for time' are close.",
+      "wrong": [
+        "pull time",
+        "stretch the time"
+      ],
+      "tags": [
+        "work",
+        "sport"
+      ]
+    },
+    {
+      "term": "mess around",
+      "ipa": "mes əˈraʊnd",
+      "type": "phrasal-verb",
+      "translation": "валять дурака, баловаться",
+      "definition": "to behave in a silly way instead of doing something useful",
+      "example": "Stop [messing around] and help me pack the car — we're already late!",
+      "exampleRu": "Хватит дурачиться, помоги загрузить машину — мы и так опаздываем!",
+      "collocations": [
+        "mess about (UK)",
+        "fool around",
+        "mess around with sth"
+      ],
+      "pattern": "mess around / mess around with sth",
+      "trap": "Don't confuse it with 'mess sth up' (испортить, напортачить); 'mess about' means the same and is very British.",
+      "wrong": [
+        "making a fool",
+        "messing up"
+      ],
+      "tags": [
+        "everyday"
+      ]
+    },
+    {
+      "term": "put sb off",
+      "ipa": "pʊt ɒf",
+      "type": "phrasal-verb",
+      "translation": "отвлекать, сбивать с настроя; отбивать охоту",
+      "definition": "to distract someone so they can't concentrate or do something well",
+      "example": "Please don't talk while I'm serving — it really [puts me off].",
+      "exampleRu": "Пожалуйста, не разговаривай, когда я подаю, — меня это очень сбивает.",
+      "collocations": [
+        "put sb off their game",
+        "put sb off doing sth",
+        "off-putting"
+      ],
+      "pattern": "put sb off (sth / doing sth)",
+      "trap": "Not the same as 'put sth off' (откладывать), and the pronoun goes in the middle: 'it puts me off', not 'it puts off me'.",
+      "wrong": [
+        "puts off me",
+        "puts me down"
+      ],
+      "tags": [
+        "sport"
+      ]
+    },
+    {
+      "term": "bend the rules",
+      "ipa": "bend ðə ruːlz",
+      "type": "idiom",
+      "translation": "обходить правила",
+      "definition": "to break a rule a little, usually to help someone",
+      "example": "The receptionist [bent the rules] and let me into the gym without my card.",
+      "exampleRu": "На ресепшене пошли мне навстречу и в обход правил пустили в зал без карты.",
+      "collocations": [
+        "break the rules",
+        "stick to the rules",
+        "rules are rules"
+      ],
+      "pattern": "bend the rules (for sb)",
+      "trap": "'Bend' is softer than 'break' (you break a rule a little, often to be kind), and the past form is 'bent', not 'bended'.",
+      "wrong": [
+        "bended the rules",
+        "curved the rules"
+      ],
+      "tags": [
+        "sport",
+        "honesty"
+      ]
+    },
+    {
+      "term": "unbeaten",
+      "ipa": "ʌnˈbiːtn",
+      "type": "word",
+      "translation": "непобеждённый",
+      "definition": "not having lost a single game or match",
+      "example": "Believe it or not, our Sunday league team is still [unbeaten] this season.",
+      "exampleRu": "Хотите верьте, хотите нет, но наша любительская команда в этом сезоне ещё ни разу не проиграла.",
+      "collocations": [
+        "an unbeaten run",
+        "remain unbeaten",
+        "undefeated"
+      ],
+      "pattern": "be unbeaten (in ten games); an unbeaten run",
+      "trap": "'Unbeaten' means it hasn't lost yet, while 'unbeatable' means impossible to beat.",
+      "wrong": [
+        "unbeated",
+        "non-defeated"
+      ],
+      "tags": [
+        "sport"
+      ]
+    },
+    {
+      "term": "concede",
+      "ipa": "kənˈsiːd",
+      "type": "word",
+      "translation": "пропустить (гол); признать (поражение)",
+      "definition": "to let the other team score; also to admit that you have lost or are wrong",
+      "example": "We were 2–0 up and then [conceded] three goals in the last ten minutes.",
+      "exampleRu": "Мы вели 2:0, а потом за последние десять минут пропустили три гола.",
+      "collocations": [
+        "concede a goal",
+        "concede defeat",
+        "concede a penalty",
+        "concede that ..."
+      ],
+      "pattern": "concede a goal / defeat; concede that ...",
+      "trap": "Not 'miss a goal' (a calque of «пропустить гол»): if you miss, you fail to score yourself.",
+      "wrong": [
+        "missed",
+        "skipped"
+      ],
+      "tags": [
+        "sport"
+      ]
+    },
+    {
+      "term": "play fair",
+      "ipa": "pleɪ feə",
+      "type": "collocation",
+      "translation": "играть честно",
+      "definition": "to follow the rules and treat others honestly",
+      "example": "Come on, [play fair] — you can't look at my cards!",
+      "exampleRu": "Ну давай по-честному — нельзя подглядывать в мои карты!",
+      "collocations": [
+        "fair play",
+        "fair and square",
+        "play by the rules"
+      ],
+      "pattern": "play fair (with sb)",
+      "trap": "Say 'play fair', not 'play honest'; «фэйр-плей» is the noun 'fair play'.",
+      "wrong": [
+        "play honest",
+        "play fairplay"
+      ],
+      "tags": [
+        "sport",
+        "honesty"
+      ]
+    },
+    {
+      "term": "play by the rules",
+      "ipa": "pleɪ baɪ ðə ruːlz",
+      "type": "idiom",
+      "translation": "играть по правилам",
+      "definition": "to do things in the honest, accepted way",
+      "example": "I always [play by the rules] at work, even when others take shortcuts.",
+      "exampleRu": "На работе я всегда играю по правилам, даже когда другие ищут обходные пути.",
+      "collocations": [
+        "stick to the rules",
+        "follow the rules",
+        "bend the rules",
+        "break the rules"
+      ],
+      "pattern": "play by the rules",
+      "trap": "Use 'by', not 'on' or 'with' (calques of «по правилам»).",
+      "wrong": [
+        "play on the rules",
+        "play with the rules"
+      ],
+      "tags": [
+        "work",
+        "honesty"
+      ]
+    },
+    {
+      "term": "gain an advantage",
+      "ipa": "ɡeɪn ən ədˈvɑːntɪdʒ",
+      "type": "collocation",
+      "translation": "получить преимущество",
+      "definition": "to get something that puts you in a better position than others",
+      "example": "Speaking a second language can help you [gain an advantage] in the job market.",
+      "exampleRu": "Знание второго языка может дать вам преимущество на рынке труда.",
+      "collocations": [
+        "gain an unfair advantage",
+        "have an advantage over sb",
+        "take advantage of sth",
+        "a competitive edge"
+      ],
+      "pattern": "gain an advantage over sb / in sth",
+      "trap": "Don't confuse it with 'take advantage of sth' (воспользоваться); we don't say 'receive an advantage'.",
+      "wrong": [
+        "receive an advantage",
+        "take an advantage"
+      ],
+      "tags": [
+        "work"
+      ]
+    },
+    {
+      "term": "play a shot",
+      "ipa": "pleɪ ə ʃɒt",
+      "type": "collocation",
+      "translation": "сделать удар (теннис, гольф, крикет)",
+      "definition": "to hit the ball in tennis, golf, cricket and similar sports",
+      "example": "I tried to [play a shot] I'd seen on YouTube and almost hit my doubles partner.",
+      "exampleRu": "Я попробовал повторить удар, который видел на YouTube, и чуть не попал в своего партнёра по паре.",
+      "collocations": [
+        "a winning shot",
+        "hit a shot",
+        "miss a shot",
+        "take a shot (football)"
+      ],
+      "pattern": "play/hit a shot (tennis, golf, cricket)",
+      "trap": "In tennis, golf and cricket you 'play' or 'hit' a shot, not 'do a hit' or 'make a strike'; in football you 'take a shot'.",
+      "wrong": [
+        "do a hit",
+        "make a strike"
+      ],
+      "tags": [
+        "sport"
+      ]
+    },
+    {
+      "term": "spoil the game",
+      "ipa": "spɔɪl ðə ɡeɪm",
+      "type": "collocation",
+      "translation": "испортить игру",
+      "definition": "to make a game less enjoyable for everyone",
+      "example": "One guy kept arguing with the ref and [spoilt the game] for everyone.",
+      "exampleRu": "Один парень всё время спорил с судьёй и испортил игру всем.",
+      "collocations": [
+        "spoil the fun",
+        "ruin the game",
+        "a spoilsport"
+      ],
+      "pattern": "spoil the game (for sb)",
+      "trap": "For fun and games use 'spoil' or 'ruin', not 'damage' or 'break' (calques of «испортить»); British English often uses the past form 'spoilt'.",
+      "wrong": [
+        "damaged the game",
+        "broke the game"
+      ],
+      "tags": [
+        "sport"
+      ]
+    },
+    {
+      "term": "sports competition",
+      "ipa": "spɔːts ˌkɒmpəˈtɪʃn",
+      "type": "collocation",
+      "translation": "спортивное соревнование",
+      "definition": "an event where people or teams compete in a sport",
+      "example": "Every summer my company runs a [sports competition], and this year I'm doing the relay.",
+      "exampleRu": "Каждое лето наша компания проводит спортивные соревнования, и в этом году я бегу эстафету.",
+      "collocations": [
+        "enter a competition",
+        "win a competition",
+        "sports day (UK)",
+        "sports event"
+      ],
+      "pattern": "enter / take part in a sports competition",
+      "trap": "Use 'sports' with an -s before the noun, not 'sportive', and Russian plural «соревнования» is often a single 'competition'.",
+      "wrong": [
+        "sport competition",
+        "sportive competition"
+      ],
+      "tags": [
+        "sport",
+        "work"
+      ]
+    },
+    {
+      "term": "defeat",
+      "ipa": "dɪˈfiːt",
+      "type": "word",
+      "translation": "победить, нанести поражение; поражение",
+      "definition": "to win against someone in a game or fight; also the act of losing",
+      "example": "Last weekend our local team [defeated] the league leaders 3–1.",
+      "exampleRu": "В прошлые выходные наша местная команда обыграла лидеров лиги со счётом 3:1.",
+      "collocations": [
+        "a heavy defeat",
+        "suffer a defeat",
+        "admit defeat",
+        "defeat sb 3–1"
+      ],
+      "pattern": "defeat sb (3–1); suffer a defeat",
+      "trap": "You 'defeat' or 'beat' a team but 'win' a game or a cup, so never 'we won them'.",
+      "wrong": [
+        "won",
+        "beated"
+      ],
+      "tags": [
+        "sport"
+      ]
+    },
+    {
+      "term": "uneven",
+      "ipa": "ʌnˈiːvn",
+      "type": "word",
+      "translation": "неравный; неровный",
+      "definition": "not equal or fair; also not flat or smooth",
+      "example": "It was a really [uneven] contest — they were all twenty and we were over forty.",
+      "exampleRu": "Силы были явно неравные: им всем по двадцать, а нам за сорок.",
+      "collocations": [
+        "an uneven contest",
+        "uneven ground",
+        "an uneven surface",
+        "one-sided"
+      ],
+      "pattern": "",
+      "trap": "It means both «неравный» and «неровный» (uneven ground), but «нечётное число» is an 'odd number', not an 'uneven' one.",
+      "wrong": [
+        "inequal",
+        "non-equal"
+      ],
+      "tags": [
+        "sport"
+      ]
+    },
+    {
+      "term": "disgusted",
+      "ipa": "dɪsˈɡʌstɪd",
+      "type": "word",
+      "translation": "возмущённый, испытывающий отвращение",
+      "definition": "very angry and shocked about something, or feeling that it is very unpleasant",
+      "example": "I was absolutely [disgusted] by how the fans treated the referee.",
+      "exampleRu": "Меня до глубины души возмутило, как болельщики обращались с судьёй.",
+      "collocations": [
+        "absolutely disgusted",
+        "disgusted by/at/with sth",
+        "disgusting"
+      ],
+      "pattern": "be disgusted by/at/with sth",
+      "trap": "'Disgusted' is how you feel and 'disgusting' is what causes it; both are much stronger than 'annoyed'.",
+      "wrong": [
+        "disgusting",
+        "disgust"
+      ],
+      "tags": [
+        "feelings",
+        "sport"
+      ]
+    },
+    {
+      "term": "fake an injury",
+      "ipa": "feɪk ən ˈɪndʒəri",
+      "type": "collocation",
+      "translation": "симулировать травму",
+      "definition": "to pretend that you are hurt",
+      "example": "At school I once [faked an injury] to get out of cross-country.",
+      "exampleRu": "В школе я однажды симулировал травму, чтобы не бежать кросс.",
+      "collocations": [
+        "a fake injury",
+        "pretend to be injured",
+        "fake it",
+        "dive"
+      ],
+      "pattern": "fake an injury / an illness",
+      "trap": "Not 'imitate an injury' (imitate = copy sb) or 'fake a trauma', because 'trauma' in English usually means a deep emotional shock.",
+      "wrong": [
+        "imitated an injury",
+        "faked a trauma"
+      ],
+      "tags": [
+        "sport",
+        "honesty"
+      ]
+    },
+    {
+      "term": "get sent off",
+      "ipa": "ɡet sent ɒf",
+      "type": "phrasal-verb",
+      "translation": "быть удалённым с поля",
+      "definition": "to be ordered by the referee to leave the field for breaking the rules",
+      "example": "My first ever match ended early: I [got sent off] for swearing at the ref.",
+      "exampleRu": "Мой самый первый матч быстро закончился: меня удалили за то, что я выругался на судью.",
+      "collocations": [
+        "get a red card",
+        "be sent off",
+        "get booked",
+        "a sending-off"
+      ],
+      "pattern": "get sent off (for sth / for doing sth)",
+      "trap": "Not 'got deleted' (a calque of «удалили»), and spell it 'off', not 'of'; American English says 'get ejected'.",
+      "wrong": [
+        "got deleted",
+        "got sent of"
+      ],
+      "tags": [
+        "sport"
+      ]
+    },
+    {
+      "term": "disgraceful",
+      "ipa": "dɪsˈɡreɪsfl",
+      "type": "word",
+      "translation": "позорный, возмутительный",
+      "definition": "so bad that it makes people angry or ashamed",
+      "example": "Waiting three weeks for a refund is [disgraceful] — I'm writing a complaint.",
+      "exampleRu": "Три недели ждать возврата денег — это возмутительно, я пишу жалобу.",
+      "collocations": [
+        "absolutely disgraceful",
+        "disgraceful behaviour",
+        "it's a disgrace"
+      ],
+      "pattern": "It's disgraceful that ... / disgraceful behaviour",
+      "trap": "'Disgraceful' describes a thing or behaviour; 'disgraced' describes a person who has lost respect, and 'disgusted' is how you feel.",
+      "wrong": [
+        "disgraced",
+        "disgusted"
+      ],
+      "tags": [
+        "opinions",
+        "money"
+      ]
+    },
+    {
+      "term": "cheat",
+      "ipa": "tʃiːt",
+      "type": "word",
+      "translation": "жульничать",
+      "definition": "to break the rules to win or get something",
+      "example": "My sister always [cheats] at Monopoly, so nobody wants to play with her.",
+      "exampleRu": "Моя сестра вечно жульничает, когда играет в «Монополию», поэтому с ней никто не хочет играть.",
+      "collocations": [
+        "cheat at cards",
+        "cheat in an exam",
+        "cheat on sb",
+        "a cheat"
+      ],
+      "pattern": "cheat at cards / in an exam / on sb",
+      "trap": "You cheat 'at' a game and 'in' an exam, but 'cheat on sb' means «изменять» a partner.",
+      "wrong": [
+        "deceives",
+        "swindles"
+      ],
+      "tags": [
+        "honesty",
+        "everyday"
+      ]
+    },
+    {
+      "term": "get away with sth",
+      "ipa": "ɡet əˈweɪ wɪð",
+      "type": "phrasal-verb",
+      "translation": "выйти сухим из воды, остаться безнаказанным",
+      "definition": "to do something wrong and not be caught or punished",
+      "example": "I parked there for three hours without paying and somehow [got away with it].",
+      "exampleRu": "Я простоял там три часа, не заплатив за парковку, и мне это каким-то чудом сошло с рук.",
+      "collocations": [
+        "get away with murder",
+        "let sb get away with sth",
+        "get away with doing sth"
+      ],
+      "pattern": "get away with sth / with doing sth",
+      "trap": "'Get away with sth' means «сойти с рук», while 'get away from sth' means escape or leave a place.",
+      "wrong": [
+        "got away from it",
+        "came out dry"
+      ],
+      "tags": [
+        "honesty",
+        "city"
+      ]
+    },
+    {
+      "term": "competitive",
+      "ipa": "kəmˈpetətɪv",
+      "type": "word",
+      "translation": "азартный, любящий соревноваться",
+      "definition": "always wanting to win and be better than other people",
+      "example": "I get really [competitive] at pub quizzes, even though I pretend I don't care.",
+      "exampleRu": "На квизах в пабе я становлюсь страшно азартным, хотя делаю вид, что мне всё равно.",
+      "collocations": [
+        "fiercely competitive",
+        "a competitive streak",
+        "competitive prices"
+      ],
+      "pattern": "be/get competitive (about sth)",
+      "trap": "About a person it means «любящий соревноваться», but about prices or a market it means «конкурентоспособный».",
+      "wrong": [
+        "hazardous",
+        "gambling"
+      ],
+      "tags": [
+        "people",
+        "sport"
+      ]
+    },
+    {
+      "term": "come out on top",
+      "ipa": "kʌm aʊt ɒn tɒp",
+      "type": "idiom",
+      "translation": "выйти победителем",
+      "definition": "to win or be the most successful in the end",
+      "example": "Five of us applied for the same promotion, and I [came out on top].",
+      "exampleRu": "На одно повышение претендовали пятеро, и победа осталась за мной.",
+      "collocations": [
+        "come first",
+        "come out ahead",
+        "win in the end"
+      ],
+      "pattern": "come out on top (in sth)",
+      "trap": "No article: 'on top', not 'on the top', which means on the upper surface of something.",
+      "wrong": [
+        "came out on the top",
+        "came out over the top"
+      ],
+      "tags": [
+        "work",
+        "sport"
+      ]
+    },
+    {
+      "term": "let sb win",
+      "ipa": "let wɪn",
+      "type": "phrase",
+      "translation": "поддаться, дать выиграть",
+      "definition": "to lose on purpose so that the other person wins",
+      "example": "I used to [let my nephew win] at chess, but now he actually beats me.",
+      "exampleRu": "Раньше я поддавался племяннику в шахматах, а теперь он и правда меня обыгрывает.",
+      "collocations": [
+        "go easy on sb",
+        "lose on purpose",
+        "let sb have a go"
+      ],
+      "pattern": "let sb win (no 'to')",
+      "trap": "No 'to' after 'let': 'let him win', not 'let him to win' or 'give him to win' (a calque of «дать выиграть»).",
+      "wrong": [
+        "let my nephew to win",
+        "give my nephew to win"
+      ],
+      "tags": [
+        "relationships",
+        "sport"
+      ]
+    },
+    {
+      "term": "win at all costs",
+      "ipa": "wɪn ət ɔːl kɒsts",
+      "type": "idiom",
+      "translation": "победить любой ценой",
+      "definition": "to be ready to do anything, even something unfair, to win",
+      "example": "Playing tennis with my boss is stressful because he has to [win at all costs].",
+      "exampleRu": "Играть в теннис с начальником — сплошной стресс: ему нужно победить любой ценой.",
+      "collocations": [
+        "a win-at-all-costs attitude",
+        "at any price",
+        "whatever it takes",
+        "avoid sth at all costs"
+      ],
+      "pattern": "win at all costs; a win-at-all-costs mentality",
+      "trap": "Use 'at' and plural 'costs', not 'by any price' or 'for any price' (calques of «любой ценой»).",
+      "wrong": [
+        "win by any price",
+        "win for any price"
+      ],
+      "tags": [
+        "sport",
+        "work"
+      ]
+    },
+    {
+      "term": "hold your head up high",
+      "ipa": "həʊld jə hed ʌp haɪ",
+      "type": "idiom",
+      "translation": "держать голову высоко, гордиться собой",
+      "definition": "to feel proud and not ashamed, even after losing or failing",
+      "example": "We lost the final, but we played fair, so we can [hold our heads up high].",
+      "exampleRu": "Мы проиграли финал, но играли честно, так что нам нечего стыдиться.",
+      "collocations": [
+        "hold your head high",
+        "with your head held high",
+        "be proud of yourself"
+      ],
+      "pattern": "hold your head (up) high",
+      "trap": "Change 'your' to match the subject (we → our heads), and don't confuse it with 'keep your chin up' (не вешай нос).",
+      "wrong": [
+        "hold our noses high",
+        "hold our heads up highly"
+      ],
+      "tags": [
+        "feelings",
+        "sport"
+      ]
+    },
+    {
+      "term": "quiz team",
+      "ipa": "kwɪz tiːm",
+      "type": "collocation",
+      "translation": "команда в викторине",
+      "definition": "a group of friends who play together in a quiz, often in a pub",
+      "example": "Our [quiz team] meets at the pub every Thursday, and we've still never won.",
+      "exampleRu": "Наша команда по квизам каждый четверг собирается в пабе, и мы до сих пор ни разу не выиграли.",
+      "collocations": [
+        "pub quiz",
+        "quiz night",
+        "quizmaster",
+        "team name"
+      ],
+      "pattern": "be in a quiz team (UK) / on a quiz team (US)",
+      "trap": "«Команда» here is 'team', never 'command', and in British English you are 'in' a team (US: 'on').",
+      "wrong": [
+        "quiz command",
+        "victorina team"
+      ],
+      "tags": [
+        "everyday",
+        "people"
+      ]
+    }
+  ]
+}

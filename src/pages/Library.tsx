@@ -5,9 +5,9 @@ import { ItemForm } from '../components/ItemForm';
 import { Empty, LevelMeter, Sheet, toast, usePageTitle } from '../components/ui';
 import { sentenceUsesTerm } from '../lib/cloze';
 import { db, useLive } from '../lib/db';
-import { DECKS, addDeck } from '../lib/decks';
+import { COURSE_DECKS, DECKS, addDeck } from '../lib/decks';
 import { addSentence, resetItem } from '../lib/srs';
-import { LEVEL_NAMES, type Item } from '../lib/types';
+import { LEVEL_NAMES, type Deck, type Item } from '../lib/types';
 
 export function Library({ tab }: { tab: string }) {
   usePageTitle('Library');
@@ -50,6 +50,7 @@ const FILTERS = [
   { id: 'new', label: 'Not started', test: (i: Item) => i.level === 0 && !i.suspended },
   { id: 'learning', label: 'Learning', test: (i: Item) => i.level >= 1 && i.level <= 3 },
   { id: 'use', label: 'Can use', test: (i: Item) => i.level >= 4 },
+  { id: 'course', label: 'My course', test: (i: Item) => COURSE_DECKS.has(i.deck) },
   { id: 'own', label: 'My own', test: (i: Item) => i.deck === 'own' },
   { id: 'paused', label: 'Paused', test: (i: Item) => i.suspended },
 ];
@@ -309,55 +310,80 @@ function ItemDetails({ item, onClose }: { item: Item; onClose: () => void }) {
 function Packs() {
   const items = useLive(() => db.items.toArray(), [], [] as Item[]);
   const [preview, setPreview] = useState<string | null>(null);
+  const course = DECKS.filter((d) => d.course);
   return (
     <div className="stack">
+      {course.length > 0 && (
+        <>
+          <h2 className="pack-group">From my course</h2>
+          <p className="muted small">The words from your course, with examples. They come first in your lessons, at your daily pace.</p>
+          {course.map((d) => (
+            <PackCard key={d.id} deck={d} items={items} preview={preview} setPreview={setPreview} />
+          ))}
+          <h2 className="pack-group">Ready-made packs</h2>
+        </>
+      )}
       <p className="muted small">Ready-made Upper-Intermediate phrases. New words from packs come in at your daily pace, never all at once.</p>
-      {DECKS.map((d) => {
-        const added = items.filter((i) => i.deck === d.id).length;
-        return (
-          <div key={d.id} className="card pack">
-            <div className="pack-head">
-              <div>
-                <h3>{d.title}</h3>
-                <p className="muted small">
-                  {d.description} · {d.items.length} phrases
-                </p>
-              </div>
-              {added > 0 ? (
-                <span className="chip ok">
-                  <Icon name="check" size={14} strokeWidth={3} /> Added
-                </span>
-              ) : (
-                <button
-                  type="button"
-                  className="primary small"
-                  onClick={async () => {
-                    const n = await addDeck(d);
-                    toast(n < d.items.length ? `Added ${n} (${d.items.length - n} were already there)` : `Added ${n} phrases`);
-                  }}
-                >
-                  <Icon name="plus" size={18} /> Add pack
-                </button>
-              )}
-            </div>
-            <button type="button" className="link-btn small" aria-expanded={preview === d.id} onClick={() => setPreview(preview === d.id ? null : d.id)}>
-              {preview === d.id ? 'Hide phrases' : 'Show phrases'}
-            </button>
-            {preview === d.id && (
-              <ul className="pack-list small">
-                {d.items.map((i) => (
-                  <li key={i.term}>
-                    <b>{i.term}</b>{' '}
-                    <span className="muted" lang="ru">
-                      — {i.translation}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        );
-      })}
+      {DECKS.filter((d) => !d.course).map((d) => (
+        <PackCard key={d.id} deck={d} items={items} preview={preview} setPreview={setPreview} />
+      ))}
+    </div>
+  );
+}
+
+function PackCard({
+  deck: d,
+  items,
+  preview,
+  setPreview,
+}: {
+  deck: Deck;
+  items: Item[];
+  preview: string | null;
+  setPreview: (id: string | null) => void;
+}) {
+  const added = items.filter((i) => i.deck === d.id).length;
+  return (
+    <div className="card pack">
+      <div className="pack-head">
+        <div>
+          <h3>{d.title}</h3>
+          <p className="muted small">
+            {d.description} · {d.items.length} phrases
+          </p>
+        </div>
+        {added > 0 ? (
+          <span className="chip ok">
+            <Icon name="check" size={14} strokeWidth={3} /> Added
+          </span>
+        ) : (
+          <button
+            type="button"
+            className="primary small"
+            onClick={async () => {
+              const n = await addDeck(d);
+              toast(n < d.items.length ? `Added ${n} (${d.items.length - n} were already there)` : `Added ${n} phrases`);
+            }}
+          >
+            <Icon name="plus" size={18} /> Add pack
+          </button>
+        )}
+      </div>
+      <button type="button" className="link-btn small" aria-expanded={preview === d.id} onClick={() => setPreview(preview === d.id ? null : d.id)}>
+        {preview === d.id ? 'Hide phrases' : 'Show phrases'}
+      </button>
+      {preview === d.id && (
+        <ul className="pack-list small">
+          {d.items.map((i) => (
+            <li key={i.term}>
+              <b>{i.term}</b>{' '}
+              <span className="muted" lang="ru">
+                — {i.translation}
+              </span>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

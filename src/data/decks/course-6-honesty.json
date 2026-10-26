@@ -1,0 +1,987 @@
+{
+  "id": "course-6-honesty",
+  "title": "Honesty, Lies & Excuses",
+  "description": "From your course: confessions, lies and cons, cheating in exams, excuses at work and getting caught out.",
+  "course": true,
+  "items": [
+    {
+      "term": "confession",
+      "ipa": "kənˈfeʃn",
+      "type": "word",
+      "translation": "признание",
+      "definition": "telling people about something bad or embarrassing that you did",
+      "example": "OK, [confession] time: I still haven't read the book for our book club.",
+      "exampleRu": "Ладно, каюсь: я так и не прочитал книгу для нашего книжного клуба.",
+      "collocations": [
+        "confession time",
+        "make a confession",
+        "have a confession to make",
+        "a full confession"
+      ],
+      "pattern": "make a confession / have a confession to make",
+      "trap": "«Признание» meaning recognition of your work is 'recognition', not 'confession'; and you 'make' a confession, not 'do' one.",
+      "wrong": [
+        "recognition",
+        "confess"
+      ],
+      "tags": [
+        "honesty"
+      ]
+    },
+    {
+      "term": "not the done thing",
+      "ipa": "nɒt ðə dʌn θɪŋ",
+      "type": "idiom",
+      "translation": "так не принято",
+      "definition": "not considered polite or acceptable in a particular group or place",
+      "example": "Where I work, it's [not the done thing] to talk about your salary.",
+      "exampleRu": "У нас на работе не принято обсуждать свою зарплату.",
+      "collocations": [
+        "it's not the done thing",
+        "the done thing",
+        "bad manners",
+        "frowned upon"
+      ],
+      "pattern": "it's (not) the done thing to do sth",
+      "trap": "Mainly British. Don't calque «не принято» as 'it's not accepted to…'; say 'it's not the done thing to…' or 'people don't usually…'.",
+      "wrong": [
+        "not a done thing",
+        "not the doing thing"
+      ],
+      "tags": [
+        "everyday",
+        "work"
+      ]
+    },
+    {
+      "term": "ashamed of sth",
+      "ipa": "əˈʃeɪmd əv",
+      "type": "phrase",
+      "translation": "стыдящийся (be ashamed of — стыдиться чего-то)",
+      "definition": "feeling bad and guilty because of something wrong you did",
+      "example": "Looking back, I'm quite [ashamed of] how rude I was to that waiter.",
+      "exampleRu": "Теперь мне довольно стыдно за то, как грубо я разговаривал с тем официантом.",
+      "collocations": [
+        "deeply ashamed",
+        "nothing to be ashamed of",
+        "ashamed of yourself",
+        "feel ashamed"
+      ],
+      "pattern": "be ashamed of sth / of doing sth",
+      "trap": "'Ashamed' is about doing something wrong; for silly, awkward moments use 'embarrassed'.",
+      "wrong": [
+        "ashamed for",
+        "shameful of"
+      ],
+      "tags": [
+        "feelings",
+        "honesty"
+      ]
+    },
+    {
+      "term": "con sb",
+      "ipa": "kɒn",
+      "type": "word",
+      "translation": "обмануть, развести (разг.)",
+      "definition": "to trick someone, usually to get their money",
+      "example": "The taxi driver at the airport [conned us] out of thirty euros.",
+      "exampleRu": "Таксист в аэропорту развёл нас на тридцать евро.",
+      "collocations": [
+        "con sb out of sth",
+        "con sb into doing sth",
+        "a con artist",
+        "it's a total con"
+      ],
+      "pattern": "con sb out of sth / con sb into doing sth",
+      "trap": "Informal. «Развести на деньги» is 'con sb out of money', never 'divorce'; and 'cheat on sb' means being unfaithful.",
+      "wrong": [
+        "divorced us",
+        "cheated on us"
+      ],
+      "tags": [
+        "money",
+        "travel"
+      ]
+    },
+    {
+      "term": "deceive",
+      "ipa": "dɪˈsiːv",
+      "type": "word",
+      "translation": "обманывать",
+      "definition": "to make someone believe something that is not true",
+      "example": "Don't be [deceived] by the photos: the hotel is much smaller in real life.",
+      "exampleRu": "Не ведись на фотографии: в реальности отель намного меньше.",
+      "collocations": [
+        "be deceived by sth",
+        "deceive yourself",
+        "deliberately deceive",
+        "deceptive"
+      ],
+      "pattern": "deceive sb / be deceived by sth",
+      "trap": "'Deceive' is quite strong and formal; in everyday speech people say 'lie to sb' or 'be fooled by sth'.",
+      "wrong": [
+        "lied",
+        "deceit"
+      ],
+      "tags": [
+        "honesty",
+        "travel"
+      ]
+    },
+    {
+      "term": "mislead",
+      "ipa": "ˌmɪsˈliːd",
+      "type": "word",
+      "translation": "вводить в заблуждение",
+      "definition": "to make someone believe something wrong, by what you say or don't say",
+      "example": "Apologies if I [misled] you about the deadline: it's actually Friday, not Thursday.",
+      "exampleRu": "Прошу прощения, если ввёл вас в заблуждение насчёт дедлайна: на самом деле он в пятницу, а не в четверг.",
+      "collocations": [
+        "misleading information",
+        "a misleading advert",
+        "deliberately mislead",
+        "mislead sb about sth"
+      ],
+      "pattern": "mislead sb (about sth) / mislead sb into doing sth",
+      "trap": "The past form is 'misled', not 'misleaded'; don't confuse it with 'mislaid' (= lost).",
+      "wrong": [
+        "misleaded",
+        "mislaid"
+      ],
+      "tags": [
+        "work",
+        "honesty"
+      ]
+    },
+    {
+      "term": "inappropriate",
+      "ipa": "ˌɪnəˈprəʊpriət",
+      "type": "word",
+      "translation": "неуместный, неподобающий",
+      "definition": "not suitable or not polite for a particular situation",
+      "example": "Is it [inappropriate] to message my boss on WhatsApp at the weekend?",
+      "exampleRu": "Писать начальнику в WhatsApp на выходных — это неуместно?",
+      "collocations": [
+        "completely inappropriate",
+        "inappropriate behaviour",
+        "an inappropriate comment",
+        "inappropriate for sth"
+      ],
+      "pattern": "it's inappropriate to do sth / inappropriate for sb/sth",
+      "trap": "The prefix is 'in-', not 'un-'; and «неадекватный» is not 'inadequate' (= not good enough).",
+      "wrong": [
+        "unappropriate",
+        "inadequate"
+      ],
+      "tags": [
+        "work"
+      ]
+    },
+    {
+      "term": "be frowned on",
+      "ipa": "fraʊnd ɒn",
+      "type": "phrase",
+      "translation": "не одобряться, осуждаться",
+      "definition": "to be thought of as bad or wrong by most people",
+      "example": "Using your phone at the dinner table is [frowned on] in my family.",
+      "exampleRu": "У нас в семье не одобряют, когда сидят в телефоне за ужином.",
+      "collocations": [
+        "be frowned upon",
+        "generally frowned on",
+        "heavily frowned upon",
+        "frown on sth"
+      ],
+      "pattern": "sth is frowned on/upon",
+      "trap": "'Frowned upon' means the same and is a little more formal; 'frown at sb' just means looking at sb angrily.",
+      "wrong": [
+        "frowned at",
+        "frowned about"
+      ],
+      "tags": [
+        "everyday"
+      ]
+    },
+    {
+      "term": "shockingly unacceptable",
+      "ipa": "ˈʃɒkɪŋli ˌʌnəkˈseptəbl",
+      "type": "collocation",
+      "translation": "шокирующе неприемлемый, возмутительный",
+      "definition": "so bad that it shocks people and should not be allowed",
+      "example": "Our landlord took four months to fix the heating, which is [shockingly unacceptable].",
+      "exampleRu": "Наш арендодатель четыре месяца чинил отопление — это просто возмутительно.",
+      "collocations": [
+        "totally unacceptable",
+        "completely unacceptable",
+        "shockingly bad",
+        "simply unacceptable"
+      ],
+      "pattern": "sth is shockingly unacceptable",
+      "trap": "It's 'unacceptable', never 'inacceptable'; and the adverb 'shockingly', not the adjective 'shocking', goes before an adjective.",
+      "wrong": [
+        "shocking unacceptable",
+        "shockingly inacceptable"
+      ],
+      "tags": [
+        "home",
+        "opinions"
+      ]
+    },
+    {
+      "term": "look up the answers",
+      "ipa": "lʊk ʌp ði ˈɑːnsəz",
+      "type": "phrasal-verb",
+      "translation": "подсмотреть / поискать ответы",
+      "definition": "to find the answers in a book or online instead of working them out yourself",
+      "example": "At the pub quiz, my mate kept trying to [look up the answers] on his phone.",
+      "exampleRu": "На квизе в пабе мой приятель всё пытался подсмотреть ответы в телефоне.",
+      "collocations": [
+        "look sth up online",
+        "look up a word",
+        "look it up",
+        "cheat in a quiz"
+      ],
+      "pattern": "look up sth / look sth up / look it up",
+      "trap": "With a pronoun the particle goes last: 'look it up', not 'look up it'.",
+      "wrong": [
+        "look the answers",
+        "peep the answers"
+      ],
+      "tags": [
+        "study",
+        "honesty"
+      ]
+    },
+    {
+      "term": "run out of time",
+      "ipa": "rʌn aʊt əv taɪm",
+      "type": "collocation",
+      "translation": "не успеть, время закончилось",
+      "definition": "to have no time left before you finish something",
+      "example": "In the exam I [ran out of time] and left two questions blank.",
+      "exampleRu": "На экзамене мне не хватило времени, и два вопроса я так и оставил без ответа.",
+      "collocations": [
+        "run out of money",
+        "run out of patience",
+        "time is running out",
+        "run short of time"
+      ],
+      "pattern": "run out of sth",
+      "trap": "Don't say 'my time finished' or 'I didn't manage'; 'I ran out of time' is the natural way to say «не успел».",
+      "wrong": [
+        "ran out from time",
+        "finished the time"
+      ],
+      "tags": [
+        "study"
+      ]
+    },
+    {
+      "term": "revise for an exam",
+      "ipa": "rɪˈvaɪz fər ən ɪɡˈzæm",
+      "type": "collocation",
+      "translation": "повторять материал к экзамену",
+      "definition": "to study again what you have learnt so you are ready for an exam",
+      "example": "No nights out for me this week: I'm [revising for an exam] on Monday.",
+      "exampleRu": "На этой неделе никаких тусовок: готовлюсь к экзамену в понедельник.",
+      "collocations": [
+        "revise for a test",
+        "do some revision",
+        "revision notes",
+        "revise hard"
+      ],
+      "pattern": "revise (sth) for an exam",
+      "trap": "British English; Americans say 'review'. «Повторять» here is never 'repeat'.",
+      "wrong": [
+        "repeating for an exam",
+        "preparing to an exam"
+      ],
+      "tags": [
+        "study"
+      ]
+    },
+    {
+      "term": "make the grade",
+      "ipa": "meɪk ðə ɡreɪd",
+      "type": "idiom",
+      "translation": "соответствовать требованиям, пройти отбор",
+      "definition": "to be good enough to succeed or to reach the standard needed",
+      "example": "Sadly, I didn't [make the grade] for the team lead role this time.",
+      "exampleRu": "К сожалению, на позицию тимлида я в этот раз не прошёл.",
+      "collocations": [
+        "fail to make the grade",
+        "make the cut",
+        "be up to scratch",
+        "meet the standard"
+      ],
+      "pattern": "make the grade (as sth / for sth)",
+      "trap": "It's not about school marks: it means being good enough. The verb is 'make', not 'do'.",
+      "wrong": [
+        "do the grade",
+        "make the level"
+      ],
+      "tags": [
+        "work"
+      ]
+    },
+    {
+      "term": "secretly",
+      "ipa": "ˈsiːkrətli",
+      "type": "word",
+      "translation": "тайком, втайне",
+      "definition": "without other people seeing or knowing",
+      "example": "My flatmate [secretly] eats my yoghurts and thinks I don't notice.",
+      "exampleRu": "Мой сосед по квартире тайком ест мои йогурты и думает, что я не замечаю.",
+      "collocations": [
+        "secretly hope",
+        "secretly record sth",
+        "in secret",
+        "keep sth secret"
+      ],
+      "pattern": "",
+      "trap": "«Тайком от кого-то» is 'without sb knowing', not 'secretly from sb'.",
+      "wrong": [
+        "by secret",
+        "secret"
+      ],
+      "tags": [
+        "home",
+        "honesty"
+      ]
+    },
+    {
+      "term": "deserve to fail",
+      "ipa": "dɪˈzɜːv tə feɪl",
+      "type": "collocation",
+      "translation": "заслуживать провала",
+      "definition": "to have done so little or so badly that failing is fair",
+      "example": "To be fair, I didn't revise at all, so I [deserved to fail].",
+      "exampleRu": "Если честно, я вообще не готовился, так что провалился заслуженно.",
+      "collocations": [
+        "deserve to win",
+        "deserve a break",
+        "fully deserve sth",
+        "deserve better"
+      ],
+      "pattern": "deserve to do sth / deserve sth",
+      "trap": "No preposition after 'deserve': 'deserve a break', not 'deserve for a break'.",
+      "wrong": [
+        "deserved for failing",
+        "deserved to failure"
+      ],
+      "tags": [
+        "study"
+      ]
+    },
+    {
+      "term": "advert",
+      "ipa": "ˈædvɜːt",
+      "type": "word",
+      "translation": "объявление, реклама (job advert — объявление о вакансии)",
+      "definition": "a notice, picture or short film that tells people about a product, job or service",
+      "example": "Just saw a job [advert] that looks perfect for you — sending you the link!",
+      "exampleRu": "Только что увидел вакансию, которая тебе идеально подходит, — кидаю ссылку!",
+      "collocations": [
+        "job advert",
+        "put an advert in/on sth",
+        "TV advert",
+        "the advert break"
+      ],
+      "pattern": "an advert for sth",
+      "trap": "'Advert' and 'ad' are British; 'advertisement' is formal. «Реклама» in general is 'advertising' (uncountable); one item is 'an advert'.",
+      "wrong": [
+        "advertising",
+        "reclame"
+      ],
+      "tags": [
+        "work"
+      ]
+    },
+    {
+      "term": "exaggerate",
+      "ipa": "ɪɡˈzædʒəreɪt",
+      "type": "word",
+      "translation": "преувеличивать",
+      "definition": "to make something sound bigger, better or worse than it really is",
+      "example": "Honestly, I'm not [exaggerating]: the queue at passport control was two hours long.",
+      "exampleRu": "Честно, я не преувеличиваю: очередь на паспортном контроле была на два часа.",
+      "collocations": [
+        "slightly exaggerate",
+        "a wild exaggeration",
+        "exaggerate a problem",
+        "it's no exaggeration to say"
+      ],
+      "pattern": "exaggerate (sth)",
+      "trap": "Spelling: double 'g', single 'r' — exaggerate.",
+      "wrong": [
+        "exagerating",
+        "exaggerate"
+      ],
+      "tags": [
+        "travel",
+        "honesty"
+      ]
+    },
+    {
+      "term": "honesty is the best policy",
+      "ipa": "ˈɒnəsti ɪz ðə best ˈpɒləsi",
+      "type": "idiom",
+      "translation": "честность — лучшая политика",
+      "definition": "telling the truth is always the best choice, even when it is difficult",
+      "example": "I told my boss I'd forgotten about the report — [honesty is the best policy], right?",
+      "exampleRu": "Я признался начальнику, что забыл про отчёт, — честность лучшая политика, правда?",
+      "collocations": [
+        "to be honest",
+        "tell the truth",
+        "come clean",
+        "brutally honest"
+      ],
+      "pattern": "",
+      "trap": "Here 'policy' means a way of acting, not 'politics'.",
+      "wrong": [
+        "honesty is the best politics",
+        "the honesty is the best policy"
+      ],
+      "tags": [
+        "honesty"
+      ]
+    },
+    {
+      "term": "embarrassing",
+      "ipa": "ɪmˈbærəsɪŋ",
+      "type": "word",
+      "translation": "неловкий, стыдный",
+      "definition": "making you feel silly or uncomfortable in front of other people",
+      "example": "That was so [embarrassing]: I called my new manager by the wrong name.",
+      "exampleRu": "Было так неловко: я назвал нового начальника чужим именем.",
+      "collocations": [
+        "an embarrassing moment",
+        "deeply embarrassing",
+        "an embarrassing mistake",
+        "how embarrassing!"
+      ],
+      "pattern": "it's embarrassing to do sth / I'm embarrassed",
+      "trap": "'Embarrassing' describes the situation; 'embarrassed' is how you feel: 'I was embarrassed', not 'I was embarrassing'.",
+      "wrong": [
+        "embarrassed",
+        "ashamed"
+      ],
+      "tags": [
+        "feelings",
+        "work"
+      ]
+    },
+    {
+      "term": "be keen to impress",
+      "ipa": "kiːn tʊ ɪmˈpres",
+      "type": "phrase",
+      "translation": "очень хотеть произвести впечатление",
+      "definition": "to want very much to make people think well of you",
+      "example": "It's my first week, so I'm really [keen to impress] my new team.",
+      "exampleRu": "Это моя первая неделя, так что мне очень хочется произвести впечатление на новую команду.",
+      "collocations": [
+        "keen to help",
+        "keen on sth",
+        "eager to impress",
+        "make a good impression"
+      ],
+      "pattern": "be keen to do sth / be keen on sth",
+      "trap": "'Keen to + verb' but 'keen on + noun/-ing': keen to impress, keen on football.",
+      "wrong": [
+        "keen on impress",
+        "keen for impress"
+      ],
+      "tags": [
+        "work"
+      ]
+    },
+    {
+      "term": "junior staff member",
+      "ipa": "ˈdʒuːniə stɑːf ˈmembə",
+      "type": "collocation",
+      "translation": "младший сотрудник",
+      "definition": "a worker with a low position and less experience than others",
+      "example": "Being the most [junior staff member] in the office isn't always easy.",
+      "exampleRu": "Быть самым младшим сотрудником в офисе не всегда легко.",
+      "collocations": [
+        "junior colleague",
+        "senior staff member",
+        "member of staff",
+        "junior position"
+      ],
+      "pattern": "",
+      "trap": "'Junior' is about rank, not age; and 'staff' (персонал) is not 'stuff' (вещи).",
+      "wrong": [
+        "younger staff member",
+        "junior stuff member"
+      ],
+      "tags": [
+        "work"
+      ]
+    },
+    {
+      "term": "take credit for sth",
+      "ipa": "teɪk ˈkredɪt fɔː",
+      "type": "collocation",
+      "translation": "приписывать себе заслугу",
+      "definition": "to say or let people think that you did something good that someone else did",
+      "example": "My manager [took credit for] my idea in front of the whole team.",
+      "exampleRu": "Начальник при всей команде выдал мою идею за свою.",
+      "collocations": [
+        "take the credit",
+        "give sb credit for sth",
+        "deserve credit",
+        "credit where credit's due"
+      ],
+      "pattern": "take (the) credit for sth / for doing sth",
+      "trap": "No 'a': 'a credit' is money from a bank. Say 'take (the) credit for sth'.",
+      "wrong": [
+        "took a credit for",
+        "took credit of"
+      ],
+      "tags": [
+        "work",
+        "honesty"
+      ]
+    },
+    {
+      "term": "report to sb",
+      "ipa": "rɪˈpɔːt tə",
+      "type": "phrase",
+      "translation": "подчиняться кому-то (по работе)",
+      "definition": "to have someone as your manager at work",
+      "example": "Who do you [report to] in your new job?",
+      "exampleRu": "Кому ты подчиняешься на новой работе?",
+      "collocations": [
+        "report directly to sb",
+        "line manager",
+        "report back to sb",
+        "be accountable to sb"
+      ],
+      "pattern": "report to sb",
+      "trap": "«Подчиняться начальнику» at work is 'report to sb', not 'obey' or 'be subordinate to'.",
+      "wrong": [
+        "obey to",
+        "subordinate to"
+      ],
+      "tags": [
+        "work"
+      ]
+    },
+    {
+      "term": "witness sth",
+      "ipa": "ˈwɪtnəs",
+      "type": "word",
+      "translation": "стать свидетелем (чего-то)",
+      "definition": "to see something happen, especially a crime or an accident",
+      "example": "On my way to work this morning, I [witnessed] a car accident.",
+      "exampleRu": "Сегодня утром по дороге на работу я стал свидетелем аварии.",
+      "collocations": [
+        "witness a crime",
+        "witness a robbery",
+        "an eyewitness",
+        "be a witness to sth"
+      ],
+      "pattern": "witness sth / be a witness to sth",
+      "trap": "As a verb it needs no preposition: 'I witnessed an accident'; avoid the calque 'I became a witness of…'.",
+      "wrong": [
+        "witnessed to",
+        "witnessed at"
+      ],
+      "tags": [
+        "city"
+      ]
+    },
+    {
+      "term": "street robbery",
+      "ipa": "striːt ˈrɒbəri",
+      "type": "collocation",
+      "translation": "уличный грабёж",
+      "definition": "a crime when someone takes things from a person in the street, often using force",
+      "example": "There was a [street robbery] right outside my building last night.",
+      "exampleRu": "Вчера вечером прямо у моего дома был уличный грабёж.",
+      "collocations": [
+        "armed robbery",
+        "bank robbery",
+        "mugging",
+        "get robbed"
+      ],
+      "pattern": "",
+      "trap": "In everyday British English people often say 'mugging' ('I got mugged'). You rob a person or a place, but you steal a thing.",
+      "wrong": [
+        "street grabbing",
+        "street robbing"
+      ],
+      "tags": [
+        "city"
+      ]
+    },
+    {
+      "term": "chase",
+      "ipa": "tʃeɪs",
+      "type": "word",
+      "translation": "гнаться, преследовать",
+      "definition": "to run or drive after someone or something to catch them",
+      "example": "I [chased] the bus all the way down the street, but it didn't stop.",
+      "exampleRu": "Я бежал за автобусом через всю улицу, но он так и не остановился.",
+      "collocations": [
+        "chase after sb",
+        "chase your dreams",
+        "chase sb up (UK, work)",
+        "a car chase"
+      ],
+      "pattern": "chase sb/sth / chase after sb/sth",
+      "trap": "No 'for': 'chase the bus' or 'chase after the bus'. At work, 'chase sb up' means reminding them to do something.",
+      "wrong": [
+        "chased for",
+        "chased behind"
+      ],
+      "tags": [
+        "city",
+        "everyday"
+      ]
+    },
+    {
+      "term": "thief",
+      "ipa": "θiːf",
+      "type": "word",
+      "translation": "вор",
+      "definition": "a person who steals things",
+      "example": "Hold on to your bag on the metro: [thieves] often target tourists there.",
+      "exampleRu": "В метро держи сумку крепче: воры там часто охотятся на туристов.",
+      "collocations": [
+        "car thief",
+        "petty thief",
+        "catch a thief",
+        "identity thief"
+      ],
+      "pattern": "",
+      "trap": "Plural is 'thieves', not 'thiefs'. A thief steals secretly; a robber uses force or threats.",
+      "wrong": [
+        "thiefs",
+        "stealers"
+      ],
+      "tags": [
+        "travel",
+        "city"
+      ]
+    },
+    {
+      "term": "alter the facts",
+      "ipa": "ˈɔːltə ðə fækts",
+      "type": "collocation",
+      "translation": "искажать факты",
+      "definition": "to change the facts so the story is not completely true",
+      "example": "I didn't lie — I just [altered the facts] a little!",
+      "exampleRu": "Я не врал — я просто слегка подправил факты!",
+      "collocations": [
+        "twist the facts",
+        "distort the facts",
+        "stick to the facts",
+        "get your facts straight"
+      ],
+      "pattern": "",
+      "trap": "«Исказить факты» is 'alter', 'twist' or 'distort' the facts; 'alter' (change) sounds the same as 'altar' (in a church).",
+      "wrong": [
+        "curved the facts",
+        "alternated the facts"
+      ],
+      "tags": [
+        "honesty"
+      ]
+    },
+    {
+      "term": "hint",
+      "ipa": "hɪnt",
+      "type": "word",
+      "translation": "намекать; намёк",
+      "definition": "to say something in an indirect way; a small, indirect piece of information",
+      "example": "My sister keeps [hinting] that she'd love a new phone for her birthday.",
+      "exampleRu": "Сестра всё время намекает, что была бы рада новому телефону на день рождения.",
+      "collocations": [
+        "drop a hint",
+        "take the hint",
+        "give sb a hint",
+        "hint at sth"
+      ],
+      "pattern": "hint that… / hint at sth / drop a hint",
+      "trap": "Say 'hint at sth' or 'hint that…', not 'hint on sth'; and 'drop a hint', not 'make a hint'.",
+      "wrong": [
+        "hinting on",
+        "hint"
+      ],
+      "tags": [
+        "relationships"
+      ]
+    },
+    {
+      "term": "call in sick",
+      "ipa": "kɔːl ɪn sɪk",
+      "type": "phrasal-verb",
+      "translation": "сказаться больным, взять больничный",
+      "definition": "to phone work and say you are too ill to come in",
+      "example": "If you're ill, just [call in sick] — don't come in and infect everyone.",
+      "exampleRu": "Если заболел, просто отпросись по болезни — не приходи и не заражай всех.",
+      "collocations": [
+        "be off sick",
+        "take a sick day",
+        "be on sick leave",
+        "pull a sickie (UK, informal)"
+      ],
+      "pattern": "call in sick (to work)",
+      "trap": "For a longer, official absence say 'be on sick leave'; «взять больничный» is never 'take a hospital'.",
+      "wrong": [
+        "call sick",
+        "take a hospital"
+      ],
+      "tags": [
+        "work",
+        "health"
+      ]
+    },
+    {
+      "term": "get the day off",
+      "ipa": "ɡet ðə deɪ ɒf",
+      "type": "phrase",
+      "translation": "получить выходной",
+      "definition": "to be allowed not to go to work on a particular day",
+      "example": "Do you think I could [get the day off] on Friday for my cousin's wedding?",
+      "exampleRu": "Как думаете, можно мне в пятницу взять выходной на свадьбу двоюродного брата?",
+      "collocations": [
+        "take a day off",
+        "have a day off",
+        "a day off work",
+        "get time off"
+      ],
+      "pattern": "get/take/have the day off (work)",
+      "trap": "«Выходной» is 'a day off', not 'a free day' or 'a weekend'.",
+      "wrong": [
+        "get the free day",
+        "get the day out"
+      ],
+      "tags": [
+        "work"
+      ]
+    },
+    {
+      "term": "hesitation",
+      "ipa": "ˌhezɪˈteɪʃn",
+      "type": "word",
+      "translation": "колебание, сомнение",
+      "definition": "a short pause or doubt before you do or say something",
+      "example": "When they offered me the job in Lisbon, I said yes without [hesitation].",
+      "exampleRu": "Когда мне предложили работу в Лиссабоне, я согласился не раздумывая.",
+      "collocations": [
+        "without hesitation",
+        "without a moment's hesitation",
+        "slight hesitation",
+        "after some hesitation"
+      ],
+      "pattern": "without (a moment's) hesitation",
+      "trap": "«Колебание» in science is 'vibration' or 'oscillation'; only doubt is 'hesitation'.",
+      "wrong": [
+        "oscillation",
+        "hesitate"
+      ],
+      "tags": [
+        "work",
+        "feelings"
+      ]
+    },
+    {
+      "term": "make up the hours",
+      "ipa": "meɪk ʌp ði ˈaʊəz",
+      "type": "phrasal-verb",
+      "translation": "отработать часы позже",
+      "definition": "to work extra time later because you worked less earlier",
+      "example": "Can I leave early for the dentist and [make up the hours] on Thursday?",
+      "exampleRu": "Можно я уйду пораньше к стоматологу, а часы отработаю в четверг?",
+      "collocations": [
+        "make up the time",
+        "make up for lost time",
+        "work extra hours",
+        "flexitime"
+      ],
+      "pattern": "make up the hours/time (later)",
+      "trap": "Natives say 'make up the hours', not 'catch up the hours'; 'work out the hours' means calculating them.",
+      "wrong": [
+        "catch up the hours",
+        "work out the hours"
+      ],
+      "tags": [
+        "work"
+      ]
+    },
+    {
+      "term": "reluctant to do sth",
+      "ipa": "rɪˈlʌktənt tə",
+      "type": "phrase",
+      "translation": "неохотно делающий, не желающий (что-то делать)",
+      "definition": "not wanting to do something, so you do it slowly or not at all",
+      "example": "After last time, I'm a bit [reluctant to lend] him money again.",
+      "exampleRu": "После прошлого раза мне как-то не хочется снова давать ему в долг.",
+      "collocations": [
+        "reluctant speakers",
+        "reluctant to admit sth",
+        "reluctantly agree",
+        "a reluctant hero"
+      ],
+      "pattern": "be reluctant to do sth",
+      "trap": "Use 'to + verb', not 'of' or '-ing': 'reluctant to lend', not 'reluctant of lending'.",
+      "wrong": [
+        "reluctant lending",
+        "reluctant of lending"
+      ],
+      "tags": [
+        "money",
+        "relationships"
+      ]
+    },
+    {
+      "term": "make eye contact",
+      "ipa": "meɪk aɪ ˈkɒntækt",
+      "type": "collocation",
+      "translation": "смотреть в глаза, установить зрительный контакт",
+      "definition": "to look directly into someone's eyes while they look at you",
+      "example": "Try to [make eye contact] in interviews, even when you're nervous.",
+      "exampleRu": "На собеседованиях старайся смотреть в глаза, даже если нервничаешь.",
+      "collocations": [
+        "avoid eye contact",
+        "maintain eye contact",
+        "look sb in the eye",
+        "eye contact with sb"
+      ],
+      "pattern": "make eye contact (with sb)",
+      "trap": "The verb is 'make', not 'do' or 'set'; and it's 'eye contact', not 'eyes contact'.",
+      "wrong": [
+        "do eye contact",
+        "make eyes contact"
+      ],
+      "tags": [
+        "work",
+        "people"
+      ]
+    },
+    {
+      "term": "punishment",
+      "ipa": "ˈpʌnɪʃmənt",
+      "type": "word",
+      "translation": "наказание",
+      "definition": "something bad that happens to you because you did something wrong",
+      "example": "As a [punishment] for being late, I had to buy coffee for everyone.",
+      "exampleRu": "В наказание за опоздание мне пришлось покупать кофе на всех.",
+      "collocations": [
+        "as a punishment",
+        "harsh punishment",
+        "punishment for sth",
+        "a fair punishment"
+      ],
+      "pattern": "punishment for sth / for doing sth",
+      "trap": "Use 'for', not 'of': 'punishment for being late'.",
+      "wrong": [
+        "punish",
+        "punishing"
+      ],
+      "tags": [
+        "work"
+      ]
+    },
+    {
+      "term": "be caught out",
+      "ipa": "kɔːt aʊt",
+      "type": "phrasal-verb",
+      "translation": "попасться (на лжи); оказаться застигнутым врасплох",
+      "definition": "to be shown to be lying or not prepared, often by a question or a surprise",
+      "example": "Never lie about seeing a film — you'll get [caught out] in five minutes.",
+      "exampleRu": "Никогда не ври, что смотрел фильм, — спалишься через пять минут.",
+      "collocations": [
+        "catch sb out",
+        "be caught out by the rain",
+        "be caught lying",
+        "be caught red-handed"
+      ],
+      "pattern": "be/get caught out (by sth)",
+      "trap": "Mainly British. It also means being unprepared: 'We got caught out by the rain.'",
+      "wrong": [
+        "caught off",
+        "catched out"
+      ],
+      "tags": [
+        "honesty"
+      ]
+    },
+    {
+      "term": "fall over",
+      "ipa": "fɔːl ˈəʊvə",
+      "type": "phrasal-verb",
+      "translation": "упасть (потеряв равновесие)",
+      "definition": "to fall to the ground when you are standing or walking",
+      "example": "I [fell over] on the ice outside my flat and hurt my knee.",
+      "exampleRu": "Я упал на льду возле дома и ушиб колено.",
+      "collocations": [
+        "trip over sth",
+        "slip on the ice",
+        "fall down",
+        "fall off sth"
+      ],
+      "pattern": "fall over / fall over sth (= trip on it)",
+      "trap": "«Споткнуться» is 'trip (over sth)': you can trip without falling over. The past is 'fell', not 'felt'.",
+      "wrong": [
+        "felt over",
+        "fell out"
+      ],
+      "tags": [
+        "health",
+        "everyday"
+      ]
+    },
+    {
+      "term": "be tempted to do sth",
+      "ipa": "ˈtemptɪd tə",
+      "type": "phrase",
+      "translation": "испытывать соблазн",
+      "definition": "to want to do something, often something you know you shouldn't",
+      "example": "I was so [tempted to order] pizza, but I made a salad instead.",
+      "exampleRu": "Мне ужасно хотелось заказать пиццу, но я сделал себе салат.",
+      "collocations": [
+        "be tempted by sth",
+        "sorely tempted",
+        "resist the temptation",
+        "I'm tempted to say"
+      ],
+      "pattern": "be tempted to do sth / be tempted by sth",
+      "trap": "'I was tempted' is how you feel; 'it was tempting' describes the thing.",
+      "wrong": [
+        "tempting to order",
+        "tempted ordering"
+      ],
+      "tags": [
+        "food",
+        "feelings"
+      ]
+    },
+    {
+      "term": "impossible to resist",
+      "ipa": "ɪmˈpɒsəbl tə rɪˈzɪst",
+      "type": "collocation",
+      "translation": "невозможно устоять",
+      "definition": "so attractive that you can't stop yourself wanting it",
+      "example": "The smell from the bakery near my office is [impossible to resist].",
+      "exampleRu": "Перед запахом из пекарни возле моего офиса просто невозможно устоять.",
+      "collocations": [
+        "hard to resist",
+        "irresistible",
+        "can't resist (doing) sth",
+        "resist the temptation"
+      ],
+      "pattern": "sth is impossible to resist",
+      "trap": "'Resist' takes no preposition: 'resist the cake', not 'resist to the cake' or 'resist against it'.",
+      "wrong": [
+        "impossible to resist against",
+        "impossible resisting"
+      ],
+      "tags": [
+        "food"
+      ]
+    }
+  ]
+}

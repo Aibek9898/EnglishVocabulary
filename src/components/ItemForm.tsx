@@ -57,6 +57,7 @@ export function ItemForm({
         await onSubmit({
           ...c,
           term: c.term.trim(),
+          ipa: c.ipa?.replace(/^[[/]+|[\]/]+$/g, '').trim() || undefined,
           translation: c.translation.trim(),
           collocations: split(collocations),
           wrong: split(wrong),
@@ -115,6 +116,10 @@ export function ItemForm({
       </div>
       <details>
         <summary>More details</summary>
+        <label className="field">
+          <span>Transcription</span>
+          <input value={c.ipa ?? ''} onChange={set('ipa')} placeholder="e.g. kʌm ʌp wɪð" autoCapitalize="off" autoCorrect="off" spellCheck={false} />
+        </label>
         <label className="field">
           <span>English definition</span>
           <input value={c.definition} onChange={set('definition')} placeholder="e.g. to think of an idea or a plan" />

@@ -1,0 +1,986 @@
+{
+  "id": "course-3-adventure",
+  "title": "Risks, Adventures & Choices",
+  "description": "From your course: phrases for taking risks, trying adventures, making choices and saying how things turned out.",
+  "course": true,
+  "items": [
+    {
+      "term": "bite the bullet",
+      "ipa": "baɪt ðə ˈbʊlɪt",
+      "type": "idiom",
+      "translation": "решиться на неприятное, стиснуть зубы",
+      "definition": "to make yourself do something unpleasant that you have been avoiding",
+      "example": "I'd put it off for ages, but today I [bit the bullet] and booked the dentist.",
+      "exampleRu": "Я долго откладывал, но сегодня всё-таки собрался с духом и записался к стоматологу.",
+      "collocations": [
+        "bite the bullet and do sth",
+        "grit your teeth",
+        "take the plunge"
+      ],
+      "pattern": "bite the bullet (and do sth)",
+      "trap": "Don't calque «стиснуть зубы» as 'squeeze my teeth'; the past is 'bit the bullet', not 'bited'.",
+      "wrong": [
+        "bited the bullet",
+        "bit a bullet",
+        "squeezed my teeth"
+      ],
+      "tags": [
+        "everyday",
+        "feelings"
+      ]
+    },
+    {
+      "term": "jump at the chance",
+      "ipa": "dʒʌmp æt ðə tʃɑːns",
+      "type": "idiom",
+      "translation": "ухватиться за шанс",
+      "definition": "to accept an opportunity quickly and with excitement",
+      "example": "When my boss offered me three months in our Berlin office, I [jumped at the chance].",
+      "exampleRu": "Когда начальник предложил мне на три месяца поехать в наш берлинский офис, я тут же ухватился за эту возможность.",
+      "collocations": [
+        "jump at the opportunity",
+        "jump at an offer",
+        "seize the chance",
+        "grab the chance"
+      ],
+      "pattern": "jump at the chance (to do sth / of doing sth)",
+      "trap": "Use 'jump at', not 'catch the chance' (a calque of «ухватиться за шанс»).",
+      "wrong": [
+        "caught the chance",
+        "jumped to the chance"
+      ],
+      "tags": [
+        "work",
+        "travel"
+      ]
+    },
+    {
+      "term": "jump off a cliff",
+      "ipa": "dʒʌmp ɒf ə klɪf",
+      "type": "collocation",
+      "translation": "спрыгнуть со скалы",
+      "definition": "to jump from the top of a high rock, usually into water",
+      "example": "In Croatia we [jumped off a cliff] into the sea – I screamed all the way down.",
+      "exampleRu": "В Хорватии мы прыгнули со скалы в море – я орал, пока летел вниз.",
+      "collocations": [
+        "cliff jumping",
+        "jump into the sea",
+        "the edge of a cliff"
+      ],
+      "pattern": "jump off sth (into sth)",
+      "trap": "Use 'off' for leaving a high place: 'jump off a cliff', not 'jump with a cliff' (a calque of «со скалы»).",
+      "wrong": [
+        "jumped with a cliff",
+        "jumped out of a cliff"
+      ],
+      "tags": [
+        "travel",
+        "sport"
+      ]
+    },
+    {
+      "term": "run a mile",
+      "ipa": "rʌn ə maɪl",
+      "type": "idiom",
+      "translation": "бежать без оглядки (избегать чего-то)",
+      "definition": "to try very hard to avoid someone or something because you really don't want it",
+      "example": "Karaoke at the Christmas party? No way, I'd [run a mile].",
+      "exampleRu": "Караоке на новогоднем корпоративе? Ни за что, я бы сбежал без оглядки.",
+      "collocations": [
+        "run a mile from sth",
+        "steer clear of sth",
+        "avoid sth like the plague"
+      ],
+      "pattern": "would run a mile (from sth)",
+      "trap": "Informal and usually conditional ('I'd run a mile'); it is about avoiding something, not really running.",
+      "wrong": [
+        "run the mile",
+        "run one mile"
+      ],
+      "tags": [
+        "feelings",
+        "everyday"
+      ]
+    },
+    {
+      "term": "go the extra mile",
+      "ipa": "ɡəʊ ði ˈekstrə maɪl",
+      "type": "idiom",
+      "translation": "приложить больше усилий, чем нужно",
+      "definition": "to make more effort than people expect from you",
+      "example": "The hotel staff really [went the extra mile] for my mum's birthday.",
+      "exampleRu": "Ради маминого дня рождения персонал отеля сделал гораздо больше, чем был обязан.",
+      "collocations": [
+        "go the extra mile for sb",
+        "go above and beyond",
+        "make an extra effort"
+      ],
+      "pattern": "go the extra mile (for sb / to do sth)",
+      "trap": "The words are fixed: 'go the extra mile', not 'go a mile' or 'make the extra mile'.",
+      "wrong": [
+        "went a mile",
+        "made the extra mile",
+        "went the additional mile"
+      ],
+      "tags": [
+        "work",
+        "people"
+      ]
+    },
+    {
+      "term": "deep-sea diving",
+      "ipa": "ˌdiːp siː ˈdaɪvɪŋ",
+      "type": "collocation",
+      "translation": "глубоководный дайвинг",
+      "definition": "swimming very deep under the sea with special breathing equipment",
+      "example": "Is [deep-sea diving] safe if you've only done a beginners' course?",
+      "exampleRu": "Глубоководный дайвинг вообще безопасен, если у тебя за плечами только курс для новичков?",
+      "collocations": [
+        "go deep-sea diving",
+        "scuba diving",
+        "a diving instructor",
+        "deep-sea fishing"
+      ],
+      "pattern": "go deep-sea diving",
+      "trap": "With activities use 'go' + -ing: 'go deep-sea diving', not 'go to deep-sea diving'.",
+      "wrong": [
+        "deep-sea diver",
+        "deep-sea dive"
+      ],
+      "tags": [
+        "sport",
+        "travel"
+      ]
+    },
+    {
+      "term": "do a bungee jump",
+      "ipa": "duː ə ˈbʌndʒi dʒʌmp",
+      "type": "collocation",
+      "translation": "прыгнуть с банджи",
+      "definition": "to jump from a very high place with a long elastic rope tied to your legs",
+      "example": "Somehow my friends talked me into [doing a bungee jump] on holiday.",
+      "exampleRu": "Не знаю как, но друзья уговорили меня прыгнуть с банджи в отпуске.",
+      "collocations": [
+        "go bungee jumping",
+        "do a skydive",
+        "a bungee cord"
+      ],
+      "pattern": "do a bungee jump / go bungee jumping",
+      "trap": "Say 'do a bungee jump' or 'go bungee jumping', not 'jump a bungee'; after 'talk sb into' use -ing.",
+      "wrong": [
+        "to do a bungee jump",
+        "doing bungee jump",
+        "jumping a bungee"
+      ],
+      "tags": [
+        "sport",
+        "travel"
+      ]
+    },
+    {
+      "term": "go for sth",
+      "ipa": "ɡəʊ fɔː",
+      "type": "phrasal-verb",
+      "translation": "выбрать, решиться на; «давай, вперёд» (go for it)",
+      "definition": "to choose something from several options",
+      "example": "We looked at three flats and in the end we [went for] the cheapest one.",
+      "exampleRu": "Мы посмотрели три квартиры и в итоге выбрали самую дешёвую.",
+      "collocations": [
+        "go for it!",
+        "go for the cheaper option",
+        "opt for sth"
+      ],
+      "pattern": "go for sth / go for it",
+      "trap": "Don't calque «остановились на»: not 'we stopped on it'; and 'Go for it!' means «Давай, решайся!».",
+      "wrong": [
+        "stopped on",
+        "chose for"
+      ],
+      "tags": [
+        "home",
+        "everyday"
+      ]
+    },
+    {
+      "term": "go at sth",
+      "ipa": "ɡəʊ æt",
+      "type": "phrasal-verb",
+      "translation": "наброситься на, энергично взяться за",
+      "definition": "to start doing or eating something with a lot of energy",
+      "example": "We were starving after the hike and [went at] the sandwiches like animals.",
+      "exampleRu": "После похода мы умирали с голоду и набросились на бутерброды, как звери.",
+      "collocations": [
+        "go at it",
+        "tuck into sth",
+        "get stuck into sth"
+      ],
+      "pattern": "go at sth",
+      "trap": "Informal; 'go at sb' can also mean to attack someone physically.",
+      "wrong": [
+        "went on",
+        "threw on"
+      ],
+      "tags": [
+        "food",
+        "everyday"
+      ]
+    },
+    {
+      "term": "reality TV show",
+      "ipa": "riˈæləti ˌtiː ˈviː ʃəʊ",
+      "type": "collocation",
+      "translation": "реалити-шоу",
+      "definition": "a TV programme that films real people, not actors, in real or planned situations",
+      "example": "Have you seen that new [reality TV show] where couples move to an island?",
+      "exampleRu": "Ты видел то новое реалити-шоу, где пары переезжают на остров?",
+      "collocations": [
+        "reality TV",
+        "a reality star",
+        "a TV programme",
+        "binge-watch a show"
+      ],
+      "pattern": "",
+      "trap": "Don't say just 'reality' for «реалити»: it means real life; say 'reality TV' or 'a reality show'.",
+      "wrong": [
+        "reality",
+        "reality TV transmission"
+      ],
+      "tags": [
+        "everyday"
+      ]
+    },
+    {
+      "term": "catch sb doing sth",
+      "ipa": "kætʃ ˈduːɪŋ",
+      "type": "phrase",
+      "translation": "застать кого-то за чем-то",
+      "definition": "to see someone while they are doing something they shouldn't",
+      "example": "I [caught my flatmate eating] my leftovers straight from the fridge at 2am.",
+      "exampleRu": "Я застукал соседа по квартире, когда он в два часа ночи доедал мою еду прямо из холодильника.",
+      "collocations": [
+        "catch sb red-handed",
+        "catch sb in the act",
+        "be caught cheating"
+      ],
+      "pattern": "catch sb doing sth / be caught doing sth",
+      "trap": "Use the -ing form: 'caught him eating', not 'caught him to eat' or 'caught him eat'.",
+      "wrong": [
+        "caught my flatmate to eat",
+        "caught my flatmate at eating",
+        "caught my flatmate eat"
+      ],
+      "tags": [
+        "home",
+        "language"
+      ]
+    },
+    {
+      "term": "watch sb doing sth",
+      "ipa": "wɒtʃ ˈduːɪŋ",
+      "type": "phrase",
+      "translation": "наблюдать, как кто-то делает",
+      "definition": "to look at someone while they are in the middle of an action",
+      "example": "On Sundays I love sitting in a café and [watching people walking] past.",
+      "exampleRu": "По воскресеньям я люблю посидеть в кафе и понаблюдать за прохожими.",
+      "collocations": [
+        "watch sb do sth",
+        "see sb doing sth",
+        "hear sb doing sth",
+        "people-watching"
+      ],
+      "pattern": "watch sb doing sth / watch sb do sth",
+      "trap": "'Watch sb doing' = you see part of the action, 'watch sb do' = you see all of it; never 'watch sb to do'.",
+      "wrong": [
+        "watching people to walk",
+        "watching how people walking",
+        "looking people walking"
+      ],
+      "tags": [
+        "city",
+        "language"
+      ]
+    },
+    {
+      "term": "get sb to do sth",
+      "ipa": "ɡet tə duː",
+      "type": "phrase",
+      "translation": "уговорить / заставить кого-то сделать",
+      "definition": "to persuade or arrange for someone to do something",
+      "example": "It took a month, but I finally [got my landlord to fix] the boiler.",
+      "exampleRu": "Ушёл целый месяц, но я всё-таки добился, чтобы хозяин квартиры починил бойлер.",
+      "collocations": [
+        "get sb to help",
+        "persuade sb to do sth",
+        "talk sb into doing sth",
+        "have sth done"
+      ],
+      "pattern": "get sb to do sth",
+      "trap": "Unlike 'make', 'get' needs 'to': 'get him to fix it', not 'get him fix it'.",
+      "wrong": [
+        "got my landlord fix",
+        "made my landlord to fix",
+        "got from my landlord to fix"
+      ],
+      "tags": [
+        "home",
+        "language"
+      ]
+    },
+    {
+      "term": "make sb do sth",
+      "ipa": "meɪk duː",
+      "type": "phrase",
+      "translation": "заставить кого-то сделать",
+      "definition": "to force someone to do something",
+      "example": "My trainer [made me do] fifty burpees because I was late again.",
+      "exampleRu": "Тренер заставил меня сделать пятьдесят бёрпи, потому что я опять опоздал.",
+      "collocations": [
+        "make sb laugh",
+        "make sb wait",
+        "be made to do sth",
+        "force sb to do sth"
+      ],
+      "pattern": "make sb do sth / be made to do sth",
+      "trap": "No 'to' in the active ('made me do', not 'made me to do'), but the passive needs it: 'I was made to do'.",
+      "wrong": [
+        "made me to do",
+        "forced me do",
+        "made me doing"
+      ],
+      "tags": [
+        "sport",
+        "language"
+      ]
+    },
+    {
+      "term": "would sooner",
+      "ipa": "wʊd ˈsuːnə",
+      "type": "phrase",
+      "translation": "лучше уж (я бы)…, чем; предпочёл бы",
+      "definition": "would prefer to do one thing rather than another",
+      "example": "I [would sooner] walk home than squeeze onto that packed bus again.",
+      "exampleRu": "Лучше уж я пойду домой пешком, чем снова буду втискиваться в этот битком набитый автобус.",
+      "collocations": [
+        "would rather",
+        "I'd sooner not",
+        "would prefer to"
+      ],
+      "pattern": "would sooner do X than do Y",
+      "trap": "Use the bare infinitive, as with 'would rather': 'I'd sooner walk', not 'I'd sooner to walk'.",
+      "wrong": [
+        "would sooner to",
+        "would better",
+        "will sooner"
+      ],
+      "tags": [
+        "opinions",
+        "language"
+      ]
+    },
+    {
+      "term": "prefer",
+      "ipa": "prɪˈfɜː",
+      "type": "word",
+      "translation": "предпочитать",
+      "definition": "to like one thing or activity more than another",
+      "example": "These days I [prefer] working from home to commuting into the office.",
+      "exampleRu": "Сейчас мне больше нравится работать из дома, чем ездить в офис.",
+      "collocations": [
+        "prefer sth to sth",
+        "would prefer to do sth",
+        "personal preference",
+        "preferably"
+      ],
+      "pattern": "prefer sth to sth / prefer doing X to doing Y / would prefer to do sth",
+      "trap": "Compare with 'to', not 'than': 'prefer working from home to commuting', not '…than commuting'.",
+      "wrong": [
+        "more like",
+        "prefer more",
+        "rather"
+      ],
+      "tags": [
+        "opinions",
+        "work"
+      ]
+    },
+    {
+      "term": "be up to sb",
+      "ipa": "biː ʌp tə",
+      "type": "phrase",
+      "translation": "зависеть от кого-то, на чьё-то усмотрение",
+      "definition": "if something is up to you, you are the one who decides",
+      "example": "\"Thai or Italian tonight?\" \"I really don't mind – it's [up to] you.\"",
+      "exampleRu": "«Тайская или итальянская кухня сегодня?» – «Мне правда всё равно, решай сам».",
+      "collocations": [
+        "it's up to you",
+        "entirely up to sb",
+        "leave it up to sb",
+        "it's your call"
+      ],
+      "pattern": "it's up to sb (to do sth)",
+      "trap": "When you let someone choose, say 'it's up to you', not 'it depends from you' (a calque of «зависит от тебя»).",
+      "wrong": [
+        "depends on",
+        "up for"
+      ],
+      "tags": [
+        "opinions",
+        "relationships"
+      ]
+    },
+    {
+      "term": "if it wasn't for",
+      "ipa": "ɪf ɪt ˈwɒznt fɔː",
+      "type": "phrase",
+      "translation": "если бы не",
+      "definition": "used to say that without someone or something, things would be very different",
+      "example": "[If it wasn't for] coffee, I'd never survive Monday mornings.",
+      "exampleRu": "Если бы не кофе, я бы ни за что не пережил утро понедельника.",
+      "collocations": [
+        "if it weren't for",
+        "if it hadn't been for",
+        "but for",
+        "thanks to"
+      ],
+      "pattern": "if it wasn't/weren't for sth, … would … / if it hadn't been for sth, … would have …",
+      "trap": "Keep the negative: 'if it wasn't for' = «если бы не», while 'if it was for' makes no sense here; 'weren't' is more formal.",
+      "wrong": [
+        "If it was for",
+        "If there wasn't for",
+        "If it isn't for"
+      ],
+      "tags": [
+        "everyday",
+        "language"
+      ]
+    },
+    {
+      "term": "give sth a miss",
+      "ipa": "ɡɪv ə mɪs",
+      "type": "idiom",
+      "translation": "пропустить что-то, отказаться",
+      "definition": "to decide not to do, go to or have something this time",
+      "example": "I'm shattered, so I think I'll [give the gym a miss] tonight.",
+      "exampleRu": "Я совсем без сил, так что сегодня, пожалуй, пропущу спортзал.",
+      "collocations": [
+        "give it a miss",
+        "give the party a miss",
+        "skip sth",
+        "sit this one out"
+      ],
+      "pattern": "give sth a miss",
+      "trap": "British and informal; the thing you skip goes in the middle: 'give the gym a miss'.",
+      "wrong": [
+        "give a miss the gym",
+        "make the gym a miss",
+        "give the gym miss"
+      ],
+      "tags": [
+        "sport",
+        "everyday"
+      ]
+    },
+    {
+      "term": "idiomatic phrase",
+      "ipa": "ˌɪdiəˈmætɪk freɪz",
+      "type": "collocation",
+      "translation": "идиоматическое выражение",
+      "definition": "a group of words whose meaning is different from the meaning of each word",
+      "example": "In today's meeting, a client used an [idiomatic phrase] I'd never heard before.",
+      "exampleRu": "На сегодняшней встрече клиент употребил идиому, которую я раньше никогда не слышал.",
+      "collocations": [
+        "idiomatic expression",
+        "an idiom",
+        "idiomatic English",
+        "a set phrase"
+      ],
+      "pattern": "",
+      "trap": "A 'phrase' is a short group of words, not a whole sentence like Russian «фраза».",
+      "wrong": [
+        "idiotic phrase",
+        "idiomic phrase"
+      ],
+      "tags": [
+        "language",
+        "work"
+      ]
+    },
+    {
+      "term": "mountain biking",
+      "ipa": "ˈmaʊntɪn ˌbaɪkɪŋ",
+      "type": "collocation",
+      "translation": "катание на горном велосипеде",
+      "definition": "riding a strong bike with thick tyres on rough paths and hills",
+      "example": "Last summer we went [mountain biking] in Wales, and I came home covered in mud.",
+      "exampleRu": "Прошлым летом мы катались на горных велосипедах в Уэльсе, и домой я вернулся весь в грязи.",
+      "collocations": [
+        "go mountain biking",
+        "a mountain bike",
+        "a bike trail",
+        "a cycling holiday"
+      ],
+      "pattern": "go mountain biking",
+      "trap": "Use 'go' + -ing: 'go mountain biking', not 'go to mountain biking' or 'go on mountain biking'.",
+      "wrong": [
+        "to mountain biking",
+        "mountain bike",
+        "on mountain biking"
+      ],
+      "tags": [
+        "sport",
+        "travel"
+      ]
+    },
+    {
+      "term": "get an adrenalin rush",
+      "ipa": "ɡet ən əˈdrenəlɪn rʌʃ",
+      "type": "collocation",
+      "translation": "получить выброс адреналина",
+      "definition": "to suddenly feel very excited and full of energy, often because of danger",
+      "example": "You [get an adrenalin rush] the second the roller coaster drops.",
+      "exampleRu": "Как только вагончик американских горок летит вниз, получаешь мощный выброс адреналина.",
+      "collocations": [
+        "a huge adrenalin rush",
+        "an adrenalin junkie",
+        "a rush of adrenalin",
+        "get a buzz"
+      ],
+      "pattern": "get an adrenalin rush (from sth / from doing sth)",
+      "trap": "Don't translate «выброс» as 'emission' (that's for gases); 'adrenaline' is also a correct British spelling.",
+      "wrong": [
+        "get an adrenalin emission",
+        "get an adrenalin throw-out",
+        "receive an adrenalin rush"
+      ],
+      "tags": [
+        "sport",
+        "feelings"
+      ]
+    },
+    {
+      "term": "steep hill",
+      "ipa": "stiːp hɪl",
+      "type": "collocation",
+      "translation": "крутой холм",
+      "definition": "a hill that goes up or down very sharply",
+      "example": "I live at the top of a really [steep hill], so who needs a gym?",
+      "exampleRu": "Я живу на вершине очень крутого холма – кому вообще нужен спортзал?",
+      "collocations": [
+        "a steep slope",
+        "a steep climb",
+        "steep stairs",
+        "a gentle slope"
+      ],
+      "pattern": "",
+      "trap": "Don't translate «крутой» as 'cool' here: 'steep' means rising sharply, 'cool' means great.",
+      "wrong": [
+        "cool hill",
+        "abrupt hill"
+      ],
+      "tags": [
+        "city",
+        "everyday"
+      ]
+    },
+    {
+      "term": "set off",
+      "ipa": "set ɒf",
+      "type": "phrasal-verb",
+      "translation": "отправляться в путь, выезжать",
+      "definition": "to start a journey",
+      "example": "We [set off] early in the morning to avoid the traffic.",
+      "exampleRu": "Мы выехали рано утром, чтобы не попасть в пробки.",
+      "collocations": [
+        "set off on a journey",
+        "set off for home"
+      ],
+      "pattern": "set off for / on sth",
+      "trap": "",
+      "wrong": [
+        "set up",
+        "set on"
+      ],
+      "tags": [
+        "life",
+        "travel"
+      ]
+    },
+    {
+      "term": "jazz music",
+      "ipa": "dʒæz ˈmjuːzɪk",
+      "type": "collocation",
+      "translation": "джазовая музыка",
+      "definition": "a type of music with strong rhythms, where players often make up the tune as they play",
+      "example": "Cooking with some [jazz music] on in the background is my idea of relaxing.",
+      "exampleRu": "Готовить, когда на фоне играет джаз, – вот для меня лучший отдых.",
+      "collocations": [
+        "live jazz",
+        "a jazz club",
+        "a jazz band",
+        "a jazz festival"
+      ],
+      "pattern": "",
+      "trap": "'Music' is uncountable: 'some jazz music', not 'a jazz music' or 'jazz musics'; natives often just say 'jazz'.",
+      "wrong": [
+        "jazz musics",
+        "the jazz music"
+      ],
+      "tags": [
+        "home",
+        "everyday"
+      ]
+    },
+    {
+      "term": "lose yourself in sth",
+      "ipa": "luːz jɔːˈself ɪn",
+      "type": "phrase",
+      "translation": "полностью погрузиться во что-то, забыть обо всём",
+      "definition": "to be so interested in something that you forget everything around you",
+      "example": "Nothing helps me switch off like a crime novel – I just [lose myself in] it.",
+      "exampleRu": "Ничто так не помогает отключиться, как детектив: я просто с головой в него ухожу.",
+      "collocations": [
+        "lose yourself in a book",
+        "lose yourself in the music",
+        "get lost in sth",
+        "be absorbed in sth"
+      ],
+      "pattern": "lose yourself in sth",
+      "trap": "Match the pronoun ('I lose myself', 'she loses herself') and use 'in', not 'into'.",
+      "wrong": [
+        "lose myself into",
+        "lose me in",
+        "forget myself in"
+      ],
+      "tags": [
+        "feelings",
+        "everyday"
+      ]
+    },
+    {
+      "term": "lose track of time",
+      "ipa": "luːz træk əv taɪm",
+      "type": "idiom",
+      "translation": "потерять счёт времени",
+      "definition": "to forget what time it is because you are busy or having fun",
+      "example": "Sorry I'm late – I was chatting to my neighbour and completely [lost track of time].",
+      "exampleRu": "Извини, что опоздал: заболтался с соседом и совсем потерял счёт времени.",
+      "collocations": [
+        "lose all track of time",
+        "keep track of time",
+        "lose track of sth",
+        "time flies"
+      ],
+      "pattern": "lose track of time / lose track of sth",
+      "trap": "No article: 'lose track of time', not 'lose the track' or 'lose the count of time' (a calque of «счёт»).",
+      "wrong": [
+        "lost the track of time",
+        "lost the count of time"
+      ],
+      "tags": [
+        "everyday",
+        "people"
+      ]
+    },
+    {
+      "term": "landscaping project",
+      "ipa": "ˈlændskeɪpɪŋ ˈprɒdʒekt",
+      "type": "collocation",
+      "translation": "ландшафтный проект",
+      "definition": "a plan to change how a garden or outdoor area looks, with plants, paths and so on",
+      "example": "We've just started a small [landscaping project] in the back garden – wish us luck!",
+      "exampleRu": "Мы только что затеяли небольшой ландшафтный проект в саду за домом – пожелайте нам удачи!",
+      "collocations": [
+        "landscape gardener",
+        "garden makeover",
+        "a DIY project",
+        "landscape design"
+      ],
+      "pattern": "",
+      "trap": "'Landscape' is a view or the land itself; 'landscaping' is the work of designing a garden or outdoor space.",
+      "wrong": [
+        "landscaped project",
+        "landscapes project"
+      ],
+      "tags": [
+        "home"
+      ]
+    },
+    {
+      "term": "gardening",
+      "ipa": "ˈɡɑːdnɪŋ",
+      "type": "word",
+      "translation": "садоводство, работа в саду",
+      "definition": "the work of growing plants and looking after a garden",
+      "example": "According to my mum, [gardening] is cheaper than therapy – and she's right.",
+      "exampleRu": "Мама считает, что возиться в саду дешевле, чем ходить к психотерапевту, – и она права.",
+      "collocations": [
+        "do some gardening",
+        "gardening gloves",
+        "a keen gardener",
+        "have green fingers"
+      ],
+      "pattern": "do (some/the) gardening",
+      "trap": "Say 'do some gardening' or 'do the gardening', not 'make gardening'.",
+      "wrong": [
+        "garden",
+        "gardener"
+      ],
+      "tags": [
+        "home",
+        "health"
+      ]
+    },
+    {
+      "term": "get stuck in",
+      "ipa": "ɡet stʌk ɪn",
+      "type": "phrasal-verb",
+      "translation": "с энтузиазмом взяться за дело; налетай(те)! (о еде)",
+      "definition": "to start doing something, like work or eating, with energy and enthusiasm",
+      "example": "Dinner's on the table, so [get stuck in] before it gets cold!",
+      "exampleRu": "Ужин на столе, налетайте, пока не остыло!",
+      "collocations": [
+        "get stuck into sth",
+        "tuck in",
+        "roll up your sleeves"
+      ],
+      "pattern": "get stuck in / get stuck into sth",
+      "trap": "Informal British English; don't confuse it with 'get stuck' (= be unable to move or continue).",
+      "wrong": [
+        "get stuck",
+        "get stuck on",
+        "get in stuck"
+      ],
+      "tags": [
+        "food",
+        "home"
+      ]
+    },
+    {
+      "term": "have the time of your life",
+      "ipa": "hæv ðə taɪm əv jə laɪf",
+      "type": "idiom",
+      "translation": "прекрасно провести время (как никогда)",
+      "definition": "to enjoy yourself very much, more than ever before",
+      "example": "The kids [had the time of their lives] at the water park yesterday.",
+      "exampleRu": "Вчера в аквапарке дети оторвались по полной.",
+      "collocations": [
+        "have a great time",
+        "have a blast",
+        "the best day ever"
+      ],
+      "pattern": "have the time of your life",
+      "trap": "For a group say 'they had the time of their lives'; the verb is 'have', not 'spend'.",
+      "wrong": [
+        "spent the time of their lives",
+        "had a time of their lives"
+      ],
+      "tags": [
+        "travel",
+        "feelings"
+      ]
+    },
+    {
+      "term": "drive a Formula One car",
+      "ipa": "draɪv ə ˈfɔːmjələ wʌn kɑː",
+      "type": "collocation",
+      "translation": "водить болид Формулы-1",
+      "definition": "to be at the wheel of the very fast racing car used in Formula One races",
+      "example": "It's always been my dream to [drive a Formula One car], even just for one lap.",
+      "exampleRu": "Моя давняя мечта – прокатиться за рулём болида Формулы-1, хотя бы один круг.",
+      "collocations": [
+        "a racing car",
+        "a racing driver",
+        "a track day",
+        "behind the wheel"
+      ],
+      "pattern": "",
+      "trap": "Russian «болид» is a 'racing car' or 'F1 car' in English; a 'bolide' is a meteor.",
+      "wrong": [
+        "drive a Formula One bolide",
+        "ride a Formula One car",
+        "drive a car of Formula One"
+      ],
+      "tags": [
+        "sport"
+      ]
+    },
+    {
+      "term": "nervous about sth",
+      "ipa": "ˈnɜːvəs əˈbaʊt",
+      "type": "collocation",
+      "translation": "нервничающий, взволнованный (из-за чего-то)",
+      "definition": "worried and a bit afraid about something that is going to happen",
+      "example": "I'm a bit [nervous about] my job interview on Monday – any tips?",
+      "exampleRu": "Я немного нервничаю перед собеседованием в понедельник – есть советы?",
+      "collocations": [
+        "feel nervous",
+        "get nervous",
+        "a nervous wreck",
+        "a bundle of nerves"
+      ],
+      "pattern": "nervous about sth / about doing sth",
+      "trap": "It's an adjective: 'I'm nervous about it', not 'I'm nervousing' or 'nervous from it'.",
+      "wrong": [
+        "nervous from",
+        "nervous because",
+        "nervousing about"
+      ],
+      "tags": [
+        "feelings",
+        "work"
+      ]
+    },
+    {
+      "term": "be blown away",
+      "ipa": "biː bləʊn əˈweɪ",
+      "type": "idiom",
+      "translation": "быть потрясённым, в восторге",
+      "definition": "to be extremely impressed by something",
+      "example": "The food in Lisbon was incredible – I was totally [blown away].",
+      "exampleRu": "Еда в Лиссабоне была невероятной – я был в полном восторге.",
+      "collocations": [
+        "blown away by sth",
+        "absolutely blown away",
+        "be amazed",
+        "be speechless"
+      ],
+      "pattern": "be blown away (by sth)",
+      "trap": "Use 'by' for the cause ('blown away by the view'); don't confuse it with 'blown up' (= exploded).",
+      "wrong": [
+        "blown up",
+        "blowed away",
+        "blown off"
+      ],
+      "tags": [
+        "feelings",
+        "travel"
+      ]
+    },
+    {
+      "term": "once-in-a-lifetime experience",
+      "ipa": "ˌwʌns ɪn ə ˈlaɪftaɪm ɪkˈspɪəriəns",
+      "type": "collocation",
+      "translation": "опыт, который бывает раз в жизни",
+      "definition": "something very special that you will probably only do once in your life",
+      "example": "Seeing the Northern Lights in Norway was a [once-in-a-lifetime experience].",
+      "exampleRu": "Увидеть северное сияние в Норвегии – такое бывает раз в жизни.",
+      "collocations": [
+        "a once-in-a-lifetime opportunity",
+        "a once-in-a-lifetime trip",
+        "the chance of a lifetime",
+        "a bucket list"
+      ],
+      "pattern": "a once-in-a-lifetime + noun",
+      "trap": "Use hyphens before a noun ('a once-in-a-lifetime trip') but not after a verb ('it happens once in a lifetime').",
+      "wrong": [
+        "once-in-a-life experience",
+        "one-time-in-life experience"
+      ],
+      "tags": [
+        "travel"
+      ]
+    },
+    {
+      "term": "adventurous",
+      "ipa": "ədˈventʃərəs",
+      "type": "word",
+      "translation": "любящий приключения, смелый",
+      "definition": "happy to try new, exciting or slightly dangerous things",
+      "example": "My sister's far more [adventurous] than me – she'll eat absolutely anything.",
+      "exampleRu": "Сестра гораздо смелее меня в еде – она съест абсолютно что угодно.",
+      "collocations": [
+        "an adventurous spirit",
+        "feel adventurous",
+        "an adventurous eater",
+        "an adventure holiday"
+      ],
+      "pattern": "adventurous with sth",
+      "trap": "It's a positive word; for a risky, dodgy plan («авантюрный») say 'risky' or 'reckless'.",
+      "wrong": [
+        "adventure",
+        "adventurist"
+      ],
+      "tags": [
+        "people",
+        "food"
+      ]
+    },
+    {
+      "term": "meet expectations",
+      "ipa": "miːt ˌekspekˈteɪʃnz",
+      "type": "collocation",
+      "translation": "оправдать ожидания",
+      "definition": "to be as good as people hoped or expected",
+      "example": "Did the new phone [meet your expectations], or are you sending it back?",
+      "exampleRu": "Новый телефон оправдал твои ожидания, или будешь его возвращать?",
+      "collocations": [
+        "live up to expectations",
+        "exceed expectations",
+        "high expectations",
+        "beyond expectations"
+      ],
+      "pattern": "meet (sb's) expectations",
+      "trap": "Don't calque «оправдать ожидания» as 'justify expectations'; say 'meet' or 'live up to'.",
+      "wrong": [
+        "justify your expectations",
+        "meet your waitings",
+        "answer your expectations"
+      ],
+      "tags": [
+        "opinions",
+        "tech"
+      ]
+    },
+    {
+      "term": "fall short of expectations",
+      "ipa": "fɔːl ʃɔːt əv ˌekspekˈteɪʃnz",
+      "type": "idiom",
+      "translation": "не оправдать ожиданий",
+      "definition": "to be less good than people hoped or expected",
+      "example": "Everyone raved about that new ramen place, but it [fell short of expectations].",
+      "exampleRu": "Все расхваливали ту новую раменную, но она не оправдала ожиданий.",
+      "collocations": [
+        "fall far short of sth",
+        "fall short of a target",
+        "be a letdown",
+        "live up to expectations"
+      ],
+      "pattern": "fall short of (sb's) expectations",
+      "trap": "Use 'of': 'fall short of expectations', not 'fall short from' or 'not justify expectations'.",
+      "wrong": [
+        "fell short from expectations",
+        "fell short to expectations",
+        "didn't justify expectations"
+      ],
+      "tags": [
+        "opinions",
+        "food"
+      ]
+    },
+    {
+      "term": "play squash",
+      "ipa": "pleɪ skwɒʃ",
+      "type": "collocation",
+      "translation": "играть в сквош",
+      "definition": "to play a fast game in which two people hit a small ball against the walls of a room",
+      "example": "Every Wednesday after work, my colleague and I [play squash], and he always wins.",
+      "exampleRu": "Каждую среду после работы мы с коллегой играем в сквош, и он всегда выигрывает.",
+      "collocations": [
+        "a squash court",
+        "a squash racket",
+        "a game of squash",
+        "play tennis"
+      ],
+      "pattern": "play squash (with sb)",
+      "trap": "No article or preposition: 'play squash', not 'play in squash'; in the UK 'squash' is also a fruit drink mixed with water.",
+      "wrong": [
+        "play in squash",
+        "play the squash"
+      ],
+      "tags": [
+        "sport",
+        "work"
+      ]
+    }
+  ]
+}

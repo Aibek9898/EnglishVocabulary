@@ -5,6 +5,8 @@ export type ItemType = 'collocation' | 'phrasal-verb' | 'idiom' | 'phrase' | 'wo
 /** What a word or phrase card says. Packs, the add form and AI imports all produce this. */
 export interface ItemContent {
   term: string;
+  /** British IPA without slashes, e.g. "hɪt ɪt ɒf". */
+  ipa?: string;
   type: ItemType;
   translation: string;
   definition: string;
@@ -93,5 +95,7 @@ export interface Deck {
   id: string;
   title: string;
   description: string;
+  /** Words from the learner's own course: added to every library and learned first. */
+  course?: boolean;
   items: ItemContent[];
 }

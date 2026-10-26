@@ -9,6 +9,7 @@ Reply with ONE \`\`\`json code block and nothing else, in exactly this format:
 [
   {
     "term": "make a mistake",
+    "ipa": "meɪk ə mɪˈsteɪk",
     "type": "collocation",
     "translation": "сделать ошибку, ошибиться",
     "definition": "to do something wrong without meaning to",
@@ -23,6 +24,7 @@ Reply with ONE \`\`\`json code block and nothing else, in exactly this format:
 ]
 
 Rules:
+- "ipa": British IPA transcription of the term, without slashes or brackets.
 - "type" is one of: collocation, phrasal-verb, idiom, phrase, word.
 - "definition": simple English, at most 12 words, and it must NOT contain the term itself.
 - "example": one natural sentence of at most 15 words about everyday life or work. Put the target, exactly as used in the sentence, inside [square brackets] once.

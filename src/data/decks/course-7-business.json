@@ -1,0 +1,700 @@
+{
+  "id": "course-7-business",
+  "title": "Rivals & Partners",
+  "description": "From your course: phrases for talking about competition, rivals, partnerships and working together in business.",
+  "course": true,
+  "items": [
+    {
+      "term": "business rivals",
+      "ipa": "ˈbɪznəs ˈraɪvlz",
+      "type": "collocation",
+      "translation": "конкуренты в бизнесе",
+      "definition": "people or companies that compete with each other for the same customers",
+      "example": "Two of our biggest [business rivals] have just merged, so next year could be tough.",
+      "exampleRu": "Два наших главных конкурента только что объединились, так что следующий год может быть тяжёлым.",
+      "collocations": [
+        "main rivals",
+        "fierce rivals",
+        "a rival company",
+        "rivalry"
+      ],
+      "pattern": "",
+      "trap": "A rival is a person or company; the competition between them is 'rivalry'. Never 'concurrents'.",
+      "wrong": [
+        "business concurrents",
+        "business rivalries"
+      ],
+      "tags": [
+        "business",
+        "work"
+      ]
+    },
+    {
+      "term": "compete with sb",
+      "ipa": "kəmˈpiːt wɪð",
+      "type": "collocation",
+      "translation": "соревноваться, конкурировать",
+      "definition": "to try to be more successful than someone else",
+      "example": "As a freelancer, I have to [compete with] big agencies for every client.",
+      "exampleRu": "Как фрилансеру, мне приходится бороться с крупными агентствами за каждого клиента.",
+      "collocations": [
+        "compete for sth",
+        "compete against sb",
+        "compete on price",
+        "fierce competition"
+      ],
+      "pattern": "compete with/against sb for sth",
+      "trap": "Use 'with' or 'against' for the rival and 'for' for the prize; don't say 'compete to sb' or 'concur with' (that means agree).",
+      "wrong": [
+        "compete to",
+        "concur with"
+      ],
+      "tags": [
+        "business",
+        "work"
+      ]
+    },
+    {
+      "term": "collaborate",
+      "ipa": "kəˈlæbəreɪt",
+      "type": "word",
+      "translation": "сотрудничать",
+      "definition": "to work together with someone to make or achieve something",
+      "example": "Last year we [collaborated] with a local bakery on a Christmas menu.",
+      "exampleRu": "В прошлом году мы вместе с местной пекарней сделали рождественское меню.",
+      "collocations": [
+        "collaborate closely",
+        "collaborate on a project",
+        "work together",
+        "team up with sb"
+      ],
+      "pattern": "collaborate with sb on sth",
+      "trap": "Use 'with' for the person and 'on' for the project: collaborate with sb on sth. Not 'make collaboration'.",
+      "wrong": [
+        "made collaboration",
+        "co-worked"
+      ],
+      "tags": [
+        "business",
+        "work"
+      ]
+    },
+    {
+      "term": "collaboration",
+      "ipa": "kəˌlæbəˈreɪʃn",
+      "type": "word",
+      "translation": "сотрудничество, совместная работа",
+      "definition": "the act of working together with other people or organisations",
+      "example": "We're organising the charity run in [collaboration] with a local running club.",
+      "exampleRu": "Мы организуем благотворительный забег совместно с местным беговым клубом.",
+      "collocations": [
+        "in collaboration with sb",
+        "close collaboration",
+        "a collab (informal)",
+        "teamwork"
+      ],
+      "pattern": "in collaboration with sb",
+      "trap": "The fixed phrase is 'in collaboration with sb', not 'in collaboration of'; 'a collab' is informal, used for brands and music.",
+      "wrong": [
+        "collaborating",
+        "collaborations"
+      ],
+      "tags": [
+        "business",
+        "work"
+      ]
+    },
+    {
+      "term": "competitors",
+      "ipa": "kəmˈpetɪtəz",
+      "type": "word",
+      "translation": "конкуренты",
+      "definition": "people or companies that sell the same things as you or try to win the same thing",
+      "example": "Before I set my prices, I checked what my [competitors] were charging.",
+      "exampleRu": "Прежде чем назначить цены, я посмотрел, сколько берут мои конкуренты.",
+      "collocations": [
+        "main competitors",
+        "direct competitors",
+        "the competition",
+        "stay ahead of your competitors"
+      ],
+      "pattern": "",
+      "trap": "Конкуренты is 'competitors', not 'concurrents'; 'competition' is the contest itself or the competitors as a group.",
+      "wrong": [
+        "concurrents",
+        "competitions"
+      ],
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "term": "bitter rivals",
+      "ipa": "ˈbɪtə ˈraɪvlz",
+      "type": "collocation",
+      "translation": "непримиримые соперники",
+      "definition": "people or groups who compete and strongly dislike each other",
+      "example": "My sister and I were [bitter rivals] at school, but now we're best friends.",
+      "exampleRu": "В школе мы с сестрой были заклятыми соперниками, а теперь лучшие друзья.",
+      "collocations": [
+        "fierce rivals",
+        "arch-rivals",
+        "a bitter rivalry",
+        "old rivals"
+      ],
+      "pattern": "",
+      "trap": "'Bitter' here means full of anger and resentment, not горький in taste.",
+      "wrong": [
+        "bitterly rivals",
+        "bitter rivalries"
+      ],
+      "tags": [
+        "relationships",
+        "business"
+      ]
+    },
+    {
+      "term": "outdo each other",
+      "ipa": "ˌaʊtˈduː iːtʃ ˈʌðə",
+      "type": "phrase",
+      "translation": "превзойти друг друга",
+      "definition": "to each try to do better than the other person",
+      "example": "Every Christmas, my aunts try to [outdo each other] with bigger and bigger desserts.",
+      "exampleRu": "Каждое Рождество мои тёти пытаются переплюнуть друг друга всё более грандиозными десертами.",
+      "collocations": [
+        "try to outdo sb",
+        "not to be outdone",
+        "outdo yourself",
+        "go one better"
+      ],
+      "pattern": "outdo sb (with/in sth); outdid, outdone",
+      "trap": "Don't confuse 'outdo' (do better than) with 'overdo' (do too much); past forms: outdid, outdone.",
+      "wrong": [
+        "overdo each other",
+        "exceed each other"
+      ],
+      "tags": [
+        "people",
+        "business"
+      ]
+    },
+    {
+      "term": "form an alliance",
+      "ipa": "fɔːm ən əˈlaɪəns",
+      "type": "collocation",
+      "translation": "заключить союз",
+      "definition": "to agree to work together, usually against a shared rival or for a shared goal",
+      "example": "In the board game, my brother and I [formed an alliance] to beat Dad.",
+      "exampleRu": "В настолке мы с братом заключили союз, чтобы обыграть папу.",
+      "collocations": [
+        "forge an alliance",
+        "a strategic alliance",
+        "join forces",
+        "team up with sb"
+      ],
+      "pattern": "form an alliance with sb (against sb)",
+      "trap": "Заключить союз is 'form' or 'forge' an alliance; 'union' is for trade unions or groups of countries (the EU).",
+      "wrong": [
+        "formed a union",
+        "formed alliance"
+      ],
+      "tags": [
+        "business",
+        "relationships"
+      ]
+    },
+    {
+      "term": "gain a competitive edge",
+      "ipa": "ɡeɪn ə kəmˈpetətɪv edʒ",
+      "type": "collocation",
+      "translation": "получить конкурентное преимущество",
+      "definition": "to get a small advantage that helps you do better than others",
+      "example": "I'm doing a data course to [gain a competitive edge] in the job market.",
+      "exampleRu": "Я прохожу курс по анализу данных, чтобы получить преимущество на рынке труда.",
+      "collocations": [
+        "have the edge over sb",
+        "give sb an edge",
+        "a competitive advantage",
+        "stay competitive"
+      ],
+      "pattern": "gain a competitive edge (over sb)",
+      "trap": "'Edge' here means a small advantage, not край; the adjective is 'competitive', not 'competition'.",
+      "wrong": [
+        "gain a competition edge",
+        "gain a competitive border"
+      ],
+      "tags": [
+        "business",
+        "work"
+      ]
+    },
+    {
+      "term": "forge a partnership",
+      "ipa": "fɔːdʒ ə ˈpɑːtnəʃɪp",
+      "type": "collocation",
+      "translation": "создать (прочное) партнёрство",
+      "definition": "to build a strong working relationship with another person or company",
+      "example": "We've [forged a partnership] with a local gym, so staff get cheaper memberships.",
+      "exampleRu": "Мы наладили партнёрство с местным спортзалом, так что абонементы обходятся сотрудникам дешевле.",
+      "collocations": [
+        "form a partnership",
+        "forge links/ties",
+        "forge a friendship",
+        "go into partnership with sb"
+      ],
+      "pattern": "forge a partnership with sb",
+      "trap": "'Forge' can also mean подделывать (forge a signature), but with partnership, alliance or friendship it means build something strong.",
+      "wrong": [
+        "forged partnership",
+        "forged a partner"
+      ],
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "term": "push yourself beyond your limits",
+      "ipa": "pʊʃ jɔːˈself bɪˈjɒnd jɔː ˈlɪmɪts",
+      "type": "phrase",
+      "translation": "выйти за пределы своих возможностей",
+      "definition": "to make yourself do more than you thought you could",
+      "example": "Training for a half marathon taught me to [push myself beyond my limits].",
+      "exampleRu": "Подготовка к полумарафону научила меня выходить за пределы своих возможностей.",
+      "collocations": [
+        "push yourself",
+        "test your limits",
+        "know your limits",
+        "step out of your comfort zone"
+      ],
+      "pattern": "push yourself (beyond your limits / to do sth)",
+      "trap": "Use a reflexive pronoun ('push myself', not 'push me'), and 'beyond' or 'past' your limits, not 'out of'.",
+      "wrong": [
+        "push me beyond my limits",
+        "push myself out of my limits",
+        "push myself behind my limits"
+      ],
+      "tags": [
+        "sport",
+        "work"
+      ]
+    },
+    {
+      "term": "adversary",
+      "ipa": "ˈædvəsəri",
+      "type": "word",
+      "translation": "противник, соперник",
+      "definition": "a formal word for a person or group you are competing or fighting against",
+      "example": "When negotiating, I try to see the other side as a partner, not an [adversary].",
+      "exampleRu": "На переговорах я стараюсь видеть в другой стороне партнёра, а не противника.",
+      "collocations": [
+        "a worthy adversary",
+        "a political adversary",
+        "opponent",
+        "rival"
+      ],
+      "pattern": "",
+      "trap": "Adversary is formal (in everyday speech say 'opponent' or 'rival'); don't confuse it with 'adversity', which means hard times.",
+      "wrong": [
+        "adversity",
+        "adverse"
+      ],
+      "tags": [
+        "business",
+        "work"
+      ]
+    },
+    {
+      "term": "fulfil your potential",
+      "ipa": "fʊlˈfɪl jɔː pəˈtenʃl",
+      "type": "collocation",
+      "translation": "реализовать свой потенциал",
+      "definition": "to become as good or successful as you are able to be",
+      "example": "I left that job because I felt I'd never [fulfil my potential] there.",
+      "exampleRu": "Я ушёл с той работы, потому что чувствовал, что никогда не смогу реализовать там свой потенциал.",
+      "collocations": [
+        "realise your potential",
+        "reach your full potential",
+        "untapped potential",
+        "show potential"
+      ],
+      "pattern": "",
+      "trap": "'Realise your potential' is also correct, but 'potential' is uncountable here, so not 'potentials'; US spelling: fulfill.",
+      "wrong": [
+        "implement my potential",
+        "fulfil my potentials"
+      ],
+      "tags": [
+        "work"
+      ]
+    },
+    {
+      "term": "cooperation",
+      "ipa": "kəʊˌɒpəˈreɪʃn",
+      "type": "word",
+      "translation": "сотрудничество, кооперация",
+      "definition": "working together and helping each other to do something",
+      "example": "Thanks for your [cooperation] while the office was being renovated.",
+      "exampleRu": "Спасибо за понимание и содействие, пока в офисе шёл ремонт.",
+      "collocations": [
+        "thank you for your cooperation",
+        "close cooperation",
+        "in cooperation with sb",
+        "cooperate with sb"
+      ],
+      "pattern": "",
+      "trap": "Don't confuse 'cooperation' (working together) with 'corporation' (a big company); British English also writes 'co-operation'.",
+      "wrong": [
+        "cooperate",
+        "corporation"
+      ],
+      "tags": [
+        "work",
+        "business"
+      ]
+    },
+    {
+      "term": "coopetition",
+      "ipa": "kəʊˌɒpəˈtɪʃn",
+      "type": "word",
+      "translation": "соконкуренция (сотрудничество конкурентов)",
+      "definition": "when rival companies work together in some areas while still competing",
+      "example": "Sharing delivery vans with our rivals sounds odd, but [coopetition] has saved us a fortune.",
+      "exampleRu": "Делить фургоны для доставки с конкурентами звучит странно, но соконкуренция сэкономила нам кучу денег.",
+      "collocations": [
+        "cooperate with competitors",
+        "join forces",
+        "frenemies (informal)",
+        "a strategic alliance"
+      ],
+      "pattern": "",
+      "trap": "A business buzzword (cooperation + competition): fine in a meeting or an article, but many people outside business won't know it.",
+      "wrong": [
+        "co-concurrence",
+        "co-competition"
+      ],
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "term": "cut-throat industry",
+      "ipa": "ˈkʌtθrəʊt ˈɪndəstri",
+      "type": "collocation",
+      "translation": "отрасль с жесточайшей конкуренцией",
+      "definition": "a business area where companies compete very hard and without mercy",
+      "example": "I'd love to open a restaurant, but it's such a [cut-throat industry].",
+      "exampleRu": "Мечтаю открыть ресторан, но в этой сфере такая жёсткая конкуренция.",
+      "collocations": [
+        "cut-throat competition",
+        "a dog-eat-dog world",
+        "highly competitive",
+        "ruthless"
+      ],
+      "pattern": "",
+      "trap": "Отрасль is 'industry' or 'sector', not 'branch' (a branch is a local office or shop of a company).",
+      "wrong": [
+        "throat-cutting industry",
+        "cut-throat branch"
+      ],
+      "tags": [
+        "business",
+        "work"
+      ]
+    },
+    {
+      "term": "bold statement",
+      "ipa": "bəʊld ˈsteɪtmənt",
+      "type": "collocation",
+      "translation": "смелое заявление",
+      "definition": "something you say publicly that is confident and maybe risky",
+      "example": "Saying our app will replace email is a [bold statement] – can we back it up?",
+      "exampleRu": "Сказать, что наше приложение заменит почту, — смелое заявление. Нам есть чем его подкрепить?",
+      "collocations": [
+        "make a bold statement",
+        "a bold claim",
+        "a bold move",
+        "a fashion statement"
+      ],
+      "pattern": "make a bold statement",
+      "trap": "Заявление is a 'statement' when you say it publicly, but an 'application' when it is a form you fill in.",
+      "wrong": [
+        "bold application",
+        "bold announce"
+      ],
+      "tags": [
+        "work",
+        "opinions"
+      ]
+    },
+    {
+      "term": "get sth off the ground",
+      "ipa": "ɡet ɒf ðə ɡraʊnd",
+      "type": "idiom",
+      "translation": "успешно запустить (проект)",
+      "definition": "to start a project or business and make it begin to work",
+      "example": "It took us six months to [get our podcast off the ground].",
+      "exampleRu": "Нам понадобилось полгода, чтобы запустить наш подкаст.",
+      "collocations": [
+        "get a business off the ground",
+        "never get off the ground",
+        "launch a project",
+        "take off"
+      ],
+      "pattern": "get sth off the ground / sth gets off the ground",
+      "trap": "The object goes in the middle: 'get the project off the ground', not 'get off the ground the project'.",
+      "wrong": [
+        "get off the ground our podcast",
+        "get our podcast from the ground"
+      ],
+      "tags": [
+        "business",
+        "work"
+      ]
+    },
+    {
+      "term": "concerted effort",
+      "ipa": "kənˈsɜːtɪd ˈefət",
+      "type": "collocation",
+      "translation": "согласованное, целенаправленное усилие",
+      "definition": "a serious, determined effort, often by several people working together",
+      "example": "We all made a [concerted effort] to hit the deadline before Christmas.",
+      "exampleRu": "Мы все приложили максимум усилий, чтобы уложиться в срок до Рождества.",
+      "collocations": [
+        "make a concerted effort",
+        "a joint effort",
+        "a team effort",
+        "a concerted campaign"
+      ],
+      "pattern": "make a concerted effort to do sth",
+      "trap": "Today it often just means a determined effort, even by one person: 'I'm making a concerted effort to eat better.'",
+      "wrong": [
+        "concert effort",
+        "concerting effort"
+      ],
+      "tags": [
+        "work"
+      ]
+    },
+    {
+      "term": "get access to sth",
+      "ipa": "ɡet ˈækses tə",
+      "type": "collocation",
+      "translation": "получить доступ к",
+      "definition": "to be able to enter, use or see something",
+      "example": "I still can't [get access to] the shared drive – can you check my permissions?",
+      "exampleRu": "У меня всё ещё нет доступа к общему диску — можешь проверить мои права?",
+      "collocations": [
+        "have access to sth",
+        "gain access to sth",
+        "access sth (verb)",
+        "access denied"
+      ],
+      "pattern": "get/have/gain access to sth; access sth (no 'to')",
+      "trap": "Access is uncountable: 'get access to', not 'get an access to'; as a verb it takes no 'to': 'access the drive'.",
+      "wrong": [
+        "get an access to",
+        "get access for"
+      ],
+      "tags": [
+        "work",
+        "tech"
+      ]
+    },
+    {
+      "term": "be on the same page",
+      "ipa": "ɒn ðə seɪm peɪdʒ",
+      "type": "idiom",
+      "translation": "одинаково понимать ситуацию, задачу",
+      "definition": "to agree or have the same understanding about something",
+      "example": "Let's have a quick call so everyone is [on the same page] before the launch.",
+      "exampleRu": "Давайте быстро созвонимся, чтобы перед запуском все одинаково понимали задачу.",
+      "collocations": [
+        "get everyone on the same page"
+      ],
+      "pattern": "be on the same page (about sth)",
+      "trap": "Not 'on one page'. Don't mix it up with 'on the same wavelength' («на одной волне» = think and feel alike).",
+      "wrong": [
+        "on one page",
+        "on the same wave"
+      ],
+      "tags": [
+        "work",
+        "meetings"
+      ]
+    },
+    {
+      "term": "be ahead of the pack",
+      "ipa": "əˈhed əv ðə pæk",
+      "type": "idiom",
+      "translation": "опережать других",
+      "definition": "to be more successful or more advanced than your competitors",
+      "example": "Our little start-up is [ahead of the pack] when it comes to customer service.",
+      "exampleRu": "Когда дело касается клиентского сервиса, наш маленький стартап опережает всех.",
+      "collocations": [
+        "stay ahead of the pack",
+        "lead the pack",
+        "ahead of the competition",
+        "ahead of the game"
+      ],
+      "pattern": "be/stay ahead of the pack",
+      "trap": "'Pack' here is a group of competitors, like wolves or runners, not упаковка; a similar idiom is 'ahead of the game'.",
+      "wrong": [
+        "ahead the pack",
+        "before the pack"
+      ],
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "term": "no-brainer",
+      "ipa": "ˌnəʊ ˈbreɪnə",
+      "type": "idiom",
+      "translation": "очевидное решение, ежу понятно",
+      "definition": "a decision that is so easy you don't need to think about it",
+      "example": "A four-day week for the same salary? It's a [no-brainer].",
+      "exampleRu": "Четырёхдневка за ту же зарплату? Тут и думать нечего.",
+      "collocations": [
+        "it's a no-brainer",
+        "an easy decision",
+        "the obvious choice",
+        "a piece of cake"
+      ],
+      "pattern": "",
+      "trap": "Informal, and it describes a decision, never a person; for a silly person say 'an idiot' or 'brainless'.",
+      "wrong": [
+        "no-brain",
+        "brainless"
+      ],
+      "tags": [
+        "opinions",
+        "work"
+      ]
+    },
+    {
+      "term": "reap the rewards",
+      "ipa": "riːp ðə rɪˈwɔːdz",
+      "type": "idiom",
+      "translation": "пожинать плоды",
+      "definition": "to get the good results of something you worked hard for",
+      "example": "After two years of evening classes, I'm finally [reaping the rewards] at work.",
+      "exampleRu": "После двух лет вечерних курсов я наконец пожинаю плоды на работе.",
+      "collocations": [
+        "reap the benefits",
+        "reap the rewards of hard work",
+        "pay off",
+        "you reap what you sow"
+      ],
+      "pattern": "reap the rewards (of sth)",
+      "trap": "Not 'collect the fruits' (a calque of «пожинать плоды»); for bad results people say 'you reap what you sow'.",
+      "wrong": [
+        "collecting the fruits",
+        "reaping the awards"
+      ],
+      "tags": [
+        "work",
+        "study"
+      ]
+    },
+    {
+      "term": "map the human genome",
+      "ipa": "mæp ðə ˈhjuːmən ˈdʒiːnəʊm",
+      "type": "collocation",
+      "translation": "расшифровать геном человека",
+      "definition": "to find the order and position of all the genes in human DNA",
+      "example": "I watched a documentary last night about how scientists [mapped the human genome].",
+      "exampleRu": "Вчера вечером я смотрел документалку о том, как учёные расшифровали геном человека.",
+      "collocations": [
+        "sequence the genome",
+        "the Human Genome Project",
+        "genetic testing",
+        "a DNA test"
+      ],
+      "pattern": "",
+      "trap": "Расшифровать геном is 'map', 'sequence' or 'decode' it, never 'decrypt' (that's for codes and passwords); a genome is all your genes, not one gene.",
+      "wrong": [
+        "decrypted the human genome",
+        "mapped the human gene"
+      ],
+      "tags": [
+        "study",
+        "tech"
+      ]
+    },
+    {
+      "term": "carbon zero",
+      "ipa": "ˈkɑːbən ˈzɪərəʊ",
+      "type": "collocation",
+      "translation": "с нулевыми выбросами углерода",
+      "definition": "producing no carbon dioxide overall, or balancing out all that you produce",
+      "example": "By 2030, the company I work for wants to be [carbon zero].",
+      "exampleRu": "Компания, в которой я работаю, хочет к 2030 году выйти на нулевые выбросы углерода.",
+      "collocations": [
+        "net zero",
+        "carbon neutral",
+        "zero carbon",
+        "carbon footprint"
+      ],
+      "pattern": "be/go carbon zero; a carbon-zero building",
+      "trap": "'Zero carbon' and 'net zero' are also common; углерод is 'carbon', while уголь is 'coal'.",
+      "wrong": [
+        "carbon null",
+        "coal zero"
+      ],
+      "tags": [
+        "business",
+        "city"
+      ]
+    },
+    {
+      "term": "supply chain",
+      "ipa": "səˈplaɪ tʃeɪn",
+      "type": "collocation",
+      "translation": "цепочка поставок",
+      "definition": "all the companies and steps involved in making a product and getting it to the customer",
+      "example": "My new sofa is three weeks late – apparently it's [supply chain] issues.",
+      "exampleRu": "Мой новый диван задерживается уже на три недели — говорят, проблемы с поставками.",
+      "collocations": [
+        "supply chain issues",
+        "a global supply chain",
+        "supply and demand",
+        "supplier"
+      ],
+      "pattern": "",
+      "trap": "A noun used as an adjective stays singular: 'supply chain', not 'supplies chain'.",
+      "wrong": [
+        "supplies chain",
+        "chain of supplies"
+      ],
+      "tags": [
+        "business",
+        "home"
+      ]
+    },
+    {
+      "term": "for the sake of sth",
+      "ipa": "fə ðə seɪk əv",
+      "type": "phrase",
+      "translation": "ради чего-то",
+      "definition": "because of something, or in order to get or keep it",
+      "example": "Let's not have a meeting just [for the sake of] having one.",
+      "exampleRu": "Давайте не будем устраивать совещание просто ради того, чтобы оно было.",
+      "collocations": [
+        "for the sake of it",
+        "for your own sake",
+        "for old times' sake",
+        "for God's sake (informal)"
+      ],
+      "pattern": "for the sake of sth / of doing sth; for sb's sake",
+      "trap": "Don't drop 'the': 'for the sake of sth', but 'for my sake' (ради меня) has no 'the'.",
+      "wrong": [
+        "for sake of",
+        "for the sake for"
+      ],
+      "tags": [
+        "work",
+        "everyday"
+      ]
+    }
+  ]
+}

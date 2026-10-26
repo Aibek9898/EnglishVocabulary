@@ -1,0 +1,504 @@
+{
+  "id": "course-1-friends",
+  "title": "Friends & Connections",
+  "description": "From your course: words and phrases for making friends, getting on with people, falling out and talking about family.",
+  "course": true,
+  "items": [
+    {
+      "term": "bond over sth",
+      "ipa": "bɒnd ˈəʊvə",
+      "type": "collocation",
+      "translation": "сблизиться на основе общего интереса",
+      "definition": "to become close to someone because you share an interest or experience",
+      "example": "My new colleague and I [bonded over] our hatred of Monday morning meetings.",
+      "exampleRu": "Мы с новой коллегой сблизились на почве общей ненависти к утренним планёркам по понедельникам.",
+      "collocations": [
+        "bond with sb",
+        "a strong bond",
+        "team bonding"
+      ],
+      "pattern": "bond over sth / bond with sb",
+      "trap": "Use 'over' for the shared thing and 'with' for the person: 'bond with sb over sth', not 'bond on' or 'bond about'.",
+      "wrong": [
+        "bonded on",
+        "bonded about"
+      ],
+      "tags": [
+        "relationships",
+        "people"
+      ]
+    },
+    {
+      "term": "click with sb",
+      "ipa": "klɪk wɪð",
+      "type": "collocation",
+      "translation": "сразу найти общий язык",
+      "definition": "to like someone and get on well with them immediately",
+      "example": "I [clicked with] my personal trainer from the very first session.",
+      "exampleRu": "Мы с моим персональным тренером нашли общий язык с первой же тренировки.",
+      "collocations": [
+        "we just clicked",
+        "click straight away",
+        "hit it off"
+      ],
+      "pattern": "click (with sb)",
+      "trap": "Informal, and often used with no object: 'We just clicked.' Don't say 'find a common language' (from «найти общий язык»).",
+      "wrong": [
+        "found a common language with",
+        "clicked to"
+      ],
+      "tags": [
+        "relationships",
+        "people"
+      ]
+    },
+    {
+      "term": "confide in sb",
+      "ipa": "kənˈfaɪd ɪn",
+      "type": "collocation",
+      "translation": "доверять секреты, изливать душу",
+      "definition": "to tell someone your secrets or private worries because you trust them",
+      "example": "I don't usually [confide in] colleagues, but she's become a real friend.",
+      "exampleRu": "Обычно я не откровенничаю с коллегами, но она стала мне настоящей подругой.",
+      "collocations": [
+        "confide a secret to sb",
+        "in confidence",
+        "open up to sb"
+      ],
+      "pattern": "confide in sb (about sth) / confide sth to sb",
+      "trap": "Use 'in' with the person: 'confide in a friend'; 'to' is only for the secret itself: 'confide a secret to sb'.",
+      "wrong": [
+        "confide to",
+        "confide with"
+      ],
+      "tags": [
+        "relationships",
+        "feelings"
+      ]
+    },
+    {
+      "term": "have a mutual friend",
+      "ipa": "hæv ə ˈmjuːtʃuəl frend",
+      "type": "collocation",
+      "translation": "иметь общего друга",
+      "definition": "to both know the same friend",
+      "example": "We got chatting at the gym and realised we [had a mutual friend].",
+      "exampleRu": "Мы разговорились в спортзале и выяснили, что у нас есть общий друг.",
+      "collocations": [
+        "a mutual friend of ours",
+        "a friend in common",
+        "mutual friends on Instagram"
+      ],
+      "pattern": "have a mutual friend / have friends in common",
+      "trap": "Natives say 'a mutual friend' or 'a friend in common'; 'a common friend' (from «общий друг») sounds odd.",
+      "wrong": [
+        "had mutual friend",
+        "had a general friend"
+      ],
+      "tags": [
+        "relationships",
+        "people"
+      ]
+    },
+    {
+      "term": "hit it off",
+      "ipa": "hɪt ɪt ɒf",
+      "type": "idiom",
+      "translation": "сразу подружиться",
+      "definition": "to like each other and become friendly as soon as you meet",
+      "example": "At my birthday party, my best friend and my cousin [hit it off] straight away.",
+      "exampleRu": "У меня на дне рождения лучший друг и двоюродный брат сразу же подружились.",
+      "collocations": [
+        "hit it off with sb",
+        "hit it off straight away",
+        "get on like a house on fire"
+      ],
+      "pattern": "hit it off (with sb)",
+      "trap": "The 'it' is fixed: 'they hit it off', not 'they hit off'. The past form is also 'hit'.",
+      "wrong": [
+        "hit off",
+        "hitted it off",
+        "hit it on"
+      ],
+      "tags": [
+        "relationships",
+        "people"
+      ]
+    },
+    {
+      "term": "be on the same wavelength",
+      "ipa": "ɒn ðə seɪm ˈweɪvleŋθ",
+      "type": "idiom",
+      "translation": "быть на одной волне",
+      "definition": "to think in a similar way and understand each other easily",
+      "example": "Luckily, my new manager and I [are on the same wavelength] about most things.",
+      "exampleRu": "К счастью, мы с новым руководителем почти во всём на одной волне.",
+      "collocations": [
+        "be on the same page",
+        "see eye to eye",
+        "think alike"
+      ],
+      "pattern": "be on the same wavelength (as sb)",
+      "trap": "Use 'on' and 'wavelength': 'on the same wavelength', not 'on one wave' (from «на одной волне»).",
+      "wrong": [
+        "are on one wave",
+        "are in the same wavelength",
+        "are on the same wave"
+      ],
+      "tags": [
+        "relationships",
+        "work"
+      ]
+    },
+    {
+      "term": "party with sb",
+      "ipa": "ˈpɑːti wɪð",
+      "type": "collocation",
+      "translation": "тусоваться (на вечеринках) с кем-то",
+      "definition": "to go out to parties or clubs and have fun with someone",
+      "example": "At uni I used to [party with] my friends every weekend; now I'm asleep by eleven.",
+      "exampleRu": "В универе мы с друзьями тусили каждые выходные, а теперь я в одиннадцать уже сплю.",
+      "collocations": [
+        "party all night",
+        "go out partying",
+        "a party animal",
+        "hang out with sb"
+      ],
+      "pattern": "party (with sb)",
+      "trap": "As a verb, 'party' means going out drinking and dancing; for just spending time together, say 'hang out with sb'.",
+      "wrong": [
+        "make a party with",
+        "party to"
+      ],
+      "tags": [
+        "people",
+        "everyday"
+      ]
+    },
+    {
+      "term": "socialise with sb",
+      "ipa": "ˈsəʊʃəlaɪz wɪð",
+      "type": "collocation",
+      "translation": "общаться с кем-то (проводить время вместе)",
+      "definition": "to spend free time with people in a friendly way",
+      "example": "Outside the office, I don't really [socialise with] people from work.",
+      "exampleRu": "Вне офиса я особо не общаюсь с коллегами.",
+      "collocations": [
+        "socialise with colleagues",
+        "go out and socialise",
+        "a busy social life"
+      ],
+      "pattern": "socialise (with sb)",
+      "trap": "It means spending free time together, not «общаться» as in talking or messaging (for that, say 'talk to' or 'be in touch with'). US spelling: socialize.",
+      "wrong": [
+        "socialise to",
+        "contact with"
+      ],
+      "tags": [
+        "people",
+        "work"
+      ]
+    },
+    {
+      "term": "like-minded",
+      "ipa": "ˌlaɪk ˈmaɪndɪd",
+      "type": "word",
+      "translation": "близкий по взглядам; like-minded people — единомышленники",
+      "definition": "having similar interests, ideas or opinions",
+      "example": "A running club is a great way to meet [like-minded] people in a new city.",
+      "exampleRu": "Беговой клуб — отличный способ найти единомышленников в новом городе.",
+      "collocations": [
+        "like-minded people",
+        "like-minded friends",
+        "share the same interests"
+      ],
+      "pattern": "like-minded + people/friends/colleagues",
+      "trap": "It's an adjective, not a noun: «единомышленники» = 'like-minded people', never just 'like-mindeds'.",
+      "wrong": [
+        "one-minded",
+        "same-minded"
+      ],
+      "tags": [
+        "people",
+        "relationships"
+      ]
+    },
+    {
+      "term": "colleague",
+      "ipa": "ˈkɒliːɡ",
+      "type": "word",
+      "translation": "коллега",
+      "definition": "a person you work with",
+      "example": "Could you ask one of your [colleagues] to send me the report by Friday?",
+      "exampleRu": "Можешь попросить кого-нибудь из коллег прислать мне отчёт до пятницы?",
+      "collocations": [
+        "a work colleague",
+        "a former colleague",
+        "co-worker"
+      ],
+      "pattern": "a colleague of mine",
+      "trap": "Stress the first syllable, ˈkɒliːɡ, not the second as in Russian «коллега»; spelt with '-league'.",
+      "wrong": [
+        "colleges",
+        "collegues"
+      ],
+      "tags": [
+        "work",
+        "people"
+      ]
+    },
+    {
+      "term": "brother-in-law",
+      "ipa": "ˈbrʌðər ɪn lɔː",
+      "type": "word",
+      "translation": "зять / шурин / деверь / свояк",
+      "definition": "the brother of your husband or wife, or the husband of your sister",
+      "example": "On Sunday my [brother-in-law] is coming round to help me fix the boiler.",
+      "exampleRu": "В воскресенье ко мне зайдёт зять — поможет починить котёл.",
+      "collocations": [
+        "sister-in-law",
+        "the in-laws",
+        "mother-in-law"
+      ],
+      "pattern": "plural: brothers-in-law",
+      "trap": "The plural is 'brothers-in-law'. Don't confuse it with 'son-in-law' (зять = your daughter's husband).",
+      "wrong": [
+        "brother-of-law",
+        "in-law brother"
+      ],
+      "tags": [
+        "people",
+        "relationships"
+      ]
+    },
+    {
+      "term": "nephew",
+      "ipa": "ˈnevjuː",
+      "type": "word",
+      "translation": "племянник",
+      "definition": "the son of your brother or sister",
+      "example": "This Saturday I'm taking my [nephew] to the Natural History Museum — he loves dinosaurs.",
+      "exampleRu": "В эту субботу веду племянника в Музей естествознания — он обожает динозавров.",
+      "collocations": [
+        "niece",
+        "nieces and nephews",
+        "my little nephew"
+      ],
+      "pattern": "",
+      "trap": "A nephew is always a boy or man; a girl is your 'niece' (племянница).",
+      "wrong": [
+        "niece"
+      ],
+      "tags": [
+        "people"
+      ]
+    },
+    {
+      "term": "relationship",
+      "ipa": "rɪˈleɪʃnʃɪp",
+      "type": "word",
+      "translation": "отношения",
+      "definition": "the way two people or groups feel about and behave towards each other",
+      "example": "Since I moved out, my [relationship] with my dad has got so much better.",
+      "exampleRu": "С тех пор как я живу отдельно, отношения с папой стали намного лучше.",
+      "collocations": [
+        "a good relationship with sb",
+        "be in a relationship",
+        "a long-distance relationship"
+      ],
+      "pattern": "a relationship with sb / between A and B",
+      "trap": "«Отношения» with one person is singular: 'my relationship with my dad'; 'relations' is mostly for countries or groups.",
+      "wrong": [
+        "relations",
+        "relation"
+      ],
+      "tags": [
+        "relationships",
+        "people"
+      ]
+    },
+    {
+      "term": "fall out with sb",
+      "ipa": "fɔːl ˈaʊt wɪð",
+      "type": "phrasal-verb",
+      "translation": "поссориться, разругаться",
+      "definition": "to stop being friendly with someone after an argument",
+      "example": "I [fell out with] my best friend over a stupid argument about money.",
+      "exampleRu": "Я разругался с лучшим другом из-за глупого спора о деньгах.",
+      "collocations": [
+        "have a falling-out"
+      ],
+      "pattern": "fall out with sb over sth",
+      "trap": "It means the friendship is damaged, not just a short argument.",
+      "wrong": [
+        "fell out of",
+        "swore with"
+      ],
+      "tags": [
+        "people",
+        "conflict",
+        "friendship"
+      ]
+    },
+    {
+      "term": "make up",
+      "ipa": "meɪk ˈʌp",
+      "type": "phrasal-verb",
+      "translation": "помириться",
+      "definition": "to become friendly with someone again after an argument",
+      "example": "They had a big fight but [made up] the next day.",
+      "exampleRu": "Они сильно поссорились, но на следующий день помирились.",
+      "collocations": [
+        "kiss and make up"
+      ],
+      "pattern": "make up (with sb)",
+      "trap": "It has many other meanings (invent, form, cosmetics); in this sense it takes no direct object: 'make up with sb'.",
+      "wrong": [
+        "made out"
+      ],
+      "tags": [
+        "people",
+        "conflict",
+        "relationships"
+      ]
+    },
+    {
+      "term": "bump into sb",
+      "ipa": "bʌmp ˈɪntuː",
+      "type": "phrasal-verb",
+      "translation": "случайно встретить; врезаться в кого-то",
+      "definition": "to meet someone you know by chance; also, to hit someone or something by accident",
+      "example": "We kept [bumping into] each other at the gym, so we finally went for a coffee.",
+      "exampleRu": "Мы постоянно сталкивались в спортзале, так что в итоге сходили выпить кофе.",
+      "collocations": [
+        "run into sb",
+        "bump into sb by chance",
+        "come across sb"
+      ],
+      "pattern": "bump into sb/sth",
+      "trap": "Use 'into', not 'on' or 'with'. Informal; 'run into sb' means the same.",
+      "wrong": [
+        "bumping on",
+        "bumping with"
+      ],
+      "tags": [
+        "people",
+        "everyday"
+      ]
+    },
+    {
+      "term": "argue about sth",
+      "ipa": "ˈɑːɡjuː əˈbaʊt",
+      "type": "collocation",
+      "translation": "спорить о чём-то, ругаться из-за чего-то",
+      "definition": "to disagree with someone, often angrily, about something",
+      "example": "Honestly, my flatmates and I [argue about] the washing-up more than anything else.",
+      "exampleRu": "Если честно, больше всего мы с соседями по квартире спорим из-за мытья посуды.",
+      "collocations": [
+        "argue with sb",
+        "argue over sth",
+        "have an argument"
+      ],
+      "pattern": "argue with sb about/over sth",
+      "trap": "Use 'about' or 'over' for the topic and 'with' for the person; not 'argue on'.",
+      "wrong": [
+        "argue on",
+        "dispute about"
+      ],
+      "tags": [
+        "relationships",
+        "home"
+      ]
+    },
+    {
+      "term": "outlast",
+      "ipa": "aʊtˈlɑːst",
+      "type": "word",
+      "translation": "пережить, продлиться дольше",
+      "definition": "to last or continue longer than someone or something",
+      "example": "Our friendship has [outlasted] three jobs, two moves and one terrible haircut.",
+      "exampleRu": "Наша дружба пережила три работы, два переезда и одну ужасную стрижку.",
+      "collocations": [
+        "outlast the competition",
+        "outlive sb",
+        "stand the test of time"
+      ],
+      "pattern": "outlast sb/sth",
+      "trap": "When a person lives longer than someone, use 'outlive' (пережить кого-то); 'outlast' is mostly about things lasting longer.",
+      "wrong": [
+        "overlasted",
+        "overlived"
+      ],
+      "tags": [
+        "relationships"
+      ]
+    },
+    {
+      "term": "decade",
+      "ipa": "ˈdekeɪd",
+      "type": "word",
+      "translation": "десятилетие",
+      "definition": "a period of ten years",
+      "example": "Prices in this neighbourhood have doubled over the last [decade].",
+      "exampleRu": "За последние десять лет цены в этом районе выросли вдвое.",
+      "collocations": [
+        "the past decade",
+        "for decades",
+        "decades ago"
+      ],
+      "pattern": "",
+      "trap": "Not «декада» in the sense of ten days — a decade is always ten years.",
+      "wrong": [],
+      "tags": [
+        "traps",
+        "false-friend"
+      ]
+    },
+    {
+      "term": "dozens of sth",
+      "ipa": "ˈdʌzənz əv",
+      "type": "phrase",
+      "translation": "десятки, множество",
+      "definition": "a lot of something; many (a dozen is twelve)",
+      "example": "I've got [dozens of] unread messages in the family chat after one evening offline.",
+      "exampleRu": "Стоило один вечер не заходить в сеть — и в семейном чате десятки непрочитанных сообщений.",
+      "collocations": [
+        "dozens and dozens",
+        "dozens of times",
+        "a dozen eggs"
+      ],
+      "pattern": "dozens of + plural noun / two dozen + plural noun (no 'of')",
+      "trap": "Say 'dozens of messages', but after a number there's no -s and no 'of': 'two dozen messages'.",
+      "wrong": [
+        "dozen of",
+        "dozens"
+      ],
+      "tags": [
+        "everyday"
+      ]
+    },
+    {
+      "term": "mobile device",
+      "ipa": "ˈməʊbaɪl dɪˈvaɪs",
+      "type": "collocation",
+      "translation": "мобильное устройство",
+      "definition": "a small electronic machine you carry, like a phone or tablet",
+      "example": "You can join the call from any [mobile device], so you don't need your laptop.",
+      "exampleRu": "К звонку можно подключиться с любого мобильного устройства, так что ноутбук не нужен.",
+      "collocations": [
+        "smartphone",
+        "tablet",
+        "mobile app"
+      ],
+      "pattern": "",
+      "trap": "Sounds technical; in conversation people just say 'phone' or 'tablet'. In British English 'mobile' alone means a mobile phone.",
+      "wrong": [
+        "mobile apparatus",
+        "mobile instrument"
+      ],
+      "tags": [
+        "tech"
+      ]
+    }
+  ]
+}

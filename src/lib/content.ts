@@ -23,6 +23,7 @@ export function toContent(raw: unknown): ItemContent | null {
   const type = TYPES.includes(r.type as ItemType) ? (r.type as ItemType) : guessType(term);
   return {
     term,
+    ipa: str(r.ipa ?? r.transcription).replace(/^[[/]+|[\]/]+$/g, '').trim() || undefined,
     type,
     translation,
     definition: str(r.definition),

@@ -36,6 +36,11 @@ export function ItemCard({ item, compact = false, heading = 'h2' }: { item: Item
         <Speak text={item.term} />
       </div>
       <div className="item-sub">
+        {item.ipa && (
+          <span className="ipa" aria-label="Pronunciation">
+            [{item.ipa}]
+          </span>
+        )}
         <span className="chip">{TYPE_LABEL[item.type] ?? item.type}</span>
         {'level' in item && item.level > 0 && <LevelMeter level={item.level} />}
       </div>

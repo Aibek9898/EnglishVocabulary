@@ -1,0 +1,845 @@
+{
+  "id": "course-2-cities",
+  "title": "Cities, Homes & Well-being",
+  "description": "From your course: words for describing cities and homes, how places get changed and improved, and how green and blue spaces affect your well-being.",
+  "course": true,
+  "items": [
+    {
+      "term": "urban areas",
+      "ipa": "ˈɜːbən ˈeəriəz",
+      "type": "collocation",
+      "translation": "городские районы (urban — городской)",
+      "definition": "places that are in or near towns and cities",
+      "example": "Life in [urban areas] can be stressful, so I escape to the countryside most weekends.",
+      "exampleRu": "Жизнь в городе бывает очень напряжённой, поэтому почти каждые выходные я сбегаю за город.",
+      "collocations": [
+        "urban life",
+        "urban planning",
+        "rural areas",
+        "built-up areas"
+      ],
+      "pattern": "in urban areas",
+      "trap": "'Urban' sounds formal; in conversation people usually just say 'in cities' or 'in town'.",
+      "wrong": [
+        "urban area",
+        "urbanistic areas"
+      ],
+      "tags": [
+        "city"
+      ]
+    },
+    {
+      "term": "indoor",
+      "ipa": "ˈɪndɔː",
+      "type": "word",
+      "translation": "крытый, в помещении",
+      "definition": "happening or used inside a building",
+      "example": "When it's raining, I go to the [indoor] pool instead of running.",
+      "exampleRu": "Когда идёт дождь, я вместо пробежки хожу в крытый бассейн.",
+      "collocations": [
+        "indoor pool",
+        "indoor plants",
+        "stay indoors"
+      ],
+      "pattern": "indoor + noun / stay indoors",
+      "trap": "'Indoor' goes before a noun ('an indoor pool'); after a verb use 'indoors': 'stay indoors', not 'stay indoor'.",
+      "wrong": [
+        "indoors",
+        "closed"
+      ],
+      "tags": [
+        "sport",
+        "everyday"
+      ]
+    },
+    {
+      "term": "outdoor",
+      "ipa": "ˈaʊtdɔː",
+      "type": "word",
+      "translation": "на открытом воздухе",
+      "definition": "happening or used outside, not in a building",
+      "example": "In summer our gym runs [outdoor] classes in the park, which I love.",
+      "exampleRu": "Летом наш спортзал проводит занятия на улице, в парке, и я это обожаю.",
+      "collocations": [
+        "outdoor activities",
+        "outdoor seating",
+        "the great outdoors"
+      ],
+      "pattern": "outdoor + noun / be outdoors",
+      "trap": "Before a noun use 'outdoor' ('outdoor classes'); after a verb use 'outdoors' ('we trained outdoors'). «На улице» here is not 'street'.",
+      "wrong": [
+        "outdoors",
+        "street"
+      ],
+      "tags": [
+        "sport",
+        "city"
+      ]
+    },
+    {
+      "term": "well-lit",
+      "ipa": "ˌwel ˈlɪt",
+      "type": "word",
+      "translation": "хорошо освещённый",
+      "definition": "having plenty of light, so it is easy and safe to see",
+      "example": "At night I take the longer way home, along [well-lit] streets.",
+      "exampleRu": "Вечером я хожу домой более длинной дорогой — по хорошо освещённым улицам.",
+      "collocations": [
+        "a well-lit street",
+        "a well-lit room",
+        "poorly lit",
+        "dimly lit"
+      ],
+      "pattern": "well-lit + noun / be well lit",
+      "trap": "Use 'lit', not 'lightened' (= made lighter in colour); the opposite is 'poorly lit' or 'dimly lit'.",
+      "wrong": [
+        "good-lit",
+        "well-lightened"
+      ],
+      "tags": [
+        "city"
+      ]
+    },
+    {
+      "term": "surroundings",
+      "ipa": "səˈraʊndɪŋz",
+      "type": "word",
+      "translation": "окружение, обстановка",
+      "definition": "the place and things around you",
+      "example": "Working from a café helps me focus — sometimes I just need a change of [surroundings].",
+      "exampleRu": "Работа в кафе помогает мне сосредоточиться — иногда просто нужно сменить обстановку.",
+      "collocations": [
+        "a change of surroundings",
+        "pleasant surroundings",
+        "familiar surroundings"
+      ],
+      "pattern": "always plural: (your) surroundings",
+      "trap": "Always plural: 'my surroundings'. It's about places; for the people around you («моё окружение») say 'the people around me'.",
+      "wrong": [
+        "surrounding",
+        "surround"
+      ],
+      "tags": [
+        "everyday",
+        "work"
+      ]
+    },
+    {
+      "term": "coastal",
+      "ipa": "ˈkəʊstl",
+      "type": "word",
+      "translation": "прибрежный",
+      "definition": "on or near the coast, the land next to the sea",
+      "example": "We're spending the weekend in a little [coastal] town in Cornwall.",
+      "exampleRu": "Мы проведём выходные в маленьком приморском городке в Корнуолле.",
+      "collocations": [
+        "a coastal town",
+        "a coastal path",
+        "coastal walks",
+        "a seaside town"
+      ],
+      "pattern": "coastal + noun",
+      "trap": "Spelt 'coastal' with 'oa' (ˈkəʊstl); 'costal' is a different word about ribs. 'A seaside town' is also very common in the UK.",
+      "wrong": [
+        "costal",
+        "coastline"
+      ],
+      "tags": [
+        "travel"
+      ]
+    },
+    {
+      "term": "green spaces",
+      "ipa": "ɡriːn ˈspeɪsɪz",
+      "type": "collocation",
+      "translation": "зелёные зоны, парки",
+      "definition": "areas of grass and trees in a town, like parks",
+      "example": "One thing I love about this neighbourhood is all the [green spaces] nearby.",
+      "exampleRu": "Что мне нравится в этом районе — рядом много зелёных зон.",
+      "collocations": [
+        "public green spaces",
+        "access to green spaces",
+        "parks and green spaces"
+      ],
+      "pattern": "",
+      "trap": "Don't say 'green zones' (from «зелёные зоны»); 'green spaces' or just 'parks' is natural.",
+      "wrong": [
+        "green zones",
+        "green territories"
+      ],
+      "tags": [
+        "city",
+        "health"
+      ]
+    },
+    {
+      "term": "blue spaces",
+      "ipa": "bluː ˈspeɪsɪz",
+      "type": "collocation",
+      "translation": "водные пространства (реки, озёра, море)",
+      "definition": "areas of water in or near a town, like rivers, lakes, canals or the sea",
+      "example": "Apparently living near [blue spaces] like rivers or the sea makes you happier.",
+      "exampleRu": "Говорят, если жить рядом с водой — рекой или морем, — становишься счастливее.",
+      "collocations": [
+        "green and blue spaces",
+        "access to blue spaces",
+        "near the water"
+      ],
+      "pattern": "",
+      "trap": "A term from research and the news; in everyday talk people usually say 'near water' or 'by the river'.",
+      "wrong": [
+        "water territories",
+        "blue zones"
+      ],
+      "tags": [
+        "city",
+        "health"
+      ]
+    },
+    {
+      "term": "well-being",
+      "ipa": "ˌwel ˈbiːɪŋ",
+      "type": "word",
+      "translation": "благополучие, самочувствие",
+      "definition": "the state of feeling healthy, comfortable and happy",
+      "example": "Ditching the bus and walking to work has done wonders for my [well-being].",
+      "exampleRu": "С тех пор как я хожу на работу пешком, а не езжу на автобусе, самочувствие стало заметно лучше.",
+      "collocations": [
+        "mental well-being",
+        "a sense of well-being",
+        "health and well-being"
+      ],
+      "pattern": "",
+      "trap": "Uncountable: 'my well-being', not 'a well-being'. Also spelt 'wellbeing'.",
+      "wrong": [
+        "good-being",
+        "well-feeling"
+      ],
+      "tags": [
+        "health",
+        "feelings"
+      ]
+    },
+    {
+      "term": "researcher",
+      "ipa": "rɪˈsɜːtʃə",
+      "type": "word",
+      "translation": "исследователь",
+      "definition": "a person whose job is to study a subject carefully to find new facts",
+      "example": "My cousin works as a [researcher] at a university lab in Manchester.",
+      "exampleRu": "Мой двоюродный брат работает исследователем в университетской лаборатории в Манчестере.",
+      "collocations": [
+        "a medical researcher",
+        "a team of researchers",
+        "do research"
+      ],
+      "pattern": "",
+      "trap": "The work is 'research' (uncountable): 'do research', not 'make researches'; the person is a 'researcher'.",
+      "wrong": [
+        "research",
+        "scientific worker"
+      ],
+      "tags": [
+        "work",
+        "study"
+      ]
+    },
+    {
+      "term": "speculate",
+      "ipa": "ˈspekjuleɪt",
+      "type": "word",
+      "translation": "строить догадки, предполагать",
+      "definition": "to guess possible reasons or answers without knowing all the facts",
+      "example": "People at work keep [speculating] about who'll replace our manager.",
+      "exampleRu": "На работе все без конца гадают, кто займёт место нашего руководителя.",
+      "collocations": [
+        "speculate about sth",
+        "wild speculation",
+        "it's too early to speculate"
+      ],
+      "pattern": "speculate about/on sth / speculate that…",
+      "trap": "In everyday English it means «гадать, строить догадки», not «спекулировать» (reselling); use 'about' or 'on', not a direct object.",
+      "wrong": [
+        "supposing",
+        "suggesting"
+      ],
+      "tags": [
+        "work",
+        "opinions"
+      ]
+    },
+    {
+      "term": "polluted",
+      "ipa": "pəˈluːtɪd",
+      "type": "word",
+      "translation": "загрязнённый",
+      "definition": "made dirty by smoke, chemicals or rubbish",
+      "example": "Cycling to work would be great if the main road weren't so [polluted].",
+      "exampleRu": "Ездить на работу на велосипеде было бы здорово, если бы главная дорога не была такой загазованной.",
+      "collocations": [
+        "heavily polluted",
+        "polluted air",
+        "air pollution"
+      ],
+      "pattern": "",
+      "trap": "'Polluted' is the adjective, 'pollution' the noun: 'the air is polluted', 'air pollution'.",
+      "wrong": [
+        "pollution",
+        "dirtied"
+      ],
+      "tags": [
+        "city",
+        "health"
+      ]
+    },
+    {
+      "term": "waterway",
+      "ipa": "ˈwɔːtəweɪ",
+      "type": "word",
+      "translation": "водный путь (река, канал)",
+      "definition": "a river or canal that boats can travel along",
+      "example": "Walking along the city's [waterways] is my favourite way to clear my head after work.",
+      "exampleRu": "Прогулка вдоль городских рек и каналов — мой любимый способ проветрить голову после работы.",
+      "collocations": [
+        "inland waterways",
+        "the canal towpath",
+        "a riverside walk"
+      ],
+      "pattern": "",
+      "trap": "One word, and it means rivers and canals, not «водопровод» (that's 'water supply' or 'the water mains').",
+      "wrong": [
+        "water roads",
+        "water paths"
+      ],
+      "tags": [
+        "city",
+        "travel"
+      ]
+    },
+    {
+      "term": "fountain",
+      "ipa": "ˈfaʊntən",
+      "type": "word",
+      "translation": "фонтан",
+      "definition": "a structure that pushes water up into the air, often in a park or square",
+      "example": "Let's meet by the [fountain] in the main square at six.",
+      "exampleRu": "Давай встретимся у фонтана на главной площади в шесть.",
+      "collocations": [
+        "a drinking fountain",
+        "a water fountain",
+        "a fountain pen"
+      ],
+      "pattern": "",
+      "trap": "Stress the first syllable, ˈfaʊntən, not 'fon-TAN' as in Russian; spelt '-tain'.",
+      "wrong": [
+        "fontan",
+        "fontain"
+      ],
+      "tags": [
+        "city"
+      ]
+    },
+    {
+      "term": "de-stress",
+      "ipa": "ˌdiːˈstres",
+      "type": "word",
+      "translation": "снять стресс, расслабиться",
+      "definition": "to relax and stop feeling worried or tense",
+      "example": "After a crazy week at work, I usually [de-stress] with a long walk by the river.",
+      "exampleRu": "После сумасшедшей недели на работе я обычно снимаю стресс долгой прогулкой вдоль реки.",
+      "collocations": [
+        "de-stress after work",
+        "unwind",
+        "chill out",
+        "relieve stress"
+      ],
+      "pattern": "de-stress (by doing sth)",
+      "trap": "It's a verb with no object: 'I de-stress', not 'take off stress' (from «снять стресс»); with a noun, say 'relieve stress'.",
+      "wrong": [
+        "take off stress",
+        "unstress"
+      ],
+      "tags": [
+        "health",
+        "feelings"
+      ]
+    },
+    {
+      "term": "revive",
+      "ipa": "rɪˈvaɪv",
+      "type": "word",
+      "translation": "оживлять, возвращать силы, возрождать",
+      "definition": "to make someone feel full of energy again, or to bring something back to life",
+      "example": "A quick swim in the lake first thing always [revives] me.",
+      "exampleRu": "Утреннее купание в озере всегда возвращает меня к жизни.",
+      "collocations": [
+        "feel revived",
+        "revive a tradition",
+        "revive an old friendship",
+        "revive the high street"
+      ],
+      "pattern": "revive sb/sth / feel revived",
+      "trap": "Say 'it revives me' or 'I feel revived', not 'I revive myself'; not 'reanimate' (that's for bringing the dead back).",
+      "wrong": [
+        "reanimates",
+        "freshens"
+      ],
+      "tags": [
+        "health",
+        "feelings"
+      ]
+    },
+    {
+      "term": "city centre",
+      "ipa": "ˌsɪti ˈsentə",
+      "type": "collocation",
+      "translation": "центр города",
+      "definition": "the main part of a city, where most shops and offices are",
+      "example": "Parking in the [city centre] is a nightmare, so I always take the tram.",
+      "exampleRu": "Парковаться в центре города — это кошмар, поэтому я всегда езжу на трамвае.",
+      "collocations": [
+        "in the city centre",
+        "the town centre",
+        "a city-centre flat"
+      ],
+      "pattern": "in the city centre",
+      "trap": "British spelling 'centre' (US 'center' or 'downtown'); say 'in the city centre', not 'in the centre of city'.",
+      "wrong": [
+        "centre of city",
+        "city central"
+      ],
+      "tags": [
+        "city"
+      ]
+    },
+    {
+      "term": "inactive edges",
+      "ipa": "ɪnˈæktɪv ˈedʒɪz",
+      "type": "collocation",
+      "translation": "неиспользуемые, пустующие зоны города (вдоль улиц и набережных)",
+      "definition": "unused areas along a street or river, like blank walls or empty buildings, where nothing happens",
+      "example": "The council wants to turn the [inactive edges] along the canal into cafés and seating.",
+      "exampleRu": "Муниципалитет хочет превратить пустующие участки вдоль канала в кафе и места для отдыха.",
+      "collocations": [
+        "active edges",
+        "blank walls",
+        "empty shopfronts",
+        "regenerate an area"
+      ],
+      "pattern": "",
+      "trap": "A town-planning term; in everyday talk people say 'empty' or 'unused' areas. Use 'inactive', not 'unactive'.",
+      "wrong": [
+        "unactive edges",
+        "inactive borders"
+      ],
+      "tags": [
+        "city"
+      ]
+    },
+    {
+      "term": "demolish",
+      "ipa": "dɪˈmɒlɪʃ",
+      "type": "word",
+      "translation": "сносить (здания)",
+      "definition": "to completely destroy a building on purpose",
+      "example": "They're [demolishing] the old shopping centre to build flats, so there's noise all day.",
+      "exampleRu": "Старый торговый центр сносят, чтобы построить жильё, так что весь день стоит шум.",
+      "collocations": [
+        "demolish a building",
+        "knock down",
+        "pull down",
+        "be demolished"
+      ],
+      "pattern": "demolish sth / sth is demolished",
+      "trap": "«Сносить» a building is 'demolish', 'knock down' or 'pull down', not 'break' or 'ruin'.",
+      "wrong": [
+        "breaking",
+        "ruining"
+      ],
+      "tags": [
+        "city",
+        "home"
+      ]
+    },
+    {
+      "term": "tower block",
+      "ipa": "ˈtaʊə blɒk",
+      "type": "collocation",
+      "translation": "многоэтажка, высотка",
+      "definition": "a very tall building with many flats or offices (UK)",
+      "example": "The view from the fourteenth floor of our [tower block] is amazing at night.",
+      "exampleRu": "Вид с четырнадцатого этажа нашей многоэтажки ночью просто потрясающий.",
+      "collocations": [
+        "a block of flats",
+        "a high-rise",
+        "a skyscraper"
+      ],
+      "pattern": "",
+      "trap": "UK English; a 'skyscraper' is much taller and usually offices. A 'multi-storey' in the UK is a car park.",
+      "wrong": [
+        "multi-storey house",
+        "high house"
+      ],
+      "tags": [
+        "city",
+        "home"
+      ]
+    },
+    {
+      "term": "modernise",
+      "ipa": "ˈmɒdənaɪz",
+      "type": "word",
+      "translation": "модернизировать",
+      "definition": "to change something so it is more modern and works better",
+      "example": "We'd love to [modernise] the kitchen, but it'll cost a fortune.",
+      "exampleRu": "Мы бы с радостью обновили кухню, но это обойдётся в целое состояние.",
+      "collocations": [
+        "modernise the kitchen",
+        "fully modernised",
+        "bring sth up to date"
+      ],
+      "pattern": "modernise sth",
+      "trap": "British spelling '-ise' (US '-ize'); use the verb, not 'make a modernisation of sth'.",
+      "wrong": [
+        "modernisate",
+        "make modernisation of"
+      ],
+      "tags": [
+        "home"
+      ]
+    },
+    {
+      "term": "reconstruct",
+      "ipa": "ˌriːkənˈstrʌkt",
+      "type": "word",
+      "translation": "реконструировать, перестраивать",
+      "definition": "to build something again after it has been damaged or destroyed",
+      "example": "After the fire, they had to [reconstruct] the whole roof of our building.",
+      "exampleRu": "После пожара пришлось заново отстраивать всю крышу нашего дома.",
+      "collocations": [
+        "reconstruct a building",
+        "reconstruction work",
+        "rebuild"
+      ],
+      "pattern": "reconstruct sth",
+      "trap": "It usually means rebuilding something damaged; for improving an old building, 'renovate' or 'refurbish' is more natural than «реконструкция».",
+      "wrong": [
+        "restructure",
+        "reconstruction"
+      ],
+      "tags": [
+        "home",
+        "city"
+      ]
+    },
+    {
+      "term": "transform",
+      "ipa": "trænsˈfɔːm",
+      "type": "word",
+      "translation": "преобразовать, полностью изменить",
+      "definition": "to change something completely, usually so it is much better",
+      "example": "A few plants and a new rug have completely [transformed] my tiny flat.",
+      "exampleRu": "Пара растений и новый коврик полностью преобразили мою крошечную квартиру.",
+      "collocations": [
+        "transform sth into sth",
+        "completely transform",
+        "a total transformation"
+      ],
+      "pattern": "transform sth (into sth)",
+      "trap": "Use 'into', not 'to', for the result: 'transform an old warehouse into flats'.",
+      "wrong": [
+        "transformated",
+        "transferred"
+      ],
+      "tags": [
+        "home"
+      ]
+    },
+    {
+      "term": "merge",
+      "ipa": "mɜːdʒ",
+      "type": "word",
+      "translation": "объединять(ся), сливаться",
+      "definition": "to join together and become one",
+      "example": "Our two teams are [merging] next month, so I'll have a new manager.",
+      "exampleRu": "В следующем месяце наши два отдела объединяют, так что у меня будет новый руководитель.",
+      "collocations": [
+        "merge with sth",
+        "merge into one",
+        "a merger"
+      ],
+      "pattern": "merge (with sth) / merge A and B / merge into sth",
+      "trap": "Say 'merge with', not 'merge to'; don't confuse it with 'emerge' (появиться). The business noun is 'a merger'.",
+      "wrong": [
+        "emerging",
+        "merging to"
+      ],
+      "tags": [
+        "work",
+        "business"
+      ]
+    },
+    {
+      "term": "local authority",
+      "ipa": "ˌləʊkl ɔːˈθɒrəti",
+      "type": "collocation",
+      "translation": "местная власть, муниципалитет",
+      "definition": "the organisation that runs public services in a town or area (UK)",
+      "example": "You should report the broken street lights to the [local authority] — they fix them quickly.",
+      "exampleRu": "Про сломанные фонари лучше сообщить в муниципалитет — их быстро чинят.",
+      "collocations": [
+        "the council",
+        "the local council",
+        "local government",
+        "council tax"
+      ],
+      "pattern": "the local authority",
+      "trap": "Sounds official; in everyday British English people just say 'the council'. Not 'local power' (from «местная власть»).",
+      "wrong": [
+        "local power"
+      ],
+      "tags": [
+        "city"
+      ]
+    },
+    {
+      "term": "spruce sth up",
+      "ipa": "spruːs ʌp",
+      "type": "phrasal-verb",
+      "translation": "приводить в порядок, подновлять",
+      "definition": "to make something look cleaner, neater or more attractive",
+      "example": "Let's [spruce up] the spare room before your parents come to stay.",
+      "exampleRu": "Давай приведём в порядок гостевую комнату до приезда твоих родителей.",
+      "collocations": [
+        "spruce up the house",
+        "a quick spruce-up",
+        "do up a flat",
+        "smarten up"
+      ],
+      "pattern": "spruce sth up / spruce up sth",
+      "trap": "Informal, for small quick improvements; bigger building work is 'refurbish' or 'renovate'.",
+      "wrong": [
+        "spruce out",
+        "spruce over"
+      ],
+      "tags": [
+        "home"
+      ]
+    },
+    {
+      "term": "refurbish",
+      "ipa": "ˌriːˈfɜːbɪʃ",
+      "type": "word",
+      "translation": "ремонтировать, обновлять",
+      "definition": "to repair and decorate a building or room so it looks new",
+      "example": "The gym's closed for two weeks while they [refurbish] the changing rooms.",
+      "exampleRu": "Спортзал закрыт на две недели — там делают ремонт в раздевалках.",
+      "collocations": [
+        "fully refurbished",
+        "a newly refurbished flat",
+        "refurbishment",
+        "renovate"
+      ],
+      "pattern": "refurbish sth / be refurbished",
+      "trap": "«Делать ремонт» is 'refurbish', 'renovate' or 'do up', not 'make repair'; 'repair' is for fixing something broken.",
+      "wrong": [
+        "make repair in",
+        "remake"
+      ],
+      "tags": [
+        "home",
+        "sport"
+      ]
+    },
+    {
+      "term": "restore",
+      "ipa": "rɪˈstɔː",
+      "type": "word",
+      "translation": "восстанавливать, реставрировать",
+      "definition": "to repair something old so it looks as it did originally, or to bring something back",
+      "example": "That pub on the corner has been beautifully [restored], so let's try it on Friday.",
+      "exampleRu": "Тот паб на углу красиво отреставрировали — давай сходим туда в пятницу.",
+      "collocations": [
+        "restore an old building",
+        "restore furniture",
+        "restore sb's faith in sth"
+      ],
+      "pattern": "restore sth (to its former glory)",
+      "trap": "Not 'restaurate' (from «реставрировать»): the verb is 'restore' and the noun 'restoration'.",
+      "wrong": [
+        "restaurated",
+        "restorated"
+      ],
+      "tags": [
+        "city"
+      ]
+    },
+    {
+      "term": "make a huge difference",
+      "ipa": "meɪk ə hjuːdʒ ˈdɪfrəns",
+      "type": "collocation",
+      "translation": "иметь огромное значение",
+      "definition": "to have a very big effect, usually a good one",
+      "example": "Getting blackout curtains has [made a huge difference] to my sleep.",
+      "exampleRu": "Плотные шторы очень сильно улучшили мой сон.",
+      "collocations": [
+        "make a big difference",
+        "make all the difference",
+        "make no difference"
+      ],
+      "pattern": "make a huge difference to sth/sb",
+      "trap": "Use 'make', not 'do' or 'have', and 'to' for what changes: 'a huge difference to my sleep'.",
+      "wrong": [
+        "done a huge difference",
+        "had a huge difference",
+        "made a huge different"
+      ],
+      "tags": [
+        "everyday",
+        "health"
+      ]
+    },
+    {
+      "term": "completely",
+      "ipa": "kəmˈpliːtli",
+      "type": "word",
+      "translation": "полностью",
+      "definition": "totally; in every way",
+      "example": "Sorry, your message [completely] slipped my mind — I'll reply properly tonight.",
+      "exampleRu": "Прости, твоё сообщение совсем вылетело у меня из головы — вечером отвечу нормально.",
+      "collocations": [
+        "completely different",
+        "completely forget",
+        "completely agree"
+      ],
+      "pattern": "",
+      "trap": "Keep the 'e' of 'complete': 'completely', not 'completly'.",
+      "wrong": [
+        "complete",
+        "completly"
+      ],
+      "tags": [
+        "everyday"
+      ]
+    },
+    {
+      "term": "assumed",
+      "ipa": "əˈsjuːmd",
+      "type": "word",
+      "translation": "предполагаемый; (I assumed…) я думал(а), что…",
+      "definition": "thought to be true without checking or proof",
+      "example": "Everyone [assumed] the meeting was cancelled, so nobody turned up.",
+      "exampleRu": "Все решили, что встречу отменили, поэтому никто не пришёл.",
+      "collocations": [
+        "I assumed (that)…",
+        "wrongly assumed",
+        "an assumed name",
+        "an assumption"
+      ],
+      "pattern": "assume (that) + clause / an assumed + noun",
+      "trap": "Don't confuse 'assumed' (thought without checking) with 'assured' (promised, заверил).",
+      "wrong": [
+        "assured",
+        "assumpted"
+      ],
+      "tags": [
+        "work",
+        "opinions"
+      ]
+    },
+    {
+      "term": "the former",
+      "ipa": "ðə ˈfɔːmə",
+      "type": "phrase",
+      "translation": "первый (из упомянутых)",
+      "definition": "the first of two things or people just mentioned",
+      "example": "If it's a choice between pizza and sushi tonight, I'd go for [the former].",
+      "exampleRu": "Если выбирать между пиццей и суши, сегодня я за первое.",
+      "collocations": [
+        "the latter",
+        "the former … the latter",
+        "my former boss"
+      ],
+      "pattern": "A and B … the former (= A), the latter (= B)",
+      "trap": "Only for two things, and a bit formal; in conversation 'the first one' is more common. 'Former' before a noun means previous: 'my former boss'.",
+      "wrong": [
+        "the formal",
+        "the previous"
+      ],
+      "tags": [
+        "language"
+      ]
+    },
+    {
+      "term": "suitability",
+      "ipa": "ˌsuːtəˈbɪləti",
+      "type": "word",
+      "translation": "пригодность, соответствие",
+      "definition": "how right or acceptable someone or something is for a purpose",
+      "example": "The interview is mainly to check your [suitability] for the role, so don't stress.",
+      "exampleRu": "Собеседование нужно в основном для того, чтобы понять, подходишь ли ты на эту должность, так что не переживай.",
+      "collocations": [
+        "suitability for a job",
+        "suitable for sb/sth",
+        "unsuitable"
+      ],
+      "pattern": "suitability for sth",
+      "trap": "Formal; in conversation people say 'whether you're right for it'. Use 'for', not 'to'.",
+      "wrong": [
+        "correspondence",
+        "suitness"
+      ],
+      "tags": [
+        "work"
+      ]
+    },
+    {
+      "term": "standing desk",
+      "ipa": "ˈstændɪŋ desk",
+      "type": "collocation",
+      "translation": "стол для работы стоя",
+      "definition": "a high desk you use while standing up",
+      "example": "Since I got a [standing desk], my back hasn't hurt once.",
+      "exampleRu": "С тех пор как у меня появился стол для работы стоя, спина ни разу не болела.",
+      "collocations": [
+        "a sit-stand desk",
+        "an adjustable desk",
+        "an ergonomic chair"
+      ],
+      "pattern": "",
+      "trap": "The '-ing' form is fixed: 'a standing desk', not 'a stand desk'.",
+      "wrong": [
+        "stand desk",
+        "stood desk"
+      ],
+      "tags": [
+        "work",
+        "health"
+      ]
+    },
+    {
+      "term": "air purifier",
+      "ipa": "ˈeə ˌpjʊərɪfaɪə",
+      "type": "collocation",
+      "translation": "очиститель воздуха",
+      "definition": "a machine that cleans the air in a room",
+      "example": "With my hay fever, an [air purifier] in the bedroom has been a lifesaver.",
+      "exampleRu": "При моей аллергии на пыльцу очиститель воздуха в спальне — просто спасение.",
+      "collocations": [
+        "air quality",
+        "a humidifier",
+        "an air conditioner"
+      ],
+      "pattern": "",
+      "trap": "Don't confuse it with an 'air conditioner' (кондиционер), which cools the air.",
+      "wrong": [
+        "air purificator",
+        "air clearer"
+      ],
+      "tags": [
+        "home",
+        "health"
+      ]
+    }
+  ]
+}
