@@ -5,6 +5,7 @@ import { ItemCard } from '../components/ItemCard';
 import { ItemForm } from '../components/ItemForm';
 import { Empty, LevelMeter, Sheet, toast, usePageTitle } from '../components/ui';
 import { sentenceUsesTerm } from '../lib/cloze';
+import { endOfDay } from '../lib/dates';
 import { db, useLive } from '../lib/db';
 import { COURSE_DECKS, DECKS, addDeck, packOriginal } from '../lib/decks';
 import { editPatch } from '../lib/edit';
@@ -45,7 +46,9 @@ const DAY = 86_400_000;
 function dueLabel(item: Item): { text: string; due: boolean } {
   if (item.suspended) return { text: 'Paused', due: false };
   if (item.level === 0) return { text: 'Not started', due: false };
-  const days = Math.ceil((+new Date(item.card.due) - Date.now()) / DAY);
+  // Calendar days: anything due today is a review now, whatever the time.
+  const midnight = (d: Date) => new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime();
+  const days = Math.round((midnight(new Date(item.card.due)) - midnight(new Date())) / DAY);
   if (days <= 0) return { text: 'Review now', due: true };
   if (days === 1) return { text: 'Tomorrow', due: false };
   if (days < 45) return { text: `in ${days} days`, due: false };
@@ -54,7 +57,7 @@ function dueLabel(item: Item): { text: string; due: boolean } {
 
 const FILTERS = [
   { id: 'all', label: 'All', test: (_: Item) => true },
-  { id: 'due', label: 'Review now', test: (i: Item) => !i.suspended && i.level > 0 && +new Date(i.card.due) <= Date.now() },
+  { id: 'due', label: 'Review now', test: (i: Item) => !i.suspended && i.level > 0 && +new Date(i.card.due) <= +endOfDay() },
   { id: 'new', label: 'Not started', test: (i: Item) => i.level === 0 && !i.suspended },
   { id: 'learning', label: 'Learning', test: (i: Item) => i.level >= 1 && i.level <= 3 },
   { id: 'use', label: 'Can use', test: (i: Item) => i.level >= 4 },

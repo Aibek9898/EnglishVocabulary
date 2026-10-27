@@ -8,7 +8,7 @@ import { dayKey } from '../lib/dates';
 import { db, getSettings, saveSettings, useLive, useSettings } from '../lib/db';
 import { DECKS, addDeck } from '../lib/decks';
 import { removeItem } from '../lib/removed';
-import { buildSession, dueItems, newAllowance, overdueCount, pickMessageWords, retrySteps, type Step } from '../lib/session';
+import { buildSession, dueItems, newAllowance, overdueCount, pickMessageWords, refreshItems, retrySteps, type Step } from '../lib/session';
 import { unlockSpeech } from '../lib/speech';
 import { addSentence, nextLevel, recordResult, TYPED } from '../lib/srs';
 import { activityByDay, computeStreak, levelCounts, type Streak } from '../lib/stats';
@@ -27,7 +27,6 @@ interface Lesson {
   answered: number;
   right: number;
   newWords: number;
-  sentences: number;
   combo: number;
   streakBefore: Streak;
   ended: 'done' | 'early' | null;
@@ -35,7 +34,9 @@ interface Lesson {
 
 /** "Learn 5 more": extra new words once today's plan is done. */
 const MORE_NEW = 5;
-type StartMode = 'normal' | 'quick' | 'more';
+/** "Review older words": extra checks of earlier words once today's plan is done. */
+const MORE_OLDER = 10;
+type StartMode = 'normal' | 'quick' | 'more' | 'older';
 
 export function Today() {
   const items = useLive(() => db.items.toArray(), [], null as Item[] | null);
@@ -54,8 +55,9 @@ export function Today() {
   const start = useCallback(async (mode: StartMode = 'normal') => {
     unlockSpeech();
     const [all, settings, logs] = await Promise.all([db.items.toArray(), getSettings(), db.reviews.toArray()]);
-    const effective = mode === 'quick' ? { ...settings, newPerDay: 0, reviewCap: 15 } : settings;
-    const steps = buildSession(all, logs, effective, new Date(), mode === 'more' ? MORE_NEW : undefined);
+    const effective = mode === 'quick' ? { ...settings, newPerDay: 0, reviewCap: 15, oldPerDay: 0 } : settings;
+    const newCount = mode === 'more' ? MORE_NEW : mode === 'older' ? 0 : undefined;
+    const steps = buildSession(all, logs, effective, new Date(), newCount, mode === 'older' ? MORE_OLDER : undefined);
     if (!steps.length) return;
     latest.current = new Map(all.map((i) => [i.id, i]));
     handled.current = -1;
@@ -67,7 +69,6 @@ export function Today() {
       answered: 0,
       right: 0,
       newWords: 0,
-      sentences: 0,
       combo: 0,
       streakBefore: computeStreak(activityByDay(logs)),
       ended: null,
@@ -95,7 +96,8 @@ export function Today() {
         ok &&
         TYPED.includes(step.exercise) &&
         nextLevel(item, step.exercise, result) === 3 &&
-        lesson.sentences < MAX_SENTENCES &&
+        // Count the prompts, not the saved sentences: skipping one still counts.
+        next.filter((s) => s.exercise === 'sentence').length < MAX_SENTENCES &&
         item.mySentences.length === 0 &&
         !next.slice(index + 1).some((s) => s.itemId === item.id && s.exercise === 'sentence')
       ) {
@@ -110,7 +112,6 @@ export function Today() {
         answered: lesson.answered + (step.scheduled ? 1 : 0),
         right: lesson.right + (step.scheduled && ok ? 1 : 0),
         newWords: lesson.newWords + (step.isNew && step.scheduled ? 1 : 0),
-        sentences: lesson.sentences + (sentence ? 1 : 0),
         combo: isCheck ? (ok ? lesson.combo + 1 : 0) : lesson.combo,
         ended: index + 1 >= next.length ? 'done' : null,
       });
@@ -170,9 +171,16 @@ export function Today() {
   if (lesson && !lesson.ended) {
     const step = lesson.steps[lesson.index];
     const item = lesson.items.get(step.itemId)!;
+    const olderStart = lesson.index === lesson.steps.findIndex((s) => s.refresh);
     return (
       <section className="page session">
         <SessionHead done={lesson.index} total={lesson.steps.length} combo={lesson.combo} onClose={() => setConfirmEnd(true)} />
+        {olderStart && (
+          <p className="phase-note" role="status">
+            <Icon name="reset" size={18} />
+            {lesson.steps.some((s) => s.isNew) ? 'New words done. Now words from earlier days, before you forget them.' : 'Words from earlier days, before you forget them.'}
+          </p>
+        )}
         <Exercise
           key={lesson.index}
           item={item}
@@ -246,13 +254,16 @@ function TodayStart({ items, onStart }: { items: Item[]; onStart: (mode?: StartM
 
   const due = dueItems(items).length;
   const reviewsNow = Math.min(due, settings.reviewCap);
+  // Older words that are not due yet, checked at the end so enough of them come up each day.
+  const older = refreshItems(items, reviews, settings, new Date(), reviewsNow).length;
   const unseen = items.filter((i) => i.level === 0 && !i.suspended).length;
   const newCount = Math.min(newAllowance(items, reviews, settings), unseen);
   const paused = overdueCount(items) >= settings.reviewCap;
   const doneToday = reviews.filter((r) => r.scheduled).length;
-  const plan = doneToday + reviewsNow + newCount;
-  const minutes = Math.max(2, Math.round((reviewsNow * 12 + newCount * 50) / 60));
-  const nothing = reviewsNow === 0 && newCount === 0;
+  const plan = doneToday + reviewsNow + older + newCount;
+  const minutes = Math.max(2, Math.round(((reviewsNow + older) * 12 + newCount * 50) / 60));
+  const nothing = reviewsNow === 0 && older === 0 && newCount === 0;
+  const moreOlder = nothing ? refreshItems(items, reviews, settings, new Date(), 0, MORE_OLDER).length : 0;
   const levels = levelCounts(items);
   const tomorrow = items.filter((i) => !i.suspended && i.level > 0 && +new Date(i.card.due) < +new Date(new Date().setHours(48, 0, 0, 0))).length - due;
 
@@ -261,7 +272,8 @@ function TodayStart({ items, onStart }: { items: Item[]; onStart: (mode?: StartM
     onStart(mode);
   };
 
-  const parts = [reviewsNow && `${reviewsNow} review${reviewsNow === 1 ? '' : 's'}`, newCount && `${newCount} new`].filter(Boolean).join(' + ');
+  const toReview = reviewsNow + older;
+  const parts = [newCount && `${newCount} new`, toReview && `${toReview} review${toReview === 1 ? '' : 's'}`].filter(Boolean).join(' + ');
 
   return (
     <section className="page today">
@@ -279,7 +291,7 @@ function TodayStart({ items, onStart }: { items: Item[]; onStart: (mode?: StartM
               <h2>All done for today</h2>
               <p className="muted">
                 {tomorrow > 0 ? `${tomorrow} review${tomorrow === 1 ? '' : 's'} tomorrow. ` : ''}
-                {unseen > 0 ? 'Want more? Learn a few extra words, or play a game.' : 'Play a game or add new words.'}
+                {unseen > 0 || moreOlder > 0 ? 'Want more? Learn a few extra words, review older ones, or play a game.' : 'Play a game or add new words.'}
               </p>
             </div>
             <div className="hero-actions">
@@ -288,7 +300,12 @@ function TodayStart({ items, onStart }: { items: Item[]; onStart: (mode?: StartM
                   <Icon name="plus" /> Learn {Math.min(MORE_NEW, unseen)} more words
                 </button>
               )}
-              <a className={unseen > 0 ? 'button big' : 'button primary big'} href="#/practice">
+              {moreOlder > 0 && (
+                <button type="button" className={unseen > 0 ? 'big block' : 'primary big block'} onClick={() => go('older')} disabled={busy}>
+                  <Icon name="reset" /> Review {moreOlder} older word{moreOlder === 1 ? '' : 's'}
+                </button>
+              )}
+              <a className={unseen > 0 || moreOlder > 0 ? 'button big' : 'button primary big'} href="#/practice">
                 <Icon name="gamepad" /> Practice
               </a>
               <a className="button big" href="#/add">

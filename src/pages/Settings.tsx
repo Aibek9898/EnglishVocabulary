@@ -9,6 +9,12 @@ import { canSpeak, englishVoices, speak } from '../lib/speech';
 import { getTheme, setTheme, type Theme } from '../lib/theme';
 
 const GOALS = [5, 7, 10, 15];
+const OLDER = [
+  { value: 0, label: 'Off' },
+  { value: 5, label: '5' },
+  { value: 10, label: '10' },
+  { value: 20, label: '20' },
+];
 const INTENSITY = [
   { value: 0.85, label: 'Light', note: 'Fewer reviews; you forget a bit more.' },
   { value: 0.9, label: 'Balanced', note: 'Recommended: about 9 in 10 words remembered.' },
@@ -105,6 +111,20 @@ export function SettingsPage() {
             options={[...new Set([...GOALS, settings.newPerDay])].sort((a, b) => a - b).map((n) => ({ value: n, label: String(n) }))}
             onChange={(n) => saveSettings({ newPerDay: n })}
           />
+        </div>
+        <div className="field">
+          <span>Older words each day</span>
+          <Segmented
+            label="Older words each day"
+            value={settings.oldPerDay}
+            options={OLDER.some((o) => o.value === settings.oldPerDay) ? OLDER : [...OLDER, { value: settings.oldPerDay, label: String(settings.oldPerDay) }].sort((a, b) => a.value - b.value)}
+            onChange={(n) => saveSettings({ oldPerDay: n })}
+          />
+          <small>
+            {settings.oldPerDay
+              ? `After the new words, each day's lesson checks at least ${settings.oldPerDay} words from earlier days, the ones closest to being forgotten first.`
+              : 'Only the reviews that are due come back.'}
+          </small>
         </div>
         <div className="field">
           <span>Review intensity</span>

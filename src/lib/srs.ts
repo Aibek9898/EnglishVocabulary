@@ -1,6 +1,6 @@
-import { createEmptyCard, fsrs, generatorParameters, Rating, type Grade } from 'ts-fsrs';
+import { createEmptyCard, fsrs, generatorParameters, Rating, type Card, type Grade } from 'ts-fsrs';
 import { db, getSettings, newId } from './db';
-import { dayKey } from './dates';
+import { addDays, dayKey } from './dates';
 import type { ExerciseKind, Item, ItemContent, Result } from './types';
 
 const RECOGNITION: ExerciseKind[] = ['choice', 'pairs', 'flashcard'];
@@ -20,6 +20,36 @@ export function gradeFor(result: Result): Grade {
   if (result === 'wrong' || result === 'hinted') return Rating.Again;
   if (result === 'almost') return Rating.Hard;
   return Rating.Good;
+}
+
+/**
+ * The longest gap in days after each right answer in a row. With FSRS alone a
+ * word answered right comes back after 3, then 14, then 57 days, which is too
+ * sparse while it is still new; the ladder brings it back after 1, 3, 7, 14
+ * and 30 days, and FSRS decides on its own after that.
+ */
+export const LADDER = [1, 3, 7, 14, 30];
+
+/** Right answers in a row so far. Cards graded before the ladder existed use their number of reviews. */
+export function ladderStep(item: Pick<Item, 'ladder' | 'card'>): number {
+  return item.ladder ?? item.card.reps;
+}
+
+/**
+ * Grades the FSRS card and keeps the next gap within the ladder. A mistake
+ * sends the word back a step: FSRS shows it the next day, and after that
+ * the next right answer waits at most 3 days.
+ */
+export function scheduleNext(item: Pick<Item, 'ladder' | 'card'>, result: Result, now: Date, retention: number): { card: Card; ladder: number } {
+  const grade = gradeFor(result);
+  let card = scheduler(retention).next(item.card, now, grade).card;
+  if (grade === Rating.Again) return { card, ladder: 1 };
+  const step = ladderStep(item);
+  if (step < LADDER.length) {
+    const cap = addDays(now, LADDER[step]);
+    if (+new Date(card.due) > +cap) card = { ...card, due: cap, scheduled_days: LADDER[step] };
+  }
+  return { card, ladder: step + 1 };
 }
 
 /**
@@ -65,7 +95,9 @@ export async function recordResult(item: Item, exercise: ExerciseKind, result: R
   const update: Partial<Item> = {};
   if (scheduled && exercise !== 'sentence') {
     const { retention } = await getSettings();
-    update.card = scheduler(retention).next(item.card, now, gradeFor(result)).card;
+    const next = scheduleNext(item, result, now, retention);
+    update.card = next.card;
+    update.ladder = next.ladder;
   }
   // Intros count even though unscheduled: they make the item "Seen".
   if (scheduled || exercise === 'sentence' || exercise === 'intro') {
@@ -99,5 +131,5 @@ export function makeItem(content: ItemContent, deck: string): Item {
 }
 
 export async function resetItem(id: string) {
-  await db.items.update(id, { level: 0, card: createEmptyCard(new Date()) });
+  await db.items.update(id, { level: 0, card: createEmptyCard(new Date()), ladder: 0 });
 }

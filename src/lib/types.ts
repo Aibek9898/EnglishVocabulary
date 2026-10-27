@@ -42,6 +42,8 @@ export interface Item extends ItemContent {
   accepted?: string[];
   /** Fields the learner rewrote (e.g. their own translation): pack updates leave these alone. */
   edited?: (keyof ItemContent)[];
+  /** Right answers in a row on the review ladder (see LADDER in srs.ts); missing on cards graded before it. */
+  ladder?: number;
 }
 
 export type ExerciseKind =
@@ -77,6 +79,8 @@ export interface ReviewEntry {
 
 export interface Settings {
   newPerDay: number;
+  /** Words from earlier days to check each day: lessons top up the due reviews to this many. */
+  oldPerDay: number;
   reviewCap: number;
   voiceName: string;
   speechRate: number;
@@ -85,6 +89,7 @@ export interface Settings {
 
 export const DEFAULT_SETTINGS: Settings = {
   newPerDay: 7,
+  oldPerDay: 10,
   reviewCap: 40,
   voiceName: '',
   speechRate: 0.95,

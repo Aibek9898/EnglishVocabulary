@@ -1169,6 +1169,26 @@ html.in-session .app {
   margin-bottom: 16px;
 }
 
+/* "Now words from earlier days": where a lesson moves on to older words */
+.phase-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  font-weight: 650;
+  animation: fade-in 240ms var(--ease-out);
+}
+
+.phase-note svg {
+  flex-shrink: 0;
+  color: var(--brand-ink);
+}
+
 .prompt-pill.warn {
   background: var(--warn-soft);
   color: var(--warn-ink);

@@ -1,6 +1,7 @@
 import { fsrs, State, type Card } from 'ts-fsrs';
 import { parseCloze } from './cloze';
-import { dayKey } from './dates';
+import { addDays, dayKey, endOfDay } from './dates';
+import { LADDER, ladderStep } from './srs';
 import type { ExerciseKind, Item, ReviewEntry, Result, Settings } from './types';
 
 export interface Step {
@@ -11,6 +12,8 @@ export interface Step {
   isNew: boolean;
   /** 'relearn': shown again after a mistake. 'confirm': one last recall at the end once a relearn went right. */
   retry?: 'relearn' | 'confirm';
+  /** A word from earlier days, not due yet, checked at the end of the lesson (see refreshItems). */
+  refresh?: boolean;
 }
 
 const f = fsrs();
@@ -21,10 +24,11 @@ export function retrievability(card: Card, now = new Date()): number {
   return f.get_retrievability(card, now, false);
 }
 
-/** Due items, the most likely forgotten first. */
+/** Due items, the most likely forgotten first. Anything due today counts, whatever the time. */
 export function dueItems(items: Item[], now = new Date()): Item[] {
+  const end = endOfDay(now);
   return items
-    .filter((i) => !i.suspended && i.level > 0 && new Date(i.card.due) <= now)
+    .filter((i) => !i.suspended && i.level > 0 && new Date(i.card.due) <= end)
     .map((i) => ({ i, r: retrievability(i.card, now) }))
     .sort((a, b) => a.r - b.r || +new Date(a.i.card.due) - +new Date(b.i.card.due))
     .map(({ i }) => i);
@@ -51,6 +55,45 @@ export function newAllowance(items: Item[], reviews: ReviewEntry[], settings: Se
   const overdue = overdueCount(items, now);
   const room = settings.reviewCap > 0 ? Math.min(1, Math.max(0, 1 - overdue / settings.reviewCap)) : overdue ? 0 : 1;
   return Math.max(0, Math.round(settings.newPerDay * room) - introducedToday(reviews, dayKey(now)));
+}
+
+/**
+ * When the item should come back: its due date, or sooner for a card graded
+ * before the ladder existed (those were given the long FSRS gaps).
+ */
+export function ladderDue(item: Item): number {
+  const due = +new Date(item.card.due);
+  const k = ladderStep(item);
+  if (!item.card.last_review || k < 1 || k > LADDER.length) return due;
+  return Math.min(due, +addDays(new Date(item.card.last_review), LADDER[k - 1]));
+}
+
+/** Words from earlier days answered in a scheduled check today (not ones introduced today). */
+export function olderCheckedToday(reviews: ReviewEntry[], today = dayKey()): number {
+  const todays = reviews.filter((r) => r.day === today);
+  const introduced = new Set(todays.filter((r) => r.exercise === 'intro').map((r) => r.itemId));
+  return new Set(todays.filter((r) => r.scheduled && !introduced.has(r.itemId)).map((r) => r.itemId)).size;
+}
+
+/**
+ * Words from earlier days to check at the end of a lesson although they are
+ * not due yet, so at least `oldPerDay` older words get checked every day:
+ * the ones that would come back soonest first. Never a word seen today or a
+ * word due today (those are reviews anyway). `due` is how many reviews the
+ * lesson already has; `count` overrides the daily top-up ("Review older words").
+ */
+export function refreshItems(items: Item[], reviews: ReviewEntry[], settings: Settings, now = new Date(), due = 0, count?: number): Item[] {
+  const today = dayKey(now);
+  const want = count ?? Math.max(0, settings.oldPerDay - olderCheckedToday(reviews, today) - due);
+  if (want <= 0) return [];
+  const seen = new Set(reviews.filter((r) => r.day === today).map((r) => r.itemId));
+  const end = +endOfDay(now);
+  return items
+    .filter((i) => !i.suspended && i.level > 0 && i.card.state !== State.New && +new Date(i.card.due) > end && !seen.has(i.id))
+    .map((i) => ({ i, at: ladderDue(i), r: retrievability(i.card, now) }))
+    .sort((a, b) => a.at - b.at || a.r - b.r)
+    .slice(0, want)
+    .map(({ i }) => i);
 }
 
 /** Round-robin over the queues: one from each, then the second from each, and so on. */
@@ -116,16 +159,32 @@ const TYPED_AFTER = 9;
 
 /**
  * Today's queue: due reviews (most likely forgotten first, up to reviewCap) and
- * new items. A new item gets three steps: 'intro' (unscheduled), an unscheduled
- * 'choice' with at least 2 other steps in between, and its first scheduled,
- * typed check ('cloze', or 'recall' without a cloze) with at least 8 other steps
- * in between. When the queue is too short for a gap, the step goes at the end.
- * `newCount` overrides today's allowance ("Learn 5 more").
+ * new items, then older words that are not due yet (see refreshItems). A new
+ * item gets three steps: 'intro' (unscheduled), an unscheduled 'choice' with at
+ * least 2 other steps in between, and its first scheduled, typed check ('cloze',
+ * or 'recall' without a cloze) with at least 8 other steps in between. When the
+ * queue is too short for a gap, the step goes at the end, before the older words.
+ * `newCount` overrides today's allowance ("Learn 5 more"), `refreshCount` the
+ * older words ("Review older words").
  */
-export function buildSession(items: Item[], reviews: ReviewEntry[], settings: Settings, now = new Date(), newCount?: number): Step[] {
+export function buildSession(
+  items: Item[],
+  reviews: ReviewEntry[],
+  settings: Settings,
+  now = new Date(),
+  newCount?: number,
+  refreshCount?: number,
+): Step[] {
   const reviewSteps = dueItems(items, now)
     .slice(0, settings.reviewCap)
     .map<Step>((i) => ({ itemId: i.id, exercise: exerciseFor(i), scheduled: true, isNew: false }));
+  const refresh = refreshItems(items, reviews, settings, now, reviewSteps.length, refreshCount).map<Step>((i) => ({
+    itemId: i.id,
+    exercise: exerciseFor(i),
+    scheduled: true,
+    isNew: false,
+    refresh: true,
+  }));
   const fresh = pickNew(items, newCount ?? newAllowance(items, reviews, settings, now));
 
   // Base order: one warm-up review, then each intro followed by two reviews.
@@ -159,7 +218,7 @@ export function buildSession(items: Item[], reviews: ReviewEntry[], settings: Se
     }
     steps.push(step);
   }
-  return steps;
+  return [...steps, ...refresh];
 }
 
 /** Steps between a mistake and its retry: two others in between. */
@@ -176,7 +235,8 @@ const CHECKED: ExerciseKind[] = ['choice', 'cloze', 'cloze-ru', 'recall', 'say',
  *   'relearn' step ('cloze', or 'recall' without a cloze) at index + 3, clamped
  *   to the end, so right next only when nothing else remains. At most
  *   MAX_RELEARN per item per session.
- * - correct or almost on a 'relearn' step: one 'confirm' 'recall' at the end.
+ * - correct or almost on a 'relearn' step: one 'confirm' 'recall' at the end
+ *   (before the older words, unless it is one of them).
  */
 export function retrySteps(
   queue: Step[],
@@ -193,7 +253,9 @@ export function retrySteps(
   }
   const confirmLater = queue.slice(index + 1).some((s) => s.itemId === step.itemId && s.retry === 'confirm');
   if (step.retry === 'relearn' && (result === 'correct' || result === 'almost') && !confirmLater) {
-    return [{ at: queue.length, step: { ...step, exercise: 'recall', scheduled: false, retry: 'confirm' } }];
+    // Today's words are wrapped up before the older words start.
+    const older = step.refresh ? -1 : queue.findIndex((s, k) => k > index && s.refresh);
+    return [{ at: older >= 0 ? older : queue.length, step: { ...step, exercise: 'recall', scheduled: false, retry: 'confirm' } }];
   }
   return [];
 }
