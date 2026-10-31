@@ -1,4 +1,7 @@
+import { normalize } from './check';
+import { markExample, plainExample, sentenceUsesTerm } from './cloze';
 import { db, useLive } from './db';
+import type { ItemContent, MoreExample } from './types';
 
 /**
  * The AI teacher: checks the learner's own sentences through OpenRouter or
@@ -325,4 +328,86 @@ export async function checkText(
     { json: true, maxTokens: 4000, signal },
   );
   return parseFeedback(answer) ?? answer;
+}
+
+/* ---------- more examples for a word ---------- */
+
+/** The system prompt for "More examples": short, natural, useful sentences in different situations. */
+export function examplesPrompt(item: Pick<ItemContent, 'term' | 'translation' | 'definition' | 'example'>, existing: string[], count = 4): string {
+  const meaning = [item.translation && `Russian: ${item.translation}`, item.definition && `meaning: ${item.definition}`].filter(Boolean).join('; ');
+  const seen = existing.length ? `\nThe student already has these examples, so write different ones:\n${existing.map((e) => `- ${e}`).join('\n')}\n` : '';
+  return `You are an experienced English teacher. Your student is a native Russian speaker at upper-intermediate (B1–B2) level and is learning this word or phrase:
+"${item.term}"${meaning ? ` (${meaning})` : ''}
+${seen}
+Write ${count} new example sentences that help the student remember it and use it in real life.
+
+Rules:
+- Use "${item.term}" only in the meaning given above.
+- Sentences must sound natural: what a native speaker would really say or write, not textbook English.
+- Each one in a different, useful situation: work, friends and family, travel, shopping, plans, feelings, news and so on.
+- Show different forms where it is natural: past, future, questions, negatives, with "sb"/"sth" filled in.
+- Keep them short: 6 to 18 words, words the student is likely to know.
+- Wrap the words of "${item.term}" exactly as they appear in the sentence in [square brackets], e.g. "I [made a decision] last night." Only one pair of brackets per sentence.
+- Give a natural Russian translation for each sentence.
+
+Answer with one JSON object only, no other text:
+{ "examples": [{ "situation": "2-3 words, e.g. At work", "text": "the English sentence with [the target]", "ru": "Russian translation" }] }`;
+}
+
+/** Reads the examples out of the answer: marks the target, drops repeats of what the learner has. */
+export function parseExamples(answer: string, term: string, existing: string[] = []): MoreExample[] {
+  const start = answer.indexOf('{');
+  const end = answer.lastIndexOf('}');
+  let list: unknown = null;
+  if (start >= 0 && end > start) {
+    try {
+      const raw = JSON.parse(answer.slice(start, end + 1)) as { examples?: unknown };
+      list = raw.examples;
+    } catch {
+      list = null;
+    }
+  }
+  if (!Array.isArray(list)) return [];
+  const str = (v: unknown) => (typeof v === 'string' ? v.trim().replace(/\s+/g, ' ') : '');
+  const seen = new Set(existing.map((e) => normalize(plainExample(e))));
+  const out: MoreExample[] = [];
+  for (const e of list) {
+    if (!e || typeof e !== 'object') continue;
+    const r = e as Record<string, unknown>;
+    let text = str(r.text);
+    // One pair of brackets, around the target: keep the pair that holds it (or the only one), drop the rest.
+    const pairs = [...text.matchAll(/\[([^\]]+)\]/g)];
+    const keep = pairs.find((m) => sentenceUsesTerm(m[1], term)) ?? (pairs.length === 1 ? pairs[0] : undefined);
+    text = text
+      .replace(/\[([^\]]+)\]/g, (_all, inner: string, at: number) => (keep && at === keep.index ? `\u0001${inner}\u0002` : inner))
+      .replace(/[[\]]/g, '')
+      .replace('\u0001', '[')
+      .replace('\u0002', ']');
+    if (!text.includes('[')) text = markExample(text, term);
+    const key = normalize(plainExample(text));
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    out.push({ text, ru: str(r.ru), ...(str(r.situation) ? { situation: str(r.situation) } : {}) });
+  }
+  return out;
+}
+
+/** Asks the AI teacher for more examples of a word. */
+export async function moreExamples(
+  ai: { provider: Provider; key: string; model: string },
+  item: Pick<ItemContent, 'term' | 'translation' | 'definition' | 'example'>,
+  existing: string[],
+  signal?: AbortSignal,
+): Promise<MoreExample[]> {
+  const answer = await chat(
+    ai,
+    [
+      { role: 'system', content: examplesPrompt(item, existing.map(plainExample)) },
+      { role: 'user', content: `Write the examples for "${item.term}".` },
+    ],
+    { json: true, maxTokens: 3000, signal },
+  );
+  const list = parseExamples(answer, item.term, existing);
+  if (!list.length) throw new AiError("The AI didn't send examples this time. Try again.");
+  return list;
 }

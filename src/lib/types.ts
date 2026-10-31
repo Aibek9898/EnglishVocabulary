@@ -22,6 +22,14 @@ export interface ItemContent {
   wrong?: string[];
 }
 
+/** An extra example the AI teacher wrote for a word; the target is in [square brackets]. */
+export interface MoreExample {
+  text: string;
+  ru: string;
+  /** Where you'd say it, e.g. "At work". */
+  situation?: string;
+}
+
 export interface MySentence {
   text: string;
   at: number;
@@ -44,6 +52,8 @@ export interface Item extends ItemContent {
   edited?: (keyof ItemContent)[];
   /** Right answers in a row on the review ladder (see LADDER in srs.ts); missing on cards graded before it. */
   ladder?: number;
+  /** Extra examples asked from the AI teacher ("More examples"), kept with the word. */
+  moreExamples?: MoreExample[];
 }
 
 export type ExerciseKind =

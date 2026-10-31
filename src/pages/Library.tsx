@@ -4,6 +4,7 @@ import { EditMeaning } from '../components/EditMeaning';
 import { Icon } from '../components/Icon';
 import { ItemCard } from '../components/ItemCard';
 import { ItemForm } from '../components/ItemForm';
+import { MoreExamples } from '../components/MoreExamples';
 import { Empty, LevelMeter, Sheet, toast, usePageTitle } from '../components/ui';
 import { sentenceUsesTerm } from '../lib/cloze';
 import { endOfDay } from '../lib/dates';
@@ -230,7 +231,7 @@ function ItemDetails({ item, onClose }: { item: Item; onClose: () => void }) {
 
   return (
     <>
-      <ItemCard item={item} onEdit={() => setMode('meaning')} />
+      <ItemCard item={item} onEdit={() => setMode('meaning')} examples={<MoreExamples item={item} />} />
       <p className="status-line">
         <LevelMeter level={item.level} /> {statusLine(item)}
       </p>

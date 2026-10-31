@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { parseCloze, plainExample } from '../lib/cloze';
 import type { Item, ItemContent } from '../lib/types';
 import { Icon } from './Icon';
@@ -41,12 +42,15 @@ export function ItemCard({
   compact = false,
   heading = 'h2',
   onEdit,
+  examples,
 }: {
   item: ItemContent | Item;
   compact?: boolean;
   heading?: 'h2' | 'h3';
   /** Shows an Edit button for writing your own translation and example. */
   onEdit?: () => void;
+  /** Goes right under the example, e.g. "More examples". */
+  examples?: ReactNode;
 }) {
   const H = heading;
   const wrong = (item.wrong ?? []).slice(0, 3);
@@ -89,6 +93,7 @@ export function ItemCard({
           <Speak text={plainExample(item.example)} label="Listen to the example" small />
         </div>
       )}
+      {examples}
       <Also item={item} />
       {!compact && item.pattern && (
         <p className="meta">

@@ -85,6 +85,8 @@ git commit -am "Change password" && git push
 
 Кнопка **Check with AI** появляется под предложением в уроке, под «Write a sentence» в Library, в сообщении дня после урока и в конце ролевой игры.
 
+Кнопка **More examples** под примером нового слова (в уроке и в карточке слова в Library) просит AI написать ещё 4 естественных примера в разных ситуациях (работа, друзья, поездки…) с переводом. Каждое нажатие добавляет новые, не повторяя старые. Примеры сохраняются у слова (и в резервной копии), так что в следующий раз AI не нужен; лишний пример убирается крестиком.
+
 Подключение: **Settings → AI teacher**.
 1. Выбери сервис: **OpenRouter** (один ключ на много моделей: DeepSeek, Gemini, GPT, Claude) или **DeepSeek** (только его модели).
 2. Сделай ключ: [openrouter.ai/settings/keys](https://openrouter.ai/settings/keys) или [platform.deepseek.com/api_keys](https://platform.deepseek.com/api_keys), вставь и нажми Save. Сайт сразу проверит ключ.

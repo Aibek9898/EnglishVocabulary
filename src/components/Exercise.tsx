@@ -9,6 +9,7 @@ import type { ExerciseKind, Item, Result } from '../lib/types';
 import { AiCheck } from './AiCheck';
 import { Icon, type IconName } from './Icon';
 import { Example, ItemCard } from './ItemCard';
+import { MoreExamples } from './MoreExamples';
 import { Speak } from './Speak';
 import { ActionBar, ContinueButton, Verdict, type Tone } from './ui';
 
@@ -123,7 +124,7 @@ function Intro({ item, onDone, onEdit, onRemove }: ExerciseProps) {
     <>
       <div className="exercise">
         <Pill icon="sparkles">New {TYPE_NAME[item.type] ?? 'phrase'}</Pill>
-        <ItemCard item={item} onEdit={onEdit && (() => onEdit(item))} />
+        <ItemCard item={item} onEdit={onEdit && (() => onEdit(item))} examples={<MoreExamples item={item} />} />
       </div>
       <ActionBar>
         {onRemove && (

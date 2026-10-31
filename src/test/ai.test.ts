@@ -4,11 +4,14 @@ import {
   activeAi,
   AiError,
   checkText,
+  examplesPrompt,
   forgetAi,
   formatCost,
   getAi,
   keyInfo,
   maskKey,
+  moreExamples,
+  parseExamples,
   parseFeedback,
   saveAi,
   setKey,
@@ -183,5 +186,55 @@ describe('talking to the service', () => {
     expect(await keyInfo('deepseek', DS_KEY)).toEqual({ balance: '4.80 USD' });
     vi.stubGlobal('fetch', reply(404, {}));
     expect(await keyInfo('openrouter', OR_KEY)).toBeNull();
+  });
+});
+
+describe('more examples for a word', () => {
+  const item = { term: 'trip sb up', translation: 'сбить с толку', definition: 'to confuse someone', example: 'The last question [tripped me up].' };
+  it('asks for natural sentences in the meaning being learned, different from what the learner has', () => {
+    const p = examplesPrompt(item, ['The last question tripped me up.']);
+    expect(p).toContain('"trip sb up" (Russian: сбить с толку; meaning: to confuse someone)');
+    expect(p).toContain('- The last question tripped me up.');
+    expect(p).toMatch(/only in the meaning given/);
+    expect(p).toMatch(/natural/);
+    expect(p).toMatch(/\[square brackets\]/);
+    expect(p).toMatch(/"examples"/);
+  });
+  it('marks the target, keeps one pair of brackets and drops repeats', () => {
+    const answer = JSON.stringify({
+      examples: [
+        { situation: 'At work', text: 'Tricky questions in interviews always [trip me up].', ru: 'Каверзные вопросы на собеседованиях всегда сбивают меня с толку.' },
+        { situation: 'Exams', text: 'The grammar part tripped me up again.', ru: 'Грамматика опять меня подвела.' },
+        { text: 'The [last] question [tripped me up].', ru: 'повтор' },
+        { text: 'Don’t let [small details] [trip you up].', ru: 'x' },
+        { text: '', ru: 'пусто' },
+        'junk',
+      ],
+    });
+    const list = parseExamples('```json\n' + answer + '\n```', 'trip sb up', ['The last question [tripped me up].']);
+    expect(list.map((e) => e.text)).toEqual([
+      'Tricky questions in interviews always [trip me up].',
+      'The grammar part [tripped me up] again.',
+      'Don’t let small details [trip you up].',
+    ]);
+    expect(list[0]).toMatchObject({ situation: 'At work', ru: 'Каверзные вопросы на собеседованиях всегда сбивают меня с толку.' });
+    expect(list[1].situation).toBe('Exams');
+    expect('situation' in list[2]).toBe(false);
+    expect(parseExamples('no json here', 'x')).toEqual([]);
+  });
+  it('sends the word and the examples it already has', async () => {
+    const fetch = vi.fn(
+      async (_url: string, _init?: RequestInit) =>
+        new Response(JSON.stringify({ choices: [{ message: { content: '{"examples":[{"text":"Long words trip me up.","ru":"Длинные слова меня путают."}]}' } }] }), { status: 200 }),
+    );
+    vi.stubGlobal('fetch', fetch);
+    vi.stubGlobal('location', { origin: 'https://x', pathname: '/' });
+    const list = await moreExamples({ provider: 'openrouter', key: OR_KEY, model: 'm' }, item, [item.example]);
+    expect(list).toEqual([{ text: 'Long words [trip me up].', ru: 'Длинные слова меня путают.' }]);
+    const body = JSON.parse(String(fetch.mock.calls[0][1]!.body));
+    expect(body.messages[0].content).toContain('- The last question tripped me up.');
+    vi.stubGlobal('fetch', vi.fn(async () => new Response(JSON.stringify({ choices: [{ message: { content: '{"examples":[]}' } }] }), { status: 200 })));
+    await expect(moreExamples({ provider: 'openrouter', key: OR_KEY, model: 'm' }, item, [])).rejects.toThrow(/didn't send examples/);
+    vi.unstubAllGlobals();
   });
 });

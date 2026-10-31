@@ -3076,3 +3076,49 @@ button.ai-check-btn {
 .ai-raw {
   white-space: pre-wrap;
 }
+
+/* "More examples" from the AI teacher, under the word's own example */
+.more-examples {
+  margin: 0 0 12px;
+}
+
+.more-examples-list {
+  list-style: none;
+  margin: 0 0 4px;
+  padding: 0;
+}
+
+.more-examples-list li {
+  border-top: 1px solid var(--border);
+}
+
+.more-examples-list .example {
+  margin: 10px 0;
+}
+
+.example-situation {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.more-examples-actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: 10px;
+}
+
+.example-row .more-examples-actions .speak-btn {
+  margin-top: 0;
+}
+
+.more-examples-remove {
+  min-width: 36px;
+  min-height: 36px;
+  color: var(--muted);
+}
