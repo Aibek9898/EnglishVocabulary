@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { AiCheck } from '../components/AiCheck';
 import { EditMeaning } from '../components/EditMeaning';
 import { Icon } from '../components/Icon';
 import { ItemCard } from '../components/ItemCard';
@@ -253,6 +254,7 @@ function ItemDetails({ item, onClose }: { item: Item; onClose: () => void }) {
             <textarea rows={3} value={text} onChange={(e) => setText(e.target.value)} placeholder="Write about your work, your plans or your week." autoFocus />
           </label>
           {text.trim() && !uses && <p className="hint-line">I can't find “{item.term}” in it yet. You can still save it.</p>}
+          <AiCheck text={text} targets={[{ term: item.term, translation: item.translation }]} onUse={setText} from={item.term} hint />
         </div>
       )}
 

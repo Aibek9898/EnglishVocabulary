@@ -10,6 +10,8 @@ import { ActionBar, ContinueButton, SessionHead, prefersReducedMotion, toast } f
 import { GameOver } from './GameOver';
 import type { Item } from '../../lib/types';
 import { logGame, plural, type GameProps } from './shared';
+import { activeAi, useAi } from '../../lib/ai';
+import { AiCheck } from '../AiCheck';
 
 /** Role-play: pick an everyday situation, then answer the partner's questions in your own words. */
 export function RolePlay(props: GameProps) {
@@ -249,6 +251,10 @@ function ChatEnd({
 }) {
   const replies = lines.filter((l) => l.who === 'me').map((l) => l.text);
   const toSave = repliesToSave(replies, targets);
+  const ai = activeAi(useAi());
+  const chat = `A role-play chat: ${scenario.title}. ${scenario.setting} The text below is the student's replies, one per line. The whole chat was:\n${lines
+    .map((l) => `${l.who === 'me' ? 'Student' : scenario.partner}: ${l.text.trim()}`)
+    .join('\n')}`;
   const [saved, setSaved] = useState<number | null>(null);
   const [busy, setBusy] = useState(false);
   const [copyText, setCopyText] = useState<string | null>(null);
@@ -331,15 +337,18 @@ function ChatEnd({
             <Icon name={saved !== null ? 'check' : 'pen'} size={18} />
             {saved !== null ? `Saved ${plural(saved, 'sentence')}` : toSave.length ? `Save to my sentences (${toSave.length})` : 'Save to my sentences'}
           </button>
-          <button type="button" onClick={copy} disabled={!replies.length}>
-            <Icon name="copy" size={18} /> Copy for AI check
-          </button>
+          {!ai && (
+            <button type="button" onClick={copy} disabled={!replies.length}>
+              <Icon name="copy" size={18} /> Copy for AI check
+            </button>
+          )}
         </div>
         <p className="g-transcript-note">
           {toSave.length
             ? 'Saving adds each reply that uses a target phrase to that word, once per word.'
             : 'Use a target phrase in a reply to save it as your own sentence.'}
         </p>
+        {replies.length > 0 && <AiCheck text={replies.join('\n')} targets={targets.map((t) => ({ term: t.term, translation: t.translation }))} context={chat} />}
         {copyText !== null && (
           <div className="g-copy-fallback">
             <p>

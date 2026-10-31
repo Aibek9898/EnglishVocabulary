@@ -2677,3 +2677,402 @@ dialog .save-pill {
 .end-more {
   margin-top: 8px;
 }
+
+/* ============ AI teacher ============ */
+.field-label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text-2);
+  margin-bottom: 6px;
+}
+
+.ai-settings h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ai-settings h2 svg {
+  color: var(--brand);
+}
+
+.ai-key {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  padding: 8px 8px 8px 14px;
+  border-radius: var(--r-md);
+  background: var(--surface-2);
+}
+
+.ai-key > svg {
+  color: var(--success-ink);
+}
+
+.ai-key code {
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.ai-key button {
+  margin-left: auto;
+}
+
+.ai-key-input {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ai-key-input input {
+  flex: 1;
+  min-width: 0;
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+}
+
+/* The key field is a text field so password managers leave it alone; draw it as dots. */
+.ai-key-input input.masked {
+  -webkit-text-security: disc;
+  text-security: disc;
+}
+
+.ai-model {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.ai-model > span:first-child {
+  min-width: 0;
+}
+
+.ai-model b,
+.ai-model small {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.ai-model small {
+  font-size: 0.8125rem;
+  margin-top: 2px;
+}
+
+.ai-model-change {
+  color: var(--brand-ink);
+  font-weight: 700;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+.ai-test {
+  margin: 4px 0 14px;
+}
+
+.ai-test-result {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin: 10px 0 0;
+  font-weight: 650;
+}
+
+.ai-test-result svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ai-test-result.ok {
+  color: var(--success-ink);
+}
+
+.ai-test-result.error {
+  color: var(--error-ink);
+}
+
+.ai-safety summary {
+  gap: 8px;
+}
+
+.ai-safety ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text-2);
+}
+
+.ai-safety li + li {
+  margin-top: 6px;
+}
+
+.model-list {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.model-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 56px;
+  padding: 8px 14px;
+  text-align: left;
+  font-weight: 500;
+  box-shadow: none;
+}
+
+.model-row > span:first-child {
+  min-width: 0;
+}
+
+.model-row b,
+.model-row small {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.model-row small {
+  font-size: 0.8125rem;
+}
+
+.model-row[aria-pressed='true'] {
+  border-color: var(--brand);
+  background: var(--brand-soft);
+}
+
+.model-cost {
+  flex-shrink: 0;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.model-row[aria-pressed='true'] .model-cost {
+  color: var(--brand-ink);
+}
+
+.model-picker .section-title {
+  margin-top: 14px;
+}
+
+/* "Check with AI" under a sentence the learner wrote */
+.ai-hint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 0;
+}
+
+.ai-hint svg {
+  color: var(--brand);
+  flex-shrink: 0;
+}
+
+.ai-check {
+  margin-top: 12px;
+}
+
+.ai-check-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+
+button.ai-check-btn {
+  background: var(--brand-soft);
+  color: var(--brand-ink);
+  border-color: transparent;
+  box-shadow: none;
+  gap: 8px;
+}
+
+.ai-adopted {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--success-ink);
+  font-weight: 650;
+}
+
+.ai-feedback {
+  margin-top: 12px;
+  padding: 16px;
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  animation: fade-in 200ms var(--ease-out);
+}
+
+.ai-feedback > p {
+  margin: 6px 0 0;
+}
+
+.ai-score {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 1.0625rem;
+}
+
+.ai-score.good {
+  color: var(--success-ink);
+}
+
+.ai-score.ok {
+  color: var(--warn-ink);
+}
+
+.ai-score.bad {
+  color: var(--error-ink);
+}
+
+.ai-dots {
+  display: inline-flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.ai-dots i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--surface-3);
+}
+
+.ai-dots i.on {
+  background: currentColor;
+}
+
+.ai-block {
+  margin-top: 16px;
+}
+
+.ai-block h4 {
+  margin: 0 0 6px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.ai-corrected {
+  margin: 0 0 8px;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+}
+
+.ai-line {
+  display: block;
+}
+
+.ai-line + .ai-line {
+  margin-top: 4px;
+}
+
+.ai-corrected b {
+  color: var(--success-ink);
+  background: var(--success-soft);
+  border-radius: 4px;
+  padding: 0 2px;
+}
+
+.ai-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ai-list li {
+  display: grid;
+  gap: 2px;
+  padding: 8px 0;
+}
+
+.ai-list li + li {
+  border-top: 1px solid var(--border);
+}
+
+.ai-list li:first-child {
+  padding-top: 0;
+}
+
+.ai-list s {
+  color: var(--error-ink);
+}
+
+.ai-list b {
+  color: var(--text);
+}
+
+.ai-list li > span:first-child svg {
+  vertical-align: -3px;
+}
+
+.ai-list .ok-mark {
+  color: var(--success-ink);
+}
+
+.ai-list .warn-mark {
+  color: var(--warn-ink);
+}
+
+.ai-why {
+  color: var(--text-2);
+  font-size: 0.9375rem;
+}
+
+.ai-word {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ai-word > span {
+  flex: 1;
+  min-width: 0;
+}
+
+.ai-save {
+  flex-shrink: 0;
+  color: var(--brand-ink);
+}
+
+.ai-example {
+  color: var(--text-2);
+  font-style: italic;
+  font-size: 0.9375rem;
+}
+
+.ai-tip {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin: 16px 0 0 !important;
+  padding: 10px 12px;
+  border-radius: var(--r-md);
+  background: var(--gold-soft);
+}
+
+.ai-tip svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--gold-ink);
+}
+
+.ai-raw {
+  white-space: pre-wrap;
+}

@@ -158,6 +158,19 @@ export function ContinueButton({ onClick, label = 'Continue', disabled }: { onCl
   );
 }
 
+/** A row of buttons where exactly one is chosen. */
+export function Segmented<T extends string | number>({ label, value, options, onChange }: { label: string; value: T; options: { value: T; label: string }[]; onChange: (v: T) => void }) {
+  return (
+    <div className="segmented" role="group" aria-label={label}>
+      {options.map((o) => (
+        <button key={String(o.value)} type="button" aria-pressed={value === o.value} onClick={() => onChange(o.value)}>
+          {o.label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 /* ---------- dialogs and toasts ---------- */
 
 /** Native modal dialog: a bottom sheet on phones, centred on wider screens. */

@@ -1,8 +1,10 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { AiCheck } from '../components/AiCheck';
 import { EditMeaning } from '../components/EditMeaning';
 import { Exercise } from '../components/Exercise';
 import { Icon } from '../components/Icon';
 import { Confetti, Ring, SessionHead, Sheet, toast, useCountUp, useFocusMode, usePageTitle } from '../components/ui';
+import { activeAi, useAi } from '../lib/ai';
 import { sentenceUsesTerm } from '../lib/cloze';
 import { dayKey } from '../lib/dates';
 import { db, getSettings, saveSettings, useLive, useSettings } from '../lib/db';
@@ -492,6 +494,8 @@ function LessonEnd({ lesson, saved, onClose, onMore }: { lesson: Lesson; saved: 
 
 /** "Write a short message about your day using these words." */
 export function DailyMessage({ items }: { items: Item[] }) {
+  const ai = activeAi(useAi());
+  const targets = items.map((i) => ({ term: i.term, translation: i.translation }));
   const [text, setText] = useState('');
   const [saved, setSaved] = useState<string[] | null>(null);
   const used = useMemo(() => new Set(items.filter((i) => sentenceUsesTerm(text, i.term)).map((i) => i.id)), [text, items]);
@@ -521,9 +525,13 @@ export function DailyMessage({ items }: { items: Item[] }) {
         <p>
           <Icon name="check" size={18} /> Saved{saved.length ? `. You used ${saved.join(', ')}.` : '.'}
         </p>
-        <button type="button" className="ghost" onClick={copyForAi}>
-          <Icon name="sparkles" size={18} /> Check with AI
-        </button>
+        {ai ? (
+          <AiCheck text={text} targets={targets} context="A short message to a friend about the student's day or plans." />
+        ) : (
+          <button type="button" className="ghost" onClick={copyForAi}>
+            <Icon name="copy" size={18} /> Copy for an AI chat
+          </button>
+        )}
       </div>
     );
   }
@@ -544,10 +552,13 @@ export function DailyMessage({ items }: { items: Item[] }) {
         <button type="button" className="primary" onClick={save} disabled={!text.trim() || used.size === 0}>
           Save message
         </button>
-        <button type="button" className="ghost" onClick={copyForAi} disabled={!text.trim()}>
-          <Icon name="sparkles" size={18} /> Check with AI
-        </button>
+        {!ai && (
+          <button type="button" className="ghost" onClick={copyForAi} disabled={!text.trim()}>
+            <Icon name="copy" size={18} /> Copy for an AI chat
+          </button>
+        )}
       </div>
+      <AiCheck text={text} targets={targets} onUse={setText} context="A short message to a friend about the student's day or plans." />
     </div>
   );
 }

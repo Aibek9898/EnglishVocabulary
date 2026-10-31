@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
+import { AiSettings } from '../components/AiSettings';
 import { Icon } from '../components/Icon';
-import { Sheet, toast, usePageTitle } from '../components/ui';
+import { Segmented, Sheet, toast, usePageTitle } from '../components/ui';
+import { forgetAi } from '../lib/ai';
 import { logout } from '../lib/auth';
 import { downloadJson, isBackup, makeBackup, restoreBackup, type Backup } from '../lib/backup';
 import { dayKey } from '../lib/dates';
@@ -26,18 +28,6 @@ const THEMES: { value: Theme; label: string }[] = [
   { value: 'dark', label: 'Dark' },
 ];
 
-function Segmented<T extends string | number>({ label, value, options, onChange }: { label: string; value: T; options: { value: T; label: string }[]; onChange: (v: T) => void }) {
-  return (
-    <div className="segmented" role="group" aria-label={label}>
-      {options.map((o) => (
-        <button key={String(o.value)} type="button" aria-pressed={value === o.value} onClick={() => onChange(o.value)}>
-          {o.label}
-        </button>
-      ))}
-    </div>
-  );
-}
-
 export function SettingsPage() {
   usePageTitle('Settings');
   const settings = useSettings();
@@ -48,6 +38,13 @@ export function SettingsPage() {
   const [error, setError] = useState('');
   const lastBackup = useLive(async () => (await db.kv.get('lastBackup'))?.value as number | undefined, [], undefined);
   const file = useRef<HTMLInputElement>(null);
+
+  // "Connect an AI teacher in Settings" links here.
+  useEffect(() => {
+    if (!window.location.hash.includes('section=ai')) return;
+    const t = setTimeout(() => document.getElementById('ai-teacher')?.scrollIntoView({ block: 'start' }), 150);
+    return () => clearTimeout(t);
+  }, []);
 
   useEffect(() => {
     if (!canSpeak) return;
@@ -144,6 +141,8 @@ export function SettingsPage() {
           <small>New words pause while more reviews than this are waiting, so the pile never gets out of hand.</small>
         </label>
       </div>
+
+      <AiSettings />
 
       <div className="card">
         <h2>Appearance</h2>
@@ -263,7 +262,7 @@ export function SettingsPage() {
 
       <Sheet open={wipe} onClose={() => setWipe(false)} label="Delete all data">
         <h2>Delete everything?</h2>
-        <p>All words and progress on this device will be gone. Save a backup first if you might need it.</p>
+        <p>All words and progress on this device will be gone, and the AI key too. Save a backup first if you might need it.</p>
         <div className="row">
           <button type="button" className="ghost" onClick={() => setWipe(false)}>
             Cancel
@@ -272,9 +271,10 @@ export function SettingsPage() {
             type="button"
             className="danger"
             onClick={async () => {
-              await db.transaction('rw', db.items, db.reviews, async () => {
+              await db.transaction('rw', db.items, db.reviews, db.kv, async () => {
                 await db.items.clear();
                 await db.reviews.clear();
+                await forgetAi();
               });
               setWipe(false);
               toast('All data deleted', 'trash');

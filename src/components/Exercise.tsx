@@ -6,6 +6,7 @@ import { diffWords } from '../lib/diff';
 import { wrongForms } from '../lib/mistakes';
 import { canSpeak, speak } from '../lib/speech';
 import type { ExerciseKind, Item, Result } from '../lib/types';
+import { AiCheck } from './AiCheck';
 import { Icon, type IconName } from './Icon';
 import { Example, ItemCard } from './ItemCard';
 import { Speak } from './Speak';
@@ -610,6 +611,15 @@ function Sentence({ item, onDone }: ExerciseProps) {
           </p>
         )}
         {warn && <p className="hint-line">I can't find “{item.term}” in your sentence. Save it anyway?</p>}
+        <AiCheck
+          text={text}
+          targets={[{ term: item.term, translation: item.translation }]}
+          onUse={(t) => {
+            setText(t);
+            setWarn(false);
+          }}
+          from={item.term}
+        />
       </div>
       <ActionBar>
         <button type="button" className="ghost big" onClick={() => onDone('done')}>
