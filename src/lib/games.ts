@@ -634,9 +634,21 @@ export function repliesToSave(replies: string[], targets: Item[]): { item: Item;
   return out;
 }
 
+/** The AI teacher's note on one of the learner's replies in an AI role-play. */
+export interface ChatFix {
+  /** Correct and natural as it is. */
+  ok: boolean;
+  /** The reply put right; empty when ok. */
+  corrected: string;
+  /** A short explanation of the main fix. */
+  note: string;
+}
+
 export interface ChatLine {
   who: 'partner' | 'me';
   text: string;
+  /** AI role-play only: feedback on this reply. */
+  fix?: ChatFix;
 }
 
 /** A prompt to paste into Claude or Gemini to get the replies corrected. */

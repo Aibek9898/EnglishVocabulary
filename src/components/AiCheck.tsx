@@ -106,7 +106,7 @@ export function AiCheck({
 }
 
 /** The corrected text with the changed words in bold, line by line when the lines still match up. */
-function Marked({ original, corrected }: { original: string; corrected: string }) {
+export function Marked({ original, corrected }: { original: string; corrected: string }) {
   const split = (t: string) => t.split(/\n+/).map((l) => l.trim()).filter(Boolean);
   const a = split(original);
   const b = split(corrected);

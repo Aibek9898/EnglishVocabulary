@@ -10,17 +10,20 @@ import { ActionBar, ContinueButton, SessionHead, prefersReducedMotion, toast } f
 import { GameOver } from './GameOver';
 import type { Item } from '../../lib/types';
 import { logGame, plural, type GameProps } from './shared';
-import { activeAi, useAi } from '../../lib/ai';
-import { AiCheck } from '../AiCheck';
+import { activeAi, AiError, rolePlayTurn, useAi, type ActiveAi } from '../../lib/ai';
+import type { ChatFix } from '../../lib/games';
+import { AiCheck, Marked } from '../AiCheck';
 
 /** Role-play: pick an everyday situation, then answer the partner's questions in your own words. */
 export function RolePlay(props: GameProps) {
-  const [scenario, setScenario] = useState<Scenario | null>(null);
-  if (!scenario) return <ScenarioPicker onPick={setScenario} onExit={props.onExit} />;
-  return <Chat key={scenario.id} scenario={scenario} {...props} />;
+  const config = useAi();
+  // With an AI key the partner is the AI; the choice is made once, when the chat starts.
+  const [start, setStart] = useState<{ scenario: Scenario; ai: ActiveAi | null } | null>(null);
+  if (!start) return <ScenarioPicker live={!!activeAi(config)} onPick={(scenario) => setStart({ scenario, ai: activeAi(config) })} onExit={props.onExit} />;
+  return <Chat key={start.scenario.id} scenario={start.scenario} ai={start.ai} {...props} />;
 }
 
-function ScenarioPicker({ onPick, onExit }: { onPick: (s: Scenario) => void; onExit: () => void }) {
+function ScenarioPicker({ live, onPick, onExit }: { live: boolean; onPick: (s: Scenario) => void; onExit: () => void }) {
   useEffect(() => {
     window.scrollTo({ top: 0 });
   }, []);
@@ -31,6 +34,15 @@ function ScenarioPicker({ onPick, onExit }: { onPick: (s: Scenario) => void; onE
       </div>
       <h1 className="g-title">Role-play</h1>
       <p className="g-instr">Pick a situation. Your partner speaks first; answer in your own words and try to use your target phrases.</p>
+      {live ? (
+        <p className="g-live-note">
+          <Icon name="sparkles" size={18} /> Your partner is the AI: it answers what you actually say and corrects your English as you go.
+        </p>
+      ) : (
+        <p className="muted small ai-hint">
+          <Icon name="sparkles" size={16} /> Connect an AI teacher in <a href="#/settings?section=ai">Settings</a> to talk to a live partner who corrects you.
+        </p>
+      )}
       <ul className="g-scenarios">
         {SCENARIOS.map((s) => (
           <li key={s.id}>
@@ -51,7 +63,7 @@ function ScenarioPicker({ onPick, onExit }: { onPick: (s: Scenario) => void; onE
   );
 }
 
-function Chat({ scenario, pool, all, onExit, onAgain }: GameProps & { scenario: Scenario }) {
+function Chat({ scenario, ai, pool, all, onExit, onAgain }: GameProps & { scenario: Scenario; ai: ActiveAi | null }) {
   const [targets] = useState(() => pickTargets(pool.length >= 3 ? pool : all, scenario.tags, 4));
   const [lines, setLines] = useState<ChatLine[]>([{ who: 'partner', text: scenario.lines[0] }]);
   const [draft, setDraft] = useState('');
@@ -60,12 +72,23 @@ function Chat({ scenario, pool, all, onExit, onAgain }: GameProps & { scenario: 
   const endRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const abort = useRef<AbortController | null>(null);
+  const [error, setError] = useState('');
+  const [over, setOver] = useState(false);
+  const total = scenario.lines.length;
 
   const replies = useMemo(() => lines.filter((l) => l.who === 'me').map((l) => l.text), [lines]);
   const used = useMemo(() => usedTargets(replies, targets), [replies, targets]);
-  const finished = replies.length >= scenario.lines.length && !typing;
+  const answered = lines[lines.length - 1].who === 'partner';
+  const finished = !typing && (ai ? over || (replies.length >= total && answered) : replies.length >= total);
 
-  useEffect(() => () => clearTimeout(timer.current), []);
+  useEffect(
+    () => () => {
+      clearTimeout(timer.current);
+      abort.current?.abort();
+    },
+    [],
+  );
   useEffect(() => {
     endRef.current?.scrollIntoView?.({ behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: 'end' });
   }, [lines.length, typing]);
@@ -74,13 +97,45 @@ function Chat({ scenario, pool, all, onExit, onAgain }: GameProps & { scenario: 
     if (typeof matchMedia !== 'undefined' && matchMedia('(hover: hover)').matches) inputRef.current?.focus({ preventScroll: true });
   }, []);
 
+  /** AI partner: the next line in context, and a fix for the learner's last reply. */
+  const askAi = async (current: ChatLine[]) => {
+    if (!ai) return;
+    abort.current?.abort();
+    const ctrl = new AbortController();
+    abort.current = ctrl;
+    const limit = setTimeout(() => ctrl.abort(), 90_000);
+    setTyping(true);
+    setError('');
+    try {
+      const turn = await rolePlayTurn(ai, scenario, targets.map((t) => ({ term: t.term, translation: t.translation })), current, total, ctrl.signal);
+      setLines((l) => {
+        const next = [...l];
+        const last = next.map((x) => x.who).lastIndexOf('me');
+        if (turn.fix && last >= 0) next[last] = { ...next[last], fix: turn.fix };
+        return [...next, { who: 'partner', text: turn.reply }];
+      });
+      if (turn.end) setOver(true);
+    } catch (e) {
+      if (abort.current !== ctrl) return;
+      setError(ctrl.signal.aborted ? 'The AI took too long to answer.' : e instanceof AiError ? e.message : 'Something went wrong.');
+    } finally {
+      clearTimeout(limit);
+      if (abort.current === ctrl) setTyping(false);
+    }
+  };
+
   const send = () => {
     const text = draft.trim();
     if (!text || typing || finished) return;
     const turn = replies.length + 1;
-    setLines((l) => [...l, { who: 'me', text }]);
+    const next: ChatLine[] = [...lines, { who: 'me', text }];
+    setLines(next);
     setDraft('');
     if (inputRef.current) inputRef.current.style.height = '';
+    if (ai) {
+      askAi(next);
+      return;
+    }
     const reply = turn < scenario.lines.length ? scenario.lines[turn] : scenario.closing;
     setTyping(true);
     const delay = prefersReducedMotion() ? 250 : Math.min(1600, 600 + reply.length * 12);
@@ -101,16 +156,18 @@ function Chat({ scenario, pool, all, onExit, onAgain }: GameProps & { scenario: 
 
   const end = () => {
     clearTimeout(timer.current);
+    abort.current?.abort();
+    abort.current = null;
     setTyping(false);
     for (const t of targets) if (used.has(t.id)) logGame(t, 'game', 'correct');
     setEnded(true);
   };
 
-  if (ended) return <ChatEnd scenario={scenario} targets={targets} lines={lines} used={used} onAgain={onAgain} onExit={onExit} />;
+  if (ended) return <ChatEnd scenario={scenario} targets={targets} lines={lines} used={used} ai={ai} onAgain={onAgain} onExit={onExit} />;
 
   return (
     <div className="g-game g-chat-page">
-      <SessionHead done={replies.length} total={scenario.lines.length} onClose={onExit} closeLabel="End role-play" label="Conversation progress" />
+      <SessionHead done={Math.min(replies.length, total)} total={total} onClose={onExit} closeLabel="End role-play" label="Conversation progress" />
       <div className="g-chat-head">
         <span className="game-icon ice">
           <Icon name={scenario.icon} size={22} />
@@ -120,6 +177,11 @@ function Chat({ scenario, pool, all, onExit, onAgain }: GameProps & { scenario: 
           <p className="g-chat-setting">
             {scenario.setting} You're talking to the <b>{scenario.partner.toLowerCase()}</b>.
           </p>
+          {ai && (
+            <p className="g-live-badge">
+              <Icon name="sparkles" size={14} /> Live AI partner
+            </p>
+          )}
         </div>
       </div>
 
@@ -170,6 +232,7 @@ function Chat({ scenario, pool, all, onExit, onAgain }: GameProps & { scenario: 
                     ))}
                 </div>
               )}
+              {l.fix && ai && <FixNote fix={l.fix} text={l.text} lang={ai.lang} />}
             </div>
           ),
         )}
@@ -188,6 +251,16 @@ function Chat({ scenario, pool, all, onExit, onAgain }: GameProps & { scenario: 
         )}
         <div ref={endRef} />
       </div>
+      {error && (
+        <div className="g-chat-error" role="alert">
+          <p className="hint-line">{error}</p>
+          {!answered && (
+            <button type="button" className="small" onClick={() => askAi(lines)}>
+              <Icon name="reset" size={16} /> Try again
+            </button>
+          )}
+        </div>
+      )}
       {replies.length > 0 && !finished && (
         <div className="g-finish">
           <button type="button" className="link-btn" onClick={end}>
@@ -234,11 +307,39 @@ function Chat({ scenario, pool, all, onExit, onAgain }: GameProps & { scenario: 
   );
 }
 
+/** Under the learner's reply: "sounds natural", or the better version and why. */
+function FixNote({ fix, text, lang }: { fix: ChatFix; text: string; lang: 'ru' | 'en' }) {
+  if (fix.ok) {
+    return (
+      <p className="g-reply-fix ok">
+        <Icon name="check" size={14} strokeWidth={3} /> <span lang={fix.note ? lang : 'en'}>{fix.note || 'Sounds natural'}</span>
+      </p>
+    );
+  }
+  return (
+    <div className="g-reply-fix">
+      <div className="g-reply-fix-row">
+        <p className="g-reply-fix-text">
+          <span className="g-reply-fix-label">Better: </span>
+          <Marked original={text} corrected={fix.corrected} />
+        </p>
+        <Speak text={fix.corrected} label="Listen to the better version" small />
+      </div>
+      {fix.note && (
+        <p className="g-reply-fix-note" lang={lang}>
+          {fix.note}
+        </p>
+      )}
+    </div>
+  );
+}
+
 function ChatEnd({
   scenario,
   targets,
   lines,
   used,
+  ai: live,
   onAgain,
   onExit,
 }: {
@@ -246,11 +347,18 @@ function ChatEnd({
   targets: Item[];
   lines: ChatLine[];
   used: Set<string>;
+  /** Set when the partner was the AI: replies come with fixes already. */
+  ai: ActiveAi | null;
   onAgain: () => void;
   onExit: () => void;
 }) {
   const replies = lines.filter((l) => l.who === 'me').map((l) => l.text);
-  const toSave = repliesToSave(replies, targets);
+  // Save the corrected version when the AI put a reply right.
+  const toSave = repliesToSave(
+    lines.filter((l) => l.who === 'me').map((l) => (l.fix && !l.fix.ok && l.fix.corrected ? l.fix.corrected : l.text)),
+    targets,
+  );
+  const fixed = lines.filter((l) => l.fix && !l.fix.ok).length;
   const ai = activeAi(useAi());
   const chat = `A role-play chat: ${scenario.title}. ${scenario.setting} The text below is the student's replies, one per line. The whole chat was:\n${lines
     .map((l) => `${l.who === 'me' ? 'Student' : scenario.partner}: ${l.text.trim()}`)
@@ -303,7 +411,10 @@ function ChatEnd({
       max={hasTargets ? targets.length : undefined}
       unit={hasTargets ? undefined : replies.length === 1 ? 'reply' : 'replies'}
       title={hasTargets ? scoreTitle(used.size, targets.length) : 'Nice chat!'}
-      summary={hasTargets ? `You used ${used.size} of ${targets.length} target phrases.` : `You answered ${plural(replies.length, 'question')}.`}
+      summary={
+        (hasTargets ? `You used ${used.size} of ${targets.length} target phrases.` : `You answered ${plural(replies.length, 'question')}.`) +
+        (live && replies.length ? (fixed ? ` The AI corrected ${fixed} of your ${replies.length} ${replies.length === 1 ? 'reply' : 'replies'}.` : ' All your replies sounded natural.') : '')
+      }
       extra={
         used.size
           ? targets
@@ -329,6 +440,16 @@ function ChatEnd({
             <li key={i} className={l.who}>
               <span className="g-transcript-who">{l.who === 'me' ? 'You' : scenario.partner}</span>
               <span>{l.text}</span>
+              {l.fix && !l.fix.ok && (
+                <span className="g-transcript-fix">
+                  <Icon name="check" size={14} strokeWidth={3} /> <Marked original={l.text} corrected={l.fix.corrected} />
+                  {l.fix.note && (
+                    <span className="g-reply-fix-note" lang={live?.lang ?? 'ru'}>
+                      {l.fix.note}
+                    </span>
+                  )}
+                </span>
+              )}
             </li>
           ))}
         </ol>
@@ -345,10 +466,10 @@ function ChatEnd({
         </div>
         <p className="g-transcript-note">
           {toSave.length
-            ? 'Saving adds each reply that uses a target phrase to that word, once per word.'
+            ? `Saving adds each reply that uses a target phrase to that word, once per word${fixed ? ', in its corrected form' : ''}.`
             : 'Use a target phrase in a reply to save it as your own sentence.'}
         </p>
-        {replies.length > 0 && <AiCheck text={replies.join('\n')} targets={targets.map((t) => ({ term: t.term, translation: t.translation }))} context={chat} />}
+        {replies.length > 0 && !live && <AiCheck text={replies.join('\n')} targets={targets.map((t) => ({ term: t.term, translation: t.translation }))} context={chat} />}
         {copyText !== null && (
           <div className="g-copy-fallback">
             <p>
