@@ -75,7 +75,7 @@ export function pickDistinct(items: Item[], n: number, rand: Rand = Math.random)
 
 /* ================= which games can run ================= */
 
-export type GameId = 'blitz' | 'sorter' | 'mistake' | 'build' | 'roleplay' | 'pairs' | 'quiz' | 'typing' | 'dictation' | 'flashcards';
+export type GameId = 'blitz' | 'sorter' | 'mistake' | 'build' | 'roleplay' | 'sayit' | 'pairs' | 'quiz' | 'typing' | 'dictation' | 'flashcards';
 
 export function hasCloze(item: Item): boolean {
   return !!item.example && !!parseCloze(item.example, item.term);
@@ -86,6 +86,7 @@ export function gameBlocker(game: GameId, pool: Item[]): string | null {
   switch (game) {
     case 'sorter':
     case 'roleplay':
+    case 'sayit':
       return null;
     case 'typing':
       return pool.filter(hasCloze).length >= MIN_WORDS ? null : `Needs ${MIN_WORDS} words with examples`;

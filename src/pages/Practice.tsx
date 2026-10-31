@@ -5,6 +5,7 @@ import { BuildSentence } from '../components/games/BuildSentence';
 import { Flashcards, LessonGame, PairsGame } from '../components/games/ClassicGames';
 import { FindMistake } from '../components/games/FindMistake';
 import { RolePlay } from '../components/games/RolePlay';
+import { SayItGame } from '../components/games/SayItGame';
 import type { GameProps } from '../components/games/shared';
 import { VerbSorter } from '../components/games/VerbSorter';
 import { Icon, type IconName } from '../components/Icon';
@@ -28,6 +29,7 @@ const GAMES: GameMeta[] = [
   { id: 'mistake', title: 'Find the mistake', text: 'Tap the word that sounds wrong.', icon: 'search', tone: 'bad' },
   { id: 'build', title: 'Build the sentence', text: 'Translate with word tiles.', icon: 'shuffle', tone: 'ok' },
   { id: 'roleplay', title: 'Role-play', text: 'Chat your way through real life.', icon: 'chat', tone: 'ice' },
+  { id: 'sayit', title: 'Say it in English', text: 'Translate things people say every day.', icon: 'message', tone: 'flame' },
   { id: 'pairs', title: 'Match pairs', text: 'Phrases and meanings, against the clock.', icon: 'link', tone: 'brand' },
   { id: 'quiz', title: 'Quick quiz', text: '10 multiple-choice questions.', icon: 'zap', tone: 'gold' },
   { id: 'typing', title: 'Typing sprint', text: 'Fill 10 gaps from memory.', icon: 'keyboard', tone: 'ice' },
@@ -143,6 +145,8 @@ function GameRun({ game, pool, all, onAgain, onExit }: { game: GameId; pool: Ite
       return <BuildSentence {...p} />;
     case 'roleplay':
       return <RolePlay {...p} />;
+    case 'sayit':
+      return <SayItGame {...p} />;
     case 'pairs':
       return <PairsGame {...p} />;
     case 'quiz':

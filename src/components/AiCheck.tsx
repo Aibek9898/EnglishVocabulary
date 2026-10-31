@@ -118,7 +118,7 @@ export function Marked({ original, corrected }: { original: string; corrected: s
   ));
 }
 
-function AiFeedback({
+export function AiFeedback({
   feedback,
   original,
   lang,
