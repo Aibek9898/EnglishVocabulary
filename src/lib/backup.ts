@@ -40,7 +40,7 @@ export function downloadJson(data: unknown, filename: string) {
 }
 
 /** JSON turns Dates into strings; FSRS needs them back as Dates. */
-function reviveItem(item: Item): Item {
+export function reviveItem(item: Item): Item {
   const card = { ...item.card, due: new Date(item.card.due) };
   if (card.last_review) card.last_review = new Date(card.last_review);
   return { ...item, card };

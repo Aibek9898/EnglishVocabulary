@@ -326,7 +326,7 @@ function CodesStep({ codes, onDone }: { codes: string[]; onDone: () => void }) {
 }
 
 /** QR code drawn as SVG; always dark on white so cameras read it in dark mode too. */
-function QrCode({ text }: { text: string }) {
+export function QrCode({ text, label = 'QR code to scan with Google Authenticator' }: { text: string; label?: string }) {
   const { size, path } = useMemo(() => {
     const qr = qrcode(0, 'M');
     qr.addData(text);
@@ -338,7 +338,7 @@ function QrCode({ text }: { text: string }) {
     return { size: n + quiet * 2, path: d };
   }, [text]);
   return (
-    <svg className="tf-qr" viewBox={`0 0 ${size} ${size}`} role="img" aria-label="QR code to scan with Google Authenticator" shapeRendering="crispEdges">
+    <svg className="tf-qr" viewBox={`0 0 ${size} ${size}`} role="img" aria-label={label} shapeRendering="crispEdges">
       <rect width={size} height={size} fill="#fff" />
       <path d={path} fill="#000" />
     </svg>

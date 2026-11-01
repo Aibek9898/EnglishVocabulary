@@ -5,6 +5,7 @@ import { Toaster } from './components/ui';
 import { isLoggedIn } from './lib/auth';
 import { db, useLive } from './lib/db';
 import { activityByDay, computeStreak } from './lib/stats';
+import { startAutoSync } from './lib/sync';
 import { AddWords } from './pages/AddWords';
 import { Library } from './pages/Library';
 import { Login } from './pages/Login';
@@ -34,6 +35,9 @@ export function App() {
 
 function Shell() {
   const [route, setRoute] = useState(parseHash);
+  useEffect(() => {
+    startAutoSync().catch(console.error);
+  }, []);
   useEffect(() => {
     const onHash = () => {
       setRoute(parseHash());

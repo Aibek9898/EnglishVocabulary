@@ -3,11 +3,13 @@ import { AiSettings } from '../components/AiSettings';
 import { Icon } from '../components/Icon';
 import { InstallCard } from '../components/InstallCard';
 import { SecuritySettings } from '../components/SecuritySettings';
+import { SyncSettings } from '../components/SyncSettings';
 import { Segmented, Sheet, toast, usePageTitle } from '../components/ui';
 import { forgetAi } from '../lib/ai';
 import { downloadJson, isBackup, makeBackup, restoreBackup, type Backup } from '../lib/backup';
 import { dayKey } from '../lib/dates';
 import { db, saveSettings, useLive, useSettings } from '../lib/db';
+import { disconnect, forgetSyncBase, getSyncConfig } from '../lib/sync';
 import { canSpeak, englishVoices, speak } from '../lib/speech';
 import { getTheme, setTheme, type Theme } from '../lib/theme';
 
@@ -37,13 +39,14 @@ export function SettingsPage() {
   const [restore, setRestore] = useState<Backup | null>(null);
   const [wipe, setWipe] = useState(false);
   const [error, setError] = useState('');
+  const syncOn = !!useLive(getSyncConfig, [], null);
   const lastBackup = useLive(async () => (await db.kv.get('lastBackup'))?.value as number | undefined, [], undefined);
   const file = useRef<HTMLInputElement>(null);
 
   // "Connect an AI teacher in Settings" links here.
   useEffect(() => {
     const section = window.location.hash.match(/section=(\w+)/)?.[1];
-    const id = section === 'ai' ? 'ai-teacher' : section === 'security' ? 'security' : null;
+    const id = section === 'ai' ? 'ai-teacher' : section === 'security' || section === 'sync' || section === 'app' ? section : null;
     if (!id) return;
     const t = setTimeout(() => document.getElementById(id)?.scrollIntoView({ block: 'start' }), 150);
     return () => clearTimeout(t);
@@ -189,6 +192,8 @@ export function SettingsPage() {
         </div>
       )}
 
+      <SyncSettings />
+
       <div className="card">
         <h2>Backup</h2>
         <p className="muted small">
@@ -238,6 +243,7 @@ export function SettingsPage() {
             <h2>Restore this backup?</h2>
             <p>
               It's from {new Date(restore.exportedAt).toLocaleString()} and has {restore.items.length} words. Everything on this device will be replaced.
+              {syncOn && ' Sync is on, so the next sync adds back anything newer from your other devices.'}
             </p>
             <div className="row">
               <button type="button" className="ghost" onClick={() => setRestore(null)}>
@@ -248,6 +254,8 @@ export function SettingsPage() {
                 className="primary"
                 onClick={async () => {
                   await restoreBackup(restore);
+                  // With sync on, the next sync adds the backup to the synced words instead of deleting what it lacks.
+                  await forgetSyncBase();
                   toast(`Restored ${restore.items.length} words`);
                   setRestore(null);
                 }}
@@ -261,7 +269,10 @@ export function SettingsPage() {
 
       <Sheet open={wipe} onClose={() => setWipe(false)} label="Delete all data">
         <h2>Delete everything?</h2>
-        <p>All words and progress on this device will be gone, and the AI key too. Save a backup first if you might need it.</p>
+        <p>
+          All words and progress on this device will be gone, and the AI key too. Save a backup first if you might need it.
+          {syncOn && ' Sync is turned off on this device first, so your words on GitHub and other devices stay.'}
+        </p>
         <div className="row">
           <button type="button" className="ghost" onClick={() => setWipe(false)}>
             Cancel
@@ -270,6 +281,7 @@ export function SettingsPage() {
             type="button"
             className="danger"
             onClick={async () => {
+              await disconnect();
               await db.transaction('rw', db.items, db.reviews, db.kv, async () => {
                 await db.items.clear();
                 await db.reviews.clear();

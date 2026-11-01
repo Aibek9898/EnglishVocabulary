@@ -3279,3 +3279,44 @@ button.ai-check-btn {
 .install-steps li + li {
   margin-top: 6px;
 }
+
+/* ============ sync ============ */
+.sync-link {
+  margin-top: 8px;
+}
+
+.sync-steps ul {
+  margin: 6px 0 0;
+  padding-left: 18px;
+  color: var(--text-2);
+}
+
+.sync-form {
+  margin-top: 10px;
+}
+
+.sync-form details input {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.sync-choices {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.sync-choice {
+  display: grid;
+  justify-items: start;
+  justify-content: stretch;
+  width: 100%;
+  gap: 2px;
+  text-align: left;
+  padding: 14px 16px;
+}
+
+.sync-choice small {
+  font-weight: 500;
+  opacity: 0.85;
+}
