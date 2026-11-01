@@ -1,6 +1,6 @@
 // Offline support. Built assets have hashed names, so they are cached forever;
 // the page itself is fetched fresh (with a short timeout) so updates arrive.
-const CACHE = 'vocab-v2';
+const CACHE = 'vocab-v3';
 const CORE = ['./', './manifest.webmanifest', './icon.svg', './icon-192.png'];
 
 self.addEventListener('install', (event) => {

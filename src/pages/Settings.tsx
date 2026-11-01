@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { AiSettings } from '../components/AiSettings';
 import { Icon } from '../components/Icon';
+import { InstallCard } from '../components/InstallCard';
 import { SecuritySettings } from '../components/SecuritySettings';
 import { Segmented, Sheet, toast, usePageTitle } from '../components/ui';
 import { forgetAi } from '../lib/ai';
@@ -219,6 +220,8 @@ export function SettingsPage() {
           </p>
         )}
       </div>
+
+      <InstallCard />
 
       <SecuritySettings />
 

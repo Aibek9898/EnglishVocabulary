@@ -4,6 +4,8 @@ import { App } from './App';
 import { db } from './lib/db';
 import { syncPacks } from './lib/decks';
 import { applyTheme } from './lib/theme';
+// Listens for Chrome's install prompt from the start, before Settings is opened.
+import './lib/install';
 import './styles.css';
 
 applyTheme();
