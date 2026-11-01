@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { AiSettings } from '../components/AiSettings';
 import { Icon } from '../components/Icon';
+import { SecuritySettings } from '../components/SecuritySettings';
 import { Segmented, Sheet, toast, usePageTitle } from '../components/ui';
 import { forgetAi } from '../lib/ai';
-import { logout } from '../lib/auth';
 import { downloadJson, isBackup, makeBackup, restoreBackup, type Backup } from '../lib/backup';
 import { dayKey } from '../lib/dates';
 import { db, saveSettings, useLive, useSettings } from '../lib/db';
@@ -41,8 +41,10 @@ export function SettingsPage() {
 
   // "Connect an AI teacher in Settings" links here.
   useEffect(() => {
-    if (!window.location.hash.includes('section=ai')) return;
-    const t = setTimeout(() => document.getElementById('ai-teacher')?.scrollIntoView({ block: 'start' }), 150);
+    const section = window.location.hash.match(/section=(\w+)/)?.[1];
+    const id = section === 'ai' ? 'ai-teacher' : section === 'security' ? 'security' : null;
+    if (!id) return;
+    const t = setTimeout(() => document.getElementById(id)?.scrollIntoView({ block: 'start' }), 150);
     return () => clearTimeout(t);
   }, []);
 
@@ -218,13 +220,7 @@ export function SettingsPage() {
         )}
       </div>
 
-      <div className="card">
-        <h2>Account</h2>
-        <p className="muted small">Signed in as aibek. Signing out keeps your words on this device.</p>
-        <button type="button" onClick={logout}>
-          <Icon name="logout" /> Sign out
-        </button>
-      </div>
+      <SecuritySettings />
 
       <div className="card">
         <h2>Danger zone</h2>

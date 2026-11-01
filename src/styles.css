@@ -3122,3 +3122,150 @@ button.ai-check-btn {
   min-height: 36px;
   color: var(--muted);
 }
+
+/* ============ two-step sign-in ============ */
+.tf-status {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: var(--r-md);
+  background: var(--success-soft, var(--surface-2));
+}
+
+.tf-status > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--success-ink);
+}
+
+.tf-status span {
+  display: grid;
+  gap: 2px;
+}
+
+.tf-steps {
+  margin: 0 0 4px;
+  padding-left: 22px;
+  display: grid;
+  gap: 16px;
+}
+
+.tf-steps li::marker {
+  font-weight: 800;
+  color: var(--brand-ink);
+}
+
+.tf-open {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.tf-qr {
+  display: block;
+  width: min(200px, 100%);
+  height: auto;
+  margin: 12px 0 4px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.tf-more {
+  margin-top: 10px;
+}
+
+.tf-more summary {
+  color: var(--brand-ink);
+  font-weight: 650;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  min-height: 32px;
+}
+
+.tf-more p {
+  margin: 6px 0 8px;
+}
+
+.tf-key {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  padding: 8px 8px 8px 14px;
+  border-radius: var(--r-md);
+  background: var(--surface-2);
+}
+
+.tf-key code {
+  font-size: 0.9375rem;
+  letter-spacing: 0.04em;
+  word-break: break-all;
+  flex: 1;
+}
+
+.tf-code {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tf-input {
+  flex: 1;
+  min-width: 0;
+  font-size: 1.25rem;
+  letter-spacing: 0.12em;
+  font-variant-numeric: tabular-nums;
+}
+
+.tf-input[inputmode='text'] {
+  letter-spacing: 0.04em;
+}
+
+.tf-codes {
+  list-style: none;
+  margin: 0;
+  padding: 12px 14px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 16px;
+  border-radius: var(--r-md);
+  background: var(--surface-2);
+}
+
+.tf-codes code {
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.tf-saved {
+  margin: 14px 0;
+}
+
+.login-step {
+  margin-bottom: 14px;
+}
+
+.login-step h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 4px;
+  font-size: 1.25rem;
+}
+
+.login-step h2 svg {
+  color: var(--brand);
+}
+
+.login-step p {
+  margin: 0;
+}
+
+.login-alt {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}

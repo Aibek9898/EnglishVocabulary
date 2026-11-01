@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import { Icon } from '../components/Icon';
 import { usePageTitle } from '../components/ui';
-import { canVerify, checkLogin, startSession } from '../lib/auth';
+import { canVerify, checkLogin, checkSecondStep, getTwoFactor, startSession } from '../lib/auth';
 
 const LOCK_AFTER = 5;
 const LOCK_SECONDS = 30;
@@ -24,6 +24,11 @@ export function Login({ onSuccess }: { onSuccess: () => void }) {
   const [error, setError] = useState('');
   const [shake, setShake] = useState(false);
   const passwordRef = useRef<HTMLInputElement>(null);
+  // Second step, when two-step sign-in is on for this device.
+  const [stage, setStage] = useState<'password' | 'code'>('password');
+  const [code, setCode] = useState('');
+  const [recovery, setRecovery] = useState(false);
+  const codeRef = useRef<HTMLInputElement>(null);
   const [fails, setFails] = useState(0);
   const [lockedUntil, setLockedUntil] = useState(0);
   const [now, setNow] = useState(Date.now());
@@ -36,30 +41,61 @@ export function Login({ onSuccess }: { onSuccess: () => void }) {
     return () => clearInterval(t);
   }, [locked]);
 
-  const submit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (busy || Date.now() < lockedUntil) return;
-    setBusy(true);
-    setError('');
-    const ok = await checkLogin(username, password);
-    setBusy(false);
-    if (ok) {
-      startSession(remember);
-      onSuccess();
-      return;
-    }
+  const failed = (message: string) => {
     const n = fails + 1;
     setFails(n);
-    setPassword('');
     setShake(true);
-    passwordRef.current?.focus();
     if (n % LOCK_AFTER === 0) {
       setLockedUntil(Date.now() + LOCK_SECONDS * 1000);
       setNow(Date.now());
       setError('Too many attempts.');
     } else {
-      setError('Wrong username or password.');
+      setError(message);
     }
+  };
+
+  const submit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (busy || Date.now() < lockedUntil) return;
+    setBusy(true);
+    setError('');
+    if (stage === 'code') {
+      const r = await checkSecondStep(code);
+      setBusy(false);
+      if (r.ok) {
+        startSession(remember);
+        onSuccess();
+        return;
+      }
+      setCode('');
+      codeRef.current?.focus();
+      if (r.reason === 'used') setError('That code was just used. Wait for the next one.');
+      else failed(recovery ? "That recovery code doesn't work." : "That code doesn't match.");
+      return;
+    }
+    const ok = await checkLogin(username, password);
+    setBusy(false);
+    if (ok) {
+      if (getTwoFactor()) {
+        setStage('code');
+        setPassword('');
+        setFails(0);
+        return;
+      }
+      startSession(remember);
+      onSuccess();
+      return;
+    }
+    setPassword('');
+    passwordRef.current?.focus();
+    failed('Wrong username or password.');
+  };
+
+  const back = () => {
+    setStage('password');
+    setCode('');
+    setRecovery(false);
+    setError('');
   };
 
   const wait = Math.max(0, Math.ceil((lockedUntil - now) / 1000));
@@ -87,6 +123,67 @@ export function Login({ onSuccess }: { onSuccess: () => void }) {
               <Icon name="alert" size={18} />
               Open the site over https (or on localhost) to sign in.
             </p>
+          ) : stage === 'code' ? (
+            <>
+              <div className="login-step">
+                <h2>
+                  <Icon name="shield" size={22} /> Two-step sign-in
+                </h2>
+                <p className="muted small">
+                  {recovery ? 'Type one of your recovery codes. Each one works once.' : 'Open Google Authenticator and type the 6‑digit code for Vocab.'}
+                </p>
+              </div>
+              <label className="field">
+                <span>{recovery ? 'Recovery code' : 'Code'}</span>
+                <span className="input-icon">
+                  <Icon name={recovery ? 'key' : 'shield'} size={20} />
+                  <input
+                    ref={codeRef}
+                    key={recovery ? 'recovery' : 'otp'}
+                    name={recovery ? 'recovery-code' : 'one-time-code'}
+                    className="tf-input"
+                    value={code}
+                    onChange={(e) => setCode(e.target.value)}
+                    inputMode={recovery ? 'text' : 'numeric'}
+                    autoComplete={recovery ? 'off' : 'one-time-code'}
+                    autoCapitalize="none"
+                    autoCorrect="off"
+                    spellCheck={false}
+                    maxLength={recovery ? 24 : 7}
+                    placeholder={recovery ? 'xxxxx-xxxxx' : '123456'}
+                    enterKeyHint="go"
+                    autoFocus
+                  />
+                </span>
+              </label>
+              <div aria-live="assertive">
+                {error && (
+                  <p className="login-error">
+                    <Icon name="alert" size={18} />
+                    {locked ? `${error} Try again in ${wait} s.` : error}
+                  </p>
+                )}
+              </div>
+              <button className="primary big block" type="submit" disabled={busy || locked || !code.trim()}>
+                {busy ? <span className="spinner" aria-label="Checking" /> : 'Verify'}
+              </button>
+              <div className="login-alt">
+                <button
+                  type="button"
+                  className="link-btn"
+                  onClick={() => {
+                    setRecovery(!recovery);
+                    setCode('');
+                    setError('');
+                  }}
+                >
+                  {recovery ? 'Use the code from the app' : 'Lost your phone? Use a recovery code'}
+                </button>
+                <button type="button" className="link-btn" onClick={back}>
+                  Back
+                </button>
+              </div>
+            </>
           ) : (
             <>
               <label className="field">
