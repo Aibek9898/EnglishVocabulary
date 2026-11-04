@@ -1,0 +1,765 @@
+{
+  "id": "course-8-comparing",
+  "title": "Comparing & Job Perks",
+  "description": "From your course: how much bigger, better or worse something is, what is useful or a waste of time, and the perks a job offers.",
+  "course": true,
+  "items": [
+    {
+      "term": "lots / loads more … than",
+      "ipa": "lɒts / ləʊdz mɔː … ðən",
+      "type": "phrase",
+      "translation": "намного / гораздо больше …, чем … (неформ.)",
+      "definition": "informal: a much bigger amount, or much more, than something else",
+      "example": "In my new job I've got [loads more] free time than I used to have.",
+      "exampleRu": "На новой работе у меня гораздо больше свободного времени, чем раньше.",
+      "collocations": [
+        "loads more time than",
+        "lots better than",
+        "loads cheaper than",
+        "lots of / loads of + noun"
+      ],
+      "pattern": "lots/loads more + noun (+ than); lots/loads + comparative (+ than)",
+      "trap": "Informal: great with friends, not in a report or an email to a client. Say 'loads more', not 'loads of more'.",
+      "wrong": [
+        "loads of more",
+        "lots of more"
+      ],
+      "tags": [
+        "comparing",
+        "informal"
+      ],
+      "accepted": [
+        "lots more",
+        "lots … than",
+        "loads … than"
+      ]
+    },
+    {
+      "term": "much / a lot / far (more) … than",
+      "ipa": "mʌtʃ / ə lɒt / fɑː (mɔː) … ðən",
+      "type": "phrase",
+      "translation": "гораздо / намного (более) …, чем … (нейтр.)",
+      "definition": "used before a comparative to say that the difference is big",
+      "example": "Going by train is [far more] relaxing than driving, and you can read on the way.",
+      "exampleRu": "Ехать на поезде гораздо спокойнее, чем за рулём, и можно читать в дороге.",
+      "collocations": [
+        "far better than",
+        "much easier than",
+        "a lot cheaper than",
+        "far more expensive than"
+      ],
+      "pattern": "much/a lot/far + comparative (+ than)",
+      "trap": "Before a comparative say 'much better' or 'far better', never 'very better' or 'more better'.",
+      "wrong": [
+        "very more",
+        "much more better"
+      ],
+      "tags": [
+        "comparing"
+      ],
+      "accepted": [
+        "much more",
+        "a lot more",
+        "much … than",
+        "a lot … than",
+        "far … than"
+      ]
+    },
+    {
+      "term": "nowhere near as … as",
+      "ipa": "ˈnəʊweə nɪər əz … əz",
+      "type": "phrase",
+      "translation": "даже близко не такой …, как … / далеко не так …, как … (нейтр.)",
+      "definition": "not nearly as …; a lot less … than",
+      "example": "The sequel was [nowhere near as] good as the first film.",
+      "exampleRu": "Продолжение было даже близко не таким хорошим, как первый фильм.",
+      "collocations": [
+        "nowhere near as good as",
+        "nowhere near as bad as",
+        "nowhere near enough"
+      ],
+      "pattern": "nowhere near as + adjective/adverb + as",
+      "trap": "'Nowhere near', not 'not near' or 'nowhere close as': 'It's nowhere near as hard as I thought.'",
+      "wrong": [
+        "not near as",
+        "nowhere close as"
+      ],
+      "tags": [
+        "comparing"
+      ]
+    },
+    {
+      "term": "nothing like as … as",
+      "ipa": "ˈnʌθɪŋ laɪk əz … əz",
+      "type": "phrase",
+      "translation": "совсем не такой …, как … (нейтр.)",
+      "definition": "not at all as …; far less … than",
+      "example": "My new laptop is [nothing like as] noisy as the old one.",
+      "exampleRu": "Мой новый ноутбук совсем не такой шумный, как старый.",
+      "collocations": [
+        "nothing like as good as",
+        "nothing like as bad as",
+        "look nothing like sb"
+      ],
+      "pattern": "nothing like as + adjective + as",
+      "trap": "Keep both 'as': 'nothing like as cold as Moscow'. Leaving out the first 'as' is a common mistake.",
+      "wrong": [
+        "nothing as like",
+        "not like as"
+      ],
+      "tags": [
+        "comparing"
+      ]
+    },
+    {
+      "term": "considerably / significantly / infinitely (more) … than",
+      "ipa": "kənˈsɪdərəbli / sɪɡˈnɪfɪkəntli / ˈɪnfɪnətli (mɔː) … ðən",
+      "type": "phrase",
+      "translation": "значительно / существенно / бесконечно (более) …, чем … (офиц.)",
+      "definition": "formal: used before a comparative to say that the difference is big; 'infinitely' means very much indeed",
+      "example": "The new system is [significantly more] efficient than the old one, so reports take half the time.",
+      "exampleRu": "Новая система существенно эффективнее старой, поэтому отчёты занимают вдвое меньше времени.",
+      "collocations": [
+        "considerably cheaper than",
+        "significantly higher than",
+        "infinitely better than",
+        "significantly more expensive"
+      ],
+      "pattern": "considerably/significantly/infinitely + comparative (+ than)",
+      "trap": "Formal: good for reports, presentations and work emails. 'Infinitely better' is a strong, often emotional exaggeration.",
+      "wrong": [
+        "significant more",
+        "significantly most"
+      ],
+      "tags": [
+        "comparing",
+        "formal"
+      ],
+      "accepted": [
+        "considerably more",
+        "infinitely more"
+      ]
+    },
+    {
+      "term": "a little / slightly / a bit (more) … than",
+      "ipa": "ə ˈlɪtl / ˈslaɪtli / ə bɪt (mɔː) … ðən",
+      "type": "phrase",
+      "translation": "немного / чуть-чуть / слегка (более) …, чем … (нейтр.)",
+      "definition": "used before a comparative to say that the difference is small",
+      "example": "The blue jacket is [slightly more] expensive than the black one, but it fits better.",
+      "exampleRu": "Синяя куртка немного дороже чёрной, но сидит лучше.",
+      "collocations": [
+        "slightly better than",
+        "a bit cheaper than",
+        "a little more slowly",
+        "slightly more expensive"
+      ],
+      "pattern": "a little/slightly/a bit + comparative (+ than)",
+      "trap": "With short adjectives there is no 'more': 'a bit cheaper', not 'a bit more cheaper'. 'A bit' is the most informal of the three.",
+      "wrong": [
+        "slight more",
+        "a few more"
+      ],
+      "tags": [
+        "comparing"
+      ],
+      "accepted": [
+        "a little more",
+        "a bit more",
+        "a little … than",
+        "slightly … than",
+        "a bit … than"
+      ]
+    },
+    {
+      "term": "almost as … as",
+      "ipa": "ˈɔːlməʊst əz … əz",
+      "type": "phrase",
+      "translation": "почти такой же …, как … (нейтр.)",
+      "definition": "nearly the same; only a little less … than",
+      "example": "My daughter is already [almost as] tall as me.",
+      "exampleRu": "Моя дочь уже почти такого же роста, как я.",
+      "collocations": [
+        "almost as good as",
+        "almost as much as",
+        "nearly as … as",
+        "not quite as … as"
+      ],
+      "pattern": "almost/nearly as + adjective + as",
+      "trap": "It's 'as … as', never 'as … than' or 'so … like': 'almost as good as the original'.",
+      "wrong": [
+        "almost so",
+        "almost like"
+      ],
+      "tags": [
+        "comparing"
+      ],
+      "accepted": [
+        "nearly as",
+        "nearly as … as"
+      ]
+    },
+    {
+      "term": "marginally (more) … than",
+      "ipa": "ˈmɑːdʒɪnəli (mɔː) … ðən",
+      "type": "phrase",
+      "translation": "незначительно / минимально (более) …, чем … (офиц.)",
+      "definition": "formal: by a very small amount",
+      "example": "This year's sales were only [marginally] higher than last year's.",
+      "exampleRu": "Продажи в этом году лишь незначительно выше прошлогодних.",
+      "collocations": [
+        "marginally better",
+        "marginally higher than",
+        "only marginally",
+        "marginally more expensive"
+      ],
+      "pattern": "marginally + comparative (+ than)",
+      "trap": "Formal: in conversation people say 'slightly' or 'a tiny bit'. It's an adverb, so 'marginally higher', not 'marginal higher'.",
+      "wrong": [
+        "marginal",
+        "marginly"
+      ],
+      "tags": [
+        "comparing",
+        "formal"
+      ]
+    },
+    {
+      "term": "just as … (as)",
+      "ipa": "dʒʌst əz … (əz)",
+      "type": "phrase",
+      "translation": "точно такой же … (как)",
+      "definition": "exactly as …; to the same degree",
+      "example": "Working from home can be [just as] tiring as going to the office.",
+      "exampleRu": "Работа из дома может утомлять точно так же, как поездки в офис.",
+      "collocations": [
+        "just as good as",
+        "just as important",
+        "just as well"
+      ],
+      "pattern": "just as + adjective/adverb (+ as)",
+      "trap": "With an adjective use 'as … as', not 'the same … as': 'just as tiring as', not 'the same tiring as'.",
+      "wrong": [
+        "just so",
+        "the same"
+      ],
+      "tags": [
+        "comparing"
+      ]
+    },
+    {
+      "term": "every bit as … (as)",
+      "ipa": "ˈevri bɪt əz … (əz)",
+      "type": "phrase",
+      "translation": "ничуть не менее … (чем) / ровно такой же … (как)",
+      "definition": "in every way as …; used to stress that something is not less good, important, etc.",
+      "example": "The little café round the corner is [every bit as] good as the famous one, and half the price.",
+      "exampleRu": "Маленькое кафе за углом ничуть не хуже знаменитого, а стоит вдвое меньше.",
+      "collocations": [
+        "every bit as good as",
+        "every bit as important",
+        "every bit as much"
+      ],
+      "pattern": "every bit as + adjective (+ as)",
+      "trap": "A fixed phrase: 'every bit as', not 'each bit as' or 'every piece as'.",
+      "wrong": [
+        "each bit as",
+        "every piece as"
+      ],
+      "tags": [
+        "comparing"
+      ]
+    },
+    {
+      "term": "equally … (as)",
+      "ipa": "ˈiːkwəli … (əz)",
+      "type": "phrase",
+      "translation": "одинаково … (как)",
+      "definition": "to the same degree as each other",
+      "example": "Both candidates were [equally] strong, so the decision took ages.",
+      "exampleRu": "Оба кандидата были одинаково сильными, поэтому решение заняло кучу времени.",
+      "collocations": [
+        "equally important",
+        "equally good",
+        "equally well",
+        "just as … as"
+      ],
+      "pattern": "equally + adjective; (spoken) equally as + adjective (+ as)",
+      "trap": "Safest: 'equally important' or 'just as important as'. 'Equally as … as' is common in speech, but teachers and editors often mark it wrong.",
+      "wrong": [
+        "equal",
+        "equally like"
+      ],
+      "tags": [
+        "comparing"
+      ]
+    },
+    {
+      "term": "be valuable to sb",
+      "ipa": "bi ˈvæljuəbl tə",
+      "type": "collocation",
+      "translation": "быть ценным / представлять ценность для (кого-то)",
+      "definition": "to be very useful or important to someone",
+      "example": "Your feedback has been really [valuable to] me as a new manager.",
+      "exampleRu": "Твои отзывы были для меня, как для нового менеджера, очень ценными.",
+      "collocations": [
+        "extremely valuable",
+        "valuable experience",
+        "valuable advice",
+        "a valuable lesson"
+      ],
+      "pattern": "be valuable to sb / valuable for sth",
+      "trap": "'Valuable' means very useful or worth a lot. Careful with 'invaluable': it means even more useful, the opposite of what it looks like.",
+      "wrong": [
+        "valuable at",
+        "valuable with"
+      ],
+      "tags": [
+        "opinions",
+        "work"
+      ]
+    },
+    {
+      "term": "be invaluable to/for sb",
+      "ipa": "bi ɪnˈvæljuəbl tə / fə",
+      "type": "collocation",
+      "translation": "быть бесценным для (кого-то)",
+      "definition": "to be extremely useful to someone",
+      "example": "Her advice was [invaluable to] me when I started my own business.",
+      "exampleRu": "Её советы были для меня бесценны, когда я открывал своё дело.",
+      "collocations": [
+        "invaluable help",
+        "invaluable experience",
+        "prove invaluable"
+      ],
+      "pattern": "be invaluable to sb / invaluable for sb",
+      "trap": "'Invaluable' = extremely useful, NOT 'not valuable'. The opposite of 'valuable' is 'worthless'. And there is no word 'unvaluable'.",
+      "wrong": [
+        "unvaluable to",
+        "invaluable at"
+      ],
+      "tags": [
+        "opinions",
+        "work"
+      ],
+      "accepted": [
+        "invaluable for"
+      ]
+    },
+    {
+      "term": "be effective for sb",
+      "ipa": "bi ɪˈfektɪv fə",
+      "type": "collocation",
+      "translation": "быть эффективным для (кого-то)",
+      "definition": "to work well and give the result someone wants",
+      "example": "That diet just wasn't [effective for] me, so I stopped after a month.",
+      "exampleRu": "Мне эта диета просто не помогла, так что через месяц я её бросил.",
+      "collocations": [
+        "highly effective",
+        "cost-effective",
+        "an effective way to do sth"
+      ],
+      "pattern": "be effective for sb",
+      "trap": "'Effective' = it works and gives the result. 'Efficient' = it doesn't waste time or money. A slow but working method is effective, not efficient.",
+      "wrong": [
+        "effective to",
+        "effective on"
+      ],
+      "tags": [
+        "opinions"
+      ]
+    },
+    {
+      "term": "be effective in (doing) sth",
+      "ipa": "bi ɪˈfektɪv ɪn (ˈduːɪŋ)",
+      "type": "collocation",
+      "translation": "быть эффективным в (выполнении чего-то)",
+      "definition": "to be successful at producing a result",
+      "example": "Short daily lessons are [effective in] building a habit.",
+      "exampleRu": "Короткие ежедневные занятия эффективно помогают выработать привычку.",
+      "collocations": [
+        "effective in reducing stress",
+        "effective in dealing with sth",
+        "effective at doing sth"
+      ],
+      "pattern": "be effective in doing sth / effective at doing sth",
+      "trap": "After 'in' use the -ing form: 'effective in building', not 'effective in to build'. 'Effective at doing sth' is also fine.",
+      "wrong": [
+        "effective to",
+        "effective on"
+      ],
+      "tags": [
+        "opinions"
+      ],
+      "accepted": [
+        "effective at"
+      ]
+    },
+    {
+      "term": "be useful for sb",
+      "ipa": "bi ˈjuːsfl fə",
+      "type": "collocation",
+      "translation": "быть полезным для (кого-то)",
+      "definition": "to help someone or be good for what they need",
+      "example": "These phrases will be really [useful for] anyone moving to the UK.",
+      "exampleRu": "Эти фразы будут очень полезны всем, кто переезжает в Великобританию.",
+      "collocations": [
+        "extremely useful",
+        "a useful tip",
+        "come in useful"
+      ],
+      "pattern": "be useful for sb / useful to sb",
+      "trap": "'Useful to sb' is fine too. For a thing you use, say 'useful for sth': 'useful for travel'.",
+      "wrong": [
+        "useful with",
+        "useful at"
+      ],
+      "tags": [
+        "opinions"
+      ],
+      "accepted": [
+        "useful to"
+      ]
+    },
+    {
+      "term": "be useful in (doing) sth",
+      "ipa": "bi ˈjuːsfl ɪn (ˈduːɪŋ)",
+      "type": "collocation",
+      "translation": "быть полезным в (выполнении чего-то)",
+      "definition": "to help with doing something",
+      "example": "Podcasts are [useful in] improving your listening skills.",
+      "exampleRu": "Подкасты полезны для развития навыков восприятия на слух.",
+      "collocations": [
+        "useful in improving sth",
+        "useful in many ways",
+        "useful for doing sth"
+      ],
+      "pattern": "be useful in doing sth / useful for doing sth",
+      "trap": "After a preposition use -ing: 'useful in improving', not 'useful in improve'. 'Useful for improving' also works.",
+      "wrong": [
+        "useful at",
+        "useful to"
+      ],
+      "tags": [
+        "opinions"
+      ],
+      "accepted": [
+        "useful for"
+      ]
+    },
+    {
+      "term": "be useless for sb",
+      "ipa": "bi ˈjuːsləs fə",
+      "type": "collocation",
+      "translation": "быть бесполезным для (кого-то)",
+      "definition": "to be of no help to someone",
+      "example": "Most of these apps are [useless for] complete beginners.",
+      "exampleRu": "Большинство этих приложений бесполезны для полных новичков.",
+      "collocations": [
+        "completely useless",
+        "totally useless",
+        "useless information"
+      ],
+      "pattern": "be useless for sb / useless to sb",
+      "trap": "'Useless to me' is fine too. But for a skill a person lacks, use 'at': 'I'm useless at cooking'.",
+      "wrong": [
+        "useless at",
+        "useless on"
+      ],
+      "tags": [
+        "opinions"
+      ],
+      "accepted": [
+        "useless to"
+      ]
+    },
+    {
+      "term": "be useless at (doing) sth",
+      "ipa": "bi ˈjuːsləs ət (ˈduːɪŋ)",
+      "type": "collocation",
+      "translation": "быть никудышным в (каком-то деле / занятии)",
+      "definition": "informal: to be very bad at doing something",
+      "example": "I'm completely [useless at] remembering names.",
+      "exampleRu": "Я совершенно не умею запоминать имена.",
+      "collocations": [
+        "useless at maths",
+        "hopeless at sth",
+        "bad at sth",
+        "good at sth"
+      ],
+      "pattern": "be useless at sth / at doing sth",
+      "trap": "For skills use 'at', like 'good at' and 'bad at': 'I'm useless at cooking'. Russian 'в' makes people say 'in' here.",
+      "wrong": [
+        "useless in",
+        "useless on"
+      ],
+      "tags": [
+        "opinions",
+        "informal"
+      ]
+    },
+    {
+      "term": "be a waste of time/energy",
+      "ipa": "bi ə weɪst əv taɪm / ˈenədʒi",
+      "type": "collocation",
+      "translation": "быть пустой тратой времени / сил (для кого-то)",
+      "definition": "to be not worth the time or effort it takes",
+      "example": "Honestly, the whole meeting was [a waste of time] for most of us.",
+      "exampleRu": "Честно говоря, вся эта встреча была для большинства из нас пустой тратой времени.",
+      "collocations": [
+        "a complete waste of time",
+        "a total waste of money",
+        "a waste of energy",
+        "it's a waste of time doing sth"
+      ],
+      "pattern": "be a waste of time/energy/money (for sb)",
+      "trap": "'A waste of time', not 'a loss of time' (a calque of 'потеря времени').",
+      "wrong": [
+        "a loss of time",
+        "a waste of the time"
+      ],
+      "tags": [
+        "opinions",
+        "work"
+      ]
+    },
+    {
+      "term": "be ineffective for sb",
+      "ipa": "bi ˌɪnɪˈfektɪv fə",
+      "type": "collocation",
+      "translation": "быть неэффективным для (кого-то)",
+      "definition": "to not work or give the result someone wants",
+      "example": "Painkillers are often [ineffective for] people with this kind of headache.",
+      "exampleRu": "Обезболивающие часто не помогают людям с такой головной болью.",
+      "collocations": [
+        "largely ineffective",
+        "completely ineffective",
+        "ineffective treatment"
+      ],
+      "pattern": "be ineffective for sb",
+      "trap": "The opposite of 'effective' is 'ineffective', never 'uneffective'.",
+      "wrong": [
+        "uneffective for",
+        "ineffective to"
+      ],
+      "tags": [
+        "opinions"
+      ]
+    },
+    {
+      "term": "be ineffective in (doing) sth",
+      "ipa": "bi ˌɪnɪˈfektɪv ɪn (ˈduːɪŋ)",
+      "type": "collocation",
+      "translation": "быть неэффективным в (достижении / выполнении чего-то)",
+      "definition": "to fail to produce the result that was wanted",
+      "example": "The new parking rules have been [ineffective in] reducing traffic.",
+      "exampleRu": "Новые правила парковки не помогли уменьшить пробки.",
+      "collocations": [
+        "ineffective in dealing with sth",
+        "ineffective at doing sth",
+        "prove ineffective"
+      ],
+      "pattern": "be ineffective in doing sth / ineffective at doing sth",
+      "trap": "'Ineffective', never 'uneffective'; and after 'in' comes the -ing form.",
+      "wrong": [
+        "uneffective in",
+        "ineffective to"
+      ],
+      "tags": [
+        "opinions"
+      ],
+      "accepted": [
+        "ineffective at"
+      ]
+    },
+    {
+      "term": "be unhelpful for sb",
+      "ipa": "bi ʌnˈhelpfl fə",
+      "type": "collocation",
+      "translation": "не приносить пользы / не помогать (кому-то)",
+      "definition": "to not help someone, or make things harder for them",
+      "example": "Vague feedback is [unhelpful for] new employees.",
+      "exampleRu": "Расплывчатые отзывы не помогают новым сотрудникам.",
+      "collocations": [
+        "deeply unhelpful",
+        "an unhelpful comment",
+        "unhelpful to sb"
+      ],
+      "pattern": "be unhelpful for sb / unhelpful to sb",
+      "trap": "The opposite of 'useful' is 'useless'; of 'helpful' it's 'unhelpful'. There is no word 'unuseful'.",
+      "wrong": [
+        "unuseful for",
+        "nonhelpful for"
+      ],
+      "tags": [
+        "opinions",
+        "work"
+      ],
+      "accepted": [
+        "unhelpful to"
+      ]
+    },
+    {
+      "term": "financial / non-financial incentives",
+      "ipa": "faɪˈnænʃl / ˌnɒn faɪˈnænʃl ɪnˈsentɪvz",
+      "type": "collocation",
+      "translation": "финансовые / нефинансовые стимулы (поощрения)",
+      "definition": "things that make people want to work harder: money (a bonus, a pay rise) or other benefits (flexible hours, training)",
+      "example": "Besides a good salary, [non-financial incentives] like flexible hours really matter to me.",
+      "exampleRu": "Кроме хорошей зарплаты, для меня очень важны нефинансовые стимулы, например гибкий график.",
+      "collocations": [
+        "offer incentives",
+        "a strong incentive to do sth",
+        "tax incentives",
+        "job perks"
+      ],
+      "pattern": "an incentive to do sth / an incentive for sb",
+      "trap": "'Incentives', not 'stimuli': 'stimulus' is about science or the economy, not about rewards at work.",
+      "wrong": [
+        "non-financial stimuli",
+        "unfinancial incentives"
+      ],
+      "tags": [
+        "work",
+        "business"
+      ]
+    },
+    {
+      "term": "promotional opportunities",
+      "ipa": "prəˈməʊʃənl ˌɒpəˈtjuːnətiz",
+      "type": "collocation",
+      "translation": "возможности для карьерного роста",
+      "definition": "chances to move to a higher position at work",
+      "example": "The pay is average, but the [promotional opportunities] are excellent.",
+      "exampleRu": "Зарплата средняя, но возможности для карьерного роста отличные.",
+      "collocations": [
+        "opportunities for promotion",
+        "career opportunities",
+        "get promoted",
+        "career prospects"
+      ],
+      "pattern": "promotional opportunities / opportunities for promotion",
+      "trap": "'Opportunities', not 'possibilities'. In job ads you'll also see 'promotion opportunities' or 'opportunities for promotion'; 'promotional' alone can also mean advertising.",
+      "wrong": [
+        "promotional possibilities",
+        "career-growth possibilities"
+      ],
+      "tags": [
+        "work",
+        "business"
+      ],
+      "accepted": [
+        "promotion opportunities",
+        "opportunities for promotion"
+      ]
+    },
+    {
+      "term": "pension scheme",
+      "ipa": "ˈpenʃn skiːm",
+      "type": "collocation",
+      "translation": "пенсионная программа (система)",
+      "definition": "a plan where you and your employer pay money regularly so that you get an income when you retire",
+      "example": "The company pays into a [pension scheme] for every employee.",
+      "exampleRu": "Компания делает взносы в пенсионную программу за каждого сотрудника.",
+      "collocations": [
+        "a company pension scheme",
+        "pay into a pension",
+        "a workplace pension",
+        "pension plan (US)"
+      ],
+      "pattern": "pay into / join / opt out of a pension scheme",
+      "trap": "British English says 'pension scheme'; Americans say 'pension plan'. Not 'pension programme'.",
+      "wrong": [
+        "pension programme",
+        "pension program"
+      ],
+      "tags": [
+        "work",
+        "money"
+      ],
+      "accepted": [
+        "pension plan"
+      ]
+    },
+    {
+      "term": "annual bonus",
+      "ipa": "ˈænjuəl ˈbəʊnəs",
+      "type": "collocation",
+      "translation": "ежегодная премия / бонус",
+      "definition": "extra money an employer pays once a year, usually for good results",
+      "example": "If we hit our targets, everyone gets an [annual bonus] in December.",
+      "exampleRu": "Если мы выполним план, в декабре все получат ежегодную премию.",
+      "collocations": [
+        "a performance bonus",
+        "get a bonus",
+        "a Christmas bonus",
+        "a pay rise"
+      ],
+      "pattern": "get / receive / pay an annual bonus",
+      "trap": "Extra money from your employer is a 'bonus'. A 'premium' is what you pay for insurance.",
+      "wrong": [
+        "annual premium",
+        "yearly premium"
+      ],
+      "tags": [
+        "work",
+        "money"
+      ],
+      "accepted": [
+        "yearly bonus"
+      ]
+    },
+    {
+      "term": "free childcare",
+      "ipa": "friː ˈtʃaɪldkeə",
+      "type": "collocation",
+      "translation": "бесплатный уход за детьми (детский сад от компании)",
+      "definition": "looking after employees' young children at no cost, often in a nursery at work",
+      "example": "Parents at my company get [free childcare] in a nursery next to the office.",
+      "exampleRu": "Родители в нашей компании могут бесплатно оставлять детей в детском саду рядом с офисом.",
+      "collocations": [
+        "childcare costs",
+        "on-site childcare",
+        "a nursery",
+        "a childminder"
+      ],
+      "pattern": "free / affordable / on-site childcare",
+      "trap": "'Childcare' is one word and uncountable: 'free childcare', not 'a free childcare' or 'children care'.",
+      "wrong": [
+        "free children care",
+        "free child's care"
+      ],
+      "tags": [
+        "work",
+        "family"
+      ],
+      "accepted": [
+        "free child care"
+      ]
+    },
+    {
+      "term": "gym membership",
+      "ipa": "dʒɪm ˈmembəʃɪp",
+      "type": "collocation",
+      "translation": "абонемент в спортивный зал",
+      "definition": "paying a gym so that you can use it, usually every month or year",
+      "example": "My [gym membership] costs forty pounds a month, and I hardly ever go.",
+      "exampleRu": "Мой абонемент в спортзал стоит сорок фунтов в месяц, а я почти не хожу.",
+      "collocations": [
+        "cancel a gym membership",
+        "a free gym membership",
+        "join a gym"
+      ],
+      "pattern": "have / get / cancel a gym membership",
+      "trap": "Not 'abonement' or 'gym subscription': for a gym or a club it's 'membership'.",
+      "wrong": [
+        "gym abonement",
+        "gym subscription"
+      ],
+      "tags": [
+        "work",
+        "sport"
+      ]
+    }
+  ]
+}

@@ -62,11 +62,15 @@ export function editPatch(item: Item, next: Partial<ItemContent>, original?: Ite
   return patch;
 }
 
-/** Pack content to write over a library item, without the fields the learner rewrote. */
-export function packUpdate(fresh: ItemContent, edited: Item['edited'] = []): Partial<ItemContent> {
-  const { source: _source, ...content } = fresh;
+/**
+ * Pack content to write over a library item, without the fields the learner
+ * rewrote. Answers the learner marked as right stay, next to the pack's.
+ */
+export function packUpdate(fresh: ItemContent, edited: Item['edited'] = [], accepted: string[] = []): Partial<ItemContent> {
+  const { source: _source, accepted: packAccepted = [], ...content } = fresh;
   for (const key of edited) delete (content as Partial<ItemContent>)[key];
-  return content;
+  const all = [...new Set([...accepted, ...packAccepted])];
+  return all.length ? { ...content, accepted: all } : content;
 }
 
 /** A separate card for another meaning of the same phrase. */

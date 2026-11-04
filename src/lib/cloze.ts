@@ -28,12 +28,18 @@ export function plainExample(example: string): string {
   return example.replace(/\[([^\]]+)\]/g, '$1');
 }
 
-/** "make a decision" -> "m___ a d_______" style hint: first letter of each word. */
+/**
+ * "make a decision" -> "m___ a d_______" style hint: first letter of each word.
+ * Brackets, dots and "/" stay: "far (more) … than" -> "f__ (m___) … t___".
+ */
 export function firstLetterHint(answer: string): string {
   return answer
-    .split(' ')
-    .map((w) => (w.length <= 1 ? w : w[0] + '_'.repeat(w.length - 1)))
-    .join(' ');
+    .split(/([\s/]+)/)
+    .map((w) => {
+      let first = true;
+      return w.replace(/\p{L}/gu, (c) => (first ? ((first = false), c) : '_'));
+    })
+    .join('');
 }
 
 /**
@@ -175,21 +181,34 @@ export function markExample(example: string, term: string): string {
   return `${example.slice(0, t.start)}[${example.slice(t.start, t.end)}]${example.slice(t.end)}`;
 }
 
+const SHORT_WORDS = new Set(['up', 'on', 'in', 'at', 'by', 'of', 'to', 'go', 'do', 'as']);
+
 /**
  * Rough check that a sentence uses the term: every content word of the term
  * must appear, allowing simple inflection (decide -> decided, make -> making).
+ * Words in brackets may be missing, and of "a/b" alternatives one is enough.
+ * `accepted`: other forms that count too ("far … than" for "much / a lot / far (more) … than").
  */
-export function sentenceUsesTerm(sentence: string, term: string): boolean {
+export function sentenceUsesTerm(sentence: string, term: string, accepted: string[] = []): boolean {
   const words = new Set(normalize(sentence).split(' '));
   const stems = [...words].map((w) => w.replace(/(ing|ed|es|s|d)$/, ''));
-  const termWords = stripPlaceholders(term)
-    .split(' ')
-    .filter((w) => w.length > 2 || ['up', 'on', 'in', 'at', 'by', 'of', 'to', 'go', 'do'].includes(w));
-  if (!termWords.length) return false;
-  return termWords.every((tw) => {
+  const found = (tw: string) => {
     if (words.has(tw)) return true;
     const stem = tw.replace(/(e|ing|ed|es|s)$/, '');
     if (stem.length < 3) return false;
     return stems.some((s) => s.startsWith(stem)) || [...words].some((w) => w.startsWith(stem));
-  });
+  };
+  const content = (text: string) => stripPlaceholders(text).split(' ').filter((w) => w.length > 2 || SHORT_WORDS.has(w));
+  const uses = (form: string) => {
+    const groups = form
+      .replace(/\([^)]*\)/g, ' ')
+      .replace(/\s*\/\s*/g, '/')
+      .trim()
+      .split(/\s+/)
+      .map((token) => token.split('/').map(content))
+      // An alternative without content words ("a" in "much/a lot") can't be checked, so the group can't either.
+      .filter((alts) => alts.length && alts.every((a) => a.length));
+    return groups.length > 0 && groups.every((alts) => alts.some((a) => a.every(found)));
+  };
+  return [term, ...accepted].some(uses);
 }

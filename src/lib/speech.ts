@@ -24,10 +24,20 @@ function pickVoice(name: string) {
   );
 }
 
+/** Reads a pattern out loud: "much / a lot / far (more) … than" -> "much or a lot or far more, than". */
+export function spoken(text: string): string {
+  return text
+    .replace(/\s*\/\s*/g, ' or ')
+    .replace(/\s*(…|\.{3})\s*/g, ', ')
+    .replace(/[()]/g, '')
+    .replace(/,\s*$/, '')
+    .trim();
+}
+
 export function speak(text: string, rate?: number) {
   if (!canSpeak || !text) return;
   speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text);
+  const u = new SpeechSynthesisUtterance(spoken(text));
   const voice = pickVoice(settings.voiceName);
   if (voice) u.voice = voice;
   u.lang = voice?.lang ?? 'en-US';

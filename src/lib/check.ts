@@ -52,8 +52,15 @@ export function levenshtein(a: string, b: string): number {
 
 export type Verdict = 'correct' | 'almost' | 'wrong';
 
-/** One position of an expected answer: a slot, or a word with its "/" alternatives. */
-type Segment = { slot: 'thing' | 'possessive' } | { alts: string[][]; optional?: boolean };
+/**
+ * One position of an expected answer: a slot, or a word with its "/" alternatives.
+ * `optional`: may be left out when recalling a dictionary form. `maybe`: always
+ * optional, written in brackets ("much (more) ... than").
+ */
+type Segment = { slot: 'thing' | 'possessive'; maybe?: boolean } | { alts: string[][]; optional?: boolean; maybe?: boolean };
+
+/** "..." in a pattern ("nowhere near as ... as") stands for any words, like sth. */
+const GAP = /^(\.{2,}|…)[,;]?$/;
 
 /**
  * "angry with/angry at" is two whole answers; "drop sb/sth off" and
@@ -68,13 +75,23 @@ function wholeAlternatives(expected: string): string[] {
 
 function segments(expected: string): Segment[] {
   const out: Segment[] = [];
-  for (const token of expected.replace(/\s*\/\s*/g, '/').trim().split(/\s+/)) {
+  let bracket = false;
+  for (const raw of expected.replace(/\s*\/\s*/g, '/').trim().split(/\s+/)) {
+    // Words in round brackets may be left out: "just as ... (as)", "be a waste of time (for sb)".
+    const opens = raw.startsWith('(');
+    const maybe = bracket || opens;
+    bracket = (bracket || opens) && !raw.endsWith(')');
+    const token = raw.replace(/^\(|\)$/g, '');
+    if (GAP.test(token)) {
+      out.push({ slot: 'thing', maybe });
+      continue;
+    }
     const parts = token.split('/').map(normalize).filter(Boolean);
     if (!parts.length) continue;
-    if (parts.every((p) => slotKind(p) === 'thing')) out.push({ slot: 'thing' });
-    else if (parts.every((p) => slotKind(p) === 'possessive')) out.push({ slot: 'possessive' });
+    if (parts.every((p) => slotKind(p) === 'thing')) out.push({ slot: 'thing', maybe });
+    else if (parts.every((p) => slotKind(p) === 'possessive')) out.push({ slot: 'possessive', maybe });
     // A dictionary-form "be" ("be fed up with sth") may be left out when recalling.
-    else out.push({ alts: parts.map((p) => p.split(' ')), optional: !out.length && parts.join() === 'be' });
+    else out.push({ alts: parts.map((p) => p.split(' ')), optional: !out.length && parts.join() === 'be', maybe });
   }
   return out;
 }
@@ -99,6 +116,7 @@ function matches(input: string[], segs: Segment[], fuzzy: boolean, optional: boo
   const go = (i: number, j: number): boolean => {
     if (j === segs.length) return i === input.length;
     const s = segs[j];
+    if (s.maybe && go(i, j + 1)) return true;
     if ('slot' in s) {
       if (s.slot === 'possessive') return i < input.length && POSSESSIVE.test(input[i]) && go(i + 1, j + 1);
       for (let k = optional ? 0 : 1; k <= 3 && i + k <= input.length; k++) if (go(i + k, j + 1)) return true;
@@ -119,13 +137,18 @@ export interface CheckOptions {
 
 /**
  * Exact match is correct, a small typo is "almost", anything else is wrong.
- * sth/sb slots in the expected answer accept any 1-3 words ("turn it down" for
- * "turn sth down"), possessive slots any possessive ("change my mind" for
- * "change one's mind"). Alternatives can be separated by "/".
+ * sth/sb and "..." slots in the expected answer accept any 1-3 words ("turn it
+ * down" for "turn sth down"), possessive slots any possessive ("change my mind"
+ * for "change one's mind"). Alternatives can be separated by "/", and words in
+ * round brackets may be left out.
  */
+/** The text as shown, for an answer typed exactly like the card, slashes and all. */
+const asShown = (t: string) => t.toLowerCase().replace(/\.{3}/g, '…').replace(/\s*\/\s*/g, '/').replace(/\s+/g, ' ').trim();
+
 export function checkAnswer(input: string, expected: string, { ignorePlaceholders = false, accepted = [] }: CheckOptions = {}): Verdict {
   const clean = normalize(input);
   if (!clean) return 'wrong';
+  if ([expected, ...accepted].some((e) => asShown(e) === asShown(input))) return 'correct';
   // Typed placeholders ("put sth off") fill an optional slot, so drop them.
   const words = clean.split(' ').filter((w) => !ignorePlaceholders || slotKind(w) !== 'thing');
   const patterns = [expected, ...accepted].flatMap(wholeAlternatives).map(segments).filter((s) => s.length);

@@ -622,14 +622,14 @@ export function pickTargets(items: Item[], tags: string[], count = 4, rand: Rand
 
 /** Ids of the targets used in any of the replies. */
 export function usedTargets(replies: string[], targets: Item[]): Set<string> {
-  return new Set(targets.filter((t) => replies.some((r) => sentenceUsesTerm(r, t.term))).map((t) => t.id));
+  return new Set(targets.filter((t) => replies.some((r) => sentenceUsesTerm(r, t.term, t.accepted))).map((t) => t.id));
 }
 
 /** For each target, the first reply that uses it: what "Save to my sentences" stores. */
 export function repliesToSave(replies: string[], targets: Item[]): { item: Item; text: string }[] {
   const out: { item: Item; text: string }[] = [];
   for (const t of targets) {
-    const text = replies.find((r) => sentenceUsesTerm(r, t.term));
+    const text = replies.find((r) => sentenceUsesTerm(r, t.term, t.accepted));
     if (text) out.push({ item: t, text: text.trim() });
   }
   return out;

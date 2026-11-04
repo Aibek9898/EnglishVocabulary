@@ -21,6 +21,7 @@ export function toContent(raw: unknown): ItemContent | null {
   const translation = str(r.translation ?? r.russian ?? r.ru ?? r.meaning);
   if (!term || !translation) return null;
   const type = TYPES.includes(r.type as ItemType) ? (r.type as ItemType) : guessType(term);
+  const accepted = list(r.accepted);
   return {
     term,
     ipa: str(r.ipa ?? r.transcription).replace(/^[[/]+|[\]/]+$/g, '').trim() || undefined,
@@ -35,6 +36,7 @@ export function toContent(raw: unknown): ItemContent | null {
     tags: list(r.tags).map((t) => t.toLowerCase()),
     source: str(r.source) || undefined,
     wrong: list(r.wrong ?? r.mistakes),
+    ...(accepted.length ? { accepted } : {}),
   };
 }
 

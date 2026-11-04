@@ -221,10 +221,10 @@ function Chat({ scenario, ai, pool, all, onExit, onAgain }: GameProps & { scenar
                 <span className="sr-only">You: </span>
                 {l.text}
               </div>
-              {targets.some((t) => sentenceUsesTerm(l.text, t.term)) && (
+              {targets.some((t) => sentenceUsesTerm(l.text, t.term, t.accepted)) && (
                 <div className="g-msg-used">
                   {targets
-                    .filter((t) => sentenceUsesTerm(l.text, t.term))
+                    .filter((t) => sentenceUsesTerm(l.text, t.term, t.accepted))
                     .map((t) => (
                       <span key={t.id} className="chip ok">
                         <Icon name="check" size={12} strokeWidth={3} /> {t.term}

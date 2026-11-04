@@ -227,7 +227,7 @@ function ItemDetails({ item, onClose }: { item: Item; onClose: () => void }) {
     );
   }
 
-  const uses = text.trim() && sentenceUsesTerm(text, item.term);
+  const uses = text.trim() && sentenceUsesTerm(text, item.term, item.accepted);
 
   return (
     <>

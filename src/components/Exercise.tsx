@@ -1,9 +1,9 @@
 import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from 'react';
-import { checkAnswer, detectCyrillic, normalize, type Verdict as Check } from '../lib/check';
+import { detectCyrillic, normalize, type Verdict as Check } from '../lib/check';
 import { firstLetterHint, maskTerm, parseCloze, plainExample, sentenceUsesTerm, wordBlanks } from '../lib/cloze';
 import { db } from '../lib/db';
 import { diffWords } from '../lib/diff';
-import { wrongForms } from '../lib/mistakes';
+import { gradeTyped, isKnownMistake, wrongForms } from '../lib/mistakes';
 import { canSpeak, speak } from '../lib/speech';
 import type { ExerciseKind, Item, Result } from '../lib/types';
 import { AiCheck } from './AiCheck';
@@ -87,12 +87,6 @@ function pickOthers(item: Item, pool: Item[], n: number, key: (i: Item) => strin
     if (out.length >= n) break;
   }
   return out;
-}
-
-/** Wrong answers that are a known learner mistake for this item. */
-function isKnownMistake(item: Item, value: string): boolean {
-  const v = normalize(value);
-  return !!v && [...(item.wrong ?? []), ...wrongForms(item)].some((w) => normalize(w) === v);
 }
 
 function AnswerDiff({ value, expected }: { value: string; expected: string }) {
@@ -320,7 +314,7 @@ function Typed({ item, kind: requested, onDone, onEdit }: ExerciseProps) {
       setCyrillic(true);
       return;
     }
-    setVerdict(checkAnswer(value, expected, { ignorePlaceholders: !useCloze, accepted: item.accepted }));
+    setVerdict(gradeTyped(item, value, expected, !useCloze));
   };
 
   const acceptMine = () => {
@@ -564,7 +558,7 @@ function sentenceFrame(item: Item): string {
 function Sentence({ item, onDone }: ExerciseProps) {
   const [text, setText] = useState('');
   const [warn, setWarn] = useState(false);
-  const uses = sentenceUsesTerm(text, item.term);
+  const uses = sentenceUsesTerm(text, item.term, item.accepted);
   const save = () => {
     if (!text.trim()) return;
     if (!uses && !warn) {

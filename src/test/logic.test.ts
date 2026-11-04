@@ -6,6 +6,7 @@ import { checkAnswer, detectCyrillic } from '../lib/check';
 import { firstLetterHint, maskTerm, parseCloze, sentenceUsesTerm, wordBlanks } from '../lib/cloze';
 import { toContent } from '../lib/content';
 import { parseImport } from '../lib/importer';
+import { spoken } from '../lib/speech';
 import {
   buildSession,
   dueItems,
@@ -112,6 +113,32 @@ describe('checkAnswer', () => {
     expect(checkAnswer('take a decision', 'make a decision', { accepted: ['take a decision'] })).toBe('correct');
     expect(checkAnswer('take a decision', 'make a decision', { accepted: [] })).toBe('wrong');
   });
+  it('reads "..." as any words and words in brackets as optional', () => {
+    const recall = { ignorePlaceholders: true };
+    expect(checkAnswer('nowhere near as good as', 'nowhere near as … as', recall)).toBe('correct');
+    expect(checkAnswer('nowhere near as ... as', 'nowhere near as … as', recall)).toBe('correct');
+    expect(checkAnswer('nowhere near as as', 'nowhere near as … as', recall)).toBe('correct');
+    expect(checkAnswer('not near as good as', 'nowhere near as … as', recall)).toBe('wrong');
+    expect(checkAnswer('just as good', 'just as … (as)', recall)).toBe('correct');
+    expect(checkAnswer('just as good as', 'just as … (as)', recall)).toBe('correct');
+    expect(checkAnswer('significantly more efficient than', 'considerably / significantly / infinitely (more) … than', recall)).toBe('correct');
+    expect(checkAnswer('infinitely better than', 'considerably / significantly / infinitely (more) … than', recall)).toBe('correct');
+    expect(checkAnswer('useful in', 'be useful in (doing) sth', recall)).toBe('correct');
+    expect(checkAnswer('useful in improving', 'be useful in (doing) sth', recall)).toBe('correct');
+    expect(checkAnswer('useful at', 'be useful in (doing) sth', recall)).toBe('wrong');
+    expect(checkAnswer('non-financial incentives', 'financial / non-financial incentives')).toBe('correct');
+    expect(checkAnswer('financial incentives', 'financial / non-financial incentives')).toBe('correct');
+  });
+  it('takes other forms from the pack for multi-word choices', () => {
+    const term = 'much / a lot / far (more) … than';
+    const accepted = ['much more', 'a lot more', 'much … than', 'a lot … than', 'far … than'];
+    for (const said of ['far more expensive than', 'a lot bigger than', 'much more than', 'far better than'])
+      expect(checkAnswer(said, term, { ignorePlaceholders: true, accepted }), said).toBe('correct');
+    expect(checkAnswer('very more than', term, { ignorePlaceholders: true, accepted })).toBe('wrong');
+    // The gap in the example is "far more"; the other words fit it too.
+    expect(checkAnswer('a lot more', 'far more', { accepted })).toBe('correct');
+    expect(checkAnswer('very more', 'far more', { accepted })).toBe('wrong');
+  });
   it('detects Cyrillic input', () => {
     expect(detectCyrillic('принять решение')).toBe(true);
     expect(detectCyrillic('make a решение')).toBe(true);
@@ -132,11 +159,27 @@ describe('cloze', () => {
   });
   it('builds a first-letter hint', () => {
     expect(firstLetterHint('made a decision')).toBe('m___ a d_______');
+    expect(firstLetterHint('much / a lot / far (more) … than')).toBe('m___ / a l__ / f__ (m___) … t___');
+    expect(firstLetterHint('drop sb/sth off')).toBe('d___ s_/s__ o__');
   });
   it('spots inflected use of a term in a sentence', () => {
     expect(sentenceUsesTerm('Yesterday I finally decided and booked it', 'decide')).toBe(true);
     expect(sentenceUsesTerm('We are running out of milk', 'run out of sth')).toBe(true);
     expect(sentenceUsesTerm('Nothing related here', 'run out of sth')).toBe(false);
+  });
+  it('spots a pattern with gaps, optional words and alternatives', () => {
+    expect(sentenceUsesTerm('The sequel is nowhere near as good as the book', 'nowhere near as … as')).toBe(true);
+    expect(sentenceUsesTerm('I just finished', 'just as … (as)')).toBe(false);
+    expect(sentenceUsesTerm('Podcasts are useful in learning words', 'be useful in (doing) sth')).toBe(true);
+    expect(sentenceUsesTerm('It was a waste of energy', 'be a waste of time/energy')).toBe(true);
+    expect(sentenceUsesTerm('Trains are much nicer than cars', 'much / a lot / far (more) … than')).toBe(false);
+    expect(sentenceUsesTerm('Trains are much nicer than cars', 'much / a lot / far (more) … than', ['much … than'])).toBe(true);
+  });
+  it('reads patterns out loud without slashes and dots', () => {
+    expect(spoken('much / a lot / far (more) … than')).toBe('much or a lot or far more, than');
+    expect(spoken('be invaluable to/for sb')).toBe('be invaluable to or for sb');
+    expect(spoken('just as ... (as)')).toBe('just as, as');
+    expect(spoken('I [made a decision] yesterday.')).toBe('I [made a decision] yesterday.');
   });
   it('builds word-length blanks', () => {
     expect(wordBlanks('make a decision')).toBe('____ _ ________');
@@ -268,17 +311,36 @@ describe('session', () => {
     const picked = pickNew([item('take a break'), item('come up with', { deck: 'own', createdAt: 5 })], 1);
     expect(picked[0].term).toBe('come up with');
   });
-  it('takes course words before other packs, mixing the course topics', () => {
-    const picked = pickNew(
-      [
-        item('take a break', { deck: 'everyday-life', createdAt: 1 }),
-        item('bond over sth', { deck: 'course-1-friends', createdAt: 2 }),
-        item('click with sb', { deck: 'course-1-friends', createdAt: 3 }),
-        item('urban areas', { deck: 'course-2-cities', createdAt: 4 }),
-      ],
-      4,
-    );
-    expect(picked.map((i) => i.term)).toEqual(['bond over sth', 'urban areas', 'click with sb', 'take a break']);
+  it('takes course words before other packs, the newest course first, then the others mixed', () => {
+    const words = [
+      item('take a break', { deck: 'everyday-life', createdAt: 1 }),
+      item('bond over sth', { deck: 'course-1-friends', createdAt: 2 }),
+      item('click with sb', { deck: 'course-1-friends', createdAt: 3 }),
+      item('urban areas', { deck: 'course-2-cities', createdAt: 4 }),
+      item('annual bonus', { deck: 'course-10-comparing', createdAt: 5 }),
+      item('gym membership', { deck: 'course-10-comparing', createdAt: 6 }),
+      item('hang out', { deck: 'own', createdAt: 7 }),
+    ];
+    const terms = (list: Item[]) => list.map((i) => i.term);
+    expect(terms(pickNew(words, 7))).toEqual(['annual bonus', 'gym membership', 'hang out', 'bond over sth', 'urban areas', 'click with sb', 'take a break']);
+    // Once the newest course is learned, your own words lead again.
+    const learned = words.map((i) => (i.deck.startsWith('course-10') ? { ...i, level: 2 } : i));
+    expect(terms(pickNew(learned, 2))).toEqual(['hang out', 'bond over sth']);
+  });
+  it('lets "be" phrases with different words come on one day, but not useful for / useful in', () => {
+    const picked = pickNew([item('be useful for sb'), item('be useful in (doing) sth'), item('be late'), item('a bit (more) … than'), item('a waste of time')], 5);
+    expect(picked.map((i) => i.term)).toEqual(['be useful for sb', 'be late', 'a bit (more) … than', 'a waste of time']);
+  });
+  it('takes the picked number of reviews: the due words first, then older ones', () => {
+    const due = Array.from({ length: 4 }, (_, i) => item(`due${i}`, { level: 3, card: reviewed(5, -0.1) }));
+    const later = Array.from({ length: 6 }, (_, i) => item(`later${i}`, { level: 3, card: reviewed(10, 3 + i) }));
+    const words = [...due, ...later, item('fresh'), item('another new one')];
+    const count = (steps: Step[]) => ({ due: steps.filter((s) => s.scheduled && !s.isNew && !s.refresh).length, older: steps.filter((s) => s.refresh).length, intros: steps.filter((s) => s.exercise === 'intro').length });
+    expect(count(buildSession(words, [], DEFAULT_SETTINGS, NOW, 1, undefined, 3))).toEqual({ due: 3, older: 0, intros: 1 });
+    expect(count(buildSession(words, [], DEFAULT_SETTINGS, NOW, 0, undefined, 7))).toEqual({ due: 4, older: 3, intros: 0 });
+    expect(count(buildSession(words, [], DEFAULT_SETTINGS, NOW, 2, undefined, 0))).toEqual({ due: 0, older: 0, intros: 2 });
+    // More than the daily cap when asked for.
+    expect(count(buildSession(words, [], { ...DEFAULT_SETTINGS, reviewCap: 2 }, NOW, 0, undefined, 10))).toEqual({ due: 4, older: 6, intros: 0 });
   });
   it('can be asked for extra new words after the daily ones', () => {
     const fresh = ['a', 'b', 'c', 'd'].map((t, k) => item(`${t} word`, { createdAt: k }));

@@ -85,6 +85,10 @@ describe('your own translation and example', () => {
     expect(update.example).toBe('New [trip sb up].');
     expect('source' in update).toBe(false);
   });
+  it('pack updates keep the answers you marked as right, next to the pack ones', () => {
+    expect(packUpdate({ ...PACK, accepted: ['trip up'] }, [], ['tripped me']).accepted).toEqual(['tripped me', 'trip up']);
+    expect('accepted' in packUpdate(PACK, [])).toBe(false);
+  });
   it('another meaning becomes its own card with its own example', () => {
     const c = anotherMeaning(PACK, { translation: 'сбить с толку', definition: '', example: 'That question tripped me up.', exampleRu: 'Этот вопрос меня подловил.' });
     expect(c).toMatchObject({ term: 'trip sb up', translation: 'сбить с толку', example: 'That question [tripped me up].', wrong: [], tags: ['sport'] });

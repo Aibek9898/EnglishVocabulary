@@ -2431,6 +2431,69 @@ html.in-session .toast {
   margin: 0;
 }
 
+/* How many new words and reviews this lesson takes */
+.counts {
+  grid-column: 1 / -1;
+  display: grid;
+  padding: 2px 6px 2px 16px;
+  border-radius: var(--r-lg);
+  background: var(--surface-2);
+}
+
+.count {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 60px;
+}
+
+.count + .count {
+  border-top: 1px solid var(--border);
+}
+
+.count-label {
+  display: grid;
+  gap: 1px;
+  min-width: 0;
+}
+
+.count-label b {
+  font-weight: 700;
+}
+
+.count-label small {
+  font-size: 0.8125rem;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex: none;
+}
+
+.stepper output {
+  min-width: 2.6ch;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.step-btn {
+  width: 44px;
+  min-height: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: var(--r-pill);
+  color: var(--brand-ink);
+}
+
+.step-btn:active:not(:disabled) {
+  transform: scale(0.94);
+}
+
 .hero p {
   margin: 0;
 }

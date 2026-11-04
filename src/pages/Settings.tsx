@@ -125,7 +125,7 @@ export function SettingsPage() {
           />
           <small>
             {settings.oldPerDay
-              ? `After the new words, each day's lesson checks at least ${settings.oldPerDay} words from earlier days, the ones closest to being forgotten first.`
+              ? `After the new words, each day's lesson checks at least ${settings.oldPerDay} words from earlier days, the ones closest to being forgotten first. Today suggests this many reviews; change it there with − and +.`
               : 'Only the reviews that are due come back.'}
           </small>
         </div>

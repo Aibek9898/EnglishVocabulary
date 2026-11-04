@@ -105,8 +105,21 @@ function interleave(queues: Item[][]): Item[] {
   return out;
 }
 
+/** The number of a course pack ("course-8-…" is 8), or -1 for any other deck. */
+export const courseNumber = (deck: string) => Number(/^course-(\d+)-/.exec(deck)?.[1] ?? -1);
+
+/** Dictionary-form words that don't make two phrases alike: "be useful for" and "be late" are not a pair. */
+const NOT_FIRST = new Set(['be', 'a', 'an', 'the', 'to']);
+
+/** The word that makes two phrases easy to mix up when learned together: "look" for look up / look after. */
+export function firstWord(term: string): string {
+  const words = term.toLowerCase().split(/[\s/]+/).filter(Boolean);
+  return words.find((w) => !NOT_FIRST.has(w)) ?? words[0] ?? '';
+}
+
 /**
- * Picks new items: the learner's own words first, then the course packs
+ * Picks new items: the newest course pack first (the list being studied in
+ * class right now), then the learner's own words, then the other course packs
  * (course-*.json) round-robin, then the other packs round-robin, and never two
  * items starting with the same word on one day (look up / look after learned
  * together interfere with each other).
@@ -119,15 +132,19 @@ export function pickNew(items: Item[], count: number): Item[] {
   const own = byDeck.get('own') ?? [];
   byDeck.delete('own');
   const decks = [...byDeck.entries()];
+  // Newest of all the course packs in the library, learned or not: once it is done, the usual order is back.
+  const newest = items.reduce((n, i) => Math.max(n, courseNumber(i.deck)), -1);
+  const isNewest = (id: string) => newest >= 0 && courseNumber(id) === newest;
   const ordered = [
+    ...decks.filter(([id]) => isNewest(id)).flatMap(([, q]) => q),
     ...own,
-    ...interleave(decks.filter(([id]) => id.startsWith('course-')).map(([, q]) => q)),
+    ...interleave(decks.filter(([id]) => id.startsWith('course-') && !isNewest(id)).map(([, q]) => q)),
     ...interleave(decks.filter(([id]) => !id.startsWith('course-')).map(([, q]) => q)),
   ];
   const picked: Item[] = [];
   const firstWords = new Set<string>();
   for (const i of ordered) {
-    const first = i.term.toLowerCase().split(/\s+/)[0];
+    const first = firstWord(i.term);
     if (firstWords.has(first)) continue;
     picked.push(i);
     firstWords.add(first);
@@ -165,7 +182,9 @@ const TYPED_AFTER = 9;
  * or 'recall' without a cloze) with at least 8 other steps in between. When the
  * queue is too short for a gap, the step goes at the end, before the older words.
  * `newCount` overrides today's allowance ("Learn 5 more"), `refreshCount` the
- * older words ("Review older words").
+ * older words. `reviewCount` (picked on Today) is how many words from earlier
+ * days in all: the due ones first, most likely forgotten first, then older
+ * words that are not due yet.
  */
 export function buildSession(
   items: Item[],
@@ -174,11 +193,13 @@ export function buildSession(
   now = new Date(),
   newCount?: number,
   refreshCount?: number,
+  reviewCount?: number,
 ): Step[] {
   const reviewSteps = dueItems(items, now)
-    .slice(0, settings.reviewCap)
+    .slice(0, reviewCount ?? settings.reviewCap)
     .map<Step>((i) => ({ itemId: i.id, exercise: exerciseFor(i), scheduled: true, isNew: false }));
-  const refresh = refreshItems(items, reviews, settings, now, reviewSteps.length, refreshCount).map<Step>((i) => ({
+  const topUp = reviewCount === undefined ? refreshCount : Math.max(0, reviewCount - reviewSteps.length);
+  const refresh = refreshItems(items, reviews, settings, now, reviewSteps.length, topUp).map<Step>((i) => ({
     itemId: i.id,
     exercise: exerciseFor(i),
     scheduled: true,

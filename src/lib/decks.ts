@@ -85,7 +85,7 @@ async function updatePacks() {
       if (!pack) continue;
       const fresh = pack.get(termKey(item.term));
       if (fresh) {
-        await db.items.update(item.id, packUpdate(fresh, item.edited));
+        await db.items.update(item.id, packUpdate(fresh, item.edited, item.accepted));
       } else if (item.level === 0 && item.card.reps === 0) {
         await db.items.delete(item.id);
       }

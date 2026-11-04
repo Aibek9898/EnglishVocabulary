@@ -1,5 +1,5 @@
 import { parseCloze } from './cloze';
-import { normalize, stripPlaceholders } from './check';
+import { checkAnswer, normalize, stripPlaceholders, type Verdict } from './check';
 import type { ItemContent } from './types';
 
 /** Light verbs in all their forms, so a swap keeps the tense of the example. */
@@ -72,7 +72,13 @@ function fromRules(item: ItemContent): string[] {
  */
 export function wrongForms(item: ItemContent, otherTerms: Iterable<string> = []): string[] {
   const banned = new Set(
-    [item.term, ...item.collocations, ...item.pattern.split('/'), ...(parseCloze(item.example, item.term) ? [parseCloze(item.example, item.term)!.answer] : [])]
+    [
+      item.term,
+      ...item.collocations,
+      ...item.pattern.split('/'),
+      ...(item.accepted ?? []),
+      ...(parseCloze(item.example, item.term) ? [parseCloze(item.example, item.term)!.answer] : []),
+    ]
       .map((t) => stripPlaceholders(t))
       .filter(Boolean),
   );
@@ -86,4 +92,22 @@ export function wrongForms(item: ItemContent, otherTerms: Iterable<string> = [])
     result.push(c);
   }
   return result;
+}
+
+/** Wrong answers that are a known learner mistake for this item. */
+export function isKnownMistake(item: ItemContent, value: string): boolean {
+  const v = normalize(value);
+  return !!v && [...(item.wrong ?? []), ...wrongForms(item)].some((w) => normalize(w) === v);
+}
+
+/**
+ * Grades a typed answer. A known mistake is wrong even when it is only a
+ * letter away from the answer ("uneffective" for "ineffective"), unless the
+ * learner marked it as right.
+ */
+export function gradeTyped(item: ItemContent, value: string, expected: string, recall: boolean): Verdict {
+  const accepted = item.accepted ?? [];
+  const v = normalize(value);
+  if (isKnownMistake(item, value) && !accepted.some((a) => normalize(a) === v)) return 'wrong';
+  return checkAnswer(value, expected, { ignorePlaceholders: recall, accepted });
 }

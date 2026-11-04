@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react';
 import { AiCheck } from '../components/AiCheck';
 import { EditMeaning } from '../components/EditMeaning';
 import { Exercise } from '../components/Exercise';
@@ -10,11 +10,11 @@ import { dayKey } from '../lib/dates';
 import { db, getSettings, saveSettings, useLive, useSettings } from '../lib/db';
 import { DECKS, addDeck } from '../lib/decks';
 import { removeItem } from '../lib/removed';
-import { buildSession, dueItems, newAllowance, overdueCount, pickMessageWords, refreshItems, retrySteps, type Step } from '../lib/session';
+import { buildSession, dueItems, newAllowance, overdueCount, pickMessageWords, pickNew, refreshItems, retrySteps, type Step } from '../lib/session';
 import { unlockSpeech } from '../lib/speech';
 import { addSentence, nextLevel, recordResult, TYPED } from '../lib/srs';
 import { activityByDay, computeStreak, levelCounts, type Streak } from '../lib/stats';
-import { LEVEL_NAMES, type Item, type Result } from '../lib/types';
+import { LEVEL_NAMES, type Item, type Result, type Settings } from '../lib/types';
 
 /** Sentence prompts per lesson: enough to move words towards "Used", few enough not to tire. */
 const MAX_SENTENCES = 3;
@@ -36,9 +36,12 @@ interface Lesson {
 
 /** "Learn 5 more": extra new words once today's plan is done. */
 const MORE_NEW = 5;
-/** "Review older words": extra checks of earlier words once today's plan is done. */
-const MORE_OLDER = 10;
-type StartMode = 'normal' | 'quick' | 'more' | 'older';
+type StartMode = 'normal' | 'more';
+/** How many new words and words from earlier days, as picked on the start screen. */
+interface Counts {
+  newCount: number;
+  reviewCount: number;
+}
 
 export function Today() {
   const items = useLive(() => db.items.toArray(), [], null as Item[] | null);
@@ -54,12 +57,12 @@ export function Today() {
   usePageTitle(lesson && !lesson.ended ? 'Lesson' : 'Today');
   useFocusMode(!!lesson);
 
-  const start = useCallback(async (mode: StartMode = 'normal') => {
+  const start = useCallback(async (mode: StartMode = 'normal', counts?: Counts) => {
     unlockSpeech();
     const [all, settings, logs] = await Promise.all([db.items.toArray(), getSettings(), db.reviews.toArray()]);
-    const effective = mode === 'quick' ? { ...settings, newPerDay: 0, reviewCap: 15, oldPerDay: 0 } : settings;
-    const newCount = mode === 'more' ? MORE_NEW : mode === 'older' ? 0 : undefined;
-    const steps = buildSession(all, logs, effective, new Date(), newCount, mode === 'older' ? MORE_OLDER : undefined);
+    const steps = counts
+      ? buildSession(all, logs, settings, new Date(), counts.newCount, undefined, counts.reviewCount)
+      : buildSession(all, logs, settings, new Date(), mode === 'more' ? MORE_NEW : undefined);
     if (!steps.length) return;
     latest.current = new Map(all.map((i) => [i.id, i]));
     handled.current = -1;
@@ -248,34 +251,91 @@ export function Today() {
 
 /* ---------- start screen ---------- */
 
-function TodayStart({ items, onStart }: { items: Item[]; onStart: (mode?: StartMode) => void }) {
+/** Reviews in a lesson unless you pick another number: the daily number of words from earlier days (Settings). */
+const reviewDefault = (s: Settings) => s.oldPerDay || 10;
+
+/** Steps of the − / + buttons: one by one up to 10 new words, then 5s, then 10s from 30. */
+function stepUp(v: number, ones: boolean) {
+  const unit = ones && v < 10 ? 1 : v < 30 ? 5 : 10;
+  return Math.floor(v / unit) * unit + unit;
+}
+function stepDown(v: number, ones: boolean) {
+  const unit = ones && v <= 10 ? 1 : v <= 30 ? 5 : 10;
+  return Math.max(0, Math.ceil(v / unit) * unit - unit);
+}
+
+function Stepper({ label, note, noun, value, max, ones = false, onChange }: { label: string; note: string; noun: string; value: number; max: number; ones?: boolean; onChange: (v: number) => void }) {
+  const id = useId();
+  return (
+    <div className="count">
+      <div className="count-label">
+        <b id={id}>{label}</b>
+        <small className="muted">{note}</small>
+      </div>
+      <div className="stepper" role="group" aria-labelledby={id}>
+        <button type="button" className="step-btn" aria-label={`Fewer ${noun}`} disabled={value <= 0} onClick={() => onChange(stepDown(value, ones))}>
+          <Icon name="minus" size={20} strokeWidth={2.5} />
+        </button>
+        <output aria-live="polite" aria-label={`${value} ${noun}`}>
+          {value}
+        </output>
+        <button type="button" className="step-btn" aria-label={`More ${noun}`} disabled={value >= max} onClick={() => onChange(Math.min(max, stepUp(value, ones)))}>
+          <Icon name="add" size={20} strokeWidth={2.5} />
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function TodayStart({ items, onStart }: { items: Item[]; onStart: (mode?: StartMode, counts?: Counts) => void }) {
   const settings = useSettings();
   const reviews = useLive(() => db.reviews.where('day').equals(dayKey()).toArray(), [], null);
   const [busy, setBusy] = useState(false);
+  // What the learner picked with − / +; null keeps the suggested number.
+  const [pickedNew, setPickedNew] = useState<number | null>(null);
+  const [pickedReviews, setPickedReviews] = useState<number | null>(null);
   if (!reviews) return null;
 
-  const due = dueItems(items).length;
+  const now = new Date();
+  const due = dueItems(items, now).length;
   const reviewsNow = Math.min(due, settings.reviewCap);
   // Older words that are not due yet, checked at the end so enough of them come up each day.
-  const older = refreshItems(items, reviews, settings, new Date(), reviewsNow).length;
+  const older = refreshItems(items, reviews, settings, now, reviewsNow).length;
+  // Everything a lesson could take right now.
+  const canLearn = pickNew(items, Infinity).length;
   const unseen = items.filter((i) => i.level === 0 && !i.suspended).length;
-  const newCount = Math.min(newAllowance(items, reviews, settings), unseen);
-  const paused = overdueCount(items) >= settings.reviewCap;
+  const canReview = due + refreshItems(items, reviews, settings, now, 0, Infinity).length;
+  const newToday = Math.min(newAllowance(items, reviews, settings, now), canLearn);
+  const paused = overdueCount(items, now) >= settings.reviewCap;
   const doneToday = reviews.filter((r) => r.scheduled).length;
-  const plan = doneToday + reviewsNow + older + newCount;
-  const minutes = Math.max(2, Math.round(((reviewsNow + older) * 12 + newCount * 50) / 60));
-  const nothing = reviewsNow === 0 && older === 0 && newCount === 0;
-  const moreOlder = nothing ? refreshItems(items, reviews, settings, new Date(), 0, MORE_OLDER).length : 0;
+  const plan = doneToday + reviewsNow + older + newToday;
+  const nothing = reviewsNow === 0 && older === 0 && newToday === 0;
   const levels = levelCounts(items);
   const tomorrow = items.filter((i) => !i.suspended && i.level > 0 && +new Date(i.card.due) < +new Date(new Date().setHours(48, 0, 0, 0))).length - due;
 
-  const go = (mode?: StartMode) => {
+  // Suggested: today's new words and up to 10 reviews; once the day is done, 5 more words and 10 older ones.
+  const newCount = Math.min(canLearn, Math.max(0, pickedNew ?? (nothing ? MORE_NEW : newToday)));
+  const reviewCount = Math.min(canReview, Math.max(0, pickedReviews ?? Math.min(reviewDefault(settings), nothing ? canReview : reviewsNow + older)));
+  const minutes = Math.max(2, Math.round((reviewCount * 12 + newCount * 50) / 60));
+  const waiting = due - reviewCount;
+
+  const go = () => {
     setBusy(true);
-    onStart(mode);
+    onStart('normal', { newCount, reviewCount });
   };
 
-  const toReview = reviewsNow + older;
-  const parts = [newCount && `${newCount} new`, toReview && `${toReview} review${toReview === 1 ? '' : 's'}`].filter(Boolean).join(' + ');
+  const parts = [newCount && `${newCount} new`, reviewCount && `${reviewCount} review${reviewCount === 1 ? '' : 's'}`].filter(Boolean).join(' + ');
+  const choose = canLearn > 0 || canReview > 0;
+  const steppers = choose && (
+    <div className="counts" role="group" aria-label="This lesson">
+      {canLearn > 0 && (
+        <Stepper label="New words" note={`${unseen} waiting`} noun="new words" value={newCount} max={canLearn} ones onChange={setPickedNew} />
+      )}
+      {canReview > 0 && (
+        <Stepper label="Reviews" note={due ? `${due} due today` : 'Words from earlier days'} noun="reviews" value={reviewCount} max={canReview} onChange={setPickedReviews} />
+      )}
+    </div>
+  );
 
   return (
     <section className="page today">
@@ -288,52 +348,51 @@ function TodayStart({ items, onStart }: { items: Item[]; onStart: (mode?: StartM
           {nothing ? '✓' : `${Math.round((doneToday / Math.max(1, plan)) * 100)}%`}
         </Ring>
         {nothing ? (
-          <>
-            <div>
-              <h2>All done for today</h2>
-              <p className="muted">
-                {tomorrow > 0 ? `${tomorrow} review${tomorrow === 1 ? '' : 's'} tomorrow. ` : ''}
-                {unseen > 0 || moreOlder > 0 ? 'Want more? Learn a few extra words, review older ones, or play a game.' : 'Play a game or add new words.'}
-              </p>
-            </div>
-            <div className="hero-actions">
-              {unseen > 0 && (
-                <button type="button" className="primary big block" onClick={() => go('more')} disabled={busy}>
-                  <Icon name="plus" /> Learn {Math.min(MORE_NEW, unseen)} more words
-                </button>
+          <div>
+            <h2>All done for today</h2>
+            <p className="muted">
+              {tomorrow > 0 ? `${tomorrow} review${tomorrow === 1 ? '' : 's'} tomorrow. ` : ''}
+              {choose ? 'Want more? Pick how many and start, or play a game.' : 'Play a game or add new words.'}
+            </p>
+          </div>
+        ) : (
+          <div>
+            <h2>{parts || 'Pick what to practise'}</h2>
+            <p className="muted">{parts ? `About ${minutes} minutes` : 'Choose some new words or reviews below.'}</p>
+          </div>
+        )}
+        {steppers}
+        {(waiting > 0 && reviewCount > 0) || (paused && pickedNew === null && canLearn > 0) ? (
+          <p className="muted small hero-note">
+            {waiting > 0 && reviewCount > 0 ? `The words you're closest to forgetting come first; the other ${waiting} wait for next time. ` : ''}
+            {paused && pickedNew === null && canLearn > 0 ? 'New words are paused until the review pile is smaller, but you can add some with +.' : ''}
+          </p>
+        ) : null}
+        <div className="hero-actions">
+          {choose && (
+            <button type="button" className="primary big block" onClick={go} disabled={busy || newCount + reviewCount === 0} autoFocus={!nothing}>
+              {nothing ? (
+                <>
+                  <Icon name="plus" /> {parts ? `Start: ${parts}` : 'Start'}
+                </>
+              ) : doneToday ? (
+                'Continue lesson'
+              ) : (
+                'Start lesson'
               )}
-              {moreOlder > 0 && (
-                <button type="button" className={unseen > 0 ? 'big block' : 'primary big block'} onClick={() => go('older')} disabled={busy}>
-                  <Icon name="reset" /> Review {moreOlder} older word{moreOlder === 1 ? '' : 's'}
-                </button>
-              )}
-              <a className={unseen > 0 || moreOlder > 0 ? 'button big' : 'button primary big'} href="#/practice">
+            </button>
+          )}
+          {nothing && (
+            <>
+              <a className={choose ? 'button big' : 'button primary big'} href="#/practice">
                 <Icon name="gamepad" /> Practice
               </a>
               <a className="button big" href="#/add">
                 <Icon name="plus" /> Add words
               </a>
-            </div>
-          </>
-        ) : (
-          <>
-            <div>
-              <h2>{parts}</h2>
-              <p className="muted">About {minutes} minutes</p>
-            </div>
-            <div className="hero-actions">
-              <button type="button" className="primary big block" onClick={() => go()} disabled={busy} autoFocus>
-                {doneToday ? 'Continue lesson' : 'Start lesson'}
-              </button>
-              {reviewsNow > 3 && (
-                <button type="button" className="ghost block" onClick={() => go('quick')} disabled={busy}>
-                  <Icon name="timer" size={18} /> Quick 3-minute review
-                </button>
-              )}
-            </div>
-            {paused && <p className="muted small hero-note">New words are paused until the review pile is smaller. That keeps lessons short.</p>}
-          </>
-        )}
+            </>
+          )}
+        </div>
       </div>
 
       {levels.slice(1).some(Boolean) && (
@@ -498,7 +557,7 @@ export function DailyMessage({ items }: { items: Item[] }) {
   const targets = items.map((i) => ({ term: i.term, translation: i.translation }));
   const [text, setText] = useState('');
   const [saved, setSaved] = useState<string[] | null>(null);
-  const used = useMemo(() => new Set(items.filter((i) => sentenceUsesTerm(text, i.term)).map((i) => i.id)), [text, items]);
+  const used = useMemo(() => new Set(items.filter((i) => sentenceUsesTerm(text, i.term, i.accepted)).map((i) => i.id)), [text, items]);
 
   const save = async () => {
     const chosen = items.filter((i) => used.has(i.id));

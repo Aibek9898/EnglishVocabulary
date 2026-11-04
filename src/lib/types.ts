@@ -20,6 +20,8 @@ export interface ItemContent {
   source?: string;
   /** Typical wrong versions of the target, e.g. ["do a mistake"]. */
   wrong?: string[];
+  /** Other answers that count as right: from the pack ("far more ... than"), or marked by the learner ("I was right"). */
+  accepted?: string[];
 }
 
 /** An extra example the AI teacher wrote for a word; the target is in [square brackets]. */
@@ -46,8 +48,6 @@ export interface Item extends ItemContent {
   mySentences: MySentence[];
   usedInLife: number;
   suspended: boolean;
-  /** Answers the learner marked as also right ("I was right"). */
-  accepted?: string[];
   /** Fields the learner rewrote (e.g. their own translation): pack updates leave these alone. */
   edited?: (keyof ItemContent)[];
   /** Right answers in a row on the review ladder (see LADDER in srs.ts); missing on cards graded before it. */
