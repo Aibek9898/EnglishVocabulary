@@ -7,9 +7,9 @@ import { hashRecoveryCode, newRecoveryCodes, newSecret, otpauthUri, verifyTotp }
  * can get past it. Only a salted PBKDF2 hash of the password is stored here.
  */
 export const USERNAME = 'aibek';
-const SALT = 'ddba6fb42466ff10292be32a0d2919c0';
+const SALT = 'ec77c2548f7aacc2a00cb298011809c1';
 const ITERATIONS = 600_000;
-const HASH = '7ce41aef52e06733fc447990acdd02466570a05bb0b20a41e537b55da8687b84';
+const HASH = '627ec133c350ff712cd48c0e6f7dacf50c1359ecdaae65edae30c024f244f816';
 
 const KEY = 'vocab-session';
 const REMEMBER_DAYS = 90;
