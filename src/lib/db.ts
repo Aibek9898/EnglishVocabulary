@@ -1,5 +1,6 @@
 import Dexie, { liveQuery, type Table } from 'dexie';
 import { useEffect, useState } from 'react';
+import type { Book } from './books';
 import { DEFAULT_SETTINGS, type Item, type ReviewEntry, type Settings } from './types';
 
 interface KV {
@@ -11,6 +12,8 @@ class VocabDB extends Dexie {
   items!: Table<Item, string>;
   reviews!: Table<ReviewEntry, number>;
   kv!: Table<KV, string>;
+  /** Books for Reading: kept only in this browser, never in backups or sync. */
+  books!: Table<Book, string>;
 
   constructor() {
     super('english-vocabulary');
@@ -19,6 +22,7 @@ class VocabDB extends Dexie {
       reviews: '++id, itemId, day, at',
       kv: 'key',
     });
+    this.version(2).stores({ books: 'id, openedAt' });
   }
 }
 

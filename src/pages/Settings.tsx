@@ -270,7 +270,7 @@ export function SettingsPage() {
       <Sheet open={wipe} onClose={() => setWipe(false)} label="Delete all data">
         <h2>Delete everything?</h2>
         <p>
-          All words and progress on this device will be gone, and the AI key too. Save a backup first if you might need it.
+          All words, progress and books on this device will be gone, and the AI key too. Save a backup first if you might need it.
           {syncOn && ' Sync is turned off on this device first, so your words on GitHub and other devices stay.'}
         </p>
         <div className="row">
@@ -287,6 +287,7 @@ export function SettingsPage() {
                 await db.reviews.clear();
                 await forgetAi();
               });
+              await db.books.clear();
               setWipe(false);
               toast('All data deleted', 'trash');
             }}

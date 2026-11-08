@@ -18,7 +18,7 @@ function readSelection(): Picked | null {
   if (active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA')) return null;
   const node = sel.anchorNode;
   const el = node instanceof Element ? node : node?.parentElement;
-  if (!el || el.closest('input, textarea, [contenteditable="true"], .save-pill')) return null;
+  if (!el || el.closest('input, textarea, [contenteditable="true"], .save-pill, .reader-text')) return null;
   const text = cleanPhrase(sel.toString());
   if (!isSaveable(text)) return null;
   const from = el.closest('[data-term]')?.getAttribute('data-term') ?? undefined;
