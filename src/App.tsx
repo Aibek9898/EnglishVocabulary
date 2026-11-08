@@ -11,6 +11,7 @@ import { Library } from './pages/Library';
 import { Login } from './pages/Login';
 import { Practice } from './pages/Practice';
 import { Progress } from './pages/Progress';
+import { Reading } from './pages/Reading';
 import { SettingsPage } from './pages/Settings';
 import { Today } from './pages/Today';
 
@@ -23,6 +24,7 @@ const NAV: { id: string; label: string; icon: IconName }[] = [
   { id: 'today', label: 'Today', icon: 'sun' },
   { id: 'practice', label: 'Practice', icon: 'gamepad' },
   { id: 'library', label: 'Library', icon: 'library' },
+  { id: 'reading', label: 'Read', icon: 'book' },
   { id: 'add', label: 'Add', icon: 'plus' },
   { id: 'progress', label: 'Progress', icon: 'chart' },
 ];
@@ -60,6 +62,9 @@ function Shell() {
       break;
     case 'add':
       page = <AddWords tab={tab} />;
+      break;
+    case 'reading':
+      page = <Reading bookId={route.params.get('book')} />;
       break;
     case 'progress':
       page = <Progress />;

@@ -556,3 +556,59 @@ export async function checkTranslation(ai: ActiveAi, ru: string, references: str
   );
   return parseFeedback(answer) ?? answer;
 }
+
+/* ---------- Reading: a word or phrase in its sentence ---------- */
+
+export interface InContext {
+  /** Russian translation of the selected words as they are used here. */
+  translation: string;
+  /** Dictionary form to learn, e.g. "come up with sth" for "came up with". */
+  base: string;
+  /** Short explanation in Russian: what it means here, register, how it's used. */
+  note: string;
+  /** Russian translation of the whole sentence. */
+  sentenceRu: string;
+}
+
+export function contextPrompt(): string {
+  return `You are a translator and English teacher for a native Russian speaker at upper-intermediate (B1–B2) level who is reading a book in English.
+The student selected some words in a sentence. Explain them in this exact context.
+
+Answer with one JSON object only, no other text:
+{
+  "translation": "natural Russian translation of the selected words as used in this sentence (if it is an idiom, phrasal verb or collocation, translate it as a whole)",
+  "base": "the form to put on a flashcard: infinitive for verbs, singular for nouns, phrasal verbs and idioms in dictionary form with sb/sth if needed (e.g. 'come up with sth'); if the selection is not a set phrase, the selection itself",
+  "note": "1-2 short sentences in Russian: what it means here, and register or usage if useful",
+  "sentenceRu": "natural Russian translation of the whole sentence"
+}`;
+}
+
+export function parseInContext(answer: string, selected: string): InContext | null {
+  const start = answer.indexOf('{');
+  const end = answer.lastIndexOf('}');
+  if (start < 0 || end <= start) return null;
+  try {
+    const raw = JSON.parse(answer.slice(start, end + 1)) as Record<string, unknown>;
+    const str = (v: unknown) => (typeof v === 'string' ? v.trim().replace(/\s+/g, ' ') : '');
+    const translation = str(raw.translation);
+    if (!translation) return null;
+    return { translation, base: str(raw.base) || selected, note: str(raw.note), sentenceRu: str(raw.sentenceRu) };
+  } catch {
+    return null;
+  }
+}
+
+/** Translates selected words in their sentence (the Reading section). */
+export async function translateInContext(ai: { provider: Provider; key: string; model: string }, selected: string, sentence: string, signal?: AbortSignal): Promise<InContext> {
+  const answer = await chat(
+    ai,
+    [
+      { role: 'system', content: contextPrompt() },
+      { role: 'user', content: `Sentence: ${sentence}\nSelected words: ${selected}` },
+    ],
+    { json: true, maxTokens: 1500, signal },
+  );
+  const result = parseInContext(answer, selected);
+  if (!result) throw new AiError("The AI's answer didn't come through properly. Try again.");
+  return result;
+}

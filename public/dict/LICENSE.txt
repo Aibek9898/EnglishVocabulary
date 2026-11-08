@@ -1,0 +1,6 @@
+English-Russian dictionary used by the Reading section.
+
+(C) V.K. Mueller English-Russian Dictionary, 7th Edition, "State Publishing House of
+Foreign and National Dictionaries", Moscow 1961. Free electronic version by S. Starostin
+1996; electronic version by E.S. Cymbalyuk 1999 under the GNU GPL, version 1.2 or later.
+Converted for this site by scripts/build-dictionary.mjs (line joins, modern IPA symbols).
