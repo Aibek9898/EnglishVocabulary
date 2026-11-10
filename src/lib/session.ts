@@ -117,39 +117,65 @@ export function firstWord(term: string): string {
   return words.find((w) => !NOT_FIRST.has(w)) ?? words[0] ?? '';
 }
 
+/** A word counts as learned for its lesson once it was recalled in a typed check (level 3, "Recalled"). */
+export const LESSON_LEARNED_LEVEL = 3;
+
 /**
- * Picks new items: the newest course pack first (the list being studied in
- * class right now), then the learner's own words, then the other course packs
- * (course-*.json) round-robin, then the other packs round-robin, and never two
- * items starting with the same word on one day (look up / look after learned
- * together interfere with each other).
+ * The lesson being studied right now: the newest course pack in the library,
+ * while some of its words are not learned yet (see LESSON_LEARNED_LEVEL).
+ * Null once every word of it is learned.
+ */
+export function currentLesson(items: Item[]): { deck: string; total: number; learned: number; unseen: number } | null {
+  const newest = items.reduce((n, i) => Math.max(n, courseNumber(i.deck)), -1);
+  if (newest < 0) return null;
+  const words = items.filter((i) => !i.suspended && courseNumber(i.deck) === newest);
+  const learned = words.filter((i) => i.level >= LESSON_LEARNED_LEVEL).length;
+  if (!words.length || learned === words.length) return null;
+  return { deck: words[0].deck, total: words.length, learned, unseen: words.filter((i) => i.level === 0).length };
+}
+
+/**
+ * Picks new items. While a lesson is open (see currentLesson), only its words:
+ * no other new words until all of them are learned (reviews of older words go
+ * on as usual). Otherwise the learner's own words first, then the course packs
+ * (course-*.json) round-robin, then the other packs round-robin. Never two
+ * items starting with the same word on one day if it can be helped (look up /
+ * look after learned together interfere with each other); a lesson still
+ * gets the full count.
  */
 export function pickNew(items: Item[], count: number): Item[] {
   if (count <= 0) return [];
   const fresh = items.filter((i) => !i.suspended && i.level === 0).sort((a, b) => a.createdAt - b.createdAt);
-  const byDeck = new Map<string, Item[]>();
-  for (const i of fresh) byDeck.set(i.deck, [...(byDeck.get(i.deck) ?? []), i]);
-  const own = byDeck.get('own') ?? [];
-  byDeck.delete('own');
-  const decks = [...byDeck.entries()];
-  // Newest of all the course packs in the library, learned or not: once it is done, the usual order is back.
-  const newest = items.reduce((n, i) => Math.max(n, courseNumber(i.deck)), -1);
-  const isNewest = (id: string) => newest >= 0 && courseNumber(id) === newest;
-  const ordered = [
-    ...decks.filter(([id]) => isNewest(id)).flatMap(([, q]) => q),
-    ...own,
-    ...interleave(decks.filter(([id]) => id.startsWith('course-') && !isNewest(id)).map(([, q]) => q)),
-    ...interleave(decks.filter(([id]) => !id.startsWith('course-')).map(([, q]) => q)),
-  ];
+  const lesson = currentLesson(items);
+  let ordered: Item[];
+  if (lesson) {
+    ordered = fresh.filter((i) => i.deck === lesson.deck);
+  } else {
+    const byDeck = new Map<string, Item[]>();
+    for (const i of fresh) byDeck.set(i.deck, [...(byDeck.get(i.deck) ?? []), i]);
+    const own = byDeck.get('own') ?? [];
+    byDeck.delete('own');
+    const decks = [...byDeck.entries()];
+    ordered = [
+      ...own,
+      ...interleave(decks.filter(([id]) => id.startsWith('course-')).map(([, q]) => q)),
+      ...interleave(decks.filter(([id]) => !id.startsWith('course-')).map(([, q]) => q)),
+    ];
+  }
   const picked: Item[] = [];
+  const skipped: Item[] = [];
   const firstWords = new Set<string>();
   for (const i of ordered) {
+    if (picked.length >= count) break;
     const first = firstWord(i.term);
-    if (firstWords.has(first)) continue;
+    if (firstWords.has(first)) {
+      skipped.push(i);
+      continue;
+    }
     picked.push(i);
     firstWords.add(first);
-    if (picked.length >= count) break;
   }
+  if (lesson) picked.push(...skipped.slice(0, Math.max(0, count - picked.length)));
   return picked;
 }
 

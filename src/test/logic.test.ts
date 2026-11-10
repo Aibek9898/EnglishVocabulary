@@ -15,6 +15,7 @@ import {
   newAllowance,
   pickMessageWords,
   pickNew,
+  currentLesson,
   retrySteps,
   type Step,
 } from '../lib/session';
@@ -311,7 +312,7 @@ describe('session', () => {
     const picked = pickNew([item('take a break'), item('come up with', { deck: 'own', createdAt: 5 })], 1);
     expect(picked[0].term).toBe('come up with');
   });
-  it('takes course words before other packs, the newest course first, then the others mixed', () => {
+  it('while the newest course lesson is not learned, gives only its words; then own words, courses, packs', () => {
     const words = [
       item('take a break', { deck: 'everyday-life', createdAt: 1 }),
       item('bond over sth', { deck: 'course-1-friends', createdAt: 2 }),
@@ -322,10 +323,19 @@ describe('session', () => {
       item('hang out', { deck: 'own', createdAt: 7 }),
     ];
     const terms = (list: Item[]) => list.map((i) => i.term);
-    expect(terms(pickNew(words, 7))).toEqual(['annual bonus', 'gym membership', 'hang out', 'bond over sth', 'urban areas', 'click with sb', 'take a break']);
-    // Once the newest course is learned, your own words lead again.
-    const learned = words.map((i) => (i.deck.startsWith('course-10') ? { ...i, level: 2 } : i));
-    expect(terms(pickNew(learned, 2))).toEqual(['hang out', 'bond over sth']);
+    expect(terms(pickNew(words, 7))).toEqual(['annual bonus', 'gym membership']);
+    expect(currentLesson(words)).toEqual({ deck: 'course-10-comparing', total: 2, learned: 0, unseen: 2 });
+    // Introduced but not recalled yet: still no other new words.
+    const seen = words.map((i) => (i.deck.startsWith('course-10') ? { ...i, level: 2 } : i));
+    expect(pickNew(seen, 5)).toEqual([]);
+    // Once every lesson word is recalled, your own words lead again.
+    const learned = words.map((i) => (i.deck.startsWith('course-10') ? { ...i, level: 3 } : i));
+    expect(currentLesson(learned)).toBeNull();
+    expect(terms(pickNew(learned, 4))).toEqual(['hang out', 'bond over sth', 'urban areas', 'click with sb']);
+  });
+  it('gives a lesson the full count even when its words start alike', () => {
+    const words = [item('take it well', { deck: 'course-9-x', createdAt: 1 }), item('take in', { deck: 'course-9-x', createdAt: 2 }), item('tragic', { deck: 'course-9-x', createdAt: 3 })];
+    expect(pickNew(words, 3).map((i) => i.term)).toEqual(['take it well', 'tragic', 'take in']);
   });
   it('lets "be" phrases with different words come on one day, but not useful for / useful in', () => {
     const picked = pickNew([item('be useful for sb'), item('be useful in (doing) sth'), item('be late'), item('a bit (more) … than'), item('a waste of time')], 5);

@@ -46,7 +46,18 @@ export async function addContents(contents: ItemContent[], deck: string, { first
     times = fresh.map((_, i) => lo + step * (i + 1));
   }
   await db.items.bulkAdd(fresh.map((c, i) => ({ ...makeItem(c, deck), createdAt: times[i] })));
-  return fresh.length;
+  // A course lesson also takes over its words that wait unstarted in other packs, so they are learned with it.
+  let moved = 0;
+  if (first && COURSE_DECKS.has(deck)) {
+    const byKey = new Map(contents.map((c) => [termKey(c.term), c]));
+    const start = Math.min(...times, now);
+    for (const i of items) {
+      if (i.level !== 0 || i.deck === 'own' || i.deck === deck || !byKey.has(termKey(i.term))) continue;
+      await db.items.update(i.id, { ...packUpdate(byKey.get(termKey(i.term))!, i.edited, i.accepted), deck, createdAt: start - 1 - moved });
+      moved++;
+    }
+  }
+  return fresh.length + moved;
 }
 
 /** The pack's own version of a library item, if it came from a pack. */
