@@ -10,7 +10,7 @@ import { dayKey } from '../lib/dates';
 import { db, getSettings, saveSettings, useLive, useSettings } from '../lib/db';
 import { DECKS, addDeck } from '../lib/decks';
 import { removeItem } from '../lib/removed';
-import { buildSession, dueItems, newAllowance, overdueCount, pickMessageWords, pickNew, refreshItems, retrySteps, type Step } from '../lib/session';
+import { buildSession, currentLesson, dueItems, newAllowance, overdueCount, pickMessageWords, pickNew, refreshItems, retrySteps, type Step } from '../lib/session';
 import { unlockSpeech } from '../lib/speech';
 import { addSentence, nextLevel, recordResult, TYPED } from '../lib/srs';
 import { activityByDay, computeStreak, levelCounts, type Streak } from '../lib/stats';
@@ -303,7 +303,9 @@ function TodayStart({ items, onStart }: { items: Item[]; onStart: (mode?: StartM
   const older = refreshItems(items, reviews, settings, now, reviewsNow).length;
   // Everything a lesson could take right now.
   const canLearn = pickNew(items, Infinity).length;
-  const unseen = items.filter((i) => i.level === 0 && !i.suspended).length;
+  const lesson = currentLesson(items);
+  const lessonTitle = lesson && (DECKS.find((d) => d.id === lesson.deck)?.title ?? 'your lesson');
+  const unseen = lesson ? lesson.unseen : items.filter((i) => i.level === 0 && !i.suspended).length;
   const canReview = due + refreshItems(items, reviews, settings, now, 0, Infinity).length;
   const newToday = Math.min(newAllowance(items, reviews, settings, now), canLearn);
   const paused = overdueCount(items, now) >= settings.reviewCap;
@@ -329,7 +331,7 @@ function TodayStart({ items, onStart }: { items: Item[]; onStart: (mode?: StartM
   const steppers = choose && (
     <div className="counts" role="group" aria-label="This lesson">
       {canLearn > 0 && (
-        <Stepper label="New words" note={`${unseen} waiting`} noun="new words" value={newCount} max={canLearn} ones onChange={setPickedNew} />
+        <Stepper label="New words" note={lesson ? `${unseen} left in this lesson` : `${unseen} waiting`} noun="new words" value={newCount} max={canLearn} ones onChange={setPickedNew} />
       )}
       {canReview > 0 && (
         <Stepper label="Reviews" note={due ? `${due} due today` : 'Words from earlier days'} noun="reviews" value={reviewCount} max={canReview} onChange={setPickedReviews} />
@@ -362,6 +364,14 @@ function TodayStart({ items, onStart }: { items: Item[]; onStart: (mode?: StartM
           </div>
         )}
         {steppers}
+        {lesson && (
+          <p className="muted small hero-note">
+            <b>{lessonTitle}</b>: {lesson.learned} of {lesson.total} words learned.{' '}
+            {lesson.unseen > 0
+              ? 'New words come only from this lesson until you know them all; reviews of older words go on as usual.'
+              : 'All its words are started: they come back in your reviews, and new words open up once you recall each one.'}
+          </p>
+        )}
         {(waiting > 0 && reviewCount > 0) || (paused && pickedNew === null && canLearn > 0) ? (
           <p className="muted small hero-note">
             {waiting > 0 && reviewCount > 0 ? `The words you're closest to forgetting come first; the other ${waiting} wait for next time. ` : ''}

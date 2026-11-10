@@ -1,0 +1,694 @@
+{
+  "id": "course-9-lesson-10-november",
+  "title": "Lesson — 10 November",
+  "description": "From your lesson on 10 November: games and competitions, adjectives that describe stories and feelings, and types of text.",
+  "course": true,
+  "items": [
+    {
+      "term": "know sth inside and out",
+      "ipa": "nəʊ ˈsʌmθɪŋ ˌɪnsaɪd ənd ˈaʊt",
+      "type": "idiom",
+      "translation": "знать что-то как свои пять пальцев",
+      "definition": "to know every detail of something perfectly",
+      "example": "She's played this game for years, so she [knows it inside and out].",
+      "exampleRu": "Она играет в эту игру много лет, поэтому знает правила как свои пять пальцев.",
+      "collocations": [
+        "know a city inside and out",
+        "know your job inside and out",
+        "know the system inside out"
+      ],
+      "pattern": "know + noun + inside and out (BrE also: inside out)",
+      "trap": "Not 'like my five fingers': that is a word-for-word Russian idiom English doesn't use.",
+      "wrong": [
+        "know it like my five fingers",
+        "know like five fingers"
+      ],
+      "tags": [
+        "games",
+        "idiom"
+      ],
+      "accepted": [
+        "know sth inside out",
+        "inside and out",
+        "inside out"
+      ]
+    },
+    {
+      "term": "a lot to take in",
+      "ipa": "ə lɒt tə teɪk ˈɪn",
+      "type": "phrase",
+      "translation": "много информации, которую нужно усвоить",
+      "definition": "a lot of new information that is hard to understand or accept all at once",
+      "example": "The first day at the new job was [a lot to take in]: new people, new rules, new software.",
+      "exampleRu": "Первый день на новой работе — это было много информации сразу: новые люди, новые правила, новая программа.",
+      "collocations": [
+        "it's a lot to take in",
+        "too much to take in",
+        "take in the news"
+      ],
+      "pattern": "it's / that's a lot to take in",
+      "trap": "'Take in' here means 'understand and remember', not 'take inside'.",
+      "wrong": [
+        "a lot to take on",
+        "a lot for taking in"
+      ],
+      "tags": [
+        "information"
+      ],
+      "accepted": [
+        "a lot to take in"
+      ]
+    },
+    {
+      "term": "rounds",
+      "ipa": "raʊndz",
+      "type": "word",
+      "translation": "раунды, этапы",
+      "definition": "the stages of a game or competition; each one is played separately",
+      "example": "The quiz has three [rounds], and the team with the most points wins.",
+      "exampleRu": "В викторине три раунда, и побеждает команда, набравшая больше всего очков.",
+      "collocations": [
+        "the first / final round",
+        "win a round",
+        "get through to the next round"
+      ],
+      "pattern": "the first / second / final round; win / lose a round",
+      "trap": "A stage of a game is a 'round', not a 'raund' or 'tour' (a tour is a trip).",
+      "wrong": [
+        "tours",
+        "stages of game"
+      ],
+      "tags": [
+        "games",
+        "competition"
+      ],
+      "accepted": [
+        "round"
+      ]
+    },
+    {
+      "term": "best of three",
+      "ipa": "ˌbest əv ˈθriː",
+      "type": "phrase",
+      "translation": "до двух побед из трёх",
+      "definition": "a contest where you play up to three games and the first player to win two wins",
+      "example": "You won the first game, but let's play [best of three] to make it fair.",
+      "exampleRu": "Ты выиграл первую партию, но давай сыграем до двух побед из трёх, чтобы было честно.",
+      "collocations": [
+        "best of five",
+        "play best of three",
+        "it's best of three"
+      ],
+      "pattern": "let's play / let's make it best of three",
+      "trap": "No 'from': say 'best of three', not 'two from three' or 'best from three'.",
+      "wrong": [
+        "best from three",
+        "two from three"
+      ],
+      "tags": [
+        "games",
+        "competition"
+      ]
+    },
+    {
+      "term": "kick in",
+      "ipa": "ˌkɪk ˈɪn",
+      "type": "phrasal-verb",
+      "translation": "начинать действовать, давать о себе знать",
+      "definition": "to start to have an effect",
+      "example": "I was nervous at the start, but then the adrenaline [kicked in] and I played really well.",
+      "exampleRu": "Сначала я нервничал, но потом подействовал адреналин, и я сыграл очень хорошо.",
+      "collocations": [
+        "the medicine kicked in",
+        "the caffeine kicks in",
+        "the nerves kicked in"
+      ],
+      "pattern": "something (medicine, coffee, nerves, a new rule) + kicks in",
+      "trap": "No object: 'the coffee kicked in', not 'the coffee kicked me in'.",
+      "wrong": [
+        "kicked on",
+        "started to kick"
+      ],
+      "tags": [
+        "games",
+        "phrasal verb"
+      ],
+      "accepted": [
+        "kicks in",
+        "kicked in"
+      ]
+    },
+    {
+      "term": "neck and neck",
+      "ipa": "ˌnek ən ˈnek",
+      "type": "idiom",
+      "translation": "вровень, ноздря в ноздрю",
+      "definition": "exactly level with each other in a race or competition, so either could win",
+      "example": "The two teams were [neck and neck] until the very last question.",
+      "exampleRu": "Две команды шли ноздря в ноздрю до самого последнего вопроса.",
+      "collocations": [
+        "be neck and neck",
+        "a neck-and-neck race",
+        "neck and neck in the polls"
+      ],
+      "pattern": "be neck and neck (with sb)",
+      "trap": "Not 'nose to nose' (that means face to face, often angrily).",
+      "wrong": [
+        "nose to nose",
+        "nose and nose"
+      ],
+      "tags": [
+        "games",
+        "competition",
+        "idiom"
+      ]
+    },
+    {
+      "term": "come down to sth",
+      "ipa": "kʌm ˈdaʊn tə ˈsʌmθɪŋ",
+      "type": "phrasal-verb",
+      "translation": "сводиться к",
+      "definition": "if a result comes down to something, that thing is what decides it in the end",
+      "example": "In the end, the whole game [came down to] the last throw of the dice.",
+      "exampleRu": "В итоге вся игра свелась к последнему броску кубика.",
+      "collocations": [
+        "it all comes down to",
+        "come down to money",
+        "when it comes down to it"
+      ],
+      "pattern": "it (all) comes down to + noun / -ing",
+      "trap": "Use 'to': 'it comes down to luck', not 'it comes down on luck' or 'it reduces to luck'.",
+      "wrong": [
+        "comes down on",
+        "reduces to"
+      ],
+      "tags": [
+        "games",
+        "phrasal verb"
+      ],
+      "accepted": [
+        "come down to",
+        "comes down to",
+        "came down to"
+      ]
+    },
+    {
+      "term": "take it well",
+      "ipa": "ˌteɪk ɪt ˈwel",
+      "type": "phrase",
+      "translation": "хорошо воспринять (поражение / победу)",
+      "definition": "to react calmly to bad (or good) news, for example losing a game",
+      "example": "My brother lost three games in a row, but he [took it well] and just laughed.",
+      "exampleRu": "Мой брат проиграл три партии подряд, но воспринял это нормально и просто посмеялся.",
+      "collocations": [
+        "take it badly",
+        "take the news well",
+        "take defeat well"
+      ],
+      "pattern": "take it / the news / defeat well / badly",
+      "trap": "Not 'accept it good': the adverb is 'well', and the verb is 'take'.",
+      "wrong": [
+        "take it good",
+        "accept it well"
+      ],
+      "tags": [
+        "games",
+        "feelings"
+      ],
+      "accepted": [
+        "took it well",
+        "take it well"
+      ]
+    },
+    {
+      "term": "tragic",
+      "ipa": "ˈtrædʒɪk",
+      "type": "word",
+      "translation": "трагичный, трагический",
+      "definition": "very sad, often because someone dies or something terrible happens",
+      "example": "The film has a [tragic] ending, and half the cinema was crying.",
+      "exampleRu": "У фильма трагичный конец, и половина зала плакала.",
+      "collocations": [
+        "a tragic ending",
+        "a tragic accident",
+        "tragic news"
+      ],
+      "pattern": "a tragic + ending / story / accident / loss",
+      "trap": "Stress on the first syllable: TRA-gic. The noun is 'tragedy'.",
+      "wrong": [
+        "tragical",
+        "tragedic"
+      ],
+      "tags": [
+        "describing stories",
+        "adjective"
+      ]
+    },
+    {
+      "term": "disturbing",
+      "ipa": "dɪˈstɜːbɪŋ",
+      "type": "word",
+      "translation": "тревожащий, вызывающий беспокойство",
+      "definition": "making you feel worried or upset",
+      "example": "Some scenes in the documentary were quite [disturbing], so I don't recommend it for kids.",
+      "exampleRu": "Некоторые сцены в документальном фильме довольно тревожные, так что детям я его не советую.",
+      "collocations": [
+        "deeply disturbing",
+        "a disturbing image",
+        "disturbing news"
+      ],
+      "pattern": "deeply / quite disturbing; find sth disturbing",
+      "trap": "'Disturbing' = upsetting. If something just interrupts you, use 'distracting' or 'annoying'.",
+      "wrong": [
+        "disturbed (about a film)",
+        "disturbful"
+      ],
+      "tags": [
+        "describing stories",
+        "adjective"
+      ]
+    },
+    {
+      "term": "profound",
+      "ipa": "prəˈfaʊnd",
+      "type": "word",
+      "translation": "глубокий, проникновенный",
+      "definition": "having a strong effect, or showing deep understanding",
+      "example": "It's a short book, but it has a [profound] message about friendship.",
+      "exampleRu": "Это короткая книга, но в ней глубокая мысль о дружбе.",
+      "collocations": [
+        "a profound effect / impact",
+        "a profound message",
+        "profound thoughts"
+      ],
+      "pattern": "a profound effect on / message / thought",
+      "trap": "For water, use 'deep'. 'Profound' is for ideas, feelings and effects.",
+      "wrong": [
+        "profound lake",
+        "profund"
+      ],
+      "tags": [
+        "describing stories",
+        "adjective"
+      ]
+    },
+    {
+      "term": "entertaining",
+      "ipa": "ˌentəˈteɪnɪŋ",
+      "type": "word",
+      "translation": "занимательный, развлекательный",
+      "definition": "fun and interesting to watch, read or listen to",
+      "example": "The lecture was surprisingly [entertaining]: the professor told jokes the whole time.",
+      "exampleRu": "Лекция оказалась на удивление занимательной: профессор всё время шутил.",
+      "collocations": [
+        "highly entertaining",
+        "an entertaining read",
+        "entertaining story"
+      ],
+      "pattern": "very / highly entertaining; an entertaining read / evening",
+      "trap": "The thing is 'entertaining'; the person is 'entertained': 'I was entertained', not 'I was entertaining'.",
+      "wrong": [
+        "entertainable",
+        "entertainmental"
+      ],
+      "tags": [
+        "describing stories",
+        "adjective",
+        "-ing adjective"
+      ]
+    },
+    {
+      "term": "convincing",
+      "ipa": "kənˈvɪnsɪŋ",
+      "type": "word",
+      "translation": "убедительный",
+      "definition": "making you believe that something is true or right",
+      "example": "The actor was so [convincing] that I forgot it was a film.",
+      "exampleRu": "Актёр был настолько убедительным, что я забыл, что это кино.",
+      "collocations": [
+        "a convincing argument",
+        "a convincing performance",
+        "a convincing win"
+      ],
+      "pattern": "a convincing argument / reason / performance / win",
+      "trap": "The argument is 'convincing'; you are 'convinced': 'I'm convinced', not 'I'm convincing'.",
+      "wrong": [
+        "convinceful",
+        "convincible"
+      ],
+      "tags": [
+        "describing stories",
+        "adjective",
+        "-ing adjective"
+      ]
+    },
+    {
+      "term": "unconvincing",
+      "ipa": "ˌʌnkənˈvɪnsɪŋ",
+      "type": "word",
+      "translation": "неубедительный",
+      "definition": "not making you believe that something is true or real",
+      "example": "The ending felt [unconvincing]: nobody would act like that in real life.",
+      "exampleRu": "Концовка показалась неубедительной: в реальной жизни так никто бы не поступил.",
+      "collocations": [
+        "an unconvincing excuse",
+        "rather unconvincing",
+        "an unconvincing performance"
+      ],
+      "pattern": "an unconvincing excuse / explanation / ending",
+      "trap": "One word with 'un-': not 'not convincing enough' every time, and not 'inconvincing'.",
+      "wrong": [
+        "inconvincing",
+        "disconvincing"
+      ],
+      "tags": [
+        "describing stories",
+        "adjective",
+        "-ing adjective"
+      ]
+    },
+    {
+      "term": "frustrating",
+      "ipa": "frʌˈstreɪtɪŋ",
+      "type": "word",
+      "translation": "досадный, раздражающий",
+      "definition": "making you annoyed because you can't do what you want",
+      "example": "It's so [frustrating] when the game freezes just before you win.",
+      "exampleRu": "Так досадно, когда игра зависает прямо перед твоей победой.",
+      "collocations": [
+        "really frustrating",
+        "a frustrating experience",
+        "find sth frustrating"
+      ],
+      "pattern": "it's frustrating when / that …; find sth frustrating",
+      "trap": "The situation is 'frustrating'; you feel 'frustrated'. Not the Russian 'фрустрация' idea of deep depression: it's everyday annoyance.",
+      "wrong": [
+        "frustrated (about a situation)",
+        "frustrative"
+      ],
+      "tags": [
+        "describing stories",
+        "feelings",
+        "-ing adjective"
+      ]
+    },
+    {
+      "term": "fulfilling",
+      "ipa": "fʊlˈfɪlɪŋ",
+      "type": "word",
+      "translation": "приносящий удовлетворение, насыщенный",
+      "definition": "making you feel happy and satisfied because it's useful or important",
+      "example": "Teaching kids isn't well paid, but it's a really [fulfilling] job.",
+      "exampleRu": "Учить детей — не очень денежно, но это работа, которая приносит настоящее удовлетворение.",
+      "collocations": [
+        "a fulfilling job / career",
+        "a fulfilling life",
+        "deeply fulfilling"
+      ],
+      "pattern": "a fulfilling job / career / life / experience",
+      "trap": "Spelling: fulfil (BrE) → fulfilling, double l. It means 'satisfying', not 'full' or 'busy'.",
+      "wrong": [
+        "fulfiling",
+        "fullfilling"
+      ],
+      "tags": [
+        "describing stories",
+        "work",
+        "-ing adjective"
+      ]
+    },
+    {
+      "term": "eager",
+      "ipa": "ˈiːɡə",
+      "type": "word",
+      "translation": "стремящийся, горящий желанием",
+      "definition": "wanting very much to do or have something",
+      "example": "The new players were [eager] to show what they could do.",
+      "exampleRu": "Новые игроки горели желанием показать, на что они способны.",
+      "collocations": [
+        "eager to learn",
+        "eager to please",
+        "eager for news"
+      ],
+      "pattern": "be eager to + verb; be eager for + noun",
+      "trap": "Use 'to + verb': 'eager to win', not 'eager for winning' or 'eager of winning'.",
+      "wrong": [
+        "eager for winning",
+        "eager of"
+      ],
+      "tags": [
+        "feelings",
+        "adjective"
+      ]
+    },
+    {
+      "term": "pathetic",
+      "ipa": "pəˈθetɪk",
+      "type": "word",
+      "translation": "жалкий",
+      "definition": "so bad, weak or useless that it makes you annoyed or a little sad",
+      "example": "That was a [pathetic] excuse: 'my dog ate my homework'?",
+      "exampleRu": "Это была жалкая отговорка: «собака съела мою домашку»?",
+      "collocations": [
+        "a pathetic excuse",
+        "a pathetic attempt",
+        "look pathetic"
+      ],
+      "pattern": "a pathetic excuse / attempt / performance",
+      "trap": "False friend: not 'патетический' (= emotional, grand). For grand, emotional speech say 'emotional' or 'dramatic'.",
+      "wrong": [
+        "pathetic speech (meaning emotional)"
+      ],
+      "tags": [
+        "describing stories",
+        "false friend",
+        "adjective"
+      ]
+    },
+    {
+      "term": "encouraging",
+      "ipa": "ɪnˈkʌrɪdʒɪŋ",
+      "type": "word",
+      "translation": "обнадёживающий, вдохновляющий",
+      "definition": "giving you hope or confidence",
+      "example": "The first results are [encouraging], so we'll keep going.",
+      "exampleRu": "Первые результаты обнадёживают, поэтому мы продолжим.",
+      "collocations": [
+        "encouraging news",
+        "an encouraging sign",
+        "very encouraging words"
+      ],
+      "pattern": "encouraging news / results / sign / words",
+      "trap": "The news is 'encouraging'; you feel 'encouraged'.",
+      "wrong": [
+        "encouraged news",
+        "encouragable"
+      ],
+      "tags": [
+        "feelings",
+        "-ing adjective"
+      ]
+    },
+    {
+      "term": "overwhelming",
+      "ipa": "ˌəʊvəˈwelmɪŋ",
+      "type": "word",
+      "translation": "ошеломляющий, непосильный",
+      "definition": "so big or strong that it's hard to deal with",
+      "example": "Starting a new job, moving house and studying at the same time was [overwhelming].",
+      "exampleRu": "Начать новую работу, переехать и учиться одновременно — это было непосильно.",
+      "collocations": [
+        "an overwhelming feeling",
+        "overwhelming support",
+        "an overwhelming majority"
+      ],
+      "pattern": "find sth overwhelming; an overwhelming majority / feeling",
+      "trap": "Silent 'h' after w: /ˌəʊvəˈwelmɪŋ/. The thing is 'overwhelming'; you feel 'overwhelmed'.",
+      "wrong": [
+        "overwhelmed (about a thing)",
+        "overhelming"
+      ],
+      "tags": [
+        "feelings",
+        "-ing adjective"
+      ]
+    },
+    {
+      "term": "fanfiction",
+      "ipa": "ˈfænˌfɪkʃn",
+      "type": "word",
+      "translation": "фанфикшн (истории, написанные поклонниками по мотивам известных произведений)",
+      "definition": "stories written by fans using characters or worlds from a famous book, film or series",
+      "example": "She writes [fanfiction] about Harry Potter and posts it online.",
+      "exampleRu": "Она пишет фанфики по «Гарри Поттеру» и выкладывает их в интернет.",
+      "collocations": [
+        "write fanfiction",
+        "read fanfiction",
+        "a piece of fanfiction"
+      ],
+      "pattern": "write / read fanfiction (uncountable); a fanfic (countable, informal)",
+      "trap": "Uncountable: 'I write fanfiction', not 'I write a fanfiction'. For one story say 'a fanfic'.",
+      "wrong": [
+        "a fanfiction",
+        "fanfictions"
+      ],
+      "tags": [
+        "types of text",
+        "reading"
+      ],
+      "accepted": [
+        "fan fiction",
+        "fanfic"
+      ]
+    },
+    {
+      "term": "fiction",
+      "ipa": "ˈfɪkʃn",
+      "type": "word",
+      "translation": "художественная литература",
+      "definition": "books and stories about imaginary people and events",
+      "example": "I mostly read [fiction], but this year I'm trying some history books too.",
+      "exampleRu": "Я в основном читаю художественную литературу, но в этом году пробую и книги по истории.",
+      "collocations": [
+        "science fiction",
+        "a work of fiction",
+        "fiction and non-fiction"
+      ],
+      "pattern": "read fiction; a work of fiction; fiction vs non-fiction",
+      "trap": "Not 'artistic literature' (word-for-word from Russian). Uncountable: not 'a fiction'.",
+      "wrong": [
+        "artistic literature",
+        "a fiction"
+      ],
+      "tags": [
+        "types of text",
+        "reading"
+      ]
+    },
+    {
+      "term": "social media post",
+      "ipa": "ˈsəʊʃl ˈmiːdiə pəʊst",
+      "type": "collocation",
+      "translation": "пост в социальных сетях",
+      "definition": "a short text, photo or video that someone shares on Instagram, Facebook, etc.",
+      "example": "His [social media post] about the match got thousands of likes.",
+      "exampleRu": "Его пост в соцсетях о матче набрал тысячи лайков.",
+      "collocations": [
+        "write / share a social media post",
+        "a post on Instagram",
+        "post something online"
+      ],
+      "pattern": "write / share / delete a social media post; a post on + platform",
+      "trap": "'Post' is both the noun and the verb: 'I posted it', not 'I made a post it'. Say 'on social media', not 'in social media'.",
+      "wrong": [
+        "post in social media",
+        "social net post"
+      ],
+      "tags": [
+        "types of text",
+        "internet"
+      ],
+      "accepted": [
+        "post"
+      ]
+    },
+    {
+      "term": "review",
+      "ipa": "rɪˈvjuː",
+      "type": "word",
+      "translation": "рецензия, отзыв",
+      "definition": "an article or comment giving an opinion about a book, film, product, etc.",
+      "example": "The film got great [reviews], so we bought tickets for Friday.",
+      "exampleRu": "У фильма отличные рецензии, поэтому мы купили билеты на пятницу.",
+      "collocations": [
+        "a good / bad review",
+        "write a review",
+        "read the reviews"
+      ],
+      "pattern": "a review of + film / book / product; get good reviews",
+      "trap": "Not 'recension' (that's a rare academic word). Say 'a review of the film', not 'a review about the film' in most cases.",
+      "wrong": [
+        "recension"
+      ],
+      "tags": [
+        "types of text"
+      ],
+      "accepted": [
+        "reviews"
+      ]
+    },
+    {
+      "term": "research report",
+      "ipa": "rɪˈsɜːtʃ rɪˌpɔːt",
+      "type": "collocation",
+      "translation": "исследовательский отчёт",
+      "definition": "a formal document that explains what a study found",
+      "example": "Our team spent two months on the [research report] about customer habits.",
+      "exampleRu": "Наша команда два месяца работала над исследовательским отчётом о привычках клиентов.",
+      "collocations": [
+        "write a research report",
+        "publish a research report",
+        "according to the research report"
+      ],
+      "pattern": "write / publish a research report on / into sth",
+      "trap": "'Research' is uncountable: 'a lot of research', not 'researches'.",
+      "wrong": [
+        "researches report",
+        "research's report"
+      ],
+      "tags": [
+        "types of text",
+        "work"
+      ]
+    },
+    {
+      "term": "how-to guide",
+      "ipa": "ˈhaʊ tuː ˌɡaɪd",
+      "type": "collocation",
+      "translation": "пошаговая инструкция",
+      "definition": "a text that explains step by step how to do something",
+      "example": "I followed a [how-to guide] on YouTube and fixed the washing machine myself.",
+      "exampleRu": "Я посмотрел пошаговую инструкцию на YouTube и сам починил стиральную машину.",
+      "collocations": [
+        "a step-by-step guide",
+        "a how-to video",
+        "follow a guide"
+      ],
+      "pattern": "write / follow a how-to guide (on sth)",
+      "trap": "Not 'instruction' (that's usually plural and from the maker: 'instructions'). A text you read online is 'a how-to guide'.",
+      "wrong": [
+        "how-to instruction",
+        "a instruction"
+      ],
+      "tags": [
+        "types of text"
+      ],
+      "accepted": [
+        "how to guide"
+      ]
+    },
+    {
+      "term": "humorous article",
+      "ipa": "ˈhjuːmərəs ˈɑːtɪkl",
+      "type": "collocation",
+      "translation": "юмористическая статья",
+      "definition": "a funny piece of writing in a magazine, newspaper or online",
+      "example": "He wrote a [humorous article] about the worst holiday he's ever had.",
+      "exampleRu": "Он написал юмористическую статью о самом неудачном отпуске в своей жизни.",
+      "collocations": [
+        "a humorous story",
+        "a humorous tone",
+        "write in a humorous style"
+      ],
+      "pattern": "a humorous article / story / tone / style",
+      "trap": "Spelling: 'humour' (BrE) but 'humorous' (no u before r). Not 'humoristic'.",
+      "wrong": [
+        "humoristic article",
+        "humourous article"
+      ],
+      "tags": [
+        "types of text"
+      ]
+    }
+  ]
+}
