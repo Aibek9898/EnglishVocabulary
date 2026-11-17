@@ -11,7 +11,7 @@ const files = import.meta.glob<{ default: Deck }>('../data/decks/*.json', { eage
 export const DECKS: Deck[] = Object.values(files)
   .map((m) => m.default)
   .map((d) => ({ ...d, items: d.items.map(toContent).filter((x): x is ItemContent => !!x) }))
-  .sort((a, b) => (a.course === b.course ? (a.course ? a.id.localeCompare(b.id) : a.title.localeCompare(b.title)) : a.course ? -1 : 1));
+  .sort((a, b) => (a.course === b.course ? (a.course ? a.id.localeCompare(b.id, 'en', { numeric: true }) : a.title.localeCompare(b.title)) : a.course ? -1 : 1));
 
 export const COURSE_DECKS = new Set(DECKS.filter((d) => d.course).map((d) => d.id));
 

@@ -1,0 +1,353 @@
+{
+  "id": "course-10-lesson-17-november",
+  "title": "Lesson — 17 November",
+  "description": "Your words for 17 November: phrasal verbs for everyday life, and words and phrases for giving opinions and sounding natural in conversation.",
+  "course": true,
+  "items": [
+    {
+      "term": "figure sth out",
+      "ipa": "ˈfɪɡər ˈsʌmθɪŋ ˈaʊt",
+      "type": "phrasal-verb",
+      "translation": "разобраться, понять, сообразить",
+      "definition": "to understand something or find the answer to a problem after thinking about it",
+      "example": "It took me an hour to [figure out] how the new coffee machine works.",
+      "exampleRu": "Мне понадобился час, чтобы разобраться, как работает новая кофемашина.",
+      "collocations": [
+        "figure out how to",
+        "figure out what to do",
+        "figure out a way",
+        "I can't figure it out"
+      ],
+      "pattern": "figure out how/what/why… · figure it out (pronoun in the middle)",
+      "trap": "With a pronoun say 'figure it out', not 'figure out it'.",
+      "wrong": [
+        "figure up",
+        "find out it"
+      ],
+      "tags": [
+        "phrasal",
+        "thinking"
+      ],
+      "accepted": [
+        "figure out",
+        "figure it out"
+      ]
+    },
+    {
+      "term": "rely on sb/sth",
+      "ipa": "rɪˈlaɪ ɒn",
+      "type": "phrasal-verb",
+      "translation": "полагаться на, рассчитывать на",
+      "definition": "to trust someone or something to help you or to work as you need",
+      "example": "You can always [rely on] Anna: she has never missed a deadline.",
+      "exampleRu": "На Анну всегда можно положиться: она ни разу не сорвала сроки.",
+      "collocations": [
+        "rely heavily on",
+        "rely on public transport",
+        "can't rely on the weather",
+        "rely on sb to do sth"
+      ],
+      "pattern": "rely on sb/sth · rely on sb to do sth",
+      "trap": "The preposition is 'on', not 'to' or 'at': «полагаться на» = rely on.",
+      "wrong": [
+        "rely to",
+        "rely at"
+      ],
+      "tags": [
+        "phrasal",
+        "trust"
+      ],
+      "accepted": [
+        "rely on",
+        "relied on",
+        "relies on",
+        "relying on"
+      ]
+    },
+    {
+      "term": "get used to sth",
+      "ipa": "ɡet ˈjuːst tə ˈsʌmθɪŋ",
+      "type": "phrase",
+      "translation": "привыкнуть к",
+      "definition": "to become familiar with something new so that it no longer feels strange or difficult",
+      "example": "At first the cold was hard, but after a month I [got used to] it.",
+      "exampleRu": "Сначала было тяжело из-за холода, но через месяц я к нему привык.",
+      "collocations": [
+        "get used to doing sth",
+        "get used to the noise",
+        "get used to a new job",
+        "be used to sth (уже привык)"
+      ],
+      "pattern": "get used to + noun / + -ing",
+      "trap": "After 'get used to' use -ing: 'get used to waking up early', not 'get used to wake up'. 'I used to…' (раньше я…) is a different phrase.",
+      "wrong": [
+        "get use to",
+        "get used with"
+      ],
+      "tags": [
+        "habits",
+        "change"
+      ],
+      "accepted": [
+        "get used to",
+        "got used to",
+        "getting used to"
+      ]
+    },
+    {
+      "term": "put sth off",
+      "ipa": "pʊt ˈsʌmθɪŋ ˈɒf",
+      "type": "phrasal-verb",
+      "translation": "откладывать (на потом)",
+      "definition": "to delay doing something until a later time, often because you don't want to do it",
+      "example": "I keep [putting off] my dentist appointment because I hate needles.",
+      "exampleRu": "Я всё откладываю визит к стоматологу, потому что терпеть не могу уколы.",
+      "collocations": [
+        "put off a decision",
+        "put off a meeting",
+        "put off doing sth",
+        "keep putting it off"
+      ],
+      "pattern": "put off doing sth · put it off (pronoun in the middle)",
+      "trap": "Followed by -ing, not 'to': 'put off calling', not 'put off to call'.",
+      "wrong": [
+        "putting aside",
+        "putting away"
+      ],
+      "tags": [
+        "phrasal",
+        "time"
+      ],
+      "accepted": [
+        "put off",
+        "put it off"
+      ]
+    },
+    {
+      "term": "look forward to sth",
+      "ipa": "lʊk ˈfɔːwəd tə ˈsʌmθɪŋ",
+      "type": "phrasal-verb",
+      "translation": "ждать с нетерпением",
+      "definition": "to feel happy and excited about something that is going to happen",
+      "example": "I'm really [looking forward to] our holiday in Portugal next month.",
+      "exampleRu": "Я с нетерпением жду нашего отпуска в Португалии в следующем месяце.",
+      "collocations": [
+        "look forward to hearing from you",
+        "look forward to seeing sb",
+        "really look forward to"
+      ],
+      "pattern": "look forward to + noun / + -ing",
+      "trap": "'To' is a preposition here: 'look forward to seeing you', not 'look forward to see you'.",
+      "wrong": [
+        "looking forward for",
+        "looking forward on"
+      ],
+      "tags": [
+        "phrasal",
+        "feelings"
+      ],
+      "accepted": [
+        "look forward to"
+      ]
+    },
+    {
+      "term": "make sure",
+      "ipa": "meɪk ˈʃʊə",
+      "type": "phrase",
+      "translation": "убедиться, проследить (чтобы)",
+      "definition": "to check that something is true or done, or to take action so that it happens",
+      "example": "Before you leave, [make sure] all the windows are closed.",
+      "exampleRu": "Перед уходом убедись, что все окна закрыты.",
+      "collocations": [
+        "make sure (that)…",
+        "make sure to do sth",
+        "just to make sure",
+        "make sure of sth"
+      ],
+      "pattern": "make sure (that) + clause · make sure to + verb",
+      "trap": "Not 'do sure' or 'make sure in': «убедиться в чём-то» = make sure of sth / make sure that…",
+      "wrong": [
+        "do sure",
+        "make sure in"
+      ],
+      "tags": [
+        "checking",
+        "everyday"
+      ],
+      "accepted": [
+        "make sure",
+        "made sure",
+        "making sure"
+      ]
+    },
+    {
+      "term": "obvious",
+      "ipa": "ˈɒbviəs",
+      "type": "word",
+      "translation": "очевидный, явный",
+      "definition": "easy to see or understand",
+      "example": "It was [obvious] from his face that he hadn't slept all night.",
+      "exampleRu": "По его лицу было очевидно, что он не спал всю ночь.",
+      "collocations": [
+        "the obvious answer",
+        "an obvious mistake",
+        "it's obvious that…",
+        "for obvious reasons",
+        "state the obvious"
+      ],
+      "pattern": "it's obvious (that)… · obvious to sb",
+      "trap": "Spelling: one 'b', and the ending is -ious: o-b-v-i-o-u-s.",
+      "wrong": [
+        "obviuos",
+        "obvius"
+      ],
+      "tags": [
+        "describing",
+        "opinions"
+      ],
+      "accepted": [
+        "obvious"
+      ]
+    },
+    {
+      "term": "roughly",
+      "ipa": "ˈrʌfli",
+      "type": "word",
+      "translation": "примерно, приблизительно",
+      "definition": "approximately; not exactly",
+      "example": "The flight takes [roughly] three hours, depending on the wind.",
+      "exampleRu": "Полёт длится примерно три часа, в зависимости от ветра.",
+      "collocations": [
+        "roughly the same",
+        "roughly speaking",
+        "roughly half",
+        "roughly 20 people"
+      ],
+      "pattern": "roughly + number / amount",
+      "trap": "Pronounced /ˈrʌfli/, like 'ruff-ly'; the 'gh' sounds like 'f'. Also means 'грубо' (treat sb roughly).",
+      "wrong": [
+        "roughtly",
+        "roughy"
+      ],
+      "tags": [
+        "numbers",
+        "everyday"
+      ],
+      "accepted": [
+        "roughly"
+      ]
+    },
+    {
+      "term": "apparently",
+      "ipa": "əˈpærəntli",
+      "type": "word",
+      "translation": "по-видимому, судя по всему, говорят",
+      "definition": "used when you have heard something but are not sure it is true, or when something seems true",
+      "example": "[Apparently], the new boss used to work for Google.",
+      "exampleRu": "Говорят, новый начальник раньше работал в Google.",
+      "collocations": [
+        "apparently not",
+        "apparently so",
+        "apparently, he's leaving"
+      ],
+      "pattern": "Apparently, + sentence (often at the start)",
+      "trap": "False friend: it doesn't mean «очевидно» (that's 'obviously'). 'Apparently' = «судя по всему, как я слышал».",
+      "wrong": [
+        "obviously",
+        "apparantly"
+      ],
+      "tags": [
+        "opinions",
+        "news"
+      ],
+      "accepted": [
+        "apparently"
+      ]
+    },
+    {
+      "term": "as far as I know",
+      "ipa": "əz ˈfɑːr əz aɪ ˈnəʊ",
+      "type": "phrase",
+      "translation": "насколько я знаю",
+      "definition": "used to say that you think something is true but you are not completely sure",
+      "example": "[As far as I know], the meeting is still on for Friday.",
+      "exampleRu": "Насколько я знаю, встреча в пятницу всё ещё в силе.",
+      "collocations": [
+        "as far as I can tell",
+        "as far as I remember",
+        "as far as I'm aware"
+      ],
+      "pattern": "As far as I know, + sentence",
+      "trap": "Not 'as much as I know' or 'how far I know': the fixed form is 'as far as'.",
+      "wrong": [
+        "as much as I know",
+        "how far I know"
+      ],
+      "tags": [
+        "opinions",
+        "conversation"
+      ],
+      "accepted": [
+        "as far as I know",
+        "as far as I'm aware"
+      ]
+    },
+    {
+      "term": "in terms of",
+      "ipa": "ɪn ˈtɜːmz əv",
+      "type": "phrase",
+      "translation": "с точки зрения, в плане, что касается",
+      "definition": "used to say which aspect of something you are talking about",
+      "example": "[In terms of] salary the job is great, but the hours are long.",
+      "exampleRu": "В плане зарплаты работа отличная, но рабочий день длинный.",
+      "collocations": [
+        "in terms of money",
+        "in terms of quality",
+        "in terms of time",
+        "in practical terms"
+      ],
+      "pattern": "in terms of + noun / -ing",
+      "trap": "Always plural 'terms' and 'of': not 'in term of' or 'in terms on'.",
+      "wrong": [
+        "in term of",
+        "in terms on"
+      ],
+      "tags": [
+        "work",
+        "opinions"
+      ],
+      "accepted": [
+        "in terms of"
+      ]
+    },
+    {
+      "term": "to be honest",
+      "ipa": "tə bi ˈɒnɪst",
+      "type": "phrase",
+      "translation": "честно говоря, если честно",
+      "definition": "used before saying what you really think, especially something negative",
+      "example": "[To be honest], I didn't really enjoy the film.",
+      "exampleRu": "Если честно, фильм мне не особо понравился.",
+      "collocations": [
+        "to be frank",
+        "honestly",
+        "to be perfectly honest",
+        "to tell the truth"
+      ],
+      "pattern": "To be honest, + sentence",
+      "trap": "Not 'if to be honest' (a calque of «если честно»). The 'h' is silent: /ˈɒnɪst/.",
+      "wrong": [
+        "If to be honest",
+        "Honestly saying"
+      ],
+      "tags": [
+        "people",
+        "opinions"
+      ],
+      "accepted": [
+        "to be honest",
+        "to be perfectly honest"
+      ]
+    }
+  ]
+}
