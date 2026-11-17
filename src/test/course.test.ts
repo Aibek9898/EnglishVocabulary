@@ -7,14 +7,20 @@ import { toContent } from '../lib/content';
 import { gradeTyped, wrongForms } from '../lib/mistakes';
 import type { Deck, ItemContent } from '../lib/types';
 
-const deck: Deck = JSON.parse(readFileSync(join(__dirname, '../data/decks/course-8-comparing.json'), 'utf8'));
+const LISTS: [file: string, size: number][] = [
+  ['course-8-comparing', 29],
+  ['course-10-lesson-17-november', 12],
+];
+
+for (const [file, size] of LISTS) {
+const deck: Deck = JSON.parse(readFileSync(join(__dirname, `../data/decks/${file}.json`), 'utf8'));
 const items = deck.items.map((raw) => toContent(raw)!) as ItemContent[];
 
-describe('course 8: comparing and job perks', () => {
+describe(deck.title, () => {
   it('is a course pack with every phrase from the list', () => {
     expect(deck.course).toBe(true);
-    expect(items).toHaveLength(29);
-    expect(new Set(items.map((i) => i.term.toLowerCase())).size).toBe(29);
+    expect(items).toHaveLength(size);
+    expect(new Set(items.map((i) => i.term.toLowerCase())).size).toBe(size);
   });
   for (const item of items) {
     describe(item.term, () => {
@@ -39,3 +45,4 @@ describe('course 8: comparing and job perks', () => {
     });
   }
 });
+}
