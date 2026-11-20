@@ -10,6 +10,7 @@ import type { Deck, ItemContent } from '../lib/types';
 const LISTS: [file: string, size: number][] = [
   ['course-8-comparing', 29],
   ['course-10-lesson-17-november', 12],
+  ['course-11-lesson-20-november', 23],
 ];
 
 for (const [file, size] of LISTS) {

@@ -1,0 +1,682 @@
+{
+  "id": "course-11-lesson-20-november",
+  "title": "Lesson — 20 November",
+  "description": "Your words for 20 November: idioms and nouns for strong feelings, listening in and overhearing, and words for talking about spoken-word poetry.",
+  "course": true,
+  "items": [
+    {
+      "term": "drive sb up the wall",
+      "ipa": "draɪv ˈsʌmbədi ʌp ðə ˈwɔːl",
+      "type": "idiom",
+      "translation": "выводить кого-то из себя, доводить до белого каления",
+      "definition": "to make someone very annoyed, especially by doing something again and again",
+      "example": "My neighbour's dog barks all night and it [drives me up the wall].",
+      "exampleRu": "Соседская собака лает всю ночь, и это доводит меня до белого каления.",
+      "collocations": [
+        "drive me up the wall",
+        "it drives me crazy",
+        "get on sb's nerves"
+      ],
+      "pattern": "sth drives sb up the wall · be driving sb up the wall",
+      "trap": "It's 'up the wall', not 'on the wall' or 'to the wall'.",
+      "wrong": [
+        "drives me on the wall",
+        "drives me to the wall"
+      ],
+      "tags": [
+        "emotions",
+        "annoyance",
+        "idiom"
+      ],
+      "accepted": [
+        "drive sb up the wall",
+        "drive me up the wall",
+        "drives me up the wall",
+        "drove me up the wall",
+        "driving me up the wall"
+      ]
+    },
+    {
+      "term": "have butterflies in your stomach",
+      "ipa": "hæv ˈbʌtəflaɪz ɪn jɔː ˈstʌmək",
+      "type": "idiom",
+      "translation": "волноваться, чувствовать «бабочек» в животе",
+      "definition": "to feel very nervous or excited before something important",
+      "example": "I always [have butterflies in my stomach] before a job interview.",
+      "exampleRu": "Перед собеседованием у меня всегда бабочки в животе.",
+      "collocations": [
+        "get butterflies (in your stomach)",
+        "have butterflies before an exam",
+        "a nervous stomach"
+      ],
+      "pattern": "have/get butterflies (in your stomach) before sth",
+      "trap": "Always plural 'butterflies', and 'in your stomach', not 'on'. In English it's usually nerves, not only love.",
+      "wrong": [
+        "have butterfly in my stomach",
+        "have butterflies on my stomach"
+      ],
+      "tags": [
+        "emotions",
+        "nervousness",
+        "idiom"
+      ],
+      "accepted": [
+        "have butterflies in your stomach",
+        "have butterflies in my stomach",
+        "had butterflies in my stomach",
+        "get butterflies in my stomach",
+        "have butterflies"
+      ]
+    },
+    {
+      "term": "tear your hair out",
+      "ipa": "ˌteə jɔː ˈheər ˈaʊt",
+      "type": "idiom",
+      "translation": "рвать на себе волосы (от отчаяния или злости)",
+      "definition": "to be extremely worried, angry or frustrated about something",
+      "example": "After the third failed attempt to install the printer, I was [tearing my hair out].",
+      "exampleRu": "После третьей неудачной попытки установить принтер я был готов рвать на себе волосы.",
+      "collocations": [
+        "be tearing your hair out",
+        "tear your hair out over sth",
+        "make sb want to tear their hair out"
+      ],
+      "pattern": "be tearing your hair out (over sth)",
+      "trap": "'Hair' is uncountable: not 'hairs'. Past: tear – tore – torn.",
+      "wrong": [
+        "tearing my hairs out",
+        "teared my hair out"
+      ],
+      "tags": [
+        "emotions",
+        "desperation",
+        "idiom"
+      ],
+      "accepted": [
+        "tear your hair out",
+        "tear my hair out",
+        "tearing my hair out",
+        "tore my hair out"
+      ]
+    },
+    {
+      "term": "kill yourself laughing",
+      "ipa": "ˈkɪl jɔːˈself ˈlɑːfɪŋ",
+      "type": "idiom",
+      "translation": "умирать со смеху",
+      "definition": "to laugh a lot and for a long time (informal)",
+      "example": "His story about the wedding was so funny that we were [killing ourselves laughing].",
+      "exampleRu": "Его история про свадьбу была такой смешной, что мы умирали со смеху.",
+      "collocations": [
+        "be killing yourself laughing",
+        "nearly kill yourself laughing",
+        "laugh your head off"
+      ],
+      "pattern": "be killing yourself laughing (at sth)",
+      "trap": "Use the -ing form 'laughing': not 'from laughing' or 'with laugh' (calques of «со смеху»).",
+      "wrong": [
+        "killing ourselves from laughing",
+        "killing ourselves with laugh"
+      ],
+      "tags": [
+        "emotions",
+        "amusement",
+        "idiom"
+      ],
+      "accepted": [
+        "kill yourself laughing",
+        "killing ourselves laughing",
+        "killing myself laughing",
+        "kill myself laughing",
+        "killed myself laughing"
+      ]
+    },
+    {
+      "term": "lose your temper",
+      "ipa": "ˌluːz jɔː ˈtempə",
+      "type": "collocation",
+      "translation": "потерять самообладание, вспылить",
+      "definition": "to suddenly become very angry and show it",
+      "example": "I [lost my temper] when the delivery was late for the third time.",
+      "exampleRu": "Я вспылил, когда доставка опоздала в третий раз.",
+      "collocations": [
+        "lose your temper with sb",
+        "keep your temper",
+        "have a short temper"
+      ],
+      "pattern": "lose your temper (with sb)",
+      "trap": "Not 'went out of myself' (calque of «вышел из себя»). 'Temper', not 'temperature'.",
+      "wrong": [
+        "lost my temperature",
+        "went out of myself"
+      ],
+      "tags": [
+        "emotions",
+        "anger",
+        "conflict"
+      ],
+      "accepted": [
+        "lose your temper",
+        "lose my temper",
+        "lost my temper",
+        "losing my temper"
+      ]
+    },
+    {
+      "term": "be on edge",
+      "ipa": "bi ɒn ˈedʒ",
+      "type": "phrase",
+      "translation": "быть на взводе, нервничать",
+      "definition": "to be nervous and unable to relax, usually because you are waiting for something",
+      "example": "Everyone [was on edge] while we waited for the exam results.",
+      "exampleRu": "Все были на взводе, пока мы ждали результатов экзамена.",
+      "collocations": [
+        "feel on edge",
+        "a bit on edge",
+        "put sb on edge",
+        "on edge all day"
+      ],
+      "pattern": "be/feel on edge (about sth)",
+      "trap": "No article: 'on edge'. 'On the edge' means physically at the edge of something.",
+      "wrong": [
+        "was on the edge",
+        "was at edge"
+      ],
+      "tags": [
+        "emotions",
+        "nervousness"
+      ],
+      "accepted": [
+        "be on edge",
+        "on edge",
+        "was on edge",
+        "were on edge",
+        "is on edge"
+      ]
+    },
+    {
+      "term": "kick yourself",
+      "ipa": "ˈkɪk jɔːˈself",
+      "type": "idiom",
+      "translation": "корить себя, пинать себя (за глупость)",
+      "definition": "to be angry with yourself because you made a silly mistake or missed a chance",
+      "example": "I could [kick myself] for forgetting her birthday again.",
+      "exampleRu": "Я так ругаю себя за то, что опять забыл про её день рождения.",
+      "collocations": [
+        "could kick myself",
+        "kick yourself for doing sth",
+        "you'll kick yourself"
+      ],
+      "pattern": "I could kick myself for + -ing",
+      "trap": "Use the reflexive 'myself/yourself', not 'kick me'.",
+      "wrong": [
+        "kick me",
+        "kick on myself"
+      ],
+      "tags": [
+        "emotions",
+        "regret",
+        "idiom"
+      ],
+      "accepted": [
+        "kick yourself",
+        "kick myself",
+        "kicked myself",
+        "kicking myself"
+      ]
+    },
+    {
+      "term": "be a real pain",
+      "ipa": "bi ə ˈrɪəl ˈpeɪn",
+      "type": "phrase",
+      "translation": "быть настоящей головной болью, сильно раздражать",
+      "definition": "to be very annoying or cause a lot of trouble (informal)",
+      "example": "Finding a parking space in the city centre [is a real pain].",
+      "exampleRu": "Найти парковку в центре города — настоящая головная боль.",
+      "collocations": [
+        "a real pain in the neck",
+        "what a pain!",
+        "be a pain to do sth"
+      ],
+      "pattern": "sth/sb is a real pain · it's a pain to + verb",
+      "trap": "«Головная боль» in this sense = 'a pain' or 'a headache', never 'an ache'.",
+      "wrong": [
+        "is a real ache",
+        "is a real hurt"
+      ],
+      "tags": [
+        "emotions",
+        "annoyance"
+      ],
+      "accepted": [
+        "be a real pain",
+        "a real pain",
+        "is a real pain",
+        "was a real pain",
+        "a real pain in the neck"
+      ]
+    },
+    {
+      "term": "annoyance",
+      "ipa": "əˈnɔɪəns",
+      "type": "word",
+      "translation": "раздражение",
+      "definition": "the feeling of being annoyed",
+      "example": "To my [annoyance], the train was cancelled again.",
+      "exampleRu": "К моему раздражению, поезд снова отменили.",
+      "collocations": [
+        "to my annoyance",
+        "a minor annoyance",
+        "with annoyance",
+        "hide your annoyance"
+      ],
+      "pattern": "to sb's annoyance · annoyance at/with sth",
+      "trap": "The noun ends in -ance: annoy → annoyance (not 'annoyment').",
+      "wrong": [
+        "annoyment",
+        "annoyence"
+      ],
+      "tags": [
+        "emotions",
+        "nouns"
+      ],
+      "accepted": [
+        "annoyance"
+      ]
+    },
+    {
+      "term": "anger",
+      "ipa": "ˈæŋɡə",
+      "type": "word",
+      "translation": "гнев, злость",
+      "definition": "a strong feeling of being very annoyed and wanting to shout or hurt someone",
+      "example": "She couldn't hide her [anger] when she saw the bill.",
+      "exampleRu": "Она не смогла скрыть злость, когда увидела счёт.",
+      "collocations": [
+        "feel anger",
+        "in anger",
+        "anger at/about sth",
+        "anger management"
+      ],
+      "pattern": "anger at/about sth · in anger",
+      "trap": "'Anger' is the noun, 'angry' is the adjective: 'I felt anger' but 'I was angry'.",
+      "wrong": [
+        "angry",
+        "angriness"
+      ],
+      "tags": [
+        "emotions",
+        "nouns"
+      ],
+      "accepted": [
+        "anger"
+      ]
+    },
+    {
+      "term": "nervousness",
+      "ipa": "ˈnɜːvəsnəs",
+      "type": "word",
+      "translation": "нервозность, волнение",
+      "definition": "the state of feeling nervous or worried",
+      "example": "He tried to hide his [nervousness] by talking very fast.",
+      "exampleRu": "Он пытался скрыть волнение, говоря очень быстро.",
+      "collocations": [
+        "hide your nervousness",
+        "a sign of nervousness",
+        "feel a little nervousness"
+      ],
+      "pattern": "nervousness about sth",
+      "trap": "Not 'nervosity': the noun is nervous + -ness.",
+      "wrong": [
+        "nervosity",
+        "nervousity"
+      ],
+      "tags": [
+        "emotions",
+        "nouns"
+      ],
+      "accepted": [
+        "nervousness"
+      ]
+    },
+    {
+      "term": "desperation",
+      "ipa": "ˌdespəˈreɪʃn",
+      "type": "word",
+      "translation": "отчаяние",
+      "definition": "the feeling of being ready to do anything because a situation is so bad",
+      "example": "In [desperation], I called my old teacher for help.",
+      "exampleRu": "В отчаянии я позвонил своему старому учителю за помощью.",
+      "collocations": [
+        "in desperation",
+        "a sense of desperation",
+        "out of desperation"
+      ],
+      "pattern": "in/out of desperation",
+      "trap": "Spelling: desp-e-ration (like 'desperate'). 'Despair' is giving up hope; 'desperation' is when you try anything.",
+      "wrong": [
+        "desparation",
+        "desperacy"
+      ],
+      "tags": [
+        "emotions",
+        "nouns"
+      ],
+      "accepted": [
+        "desperation"
+      ]
+    },
+    {
+      "term": "amusement",
+      "ipa": "əˈmjuːzmənt",
+      "type": "word",
+      "translation": "веселье, забава",
+      "definition": "the feeling you have when something is funny",
+      "example": "Much to our [amusement], the dog stole a sausage from the table.",
+      "exampleRu": "К нашему веселью, собака стащила со стола сосиску.",
+      "collocations": [
+        "to sb's amusement",
+        "in amusement",
+        "for amusement",
+        "amusement park"
+      ],
+      "pattern": "(much) to sb's amusement · in amusement",
+      "trap": "Spelling: keep the 'e' — amuse + ment = amusement.",
+      "wrong": [
+        "amusment",
+        "amusing"
+      ],
+      "tags": [
+        "emotions",
+        "nouns"
+      ],
+      "accepted": [
+        "amusement"
+      ]
+    },
+    {
+      "term": "listen in on sb/sth",
+      "ipa": "ˌlɪsn ˈɪn ɒn",
+      "type": "phrasal-verb",
+      "translation": "подслушивать, слушать чужой разговор",
+      "definition": "to secretly listen to other people's conversation on purpose",
+      "example": "My little sister always tries to [listen in on] my phone calls.",
+      "exampleRu": "Моя младшая сестра всегда пытается подслушать мои телефонные разговоры.",
+      "collocations": [
+        "listen in on a conversation",
+        "listen in on a call",
+        "try to listen in"
+      ],
+      "pattern": "listen in on sb/sth",
+      "trap": "You do it on purpose. If you hear something by accident, use 'overhear'.",
+      "wrong": [
+        "listen on",
+        "hear in on"
+      ],
+      "tags": [
+        "phrasal",
+        "communication"
+      ],
+      "accepted": [
+        "listen in on",
+        "listening in on",
+        "listened in on",
+        "listen in"
+      ]
+    },
+    {
+      "term": "overhear",
+      "ipa": "ˌəʊvəˈhɪə",
+      "type": "word",
+      "translation": "случайно услышать, подслушать",
+      "definition": "to hear what other people are saying without them knowing and usually by accident",
+      "example": "I [overheard] two colleagues talking about my promotion.",
+      "exampleRu": "Я случайно услышал, как двое коллег обсуждали моё повышение.",
+      "collocations": [
+        "overhear a conversation",
+        "overhear sb saying sth",
+        "couldn't help overhearing"
+      ],
+      "pattern": "overhear sb doing/say sth · overhear – overheard – overheard",
+      "trap": "Irregular: overheard, not 'overheared'. Usually by accident (unlike 'listen in on').",
+      "wrong": [
+        "overheared",
+        "overlistened"
+      ],
+      "tags": [
+        "verbs",
+        "communication"
+      ],
+      "accepted": [
+        "overhear",
+        "overheard",
+        "overhearing"
+      ]
+    },
+    {
+      "term": "spoken-word poem",
+      "ipa": "ˌspəʊkən ˈwɜːd ˈpəʊɪm",
+      "type": "collocation",
+      "translation": "стихотворение для устного исполнения",
+      "definition": "a poem written to be performed out loud to an audience",
+      "example": "At the school festival she performed a [spoken-word poem] about her grandmother.",
+      "exampleRu": "На школьном фестивале она исполнила стихотворение о своей бабушке.",
+      "collocations": [
+        "perform a spoken-word poem",
+        "spoken-word poetry",
+        "a spoken-word artist"
+      ],
+      "pattern": "write/perform a spoken-word poem",
+      "trap": "'Spoken' is the past participle: not 'speaking-word' or 'speak-word'.",
+      "wrong": [
+        "speaking-word poem",
+        "speak-word poem"
+      ],
+      "tags": [
+        "poetry",
+        "art"
+      ],
+      "accepted": [
+        "spoken-word poem",
+        "spoken word poem",
+        "spoken-word poems"
+      ]
+    },
+    {
+      "term": "poet",
+      "ipa": "ˈpəʊɪt",
+      "type": "word",
+      "translation": "поэт",
+      "definition": "a person who writes poems",
+      "example": "Pushkin is the [poet] every Russian child learns about at school.",
+      "exampleRu": "Пушкин — поэт, которого каждый российский школьник изучает в школе.",
+      "collocations": [
+        "a famous poet",
+        "a national poet",
+        "poet and writer"
+      ],
+      "pattern": "poet (person) · poem (text) · poetry (the art)",
+      "trap": "Don't mix them up: a poet writes a poem; poetry is poems in general.",
+      "wrong": [
+        "poem",
+        "poetry"
+      ],
+      "tags": [
+        "poetry",
+        "people"
+      ],
+      "accepted": [
+        "poet"
+      ]
+    },
+    {
+      "term": "inspiration",
+      "ipa": "ˌɪnspəˈreɪʃn",
+      "type": "word",
+      "translation": "вдохновение",
+      "definition": "something that gives you new ideas or makes you want to create or do something",
+      "example": "The poet finds [inspiration] in ordinary conversations on the bus.",
+      "exampleRu": "Поэт находит вдохновение в обычных разговорах в автобусе.",
+      "collocations": [
+        "find/get inspiration (from)",
+        "a source of inspiration",
+        "draw inspiration from",
+        "be an inspiration to sb"
+      ],
+      "pattern": "find inspiration in/from sth",
+      "trap": "The noun is 'inspiration'; the verb is 'inspire'. Not 'inspirement'.",
+      "wrong": [
+        "inspire",
+        "inspirement"
+      ],
+      "tags": [
+        "poetry",
+        "art"
+      ],
+      "accepted": [
+        "inspiration"
+      ]
+    },
+    {
+      "term": "rhyming words",
+      "ipa": "ˈraɪmɪŋ ˈwɜːdz",
+      "type": "collocation",
+      "translation": "рифмующиеся слова",
+      "definition": "words that end with the same sound, like 'cat' and 'hat'",
+      "example": "'Moon' and 'June' are [rhyming words].",
+      "exampleRu": "«Moon» и «June» — рифмующиеся слова.",
+      "collocations": [
+        "a rhyme",
+        "rhyme with sth",
+        "a rhyming couplet"
+      ],
+      "pattern": "X rhymes with Y",
+      "trap": "Rhyme /raɪm/ (рифма) is not rhythm /ˈrɪðəm/ (ритм).",
+      "wrong": [
+        "rhythm words",
+        "riming words"
+      ],
+      "tags": [
+        "poetry",
+        "language"
+      ],
+      "accepted": [
+        "rhyming words",
+        "rhyming word"
+      ]
+    },
+    {
+      "term": "syllable",
+      "ipa": "ˈsɪləbl",
+      "type": "word",
+      "translation": "слог",
+      "definition": "one part of a word that has one vowel sound",
+      "example": "The word 'banana' has three [syllables].",
+      "exampleRu": "В слове «banana» три слога.",
+      "collocations": [
+        "the first/last syllable",
+        "a stressed syllable",
+        "words of one syllable"
+      ],
+      "pattern": "stress on the … syllable",
+      "trap": "Stress is on the first syllable: SYL-la-ble. Spelling: double 'l', 'y' after s.",
+      "wrong": [
+        "sillable",
+        "sylable"
+      ],
+      "tags": [
+        "poetry",
+        "language"
+      ],
+      "accepted": [
+        "syllable",
+        "syllables"
+      ]
+    },
+    {
+      "term": "emphasised/stressed words",
+      "ipa": "ˈemfəsaɪzd / ˈstrest ˈwɜːdz",
+      "type": "collocation",
+      "translation": "слова с ударением, выделенные слова",
+      "definition": "words that are said more strongly than others to show they are important",
+      "example": "In a spoken-word poem, the [stressed words] carry the meaning and the rhythm.",
+      "exampleRu": "В устном стихотворении выделенные слова несут смысл и ритм.",
+      "collocations": [
+        "stress a word",
+        "put emphasis on a word",
+        "a stressed syllable"
+      ],
+      "pattern": "stress/emphasise a word · put emphasis on sth",
+      "trap": "'Stressed' (ударный) is not 'stressful' (напряжённый). American spelling: emphasized.",
+      "wrong": [
+        "stressful words",
+        "emphasis words"
+      ],
+      "tags": [
+        "poetry",
+        "language"
+      ],
+      "accepted": [
+        "emphasised/stressed words",
+        "emphasised words",
+        "stressed words",
+        "emphasized words"
+      ]
+    },
+    {
+      "term": "repetition",
+      "ipa": "ˌrepəˈtɪʃn",
+      "type": "word",
+      "translation": "повторение",
+      "definition": "saying or doing the same thing again, often for effect in a poem or speech",
+      "example": "The poet uses [repetition]: the line 'I am still here' comes back five times.",
+      "exampleRu": "Поэт использует повторение: строка «I am still here» звучит пять раз.",
+      "collocations": [
+        "the use of repetition",
+        "avoid repetition",
+        "learn by repetition"
+      ],
+      "pattern": "use repetition · through repetition",
+      "trap": "Spelling changes from 'repeat': rep-e-tition, not 'repeatition'.",
+      "wrong": [
+        "repeatition",
+        "repitition"
+      ],
+      "tags": [
+        "poetry",
+        "language"
+      ],
+      "accepted": [
+        "repetition"
+      ]
+    },
+    {
+      "term": "expressions of emotion",
+      "ipa": "ɪkˈspreʃnz əv ɪˈməʊʃn",
+      "type": "collocation",
+      "translation": "выражения эмоций",
+      "definition": "words, sounds or actions that show how someone feels",
+      "example": "Crying and laughing are natural [expressions of emotion].",
+      "exampleRu": "Плач и смех — естественные выражения эмоций.",
+      "collocations": [
+        "an expression of emotion",
+        "show emotion",
+        "express your emotions"
+      ],
+      "pattern": "an expression of joy/anger/sadness",
+      "trap": "Use 'of': 'expressions of emotion', not 'with' or 'expressing of'.",
+      "wrong": [
+        "expressing of emotion",
+        "expressions with emotion"
+      ],
+      "tags": [
+        "poetry",
+        "emotions"
+      ],
+      "accepted": [
+        "expressions of emotion",
+        "expression of emotion"
+      ]
+    }
+  ]
+}
