@@ -1,4 +1,5 @@
 import { db, getSettings } from './db';
+import { getGrammar, setGrammar, type GrammarStore } from './grammar';
 import { getRemoved, setRemoved } from './removed';
 import { getSaved, setSaved, type SavedPhrase } from './saved';
 import type { Item, ReviewEntry, Settings } from './types';
@@ -14,6 +15,8 @@ export interface Backup {
   saved?: SavedPhrase[];
   /** Words removed on purpose, so packs don't bring them back; missing in older backups. */
   removed?: string[];
+  /** Grammar lessons the AI wrote and grammar progress; missing in older backups. */
+  grammar?: GrammarStore;
 }
 
 export async function makeBackup(): Promise<Backup> {
@@ -26,6 +29,7 @@ export async function makeBackup(): Promise<Backup> {
     settings: await getSettings(),
     saved: await getSaved(),
     removed: await getRemoved(),
+    grammar: await getGrammar(),
   };
 }
 
@@ -60,5 +64,6 @@ export async function restoreBackup(backup: Backup) {
     await db.kv.put({ key: 'settings', value: backup.settings });
     if (Array.isArray(backup.saved)) await setSaved(backup.saved);
     if (Array.isArray(backup.removed)) await setRemoved(backup.removed);
+    if (backup.grammar && Array.isArray(backup.grammar.lessons)) await setGrammar(backup.grammar);
   });
 }

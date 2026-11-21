@@ -286,6 +286,7 @@ export function SettingsPage() {
                 await db.items.clear();
                 await db.reviews.clear();
                 await forgetAi();
+                await db.kv.delete('grammar');
               });
               await db.books.clear();
               setWipe(false);

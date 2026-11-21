@@ -10,6 +10,7 @@
 import { useSyncExternalStore } from 'react';
 import { reviveItem } from './backup';
 import { db, getSettings } from './db';
+import { getGrammar, setGrammar } from './grammar';
 import { getRemoved } from './removed';
 import { getSaved } from './saved';
 import { baseOf, itemHash, LOCAL_SETTINGS, mergeSnapshots, reviewKey, snapshotHash, withoutLocalSettings, type Snapshot, type SyncBase } from './syncMerge';
@@ -20,7 +21,7 @@ const FILE = 'vocab-sync.json.gz';
 const CONFIG_KEY = 'sync';
 const BASE_KEY = 'syncBase';
 /** kv rows that travel with the words; everything else stays on the device. */
-const SYNCED_KV = new Set(['settings', 'saved', 'removed', 'coursePacks']);
+const SYNCED_KV = new Set(['settings', 'saved', 'removed', 'coursePacks', 'grammar']);
 
 export const DEFAULT_REPO = 'vocab-sync';
 
@@ -180,6 +181,7 @@ function parseFile(text: string): Snapshot {
     saved: Array.isArray(f.saved) ? f.saved : [],
     removed: Array.isArray(f.removed) ? f.removed : [],
     coursePacks: Array.isArray(f.coursePacks) ? f.coursePacks : [],
+    ...(f.grammar && Array.isArray(f.grammar.lessons) ? { grammar: f.grammar } : {}),
   };
 }
 
@@ -252,6 +254,7 @@ async function localSnapshot(): Promise<{ snap: Snapshot; reviews: ReviewEntry[]
       saved: await getSaved(),
       removed: await getRemoved(),
       coursePacks: Array.isArray(course) ? course : [],
+      grammar: await getGrammar(),
     },
   };
 }
@@ -288,6 +291,7 @@ async function applyLocal(merged: Snapshot, current: { snap: Snapshot; reviews: 
   await db.kv.put({ key: 'saved', value: merged.saved });
   await db.kv.put({ key: 'removed', value: merged.removed });
   await db.kv.put({ key: 'coursePacks', value: merged.coursePacks });
+  if (merged.grammar) await setGrammar(merged.grammar);
 }
 
 /* ============ syncing ============ */

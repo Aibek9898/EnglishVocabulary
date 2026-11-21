@@ -1,0 +1,473 @@
+/* ============ Grammar ============ */
+
+.gr-h2 {
+  font-size: 1.125rem;
+  margin: 22px 0 10px;
+}
+
+.gr-first {
+  margin-top: 4px;
+}
+
+.gr-list + .gr-new {
+  margin-top: 22px;
+}
+
+.gr-due {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.gr-due-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 16px;
+  text-align: left;
+  border-radius: var(--r-xl);
+  border: 1px solid var(--border);
+  background: var(--flame-soft);
+  color: var(--text);
+}
+
+.gr-due-card > span:nth-child(2) {
+  flex: 1;
+  display: grid;
+  gap: 2px;
+}
+
+.gr-due-card > span:nth-child(2) span {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--text-2);
+}
+
+.gr-due-card .game-icon {
+  margin: 0;
+  background: var(--surface);
+}
+
+.gr-new h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 6px;
+  font-size: 1.125rem;
+}
+
+.gr-new .field {
+  margin-top: 12px;
+}
+
+.gr-ideas {
+  margin: 8px 0 0;
+}
+
+.gr-new-go {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.gr-new-go .primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gr-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.gr-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px 6px 6px;
+  border-radius: var(--r-xl);
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.gr-item-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px;
+  text-align: left;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  color: var(--text);
+  justify-content: flex-start;
+}
+
+.gr-item-main .game-icon {
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.gr-item-text {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.gr-item-text b {
+  font-size: 1.0625rem;
+}
+
+.gr-item-text > span {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--text-2);
+}
+
+.gr-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.gr-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: var(--r-pill);
+  background: var(--surface-2);
+  color: var(--text-2);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.gr-tag.due {
+  background: var(--flame-soft);
+  color: var(--flame-ink);
+}
+
+.gr-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .gr-item {
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+  }
+
+  .gr-item-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .gr-item-actions:empty {
+    display: none;
+  }
+}
+
+/* ---------- a lesson ---------- */
+
+.gr-text {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 16px 18px;
+  margin-bottom: 18px;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.gr-text p {
+  margin: 0 0 6px;
+}
+
+.gr-text p:last-child {
+  margin: 0;
+}
+
+.gr-speaker {
+  color: var(--brand-ink);
+}
+
+.gr-text mark,
+.gr-rules mark,
+.gr-hint mark {
+  background: var(--gold-soft);
+  color: inherit;
+  padding: 0 3px;
+  border-radius: 4px;
+  box-shadow: inset 0 -2px 0 var(--gold, #e0a800);
+  font-weight: 700;
+}
+
+.gr-q {
+  font-size: 1.1875rem;
+  font-weight: 700;
+  line-height: 1.45;
+  margin: 0 0 16px;
+}
+
+.gr-ru {
+  font-weight: 650;
+}
+
+.gr-sentence {
+  padding: 14px 16px;
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.gr-kind {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin: -6px 0 6px;
+}
+
+.gr-other {
+  margin: -10px 0 10px;
+}
+
+.gr-blank {
+  display: inline-block;
+  min-width: 72px;
+  margin: 0 4px;
+  padding: 0 8px;
+  border-bottom: 2px solid var(--brand);
+  color: var(--muted);
+  font-weight: 600;
+  text-align: center;
+}
+
+.gr-judge .option {
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.gr-field textarea {
+  font-size: 1.0625rem;
+}
+
+.gr-start {
+  display: block;
+  font-weight: 700;
+  color: var(--text-2);
+  margin-bottom: 6px;
+}
+
+.gr-hint {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: var(--r-lg);
+  background: var(--warn-soft);
+  color: var(--text);
+  font-size: 0.9375rem;
+}
+
+.gr-hint svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--warn-ink);
+}
+
+.gr-feedback {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.gr-feedback p {
+  margin: 0;
+}
+
+.gr-answer {
+  display: grid;
+  gap: 2px;
+  padding: 12px 14px;
+  border-radius: var(--r-lg);
+  background: var(--success-soft);
+}
+
+.gr-answer b {
+  font-size: 1.0625rem;
+}
+
+.gr-why {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  color: var(--text-2);
+}
+
+.gr-why svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--warn-ink);
+}
+
+.gr-ai {
+  display: grid;
+  gap: 6px;
+  padding: 12px 14px;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.gr-ai-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 800;
+  font-size: 0.875rem;
+  color: var(--brand-ink);
+}
+
+.gr-corrected b {
+  color: var(--success-ink);
+}
+
+.gr-rule-peek summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--brand-ink);
+  min-height: 32px;
+}
+
+.gr-rule-peek .gr-point {
+  margin: 10px 0 0;
+}
+
+.gr-report {
+  justify-self: start;
+  color: var(--muted);
+}
+
+/* rule card */
+.gr-rules .g-title {
+  display: grid;
+  gap: 4px;
+}
+
+.gr-sub {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-2);
+}
+
+.gr-point h2,
+.gr-traps h2,
+.gr-summary h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.0625rem;
+  margin: 0 0 8px;
+}
+
+.gr-num {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--brand-soft);
+  color: var(--brand-ink);
+  font-size: 0.875rem;
+}
+
+.gr-form {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 4px 10px;
+  border-radius: var(--r-md);
+  background: var(--surface-2);
+  font-weight: 700;
+  font-size: 0.9375rem;
+}
+
+.gr-point > p[lang='ru'] {
+  margin: 0 0 10px;
+}
+
+.gr-examples,
+.gr-traps ul,
+.gr-summary ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.gr-examples li,
+.gr-traps li {
+  display: grid;
+  gap: 2px;
+}
+
+.gr-ex-en {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.gr-ex-en .speak-btn {
+  flex-shrink: 0;
+}
+
+.gr-traps {
+  background: color-mix(in srgb, var(--error-soft) 50%, var(--surface));
+}
+
+.gr-traps s {
+  color: var(--error-ink);
+  text-decoration-thickness: 2px;
+}
+
+.gr-traps b {
+  color: var(--success-ink);
+}
+
+.gr-summary ul li {
+  padding-left: 14px;
+  position: relative;
+}
+
+.gr-summary ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--brand);
+}
+
+.gr-done .g-instr {
+  margin: 0 0 18px;
+}

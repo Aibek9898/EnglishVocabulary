@@ -859,8 +859,46 @@ summary {
     background: var(--brand-soft);
   }
 
+  /* Seven tabs: let them shrink on narrow phones instead of pushing the page wider. */
+  .nav a {
+    min-width: 0;
+  }
+
+  .nav a .nav-label {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   .brand-name {
     display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .nav a .nav-icon {
+    width: 46px;
+  }
+
+  .nav a {
+    font-size: 0.625rem;
+  }
+}
+
+/* Tablets and small laptops: seven tabs only fit as icons (the label stays for screen readers). */
+@media (min-width: 701px) and (max-width: 1100px) {
+  .nav a {
+    padding: 6px 10px;
+  }
+
+  .nav a .nav-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
   }
 }
 
