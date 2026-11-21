@@ -12,6 +12,7 @@
  * - Reviews are a log: both sides' entries are kept.
  */
 import { termKey } from './content';
+import { mergeGrammar, type GrammarStore } from './grammar';
 import type { SavedPhrase } from './saved';
 import type { Item, ReviewEntry, Settings } from './types';
 
@@ -23,6 +24,8 @@ export interface Snapshot {
   saved: SavedPhrase[];
   removed: string[];
   coursePacks: string[];
+  /** Grammar lessons and progress; missing in files from before the Grammar section. */
+  grammar?: GrammarStore;
 }
 
 /** What both sides looked like after the last sync. */
@@ -197,6 +200,7 @@ export function mergeSnapshots(local: Snapshot, remote: Snapshot, base: SyncBase
       saved: mergeList(local.saved, remote.saved, base?.saved, savedKey).sort((a, b) => a.at - b.at),
       removed,
       coursePacks: [...new Set([...local.coursePacks, ...remote.coursePacks])].sort(),
+      ...(local.grammar || remote.grammar ? { grammar: mergeGrammar(local.grammar, remote.grammar) } : {}),
     },
   };
 }
@@ -221,6 +225,7 @@ export function snapshotHash(snap: Snapshot | null): string {
       saved: [...snap.saved].sort((a, b) => a.at - b.at),
       removed: [...snap.removed].sort(),
       coursePacks: [...snap.coursePacks].sort(),
+      grammar: snap.grammar,
     }),
   );
 }

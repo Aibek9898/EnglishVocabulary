@@ -7,6 +7,7 @@ import { db, useLive } from './lib/db';
 import { activityByDay, computeStreak } from './lib/stats';
 import { startAutoSync } from './lib/sync';
 import { AddWords } from './pages/AddWords';
+import { Grammar } from './pages/Grammar';
 import { Library } from './pages/Library';
 import { Login } from './pages/Login';
 import { Practice } from './pages/Practice';
@@ -23,6 +24,7 @@ function parseHash() {
 const NAV: { id: string; label: string; icon: IconName }[] = [
   { id: 'today', label: 'Today', icon: 'sun' },
   { id: 'practice', label: 'Practice', icon: 'gamepad' },
+  { id: 'grammar', label: 'Grammar', icon: 'cap' },
   { id: 'library', label: 'Library', icon: 'library' },
   { id: 'reading', label: 'Read', icon: 'book' },
   { id: 'add', label: 'Add', icon: 'plus' },
@@ -57,6 +59,9 @@ function Shell() {
     case 'practice':
       page = <Practice />;
       break;
+    case 'grammar':
+      page = <Grammar />;
+      break;
     case 'library':
       page = <Library tab={tab} />;
       break;
@@ -87,7 +92,7 @@ function Shell() {
         </a>
         <nav className="nav" aria-label="Main">
           {NAV.map((n) => (
-            <a key={n.id} href={`#/${n.id}`} aria-current={current === n.id ? 'page' : undefined}>
+            <a key={n.id} href={`#/${n.id}`} title={n.label} aria-current={current === n.id ? 'page' : undefined}>
               <span className="nav-icon">
                 <Icon name={n.icon} size={22} />
               </span>

@@ -5,15 +5,15 @@ import type { ChatFix, ChatLine } from './games';
 import type { ItemContent, MoreExample } from './types';
 
 /**
- * The AI teacher: checks the learner's own sentences through OpenRouter or
- * DeepSeek with the learner's own API key.
+ * The AI teacher: checks the learner's own sentences through OpenRouter,
+ * DeepSeek or OpenAI with the learner's own API key.
  *
  * The key lives only in this browser's database (kv 'ai'). It is never part
  * of a backup, never shown in full, and only ever sent to the provider's own
  * API over HTTPS (the page's Content-Security-Policy allows no other hosts).
  */
 
-export type Provider = 'openrouter' | 'deepseek';
+export type Provider = 'openrouter' | 'deepseek' | 'openai';
 export type FeedbackLang = 'ru' | 'en';
 
 export interface AiConfig {
@@ -39,7 +39,17 @@ export const PROVIDERS: Record<Provider, { name: string; chat: string; models: s
     keysPage: 'https://platform.deepseek.com/api_keys',
     defaultModel: 'deepseek-chat',
   },
+  openai: {
+    name: 'OpenAI',
+    chat: 'https://api.openai.com/v1/chat/completions',
+    models: 'https://api.openai.com/v1/models',
+    keysPage: 'https://platform.openai.com/api-keys',
+    defaultModel: 'gpt-4.1-mini',
+  },
 };
+
+/** OpenAI's reasoning models (o1…, gpt-5…) take no temperature. */
+const fixedTemperature = (model: string) => /^(o\d|gpt-5)/.test(model);
 
 const EMPTY: AiConfig = { provider: 'openrouter', keys: {}, models: {}, lang: 'ru' };
 
@@ -119,7 +129,10 @@ export async function chat(
     headers['HTTP-Referer'] = location.origin + location.pathname;
     headers['X-Title'] = 'Vocab Trainer';
   }
-  const body: Record<string, unknown> = { model: ai.model, messages, temperature: 0.3, max_tokens: maxTokens };
+  const body: Record<string, unknown> =
+    ai.provider === 'openai'
+      ? { model: ai.model, messages, max_completion_tokens: maxTokens, ...(fixedTemperature(ai.model) ? {} : { temperature: 0.3 }) }
+      : { model: ai.model, messages, temperature: 0.3, max_tokens: maxTokens };
   // DeepSeek's reasoner rejects JSON mode; OpenRouter drops it for models without it.
   if (json && ai.model !== 'deepseek-reasoner') body.response_format = { type: 'json_object' };
   let res: Response;
@@ -154,6 +167,7 @@ export type KeyInfo = { limit: number | null; used: number } | { balance: string
 export async function keyInfo(provider: Provider, key: string, signal?: AbortSignal): Promise<KeyInfo | null> {
   try {
     const headers = { Authorization: `Bearer ${key}` };
+    if (provider === 'openai') return null;
     if (provider === 'openrouter') {
       const res = await fetch('https://openrouter.ai/api/v1/key', { headers, signal });
       if (!res.ok) return null;
@@ -179,13 +193,14 @@ export interface ModelInfo {
   created?: number;
 }
 
-/** The provider's model list. OpenRouter's is public; DeepSeek's needs the key. */
+/** The provider's model list. OpenRouter's is public; DeepSeek's and OpenAI's need the key. */
 export async function listModels(provider: Provider, key?: string, signal?: AbortSignal): Promise<ModelInfo[]> {
   const p = PROVIDERS[provider];
-  const res = await fetch(p.models, { headers: provider === 'deepseek' && key ? { Authorization: `Bearer ${key}` } : {}, signal });
+  const res = await fetch(p.models, { headers: provider !== 'openrouter' && key ? { Authorization: `Bearer ${key}` } : {}, signal });
   if (!res.ok) throw new AiError(explain(provider, res.status, ''));
   const data = (await res.json()) as { data?: { id: string; name?: string; created?: number; pricing?: { prompt?: string; completion?: string } }[] };
-  return (data.data ?? []).map((m) => {
+  const all = provider === 'openai' ? (data.data ?? []).filter((m) => /^(gpt-[\d.o]|o\d)/.test(m.id) && !/(audio|realtime|transcribe|tts|image|search|instruct)/.test(m.id)) : (data.data ?? []);
+  return all.map((m) => {
     const prompt = Number(m.pricing?.prompt);
     const completion = Number(m.pricing?.completion);
     const priced = Number.isFinite(prompt) && Number.isFinite(completion) && prompt >= 0 && completion >= 0;

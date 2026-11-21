@@ -1,0 +1,521 @@
+{
+  "id": "as-if",
+  "title": "as if / as though",
+  "subtitle": "«Как будто», «словно»: реальное и нереальное сравнение",
+  "level": "B2",
+  "text": "Anna: Have you met the new manager yet?\nTom: Yes. He talks [as if he knew] everything about our work, and he only started on Monday!\nAnna: I know. He walked into the meeting [as though he owned] the place.\nTom: To be fair, he looked [as if he hadn't slept] for days.\nAnna: Wait, you sound [as if you're going to] defend him!\nTom: I'm just saying. It sounds [as if he's had] a really hard week.\nAnna: Do you think he'll buy everyone coffee to say hello?\nTom: [As if!]",
+  "gist": {
+    "q": "Does Tom think the new manager really knows everything about their work?",
+    "options": [
+      "Yes, he's an expert",
+      "No, he has only just started"
+    ],
+    "answer": 1,
+    "why": "Он начал работать только в понедельник: он ведёт себя так, будто всё знает, но на самом деле нет."
+  },
+  "notice": [
+    {
+      "q": "«He talks as if he knew everything.» Is this about the past or about now?",
+      "options": [
+        "About the past",
+        "About now"
+      ],
+      "answer": 1,
+      "point": 2,
+      "why": "knew — прошедшая форма, но речь о настоящем. Прошедшее здесь показывает нереальность: на самом деле он не знает всего."
+    },
+    {
+      "q": "«He looked as if he hadn't slept for days.» Which came first?",
+      "options": [
+        "Not sleeping, then looking tired",
+        "Looking tired, then not sleeping"
+      ],
+      "answer": 0,
+      "point": 3,
+      "why": "hadn't slept (past perfect) — то, что было раньше, чем looked. Нереальное или предполагаемое «раньше» = past perfect."
+    },
+    {
+      "q": "«It sounds as if he's had a hard week.» Why a normal tense here, not knew/had had?",
+      "options": [
+        "Tom thinks it's probably true",
+        "Tom knows it isn't true"
+      ],
+      "answer": 0,
+      "point": 1,
+      "why": "Когда это, вероятно, правда (есть признаки), время не сдвигаем: sounds as if he's had."
+    },
+    {
+      "q": "Tom answers «As if!». What does he mean?",
+      "options": [
+        "Probably, yes",
+        "No way, that won't happen"
+      ],
+      "answer": 1,
+      "point": 4,
+      "why": "«As if!» — саркастичная реплика: «Ещё чего! / Как же!»"
+    }
+  ],
+  "points": [
+    {
+      "title": "as if = as though",
+      "form": "as if / as though + clause",
+      "ru": "Значат одно и то же: «как будто», «словно». as though звучит чуть книжнее. После них всегда целое предложение (подлежащее + глагол).",
+      "examples": [
+        {
+          "en": "She smiled [as though] nothing had happened.",
+          "ru": "Она улыбнулась, словно ничего не случилось."
+        }
+      ]
+    },
+    {
+      "title": "Probably true: normal tense",
+      "form": "look / seem / sound / feel / smell + as if + present, present perfect, going to…",
+      "ru": "Есть признаки, и это, скорее всего, правда. Время не меняем. Чаще всего после look, seem, sound, feel, smell, taste.",
+      "examples": [
+        {
+          "en": "Look at those clouds. It looks [as if it's going to] rain.",
+          "ru": "Посмотри на тучи. Похоже, пойдёт дождь."
+        },
+        {
+          "en": "You sound [as though you've got] a cold.",
+          "ru": "По голосу похоже, что ты простыл."
+        }
+      ]
+    },
+    {
+      "title": "Not true, at the same time: past simple",
+      "form": "as if + past simple (knew, had, were)",
+      "ru": "Это неправда (или говорящий так считает), и речь о том же времени. Сдвигаем на шаг назад: know → knew. Время главного глагола не важно: talks / talked as if he knew — оба «одновременно».",
+      "examples": [
+        {
+          "en": "He talks [as if he knew] everything about cars.",
+          "ru": "Он говорит так, как будто всё знает о машинах."
+        },
+        {
+          "en": "Don't treat me [as if I were] a child.",
+          "ru": "Не обращайся со мной, как с ребёнком."
+        }
+      ]
+    },
+    {
+      "title": "Not true, earlier: past perfect",
+      "form": "as if + had + V3 (had seen, hadn't slept)",
+      "ru": "Нереальное или предполагаемое действие произошло раньше. Сдвигаем ещё на шаг назад: past perfect.",
+      "examples": [
+        {
+          "en": "She looked [as if she had seen] a ghost.",
+          "ru": "Она выглядела так, словно увидела привидение."
+        },
+        {
+          "en": "He went on [as though nothing had happened].",
+          "ru": "Он продолжил, будто ничего не произошло."
+        }
+      ]
+    },
+    {
+      "title": "were or was? like? As if!",
+      "form": "as if I/he/she were (formal) = was (speech); like + noun; as if to + verb",
+      "ru": "were — письменный и формальный вариант, was — обычный в речи; оба верны. В разговоре вместо as if часто говорят like: It looks like it's going to rain. С существительным — только like: He looks like his dad. as if to + глагол = «как будто собираясь». «As if!» = «Ещё чего!». «It's not as if…» = «Можно подумать…», «Не то чтобы…».",
+      "examples": [
+        {
+          "en": "He raised his hand [as if to] say something.",
+          "ru": "Он поднял руку, как будто хотел что-то сказать."
+        },
+        {
+          "en": "[It's not as if] we didn't warn you.",
+          "ru": "Можно подумать, мы тебя не предупреждали."
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "wrong": "He talks as if he is the boss. (а он не начальник)",
+      "right": "He talks as if he were / was the boss.",
+      "why": "В русском «как будто» не меняет время. В английском для нереального сравнения время сдвигается назад."
+    },
+    {
+      "wrong": "He talks as if he would know everything.",
+      "right": "He talks as if he knew everything.",
+      "why": "would после as if для нереальности не ставят: нужен past simple."
+    },
+    {
+      "wrong": "She looks as if a model.",
+      "right": "She looks like a model.",
+      "why": "После as if нужно целое предложение. С одним существительным — like."
+    },
+    {
+      "wrong": "He looked as if he didn't sleep. (не спал до этого)",
+      "right": "He looked as if he hadn't slept.",
+      "why": "Если «как будто» про то, что было раньше, нужен past perfect."
+    },
+    {
+      "wrong": "Он как будто устал → He as if tired.",
+      "right": "He seems tired. / He looks tired.",
+      "why": "«Как будто» в значении «кажется» — это seem/look, а не as if."
+    }
+  ],
+  "practice": [
+    {
+      "kind": "choice",
+      "q": "My boss treats me as if I ___ a child.",
+      "options": [
+        "am",
+        "were",
+        "would be"
+      ],
+      "answer": 1,
+      "point": 2,
+      "why": "Я не ребёнок, значит сравнение нереальное, нужна прошедшая форма: were (в речи — was). would после as if не ставим."
+    },
+    {
+      "kind": "gap",
+      "q": "He talks as if he ___ the boss, but he's just an intern.",
+      "hint": "be",
+      "answers": [
+        "were",
+        "was"
+      ],
+      "point": 2,
+      "why": "Он не начальник: нереально сейчас → were / was."
+    },
+    {
+      "kind": "gap",
+      "q": "She looked as if she ___ a ghost.",
+      "hint": "see",
+      "answers": [
+        "had seen",
+        "'d seen"
+      ],
+      "point": 3,
+      "why": "«Увидела» — раньше, чем «выглядела»: past perfect had seen."
+    },
+    {
+      "kind": "choice",
+      "q": "Look at those dark clouds. It looks as if it ___ rain.",
+      "options": [
+        "is going to",
+        "were going to",
+        "had rained"
+      ],
+      "answer": 0,
+      "point": 1,
+      "why": "Тучи — реальный признак, дождь вероятен. Время не сдвигаем: is going to."
+    },
+    {
+      "kind": "choice",
+      "q": "«He acts as if he owned the place.» What does the speaker think?",
+      "options": [
+        "He probably owns it",
+        "He definitely doesn't own it"
+      ],
+      "answer": 1,
+      "point": 2,
+      "why": "owned (сдвиг времени) показывает, что говорящий считает это неправдой. С owns было бы «может, и правда хозяин»."
+    },
+    {
+      "kind": "fix",
+      "q": "She speaks English as if she is British, but she's from Kazan.",
+      "correct": false,
+      "answers": [
+        "She speaks English as if she were British, but she's from Kazan.",
+        "She speaks English as if she was British, but she's from Kazan."
+      ],
+      "point": 2,
+      "why": "Она не британка, значит сравнение нереальное: is → were / was."
+    },
+    {
+      "kind": "fix",
+      "q": "It sounds as if you've had a great holiday.",
+      "correct": true,
+      "answers": [],
+      "point": 1,
+      "why": "Всё верно: судя по рассказу, это правда, поэтому время обычное (present perfect)."
+    },
+    {
+      "kind": "fix",
+      "q": "He looks as if his father.",
+      "correct": false,
+      "answers": [
+        "He looks like his father."
+      ],
+      "point": 4,
+      "why": "После as if нужно предложение. С существительным говорим like: looks like his father."
+    },
+    {
+      "kind": "transform",
+      "q": "He isn't rich, but he spends money like a rich man. → Use as if.",
+      "start": "He spends money as if",
+      "answers": [
+        "He spends money as if he were rich.",
+        "He spends money as if he was rich."
+      ],
+      "point": 2,
+      "why": "Он не богат: нереально сейчас → he were / was rich."
+    },
+    {
+      "kind": "transform",
+      "q": "She hadn't run a marathon, but she was breathing very hard. → Use as if.",
+      "start": "She was breathing as if",
+      "answers": [
+        "She was breathing as if she had run a marathon.",
+        "She was breathing as if she'd run a marathon."
+      ],
+      "point": 3,
+      "why": "«Пробежала» — раньше, чем «дышала»: past perfect had run."
+    },
+    {
+      "kind": "choice",
+      "q": "He looked at me as if ___ something, then turned away.",
+      "options": [
+        "to say",
+        "saying",
+        "he says"
+      ],
+      "answer": 0,
+      "point": 4,
+      "why": "as if to + глагол = «как будто собираясь что-то сделать»."
+    },
+    {
+      "kind": "gap",
+      "q": "Don't look at me as though I ___ something wrong. I haven't!",
+      "hint": "do",
+      "answers": [
+        "had done",
+        "'d done",
+        "did"
+      ],
+      "point": 3,
+      "why": "Я ничего не сделал, а «сделал» относится к прошлому: had done (в речи бывает и did)."
+    }
+  ],
+  "produce": [
+    {
+      "kind": "translate",
+      "q": "Он говорит так, как будто всё знает.",
+      "answers": [
+        "He talks as if he knew everything.",
+        "He speaks as if he knew everything.",
+        "He talks like he knew everything.",
+        "He talks as if he knows everything.",
+        "He speaks as if he knows everything.",
+        "He talks like he knows everything."
+      ],
+      "point": 2,
+      "why": "Если он на самом деле не всё знает: as if he knew. knows тоже возможно, если вы допускаете, что это правда."
+    },
+    {
+      "kind": "translate",
+      "q": "Она выглядела так, словно не спала всю ночь.",
+      "answers": [
+        "She looked as if she hadn't slept all night.",
+        "She looked as if she had not slept all night.",
+        "She looked like she hadn't slept all night.",
+        "She looked as if she hadn't slept the whole night."
+      ],
+      "point": 3,
+      "why": "«Не спала» было раньше, чем «выглядела»: past perfect hadn't slept."
+    },
+    {
+      "kind": "translate",
+      "q": "Похоже, пойдёт дождь.",
+      "answers": [
+        "It looks as if it's going to rain.",
+        "It looks like it's going to rain.",
+        "It seems as if it's going to rain.",
+        "It looks as if it will rain.",
+        "It looks like it will rain."
+      ],
+      "point": 1,
+      "why": "Есть признаки, значит время обычное: It looks as if / like it's going to rain."
+    },
+    {
+      "kind": "write",
+      "q": "Опишите знакомого, который ведёт себя так, как будто он… (всё знает, здесь хозяин, богат). 1–2 предложения.",
+      "model": "My cousin talks about cars as if he were a mechanic, but he can't even change a tyre.",
+      "point": 2,
+      "why": "Нереально сейчас → past simple: as if he were / knew / owned."
+    },
+    {
+      "kind": "write",
+      "q": "Как вы себя чувствовали или выглядели после очень тяжёлого дня? Используйте look / feel as if + past perfect.",
+      "model": "After the move I felt as if I had carried the whole flat on my back.",
+      "point": 3,
+      "why": "То, что «как будто случилось» раньше, — past perfect: as if I had carried."
+    }
+  ],
+  "check": [
+    {
+      "kind": "gap",
+      "q": "She went on talking as though nothing ___.",
+      "hint": "happen",
+      "answers": [
+        "had happened",
+        "'d happened"
+      ],
+      "point": 3,
+      "why": "«Ничего не случилось» — раньше, чем «продолжила»: past perfect."
+    },
+    {
+      "kind": "choice",
+      "q": "He's forty, but he dresses as if he ___ eighteen.",
+      "options": [
+        "is",
+        "were",
+        "had been"
+      ],
+      "answer": 1,
+      "point": 2,
+      "why": "Ему не 18, и речь о том же времени: were (или was)."
+    },
+    {
+      "kind": "fix",
+      "q": "He looked at me as if I would be crazy.",
+      "correct": false,
+      "answers": [
+        "He looked at me as if I were crazy.",
+        "He looked at me as if I was crazy."
+      ],
+      "point": 2,
+      "why": "would после as if не ставим. Нереально в тот же момент: as if I were / was crazy."
+    },
+    {
+      "kind": "transform",
+      "q": "I'm not your servant! Don't talk to me like that. → Use as if.",
+      "start": "Don't talk to me as if",
+      "answers": [
+        "Don't talk to me as if I were your servant.",
+        "Don't talk to me as if I was your servant."
+      ],
+      "point": 2,
+      "why": "Я не слуга: нереально → I were / was your servant."
+    },
+    {
+      "kind": "gap",
+      "q": "Listen to that music! It sounds as if the neighbours ___ a party again.",
+      "hint": "have",
+      "answers": [
+        "are having",
+        "'re having"
+      ],
+      "point": 1,
+      "why": "Музыку слышно, значит это, скорее всего, правда: обычное время, are having."
+    },
+    {
+      "kind": "choice",
+      "q": "«Do you think he'll lend you his car?» — «___ He never lends anyone anything.»",
+      "options": [
+        "As if!",
+        "As though!",
+        "Like if!"
+      ],
+      "answer": 0,
+      "point": 4,
+      "why": "«As if!» — устойчивая реплика: «Ещё чего!». As though! так не говорят."
+    }
+  ],
+  "review": [
+    {
+      "kind": "gap",
+      "q": "The kitchen smells as if someone ___ fish.",
+      "hint": "cook",
+      "answers": [
+        "has been cooking",
+        "'s been cooking",
+        "has cooked",
+        "'s cooked",
+        "is cooking",
+        "'s cooking"
+      ],
+      "point": 1,
+      "why": "Запах — реальный признак: время обычное (has been cooking / is cooking)."
+    },
+    {
+      "kind": "gap",
+      "q": "He's very rich, but he lives as if he ___ any money.",
+      "hint": "not / have",
+      "answers": [
+        "didn't have",
+        "did not have"
+      ],
+      "point": 2,
+      "why": "У него есть деньги, значит сравнение нереальное: didn't have."
+    },
+    {
+      "kind": "fix",
+      "q": "It looks as if it's going to snow.",
+      "correct": true,
+      "answers": [],
+      "point": 1,
+      "why": "Верно: снег вероятен, время обычное."
+    },
+    {
+      "kind": "fix",
+      "q": "She felt as if she has run ten kilometres.",
+      "correct": false,
+      "answers": [
+        "She felt as if she had run ten kilometres.",
+        "She felt as if she'd run ten kilometres."
+      ],
+      "point": 3,
+      "why": "Пробежала (как будто) раньше, чем почувствовала: had run."
+    },
+    {
+      "kind": "translate",
+      "q": "Не смотри на меня так, как будто я сумасшедший.",
+      "answers": [
+        "Don't look at me as if I were crazy.",
+        "Don't look at me as if I was crazy.",
+        "Don't look at me as if I'm crazy.",
+        "Don't look at me like I'm crazy.",
+        "Don't look at me like I was crazy.",
+        "Don't look at me as if I were mad.",
+        "Don't look at me as if I was mad.",
+        "Don't look at me like I'm mad."
+      ],
+      "point": 2,
+      "why": "Обычно: as if I were / was crazy. В разговоре часто like I'm crazy."
+    },
+    {
+      "kind": "choice",
+      "q": "He looks ___ his grandfather.",
+      "options": [
+        "like",
+        "as if",
+        "as though"
+      ],
+      "answer": 0,
+      "point": 4,
+      "why": "С существительным только like. as if / as though требуют целое предложение."
+    },
+    {
+      "kind": "transform",
+      "q": "He hadn't won the lottery, but he was smiling like a winner. → Use as if.",
+      "start": "He was smiling as if",
+      "answers": [
+        "He was smiling as if he had won the lottery.",
+        "He was smiling as if he'd won the lottery."
+      ],
+      "point": 3,
+      "why": "Выиграл (как будто) раньше: past perfect had won."
+    },
+    {
+      "kind": "choice",
+      "q": "«It's not as if you didn't know.» What does it mean?",
+      "options": [
+        "Можно подумать, ты не знал.",
+        "Ты, кажется, не знал."
+      ],
+      "answer": 0,
+      "point": 4,
+      "why": "It's not as if… = «Можно подумать…»: ты прекрасно знал."
+    }
+  ],
+  "summary": [
+    "as if = as though: «как будто», «словно». После них — целое предложение.",
+    "Вероятно правда → обычное время: It looks as if it's going to rain.",
+    "Неправда сейчас → past simple: He talks as if he knew everything.",
+    "Неправда раньше → past perfect: She looked as if she had seen a ghost.",
+    "were (формально) = was (в речи). С существительным — like: He looks like his dad."
+  ]
+}

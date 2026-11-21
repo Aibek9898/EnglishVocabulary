@@ -23,6 +23,7 @@ import { Segmented, Sheet, toast } from './ui';
 const PROVIDER_OPTIONS: { value: Provider; label: string }[] = [
   { value: 'openrouter', label: 'OpenRouter' },
   { value: 'deepseek', label: 'DeepSeek' },
+  { value: 'openai', label: 'OpenAI' },
 ];
 
 const LANGS = [
@@ -72,12 +73,12 @@ function AiSettingsCard({ config }: { config: AiConfig }) {
     setInfo(null);
   }, [provider]);
 
-  // The model list: OpenRouter's is public, DeepSeek's needs the key.
-  const listKey = provider === 'deepseek' ? key : undefined;
+  // The model list: OpenRouter's is public, DeepSeek's and OpenAI's need the key.
+  const listKey = provider !== 'openrouter' ? key : undefined;
   useEffect(() => {
     setModels(null);
     setModelsError('');
-    if (provider === 'deepseek' && !listKey) return;
+    if (provider !== 'openrouter' && !listKey) return;
     const ctrl = new AbortController();
     listModels(provider, listKey, ctrl.signal)
       .then((list) => setModels(list.length ? list : null))
@@ -99,11 +100,11 @@ function AiSettingsCard({ config }: { config: AiConfig }) {
   const saved = config.models[provider];
   const model = saved || p.defaultModel;
   const current = list?.find((m) => m.id === model);
-  const suggested = useMemo(() => (provider === 'openrouter' && models ? suggestedModels(models) : []), [provider, models]);
+  const suggested = useMemo(() => (provider === 'openrouter' && models ? suggestedModels(models) : provider === 'openai' && models ? openAiSuggested(models) : []), [provider, models]);
 
   // No model picked yet: take the default if the service still has it, else the first good one.
   useEffect(() => {
-    if (saved || provider !== 'openrouter' || !models) return;
+    if (saved || provider === 'deepseek' || !models) return;
     const pick = models.some((m) => m.id === p.defaultModel) ? p.defaultModel : suggested[0]?.id;
     if (pick && pick !== p.defaultModel) saveAi({ models: { ...config.models, [provider]: pick } });
   }, [saved, provider, models, suggested, p.defaultModel, config.models]);
@@ -131,7 +132,8 @@ function AiSettingsCard({ config }: { config: AiConfig }) {
     if (!k) return;
     if (/\s/.test(k) || k.length < 20) return setDraftError("This doesn't look like a whole key. Copy it again.");
     if (provider === 'deepseek' && k.startsWith('sk-or-')) return setDraftError('This is an OpenRouter key. Choose OpenRouter above.');
-    if (provider === 'openrouter' && !k.startsWith('sk-or-')) return setDraftError('OpenRouter keys start with “sk-or-”. Is this a DeepSeek key? Choose DeepSeek above.');
+    if (provider === 'openai' && k.startsWith('sk-or-')) return setDraftError('This is an OpenRouter key. Choose OpenRouter above.');
+    if (provider === 'openrouter' && !k.startsWith('sk-or-')) return setDraftError('OpenRouter keys start with “sk-or-”. Is this a DeepSeek or OpenAI key? Choose that service above.');
     await setKey(provider, k);
     setDraft('');
     setShow(false);
@@ -161,7 +163,7 @@ function AiSettingsCard({ config }: { config: AiConfig }) {
       </h2>
       <p className="muted small">
         Check the sentences you write with an AI that acts as your English teacher: is it correct, does it sound natural, how else could you say it, and which
-        words would fit. It needs your own key from OpenRouter or DeepSeek; you pay them for what you use, usually a fraction of a cent for a check.
+        words would fit. It also writes grammar lessons. It needs your own key from OpenRouter, DeepSeek or OpenAI; you pay them for what you use, usually a fraction of a cent for a check.
       </p>
 
       <div className="field">
@@ -170,7 +172,9 @@ function AiSettingsCard({ config }: { config: AiConfig }) {
         <small>
           {provider === 'openrouter'
             ? 'One key for many models: DeepSeek, Gemini, GPT, Claude and more. You can set a spending limit on the key.'
-            : "DeepSeek's own API: cheap, but only its own models, and there's no spending limit per key."}
+            : provider === 'openai'
+              ? "OpenAI's own API: GPT models. Set a monthly budget for the project the key belongs to."
+              : "DeepSeek's own API: cheap, but only its own models, and there's no spending limit per key."}
         </small>
       </div>
 
@@ -297,7 +301,11 @@ function AiSettingsCard({ config }: { config: AiConfig }) {
           <li>It's never shown in full here. Removing it here deletes it from this device.</li>
           <li>
             Anyone who can open this site on this device, signed in, could use it. That's why the key should have a small limit:{' '}
-            {provider === 'openrouter' ? 'on OpenRouter each key can have its own credit limit.' : 'DeepSeek has no per-key limit, so keep a small balance.'}
+            {provider === 'openrouter'
+              ? 'on OpenRouter each key can have its own credit limit.'
+              : provider === 'openai'
+                ? 'on OpenAI, give the key its own project with a small monthly budget.'
+                : 'DeepSeek has no per-key limit, so keep a small balance.'}
           </li>
           <li>Lost the device, or the key leaked? Delete the key on {p.keysPage.replace('https://', '').split('/')[0]} and make a new one.</li>
         </ul>
@@ -323,6 +331,16 @@ function AiSettingsCard({ config }: { config: AiConfig }) {
       </Sheet>
     </div>
   );
+}
+
+/** OpenAI's list has no prices: suggest the newest small and full GPT models. */
+function openAiSuggested(models: ModelInfo[]): ModelInfo[] {
+  const out: ModelInfo[] = [];
+  for (const re of [/^gpt-[\d.]+-mini$/, /^gpt-[\d.]+-nano$/, /^gpt-[\d.]+o?$/]) {
+    const hit = models.filter((m) => re.test(m.id)).sort((a, b) => (b.created ?? 0) - (a.created ?? 0))[0];
+    if (hit) out.push(hit);
+  }
+  return out;
 }
 
 function KeyNote({ info, provider }: { info: KeyInfo; provider: Provider }) {
