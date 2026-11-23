@@ -9,7 +9,8 @@ import { Empty, LevelMeter, Sheet, toast, usePageTitle } from '../components/ui'
 import { sentenceUsesTerm } from '../lib/cloze';
 import { endOfDay } from '../lib/dates';
 import { db, useLive } from '../lib/db';
-import { COURSE_DECKS, DECKS, addDeck, packOriginal } from '../lib/decks';
+import { DECKS, addDeck, deckTitle, isCourseDeck, packOriginal } from '../lib/decks';
+import { isMyLesson } from '../lib/lessonImport';
 import { editPatch } from '../lib/edit';
 import { removeItem } from '../lib/removed';
 import { getSaved, inLibrary, libraryKeys, removeSaved, savePhrase, savedText, type SavedPhrase } from '../lib/saved';
@@ -63,7 +64,7 @@ const FILTERS = [
   { id: 'new', label: 'Not started', test: (i: Item) => i.level === 0 && !i.suspended },
   { id: 'learning', label: 'Learning', test: (i: Item) => i.level >= 1 && i.level <= 3 },
   { id: 'use', label: 'Can use', test: (i: Item) => i.level >= 4 },
-  { id: 'course', label: 'My course', test: (i: Item) => COURSE_DECKS.has(i.deck) },
+  { id: 'course', label: 'My course', test: (i: Item) => isCourseDeck(i.deck) },
   { id: 'own', label: 'My own', test: (i: Item) => i.deck === 'own' },
   { id: 'paused', label: 'Paused', test: (i: Item) => i.suspended },
 ];
@@ -336,8 +337,25 @@ function Packs() {
   const items = useLive(() => db.items.toArray(), [], [] as Item[]);
   const [preview, setPreview] = useState<string | null>(null);
   const course = DECKS.filter((d) => d.course);
+  const mine = [...new Set(items.filter((i) => isMyLesson(i.deck)).map((i) => i.deck))].sort().reverse();
   return (
     <div className="stack">
+      <h2 className="pack-group">My lessons</h2>
+      <p className="muted small">
+        Lessons you made in <a href="#/add">Add → New lesson</a>. The newest one comes first: until its words are learned, new words come only from it.
+      </p>
+      {mine.map((deck) => {
+        const words = items.filter((i) => i.deck === deck);
+        const learned = words.filter((i) => i.level >= 3).length;
+        return (
+          <div key={deck} className="card my-lesson-card">
+            <b>{deckTitle(deck)}</b>
+            <span className="muted small">
+              {words.length} word{words.length === 1 ? '' : 's'} · {learned} learned
+            </span>
+          </div>
+        );
+      })}
       {course.length > 0 && (
         <>
           <h2 className="pack-group">From my course</h2>

@@ -3499,3 +3499,71 @@ button.ai-check-btn {
   border: 1px solid var(--border);
   user-select: all;
 }
+
+/* ============ Add → New lesson ============ */
+
+.lesson-date {
+  max-width: 220px;
+}
+
+.lesson-terms {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.lesson-terms li {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 2px 2px 12px;
+  border-radius: var(--r-pill);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  font-weight: 650;
+}
+
+.lesson-terms li.skipped {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.lesson-terms .icon-btn {
+  width: 32px;
+  height: 32px;
+}
+
+.lesson-cards {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 16px;
+  display: grid;
+  gap: 14px;
+}
+
+.lesson-cards > li {
+  display: grid;
+  gap: 6px;
+  justify-items: start;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.lesson-cards > li > .item-card {
+  width: 100%;
+}
+
+.lesson-missing {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+
+.my-lesson-card {
+  display: grid;
+  gap: 2px;
+}
