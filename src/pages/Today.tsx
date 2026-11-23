@@ -8,7 +8,7 @@ import { activeAi, useAi } from '../lib/ai';
 import { sentenceUsesTerm } from '../lib/cloze';
 import { dayKey } from '../lib/dates';
 import { db, getSettings, saveSettings, useLive, useSettings } from '../lib/db';
-import { DECKS, addDeck } from '../lib/decks';
+import { DECKS, addDeck, deckTitle } from '../lib/decks';
 import { removeItem } from '../lib/removed';
 import { buildSession, currentLesson, dueItems, newAllowance, overdueCount, pickMessageWords, pickNew, refreshItems, retrySteps, type Step } from '../lib/session';
 import { unlockSpeech } from '../lib/speech';
@@ -304,7 +304,7 @@ function TodayStart({ items, onStart }: { items: Item[]; onStart: (mode?: StartM
   // Everything a lesson could take right now.
   const canLearn = pickNew(items, Infinity).length;
   const lesson = currentLesson(items);
-  const lessonTitle = lesson && (DECKS.find((d) => d.id === lesson.deck)?.title ?? 'your lesson');
+  const lessonTitle = lesson && (deckTitle(lesson.deck) ?? 'your lesson');
   const unseen = lesson ? lesson.unseen : items.filter((i) => i.level === 0 && !i.suspended).length;
   const canReview = due + refreshItems(items, reviews, settings, now, 0, Infinity).length;
   const newToday = Math.min(newAllowance(items, reviews, settings, now), canLearn);

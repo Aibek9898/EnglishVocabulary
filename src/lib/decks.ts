@@ -2,6 +2,7 @@ import { db } from './db';
 import { makeItem } from './srs';
 import { termKey, toContent } from './content';
 import { packUpdate } from './edit';
+import { isMyLesson, myLessonTitle } from './lessonImport';
 import { getRemoved, setRemoved } from './removed';
 import type { Deck, Item, ItemContent } from './types';
 
@@ -14,6 +15,14 @@ export const DECKS: Deck[] = Object.values(files)
   .sort((a, b) => (a.course === b.course ? (a.course ? a.id.localeCompare(b.id, 'en', { numeric: true }) : a.title.localeCompare(b.title)) : a.course ? -1 : 1));
 
 export const COURSE_DECKS = new Set(DECKS.filter((d) => d.course).map((d) => d.id));
+
+/** Course packs and the lessons made on the site (Add → New lesson). */
+export const isCourseDeck = (deck: string) => COURSE_DECKS.has(deck) || isMyLesson(deck);
+
+/** A pack's or lesson's name. */
+export function deckTitle(deck: string): string | undefined {
+  return DECKS.find((d) => d.id === deck)?.title ?? myLessonTitle(deck) ?? undefined;
+}
 
 /**
  * Adds the given items to the library, skipping terms that are already there. Returns how many were added.
@@ -37,10 +46,10 @@ export async function addContents(contents: ItemContent[], deck: string, { first
   const now = Date.now();
   let times = fresh.map((_, i) => now + i);
   const waiting = items.filter((i) => i.level === 0);
-  const later = waiting.filter((i) => !COURSE_DECKS.has(i.deck)).map((i) => i.createdAt);
+  const later = waiting.filter((i) => !isCourseDeck(i.deck)).map((i) => i.createdAt);
   if (first && later.length) {
     const hi = Math.min(...later);
-    const ahead = waiting.filter((i) => COURSE_DECKS.has(i.deck) && i.createdAt < hi).map((i) => i.createdAt);
+    const ahead = waiting.filter((i) => isCourseDeck(i.deck) && i.createdAt < hi).map((i) => i.createdAt);
     const lo = ahead.length ? Math.max(...ahead) : hi - fresh.length - 1;
     const step = (hi - lo) / (fresh.length + 1);
     times = fresh.map((_, i) => lo + step * (i + 1));
@@ -48,7 +57,7 @@ export async function addContents(contents: ItemContent[], deck: string, { first
   await db.items.bulkAdd(fresh.map((c, i) => ({ ...makeItem(c, deck), createdAt: times[i] })));
   // A course lesson also takes over its words that wait unstarted in other packs, so they are learned with it.
   let moved = 0;
-  if (first && COURSE_DECKS.has(deck)) {
+  if (first && isCourseDeck(deck)) {
     const byKey = new Map(contents.map((c) => [termKey(c.term), c]));
     const start = Math.min(...times, now);
     for (const i of items) {

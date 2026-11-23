@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import { Icon } from '../components/Icon';
 import { ItemForm } from '../components/ItemForm';
+import { NewLesson } from '../components/NewLesson';
 import { toast, usePageTitle } from '../components/ui';
 import { plainExample } from '../lib/cloze';
 import { termKey } from '../lib/content';
@@ -18,14 +19,17 @@ export function AddWords({ tab }: { tab: string }) {
         <h1>Add words</h1>
       </div>
       <nav className="tabs" aria-label="How to add">
-        <a className="tab" href="#/add" aria-current={tab !== 'ai' ? 'page' : undefined}>
+        <a className="tab" href="#/add" aria-current={tab !== 'ai' && tab !== 'one' ? 'page' : undefined}>
+          New lesson
+        </a>
+        <a className="tab" href="#/add?tab=one" aria-current={tab === 'one' ? 'page' : undefined}>
           One by one
         </a>
         <a className="tab" href="#/add?tab=ai" aria-current={tab === 'ai' ? 'page' : undefined}>
           From an AI chat
         </a>
       </nav>
-      {tab === 'ai' ? <FromAi /> : <Manual />}
+      {tab === 'ai' ? <FromAi /> : tab === 'one' ? <Manual /> : <NewLesson />}
     </section>
   );
 }
