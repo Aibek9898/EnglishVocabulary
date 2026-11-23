@@ -23,7 +23,7 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     env:
-      REF: ${{ vars.SUPABASE_PROJECT_REF }}
+      REF: ${{ vars.SUPABASE_PROJECT_REF || secrets.SUPABASE_PROJECT_REF || 'eiuruohmwaqlavueucil' }}
       SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
       SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
     steps:
