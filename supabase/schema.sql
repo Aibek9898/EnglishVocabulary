@@ -98,6 +98,8 @@ create policy "Own books" on public.books
 
 grant select on public.profiles to authenticated;
 grant select, insert, update, delete on public.vocab_state, public.books to authenticated;
+-- The admin function works as service_role; grant it too, in case new tables aren't granted automatically.
+grant all on public.profiles, public.vocab_state, public.books to service_role;
 
 -- ---------- Storage: a private bucket; each account sees only its own folder ----------
 
