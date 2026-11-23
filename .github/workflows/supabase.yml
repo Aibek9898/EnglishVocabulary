@@ -62,4 +62,4 @@ jobs:
           version: latest
 
       - name: Deploy the admin function
-        run: supabase functions deploy admin-users --project-ref "$REF" --use-api --no-verify-jwt
+        run: supabase functions deploy admin-users --project-ref "$REF" --use-api --no-verify-jwt --yes
