@@ -9,6 +9,8 @@
  */
 import { useSyncExternalStore } from 'react';
 import { reviveItem } from './backup';
+import { booksApplying, syncBooks } from './bookSync';
+import { cloudEnabled, currentAccount, supabase } from './cloud';
 import { db, getSettings } from './db';
 import { getGrammar, setGrammar } from './grammar';
 import { getRemoved } from './removed';
@@ -20,6 +22,8 @@ const API = 'https://api.github.com';
 const FILE = 'vocab-sync.json.gz';
 const CONFIG_KEY = 'sync';
 const BASE_KEY = 'syncBase';
+/** With accounts: when this device last synced with the cloud. */
+const CLOUD_KEY = 'cloudSync';
 /** kv rows that travel with the words; everything else stays on the device. */
 const SYNCED_KV = new Set(['settings', 'saved', 'removed', 'coursePacks', 'grammar']);
 
@@ -294,6 +298,83 @@ async function applyLocal(merged: Snapshot, current: { snap: Snapshot; reviews: 
   if (merged.grammar) await setGrammar(merged.grammar);
 }
 
+/* ============ the cloud (accounts) ============ */
+
+interface CloudRow {
+  data: string;
+  version: number;
+}
+
+function cloudFailed(error: { message?: string; code?: string } | null): SyncError {
+  const m = error?.message ?? '';
+  if (/fetch|network|Failed to/i.test(m)) return new SyncError("Can't reach the server. It will sync when you're online.");
+  if (/JWT|token|401/i.test(m)) return new SyncError('Your sign-in has expired. Sign out and sign in again.');
+  return new SyncError('The server had a problem saving. It will try again in a while.');
+}
+
+async function readCloud(userId: string): Promise<Remote> {
+  const { data, error } = await supabase().from('vocab_state').select('data,version').eq('user_id', userId).maybeSingle();
+  if (error) throw cloudFailed(error);
+  const row = data as CloudRow | null;
+  if (!row) return { commit: null, snapshot: null };
+  return { commit: String(row.version), snapshot: parseFile(await gunzip(fromBase64(row.data))) };
+}
+
+/** Saves only if nobody saved since we read (the version number still matches). */
+async function writeCloud(userId: string, snap: Snapshot, readFrom: string | null) {
+  const file: SyncFile = { app: 'english-vocabulary', kind: 'sync', version: 1, savedAt: new Date().toISOString(), ...snap };
+  const data = toBase64(await gzip(JSON.stringify(file)));
+  const table = supabase().from('vocab_state');
+  if (readFrom === null) {
+    const { error } = await table.insert({ user_id: userId, data, version: 1 });
+    if (error?.code === '23505') throw new Conflict();
+    if (error) throw cloudFailed(error);
+    return;
+  }
+  const version = Number(readFrom);
+  const { data: rows, error } = await table
+    .update({ data, version: version + 1, updated_at: new Date().toISOString() })
+    .eq('user_id', userId)
+    .eq('version', version)
+    .select('version');
+  if (error) throw cloudFailed(error);
+  if (!rows || rows.length === 0) throw new Conflict();
+}
+
+/* ============ where to sync ============ */
+
+interface Target {
+  read(): Promise<Remote>;
+  write(snap: Snapshot, readFrom: string | null): Promise<void>;
+  synced(lastSync: number): Promise<void>;
+  cloud: boolean;
+}
+
+async function currentTarget(): Promise<Target | null> {
+  if (cloudEnabled) {
+    const account = currentAccount();
+    if (!account) return null;
+    return {
+      cloud: true,
+      read: () => readCloud(account.id),
+      write: (snap, from) => writeCloud(account.id, snap, from),
+      synced: async (lastSync) => {
+        await db.kv.put({ key: CLOUD_KEY, value: { lastSync } });
+      },
+    };
+  }
+  const config = await getSyncConfig();
+  if (!config) return null;
+  return {
+    cloud: false,
+    read: () => readRemote(config),
+    write: (snap, from) => writeRemote(config, snap, from),
+    synced: async (lastSync) => {
+      await db.kv.put({ key: CONFIG_KEY, value: { ...config, lastSync } });
+    },
+  };
+}
+
 /* ============ syncing ============ */
 
 let applying = false;
@@ -315,27 +396,28 @@ export async function peekRemote(c: SyncConfig): Promise<{ words: number } | nul
  * Syncs now. `first: 'replace'` makes this device a copy of the synced words
  * (for joining a new device); otherwise both sides are combined.
  */
-export function syncNow(opts: { first?: 'replace' | 'combine' } = {}): Promise<SyncSummary | null> {
+export function syncNow(opts: { first?: 'replace' | 'combine'; wipe?: boolean } = {}): Promise<SyncSummary | null> {
   if (running) return running;
   const run = async (): Promise<SyncSummary | null> => {
-    const config = await getSyncConfig();
-    if (!config) {
+    const target = await currentTarget();
+    if (!target) {
       setStatus({ state: 'off' });
       return null;
     }
     setStatus({ state: 'syncing', error: undefined });
     try {
       for (let attempt = 0; ; attempt++) {
-        const remote = await readRemote(config);
+        const remote = await target.read();
         let merged!: Snapshot;
         let changedHere = false;
         applying = true;
         try {
           await db.transaction('rw', db.items, db.reviews, db.kv, async () => {
             const current = await localSnapshot();
-            const base = opts.first ? null : ((await db.kv.get(BASE_KEY))?.value as SyncBase | undefined) ?? null;
+            const base = opts.first || opts.wipe ? null : ((await db.kv.get(BASE_KEY))?.value as SyncBase | undefined) ?? null;
             let remap = new Map<string, string>();
-            if (!remote.snapshot) merged = current.snap;
+            if (opts.wipe) merged = { items: [], reviews: [], settings: current.snap.settings, saved: [], removed: [], coursePacks: [] };
+            else if (!remote.snapshot) merged = current.snap;
             else if (opts.first === 'replace') merged = remote.snapshot;
             else ({ merged, remap } = mergeSnapshots(current.snap, remote.snapshot, base));
             changedHere = snapshotHash(merged) !== snapshotHash(current.snap);
@@ -347,7 +429,7 @@ export function syncNow(opts: { first?: 'replace' | 'combine' } = {}): Promise<S
         const upload = snapshotHash(merged) !== snapshotHash(remote.snapshot);
         if (upload) {
           try {
-            await writeRemote(config, merged, remote.commit);
+            await target.write(merged, remote.commit);
           } catch (e) {
             if (e instanceof Conflict && attempt < 3) continue;
             if (e instanceof Conflict) throw new SyncError('Another device was syncing at the same time. Try again.');
@@ -357,8 +439,16 @@ export function syncNow(opts: { first?: 'replace' | 'combine' } = {}): Promise<S
         // Only now is the synced copy known to match: the next merge starts from here.
         const lastSync = Date.now();
         await db.kv.put({ key: BASE_KEY, value: baseOf(merged) });
-        await db.kv.put({ key: CONFIG_KEY, value: { ...config, lastSync } });
+        await target.synced(lastSync);
         dirty = false;
+        if (target.cloud) {
+          try {
+            await syncBooks();
+          } catch (e) {
+            // Words are saved; books try again next time.
+            console.error(e);
+          }
+        }
         setStatus({ state: 'idle', lastSync, error: undefined });
         return { words: merged.items.length, uploaded: upload, changedHere };
       }
@@ -397,7 +487,7 @@ function schedule(ms: number) {
 }
 
 function markDirty(table: string, key: unknown) {
-  if (applying || (table === 'kv' && !SYNCED_KV.has(String(key)))) return;
+  if (applying || booksApplying() || (table === 'kv' && !SYNCED_KV.has(String(key)))) return;
   dirty = true;
   if (status.state !== 'off') schedule(AFTER_CHANGE);
 }
@@ -410,6 +500,7 @@ export async function startAutoSync() {
     ['items', db.items],
     ['reviews', db.reviews],
     ['kv', db.kv],
+    ...(cloudEnabled ? ([['books', db.books]] as const) : []),
   ] as const) {
     (table as typeof db.kv).hook('creating', (key) => markDirty(name, key));
     (table as typeof db.kv).hook('updating', (_mods, key) => markDirty(name, key));
@@ -424,6 +515,13 @@ export async function startAutoSync() {
   window.addEventListener('online', () => {
     if (status.state !== 'off') quiet();
   });
+  if (cloudEnabled) {
+    if (!currentAccount()) return;
+    const last = (await db.kv.get(CLOUD_KEY))?.value as { lastSync?: number } | undefined;
+    setStatus({ state: 'idle', lastSync: last?.lastSync });
+    // The first sync already ran before the app opened (see App).
+    return;
+  }
   const config = await getSyncConfig();
   if (config) {
     setStatus({ state: 'idle', lastSync: config.lastSync });

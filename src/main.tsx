@@ -1,6 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { App } from './App';
+import { cloudEnabled } from './lib/cloud';
 import { db } from './lib/db';
 import { syncPacks } from './lib/decks';
 import { applyTheme } from './lib/theme';
@@ -17,7 +18,8 @@ createRoot(document.getElementById('root')!).render(
 );
 
 // Libraries made from older pack files get the latest fixes (progress is kept).
-syncPacks().catch(console.error);
+// With accounts, this runs once the account's words are open (see App).
+if (!cloudEnabled) syncPacks().catch(console.error);
 
 // Ask the browser not to clear our data when the disk is low.
 navigator.storage?.persist?.().catch(() => {});
@@ -27,4 +29,4 @@ if ('serviceWorker' in navigator && import.meta.env.PROD) {
 }
 
 // Handy for debugging in the console.
-Object.assign(window, { db });
+Object.defineProperty(window, 'db', { get: () => db, configurable: true });

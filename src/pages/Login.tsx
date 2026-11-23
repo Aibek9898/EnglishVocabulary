@@ -7,7 +7,7 @@ const LOCK_AFTER = 5;
 const LOCK_SECONDS = 30;
 
 /** Phrases drifting in the background of the sign-in screen. */
-const CHIPS: { text: string; style: CSSProperties }[] = [
+export const CHIPS: { text: string; style: CSSProperties }[] = [
   { text: 'make a decision', style: { top: '9%', left: '6%', '--tilt': '-6deg' } as CSSProperties },
   { text: 'run out of time', style: { top: '16%', right: '5%', '--tilt': '5deg', animationDelay: '-3s' } as CSSProperties },
   { text: 'look forward to', style: { bottom: '18%', left: '4%', '--tilt': '4deg', animationDelay: '-6s' } as CSSProperties },

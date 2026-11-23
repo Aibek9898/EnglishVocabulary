@@ -6,6 +6,8 @@
 
 Подробный план и советы экспертов: [docs/PLAN.md](docs/PLAN.md).
 
+Аккаунты и облачная база (Supabase): [docs/ACCOUNTS.md](docs/ACCOUNTS.md).
+
 ## Запуск на компьютере
 
 Нужен [Node.js](https://nodejs.org) версии 20 или новее.
