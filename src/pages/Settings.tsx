@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { AccountSettings } from '../components/AccountSettings';
 import { AiSettings } from '../components/AiSettings';
 import { Icon } from '../components/Icon';
 import { InstallCard } from '../components/InstallCard';
@@ -6,10 +7,12 @@ import { SecuritySettings } from '../components/SecuritySettings';
 import { SyncSettings } from '../components/SyncSettings';
 import { Segmented, Sheet, toast, usePageTitle } from '../components/ui';
 import { forgetAi } from '../lib/ai';
+import { noteBookDeleted } from '../lib/bookSync';
+import { cloudEnabled } from '../lib/cloud';
 import { downloadJson, isBackup, makeBackup, restoreBackup, type Backup } from '../lib/backup';
 import { dayKey } from '../lib/dates';
 import { db, saveSettings, useLive, useSettings } from '../lib/db';
-import { disconnect, forgetSyncBase, getSyncConfig } from '../lib/sync';
+import { disconnect, forgetSyncBase, getSyncConfig, syncNow } from '../lib/sync';
 import { canSpeak, englishVoices, speak } from '../lib/speech';
 import { getTheme, setTheme, type Theme } from '../lib/theme';
 
@@ -39,7 +42,7 @@ export function SettingsPage() {
   const [restore, setRestore] = useState<Backup | null>(null);
   const [wipe, setWipe] = useState(false);
   const [error, setError] = useState('');
-  const syncOn = !!useLive(getSyncConfig, [], null);
+  const syncOn = !!useLive(getSyncConfig, [], null) || cloudEnabled;
   const lastBackup = useLive(async () => (await db.kv.get('lastBackup'))?.value as number | undefined, [], undefined);
   const file = useRef<HTMLInputElement>(null);
 
@@ -192,12 +195,14 @@ export function SettingsPage() {
         </div>
       )}
 
-      <SyncSettings />
+      {cloudEnabled ? <AccountSettings /> : <SyncSettings />}
 
       <div className="card">
         <h2>Backup</h2>
         <p className="muted small">
-          Your words live in this browser only, so your phone and computer each keep their own copy. To move your progress, save a backup on one device and restore it on the other.
+          {cloudEnabled
+            ? 'A backup is a file with all your words and progress (books are not in it). Restoring one adds it to your account: what the account already has stays.'
+            : 'Your words live in this browser only, so your phone and computer each keep their own copy. To move your progress, save a backup on one device and restore it on the other.'}
         </p>
         {days !== null && <p className="small">Last backup: {days === 0 ? 'today' : days === 1 ? 'yesterday' : `${days} days ago`}.</p>}
         <div className="row">
@@ -228,7 +233,7 @@ export function SettingsPage() {
 
       <InstallCard />
 
-      <SecuritySettings />
+      {!cloudEnabled && <SecuritySettings />}
 
       <div className="card">
         <h2>Danger zone</h2>
@@ -242,8 +247,11 @@ export function SettingsPage() {
           <>
             <h2>Restore this backup?</h2>
             <p>
-              It's from {new Date(restore.exportedAt).toLocaleString()} and has {restore.items.length} words. Everything on this device will be replaced.
-              {syncOn && ' Sync is on, so the next sync adds back anything newer from your other devices.'}
+              It's from {new Date(restore.exportedAt).toLocaleString()} and has {restore.items.length} words.
+              {cloudEnabled
+                ? ' It is combined with the words already in your account, so nothing there is lost.'
+                : ' Everything on this device will be replaced.'}
+              {!cloudEnabled && syncOn && ' Sync is on, so the next sync adds back anything newer from your other devices.'}
             </p>
             <div className="row">
               <button type="button" className="ghost" onClick={() => setRestore(null)}>
@@ -258,9 +266,10 @@ export function SettingsPage() {
                   await forgetSyncBase();
                   toast(`Restored ${restore.items.length} words`);
                   setRestore(null);
+                  if (cloudEnabled) syncNow().catch(() => {});
                 }}
               >
-                Replace and restore
+                {cloudEnabled ? 'Add to my account' : 'Replace and restore'}
               </button>
             </div>
           </>
@@ -270,8 +279,10 @@ export function SettingsPage() {
       <Sheet open={wipe} onClose={() => setWipe(false)} label="Delete all data">
         <h2>Delete everything?</h2>
         <p>
-          All words, progress and books on this device will be gone, and the AI key too. Save a backup first if you might need it.
-          {syncOn && ' Sync is turned off on this device first, so your words on GitHub and other devices stay.'}
+          {cloudEnabled
+            ? 'All words, progress, grammar and books in your account will be gone, on every device. Save a backup first if you might need it.'
+            : 'All words, progress and books on this device will be gone, and the AI key too. Save a backup first if you might need it.'}
+          {!cloudEnabled && syncOn && ' Sync is turned off on this device first, so your words on GitHub and other devices stay.'}
         </p>
         <div className="row">
           <button type="button" className="ghost" onClick={() => setWipe(false)}>
@@ -281,6 +292,19 @@ export function SettingsPage() {
             type="button"
             className="danger"
             onClick={async () => {
+              if (cloudEnabled) {
+                try {
+                  for (const b of await db.books.toArray()) await noteBookDeleted(b.id);
+                  await db.books.clear();
+                  await db.kv.delete('grammar');
+                  await syncNow({ wipe: true });
+                  setWipe(false);
+                  toast('All data deleted', 'trash');
+                } catch {
+                  toast("Couldn't reach the server. Try again when you're online.", 'alert');
+                }
+                return;
+              }
               await disconnect();
               await db.transaction('rw', db.items, db.reviews, db.kv, async () => {
                 await db.items.clear();

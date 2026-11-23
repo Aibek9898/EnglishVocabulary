@@ -3,7 +3,7 @@ import '../reading.css';
 import { Icon } from '../components/Icon';
 import { ReaderPanel, type Pick } from '../components/ReaderPanel';
 import { Empty, Sheet, toast, useFocusMode, usePageTitle } from '../components/ui';
-import { importBook, progressOf, savePosition, snapToWords, wordAt, type Book } from '../lib/books';
+import { deleteBook, importBook, progressOf, savePosition, snapToWords, wordAt, type Book } from '../lib/books';
 import { db, useLive } from '../lib/db';
 
 export function Reading({ bookId }: { bookId: string | null }) {
@@ -111,7 +111,7 @@ function Shelf() {
             type="button"
             className="danger"
             onClick={async () => {
-              if (remove) await db.books.delete(remove.id);
+              if (remove) await deleteBook(remove.id);
               setRemove(null);
             }}
           >

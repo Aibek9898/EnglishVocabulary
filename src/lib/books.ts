@@ -1,10 +1,13 @@
 import { unzipSync } from 'fflate';
+import { noteBookDeleted } from './bookSync';
+import { cloudEnabled } from './cloud';
 import { db, newId } from './db';
 
 /**
  * Books for the Reading section. A book is uploaded by the learner (EPUB, PDF
  * or TXT), turned into plain paragraphs here and stored only in this browser
- * (IndexedDB table 'books'): never in backups, sync or the site's code.
+ * (IndexedDB table 'books'): never in backups or the site's code. With
+ * accounts, books also go to the account's private cloud storage (bookSync).
  */
 
 export interface Chapter {
@@ -358,6 +361,11 @@ export function progressOf(book: Pick<Book, 'chapters' | 'pos'>): number {
   if (!total) return 0;
   const before = book.chapters.slice(0, book.pos.chapter).reduce((n, c) => n + c.paras.length, 0) + book.pos.para;
   return Math.min(1, before / total);
+}
+
+export async function deleteBook(id: string) {
+  await db.books.delete(id);
+  if (cloudEnabled) await noteBookDeleted(id);
 }
 
 export async function savePosition(id: string, pos: Book['pos']) {

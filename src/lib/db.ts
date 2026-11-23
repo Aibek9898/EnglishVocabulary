@@ -15,8 +15,8 @@ class VocabDB extends Dexie {
   /** Books for Reading: kept only in this browser, never in backups or sync. */
   books!: Table<Book, string>;
 
-  constructor() {
-    super('english-vocabulary');
+  constructor(name = LEGACY_DB) {
+    super(name);
     this.version(1).stores({
       items: 'id, level, deck, createdAt, *tags',
       reviews: '++id, itemId, day, at',
@@ -26,7 +26,28 @@ class VocabDB extends Dexie {
   }
 }
 
-export const db = new VocabDB();
+/** The database from before accounts (and the only one when accounts are off). */
+export const LEGACY_DB = 'english-vocabulary';
+
+/**
+ * This browser's copy of the words. With accounts, each account has its own
+ * database here, opened by openAccountDb() before anything reads it.
+ */
+// eslint-disable-next-line import/no-mutable-exports
+export let db = new VocabDB();
+
+export function openAccountDb(userId: string) {
+  const name = `${LEGACY_DB}-${userId}`;
+  if (db.name === name) return;
+  db.close();
+  db = new VocabDB(name);
+}
+
+export function openDb(name: string) {
+  return new VocabDB(name);
+}
+
+export type { VocabDB };
 
 export async function getSettings(): Promise<Settings> {
   const row = await db.kv.get('settings');

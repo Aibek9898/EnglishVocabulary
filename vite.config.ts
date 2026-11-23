@@ -4,8 +4,8 @@ import react from '@vitejs/plugin-react';
 
 /**
  * Content-Security-Policy for the built site. The page may only run its own
- * scripts and may only talk to its own origin, the two AI services and GitHub
- * (for sync), so the keys saved in Settings can't be sent anywhere else. Build only: the dev
+ * scripts and may only talk to its own origin, the AI services, GitHub (for
+ * sync) and Supabase (accounts), so the keys saved in Settings can't be sent anywhere else. Build only: the dev
  * server injects inline scripts for hot reload.
  */
 export const CSP = [
@@ -14,7 +14,7 @@ export const CSP = [
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com",
   "img-src 'self' data: blob:",
-  "connect-src 'self' https://openrouter.ai https://api.deepseek.com https://api.openai.com https://api.github.com",
+  "connect-src 'self' https://openrouter.ai https://api.deepseek.com https://api.openai.com https://api.github.com https://*.supabase.co",
   "manifest-src 'self'",
   "worker-src 'self'",
   "media-src 'self' blob:",

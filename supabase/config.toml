@@ -1,0 +1,6 @@
+# Used only by `supabase functions deploy` in .github/workflows/supabase.yml.
+project_id = "vocab"
+
+[functions.admin-users]
+# The function checks the caller's sign-in itself (works with the new and the legacy keys).
+verify_jwt = false

@@ -1,12 +1,16 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Icon, type IconName } from './components/Icon';
+import { MoveLegacyPrompt } from './components/AccountSettings';
 import { SaveSelection } from './components/SaveSelection';
 import { Toaster } from './components/ui';
 import { isLoggedIn } from './lib/auth';
-import { db, useLive } from './lib/db';
+import { cloudEnabled, initAuth, type Account } from './lib/cloud';
+import { db, openAccountDb, useLive } from './lib/db';
+import { syncPacks } from './lib/decks';
 import { activityByDay, computeStreak } from './lib/stats';
-import { startAutoSync } from './lib/sync';
+import { startAutoSync, syncNow } from './lib/sync';
 import { AddWords } from './pages/AddWords';
+import { CloudLogin, Opening } from './pages/CloudLogin';
 import { Grammar } from './pages/Grammar';
 import { Library } from './pages/Library';
 import { Login } from './pages/Login';
@@ -32,9 +36,52 @@ const NAV: { id: string; label: string; icon: IconName }[] = [
 ];
 
 export function App() {
+  return cloudEnabled ? <CloudApp /> : <LocalApp />;
+}
+
+/** One learner, words in this browser, the old password gate. */
+function LocalApp() {
   const [authed, setAuthed] = useState(isLoggedIn);
   if (!authed) return <Login onSuccess={() => setAuthed(true)} />;
   return <Shell />;
+}
+
+/** How long the first sync may hold the app before it opens with what this device has. */
+const FIRST_SYNC_WAIT = 10_000;
+
+let opening: string | null = null;
+
+/** Accounts: sign in, open this account's words, bring them up to date, then the app. */
+function CloudApp() {
+  const [phase, setPhase] = useState<'start' | 'signin' | 'opening' | 'ready'>('start');
+
+  const open = async (account: Account) => {
+    if (opening === account.id) return;
+    opening = account.id;
+    setPhase('opening');
+    openAccountDb(account.id);
+    // Get the words from the cloud first, so a new device doesn't start an empty library.
+    await Promise.race([syncNow().catch(() => null), new Promise((r) => setTimeout(r, FIRST_SYNC_WAIT))]);
+    await syncPacks().catch(console.error);
+    setPhase('ready');
+  };
+
+  useEffect(() => {
+    initAuth().then(
+      (a) => (a ? open(a) : setPhase('signin')),
+      () => setPhase('signin'),
+    );
+  }, []);
+
+  if (phase === 'start') return <Opening text="Opening…" />;
+  if (phase === 'signin') return <CloudLogin onSuccess={open} />;
+  if (phase === 'opening') return <Opening />;
+  return (
+    <>
+      <Shell />
+      <MoveLegacyPrompt />
+    </>
+  );
 }
 
 function Shell() {
